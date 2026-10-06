@@ -2,91 +2,330 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07111d">
 <title>Life Improvement Foundation | Better Food • Stronger Communities • Brighter Futures</title>
 <meta name="description" content="Life Improvement Foundation — food security, enterprise, skills and a pathway toward local manufacturing in Lesotho.">
 <style>
-:root{--bg:#07111d;--bg2:#0d1e2d;--card:#102536;--line:#284252;--text:#f7fbff;--muted:#b5c5cf;--lime:#c8f43a;--green:#67e33a;--blue:#12a9ff;--gold:#ffc84a}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}body{margin:0;background:linear-gradient(180deg,var(--bg),#091824);color:var(--text);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
-header{position:sticky;top:0;z-index:50;background:rgba(5,15,24,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:12px}.mark{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--lime),var(--blue));color:#06101a;display:grid;place-items:center;font-weight:1000;font-size:1.05rem;box-shadow:0 8px 24px #0005}.brand b{font-size:1rem;line-height:1.05;display:block}.brand small{color:var(--muted);font-size:.7rem}.links{display:flex;gap:18px;align-items:center}.links a{font-weight:800;font-size:.9rem;color:#d9e4ea}.links a:hover{color:var(--lime)}.menu{display:none;background:none;border:1px solid var(--line);color:#fff;border-radius:10px;padding:8px 12px;font-size:1.2rem}
-.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:12px 18px;font-weight:900;cursor:pointer}.primary{background:linear-gradient(100deg,var(--green),var(--blue));color:#04101a}.ghost{border:1px solid var(--line);background:#ffffff08;color:#fff}
-.hero{padding:76px 0 60px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:40px;align-items:center}.eyebrow{color:var(--lime);font-size:.76rem;font-weight:1000;letter-spacing:.14em;text-transform:uppercase}.hero h1{font-size:clamp(3rem,6vw,6.3rem);line-height:.95;letter-spacing:-.06em;margin:14px 0}.gradient{background:linear-gradient(90deg,#fff,var(--lime),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{color:#d0dde5;font-size:1.12rem;max-width:700px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin:25px 0}.hero-art{min-height:430px;border:1px solid var(--line);border-radius:30px;background:radial-gradient(circle at 50% 25%,#67e33a1c,transparent 30%),linear-gradient(145deg,#0d2638,#07131f);display:grid;place-items:center;position:relative;overflow:hidden}.hero-art:before{content:"";width:330px;height:330px;border:1px solid #c8f43a55;border-radius:50%;position:absolute}.hero-art:after{content:"";width:430px;height:430px;border:1px solid #12a9ff30;border-radius:50%;position:absolute}.hero-badge{position:absolute;z-index:2;padding:13px 16px;border:1px solid var(--line);background:#06121edb;border-radius:16px;font-weight:900}.b1{top:14%;left:7%}.b2{bottom:16%;right:7%}.b3{bottom:7%;left:18%;color:var(--lime)}
-.count{margin-top:25px;padding:17px;border:1px solid #c8f43a44;border-radius:20px;background:#c8f43a09}.count strong{color:var(--lime)}.timer{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.time{min-width:72px;text-align:center;background:#0c2030;border:1px solid var(--line);border-radius:13px;padding:8px}.time b{display:block;font-size:1.45rem}.time small{color:var(--muted)}
-section{padding:78px 0}.head{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:28px}.head h2{font-size:clamp(2rem,4vw,3.5rem);line-height:1;margin:8px 0}.head p{color:var(--muted);max-width:620px}.grid{display:grid;gap:16px}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.card{background:#ffffff09;border:1px solid var(--line);border-radius:22px;padding:22px}.card p{color:var(--muted)}.icon{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:#67e33a15;border:1px solid #67e33a44}
-.flag{background:linear-gradient(135deg,#67e33a10,#12a9ff0d);border-color:#67e33a55}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.bullets{display:grid;gap:10px}.bullets div{display:flex;gap:10px}.bullets i{color:var(--lime);font-style:normal;font-weight:1000}
-.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.product{padding:0;overflow:hidden;cursor:pointer}.product:focus{outline:2px solid var(--lime)}.pic{height:270px;background:#f3f5f3;display:grid;place-items:center;overflow:hidden}.pic img{width:100%;height:100%;object-fit:contain}.product-body{padding:18px}.tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--lime);font-weight:1000}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.filter{padding:9px 13px;border-radius:999px;border:1px solid var(--line);background:transparent;color:#d9e5eb;cursor:pointer}.filter.active{border-color:#67e33a77;background:#67e33a15;color:var(--lime)}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}.stat{padding:18px;border-radius:18px;background:#0c1d2b;border:1px solid var(--line)}.stat b{display:block;color:var(--lime);font-size:2rem}.stat span{color:var(--muted);font-size:.85rem}
-.range{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.range div{padding:13px 15px;border:1px solid var(--line);border-radius:14px;background:#ffffff07;font-weight:800}
-.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.flow div{padding:18px;border:1px solid var(--line);border-radius:18px;background:#ffffff07;font-weight:900;text-align:center}.flow div:nth-child(odd){border-color:#67e33a44}
-.calc{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px}.result{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.result div{padding:16px;border:1px solid var(--line);border-radius:16px;background:#ffffff07}.result b{display:block;color:var(--lime);font-size:1.35rem}label{display:block;font-weight:800;margin:10px 0 6px}input,select,textarea{width:100%;background:#06131f;color:#fff;border:1px solid var(--line);border-radius:11px;padding:12px;font:inherit}textarea{min-height:120px;resize:vertical}.note{font-size:.82rem;color:var(--muted)}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.full{grid-column:1/-1}.status{display:none;margin-top:12px;padding:12px;border-radius:12px}.status.show{display:block;background:#67e33a12;border:1px solid #67e33a55}.status.error{display:block;background:#ff5c7a12;border:1px solid #ff5c7a55}
+:root{
+  --bg:#07111d;--bg2:#0b1a27;--card:#102536;--line:#284252;
+  --text:#f7fbff;--muted:#b5c5cf;--lime:#c8f43a;--green:#67e33a;
+  --blue:#12a9ff;--gold:#ffc84a;--danger:#ff718b;
+  --shadow:0 18px 55px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:linear-gradient(180deg,var(--bg),#091824);color:var(--text);font:16px/1.65 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;overflow-x:hidden}
+img{max-width:100%;display:block}
+button,input,select,textarea{font:inherit}
+button,a{touch-action:manipulation}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1160px,92%);margin:auto}
+.skip{position:absolute;left:-9999px;top:8px;background:#fff;color:#000;padding:10px 14px;border-radius:8px;z-index:999}
+.skip:focus{left:8px}
+header{position:sticky;top:0;z-index:50;background:rgba(5,15,24,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.mark{width:58px;height:58px;flex:0 0 58px;object-fit:contain;display:block;filter:drop-shadow(0 5px 12px #0005)}
+.brand b{font-size:1rem;line-height:1.05;display:block;white-space:nowrap}
+.brand small{color:var(--muted);font-size:.7rem}
+.links{display:flex;gap:18px;align-items:center}
+.links a{font-weight:800;font-size:.9rem;color:#d9e4ea}
+.links a:hover,.links a:focus{color:var(--lime)}
+.menu{display:none;background:none;border:1px solid var(--line);color:#fff;border-radius:10px;padding:8px 12px;font-size:1.2rem;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;border:0;border-radius:999px;padding:12px 18px;font-weight:900;cursor:pointer;text-align:center}
+.primary{background:linear-gradient(100deg,var(--green),var(--blue));color:#04101a}
+.ghost{border:1px solid var(--line);background:#ffffff08;color:#fff}
+.btn:focus-visible,.filter:focus-visible,.menu:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #c8f43a66;outline-offset:2px}
+
+.hero{padding:76px 0 60px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:40px;align-items:center}
+.eyebrow{color:var(--lime);font-size:.76rem;font-weight:1000;letter-spacing:.14em;text-transform:uppercase}
+.hero h1{font-size:clamp(3rem,6vw,6.3rem);line-height:.95;letter-spacing:-.06em;margin:14px 0}
+.gradient{background:linear-gradient(90deg,#fff,var(--lime),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:#d0dde5;font-size:1.12rem;max-width:700px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:25px 0}
+.hero-art{min-height:430px;border:1px solid var(--line);border-radius:30px;background:radial-gradient(circle at 50% 25%,#67e33a1c,transparent 30%),linear-gradient(145deg,#0d2638,#07131f);display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.hero-art:before{content:"";width:330px;height:330px;border:1px solid #c8f43a55;border-radius:50%;position:absolute}
+.hero-art:after{content:"";width:430px;height:430px;border:1px solid #12a9ff30;border-radius:50%;position:absolute}
+.hero-visual{position:relative;z-index:2;width:min(78%,360px);aspect-ratio:1;display:grid;place-items:center}
+.hero-visual svg{width:100%;height:100%;filter:drop-shadow(0 18px 35px #0007)}
+.hero-badge{position:absolute;z-index:3;padding:13px 16px;border:1px solid var(--line);background:#06121edb;border-radius:16px;font-weight:900;box-shadow:0 10px 25px #0004}
+.b1{top:14%;left:7%}.b2{bottom:16%;right:7%}.b3{bottom:7%;left:18%;color:var(--lime)}
+.count{margin-top:25px;padding:17px;border:1px solid #c8f43a44;border-radius:20px;background:#c8f43a09}
+.count strong{color:var(--lime)}
+.timer{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.time{min-width:72px;text-align:center;background:#0c2030;border:1px solid var(--line);border-radius:13px;padding:8px}
+.time b{display:block;font-size:1.45rem}.time small{color:var(--muted)}
+
+section{padding:78px 0}
+.head{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:28px}
+.head h2{font-size:clamp(2rem,4vw,3.5rem);line-height:1;margin:8px 0}
+.head p{color:var(--muted);max-width:620px}
+.grid{display:grid;gap:16px}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:#ffffff09;border:1px solid var(--line);border-radius:22px;padding:22px}
+.card p{color:var(--muted)}
+.icon{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:#67e33a15;border:1px solid #67e33a44}
+.flag{background:linear-gradient(135deg,#67e33a10,#12a9ff0d);border-color:#67e33a55}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.bullets{display:grid;gap:10px}.bullets div{display:flex;gap:10px}.bullets i{color:var(--lime);font-style:normal;font-weight:1000;min-width:28px}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.product{padding:0;overflow:hidden;cursor:pointer;transition:transform .2s ease,border-color .2s ease}
+.product:hover{transform:translateY(-3px);border-color:#67e33a77}
+.product:focus{outline:2px solid var(--lime)}
+.pic{height:270px;background:#f3f5f3;display:grid;place-items:center;overflow:hidden}
+.pic img{width:100%;height:100%;object-fit:contain}
+.product-body{padding:18px}.tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--lime);font-weight:1000}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.filter{min-height:42px;padding:9px 13px;border-radius:999px;border:1px solid var(--line);background:transparent;color:#d9e5eb;cursor:pointer}
+.filter.active{border-color:#67e33a77;background:#67e33a15;color:var(--lime)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+.stat{padding:18px;border-radius:18px;background:#0c1d2b;border:1px solid var(--line)}
+.stat b{display:block;color:var(--lime);font-size:2rem}.stat span{color:var(--muted);font-size:.85rem}
+.range{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.range div{padding:13px 15px;border:1px solid var(--line);border-radius:14px;background:#ffffff07;font-weight:800}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.flow div{padding:18px;border:1px solid var(--line);border-radius:18px;background:#ffffff07;font-weight:900;text-align:center}
+.flow div:nth-child(odd){border-color:#67e33a44}
+.calc{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px}
+.result{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.result div{padding:16px;border:1px solid var(--line);border-radius:16px;background:#ffffff07}
+.result b{display:block;color:var(--lime);font-size:1.35rem}
+label{display:block;font-weight:800;margin:10px 0 6px}
+input,select,textarea{width:100%;background:#06131f;color:#fff;border:1px solid var(--line);border-radius:11px;padding:12px;font:inherit}
+textarea{min-height:120px;resize:vertical}.note{font-size:.82rem;color:var(--muted)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.full{grid-column:1/-1}
+.status{display:none;margin-top:12px;padding:12px;border-radius:12px}
+.status.show{display:block;background:#67e33a12;border:1px solid #67e33a55}
+.status.error{display:block;background:#ff5c7a12;border:1px solid #ff5c7a55}
 .cta{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:34px;border:1px solid #67e33a55;border-radius:25px;background:linear-gradient(110deg,#67e33a12,#12a9ff0c)}
-footer{padding:45px 0;border-top:1px solid var(--line);color:var(--muted)}footer .grid{grid-template-columns:1.3fr 1fr 1fr}footer h4{color:#fff}
-.modal{position:fixed;inset:0;z-index:100;background:#000b;display:none;place-items:center;padding:18px}.modal.open{display:grid}.modal-box{width:min(650px,100%);max-height:88vh;overflow:auto;background:#0b1b29;border:1px solid var(--line);border-radius:24px;padding:22px}.close{float:right;border:1px solid var(--line);background:none;color:#fff;border-radius:9px;padding:7px 10px;cursor:pointer}
-@media(max-width:900px){.hero-grid,.two,.calc{grid-template-columns:1fr}.g3,.product-grid{grid-template-columns:1fr 1fr}.g4,.stats{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}.links{display:none;position:absolute;top:78px;left:0;right:0;background:#07111d;padding:16px 4%;flex-direction:column;align-items:stretch}.links.open{display:flex}.menu{display:block}}
-@media(max-width:600px){.wrap{width:94%}.hero{padding-top:45px}.hero-art{min-height:320px}.g3,.g4,.product-grid,.stats,.range,.flow,.result,.form-grid{grid-template-columns:1fr}.head{display:block}.actions .btn{width:100%}.timer{display:grid;grid-template-columns:repeat(4,1fr)}.time{min-width:0}.hero h1{font-size:3.25rem}footer .grid{grid-template-columns:1fr}}
+footer{padding:45px 0;border-top:1px solid var(--line);color:var(--muted)}
+footer .grid{grid-template-columns:1.3fr 1fr 1fr}footer h4{color:#fff}
+.modal{position:fixed;inset:0;z-index:100;background:#000b;display:none;place-items:center;padding:18px}
+.modal.open{display:grid}
+.modal-box{width:min(650px,100%);max-height:88vh;overflow:auto;background:#0b1b29;border:1px solid var(--line);border-radius:24px;padding:22px}
+.close{float:right;border:1px solid var(--line);background:none;color:#fff;border-radius:9px;padding:7px 10px;cursor:pointer}
+
+@media(max-width:1000px){
+  .links{gap:12px}.links a{font-size:.82rem}
+  .hero-grid{grid-template-columns:1fr}.hero-art{min-height:390px}
+  .g4,.stats{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .nav{min-height:70px}.menu{display:block}
+  .links{display:none;position:absolute;top:70px;left:0;right:0;background:#07111d;padding:14px 4%;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line);box-shadow:0 18px 30px #0005}
+  .links.open{display:flex}.links a{padding:10px 0}
+  .two,.calc{grid-template-columns:1fr}.g3,.product-grid{grid-template-columns:1fr 1fr}
+  .flow{grid-template-columns:repeat(2,1fr)}
+  .brand b{white-space:normal}
+}
+@media(max-width:600px){
+  .wrap{width:94%}section{padding:58px 0}.hero{padding-top:42px}
+  .hero h1{font-size:clamp(3rem,15vw,4.2rem)}
+  .hero-art{min-height:330px;border-radius:24px}.hero-visual{width:72%}
+  .hero-badge{font-size:.78rem;padding:9px 11px}.b1{top:8%;left:4%}.b2{bottom:13%;right:4%}.b3{bottom:4%;left:10%}
+  .g3,.g4,.product-grid,.stats,.range,.flow,.result,.form-grid{grid-template-columns:1fr}
+  .head{display:block}.actions .btn{width:100%}
+  .timer{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}.time{min-width:0;padding:7px 3px}.time b{font-size:1.15rem}
+  .pic{height:250px}.cta{display:block;padding:24px}
+  .cta .actions{margin-bottom:0}.cta .btn{width:100%}
+  footer .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}.product{transition:none}
+}
 </style>
 </head>
 <body>
-<header><div class="wrap nav">
-<a class="brand" href="#home"><span class="mark">LIF</span><span><b>Life Improvement Foundation</b><small>Better Food • Stronger Communities • Brighter Futures</small></span></a>
-<button class="menu" id="menu" aria-label="Open navigation">☰</button>
-<nav class="links" id="links"><a href="#about">About</a><a href="#food-sock">Food Sock</a><a href="#lula">+LULA</a><a href="#kingdom">Kingdom Foods</a><a href="#reseller">Become a Reseller</a><a href="#registration" class="btn primary">Register</a></nav>
-</div></header>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Life Improvement Foundation home">
+      <img class="mark" src="LifeImprovement-logo.png" alt="Life Improvement Foundation logo">
+      <span><b>Life Improvement Foundation</b><small>Better Food • Stronger Communities • Brighter Futures</small></span>
+    </a>
+    <button class="menu" id="menu" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="links" id="links" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#food-sock">Food Sock</a><a href="#lula">+LULA</a><a href="#kingdom">Kingdom Foods</a><a href="#reseller">Become a Reseller</a>
+      <a href="#registration" class="btn primary">Register</a>
+    </nav>
+  </div>
+</header>
 
-<main id="home">
-<section class="hero"><div class="wrap hero-grid">
-<div><span class="eyebrow">Lesotho • Food • Enterprise • Opportunity</span><h1>Better food.<br><span class="gradient">Stronger communities.</span></h1><p class="lead">Life Improvement Foundation connects food access, entrepreneurship, practical skills and a growing partner network — with Food Sock as the flagship project and a long-term pathway toward local manufacturing.</p>
-<div class="actions"><a class="btn primary" href="#food-sock">Explore Food Sock</a><a class="btn ghost" href="#reseller">Become a Reseller</a></div>
-<div class="count"><strong>FOOD SOCK LAUNCH — 5 NOVEMBER 2026</strong><div class="timer" id="timer"><div class="time"><b id="d">0</b><small>days</small></div><div class="time"><b id="h">00</b><small>hours</small></div><div class="time"><b id="m">00</b><small>minutes</small></div><div class="time"><b id="s">00</b><small>seconds</small></div></div></div>
-</div>
-<div class="hero-art"><div class="hero-badge b1">🍲 Food Security</div><div class="hero-badge b2">💼 Local Enterprise</div><div class="hero-badge b3">🏭 Future Manufacturing</div></div>
+<main id="main">
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Lesotho • Food • Enterprise • Opportunity</span>
+      <h1>Better food.<br><span class="gradient">Stronger communities.</span></h1>
+      <p class="lead">Life Improvement Foundation connects food access, entrepreneurship, practical skills and a growing partner network — with Food Sock as the flagship project and a long-term pathway toward local manufacturing.</p>
+      <div class="actions"><a class="btn primary" href="#food-sock">Explore Food Sock</a><a class="btn ghost" href="#reseller">Become a Reseller</a></div>
+      <div class="count">
+        <strong>FOOD SOCK LAUNCH — 5 NOVEMBER 2026</strong>
+        <div class="timer" id="timer" aria-live="polite">
+          <div class="time"><b id="d">0</b><small>days</small></div><div class="time"><b id="h">00</b><small>hours</small></div><div class="time"><b id="m">00</b><small>minutes</small></div><div class="time"><b id="s">00</b><small>seconds</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-art" aria-label="Life Improvement programme illustration">
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 500 500" role="img">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#c8f43a"/><stop offset="1" stop-color="#12a9ff"/></linearGradient>
+            <linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#67e33a"/><stop offset="1" stop-color="#ffc84a"/></linearGradient>
+          </defs>
+          <circle cx="250" cy="250" r="178" fill="#07131f" stroke="url(#g1)" stroke-width="5"/>
+          <path d="M155 285c25-78 165-78 190 0" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round"/>
+          <path d="M176 285c24 40 124 40 148 0" fill="none" stroke="url(#g2)" stroke-width="15" stroke-linecap="round"/>
+          <path d="M190 205c15-42 105-42 120 0" fill="none" stroke="#c8f43a" stroke-width="16" stroke-linecap="round"/>
+          <circle cx="210" cy="183" r="14" fill="#12a9ff"/><circle cx="290" cy="183" r="14" fill="#67e33a"/>
+          <path d="M115 340h270" stroke="#284252" stroke-width="3"/>
+          <text x="250" y="365" text-anchor="middle" fill="#f7fbff" font-size="31" font-family="Arial" font-weight="800">LIFE</text>
+          <text x="250" y="395" text-anchor="middle" fill="#c8f43a" font-size="23" font-family="Arial" font-weight="800">IMPROVEMENT</text>
+        </svg>
+      </div>
+      <div class="hero-badge b1">🍲 Food Security</div><div class="hero-badge b2">💼 Local Enterprise</div><div class="hero-badge b3">🏭 Future Manufacturing</div>
+    </div>
+  </div>
+</section>
+
+<section id="about"><div class="wrap">
+  <div class="head"><div><span class="eyebrow">The bigger picture</span><h2>One programme. <span class="gradient">Many pathways.</span></h2></div><p>The programme brings Food Sock, +LULA, Kingdom Foods and the reseller opportunity into one connected story — then builds the people, market and partner network needed for future growth.</p></div>
+  <div class="grid g4">
+    <div class="card"><div class="icon">🍲</div><h3>Food Security</h3><p>Convenient food solutions that can expand access to practical meal options.</p></div>
+    <div class="card"><div class="icon">💼</div><h3>Enterprise</h3><p>People participate through sales, distribution and community-level commerce.</p></div>
+    <div class="card"><div class="icon">🎓</div><h3>Skills</h3><p>Training in selling, customer service, stock handling and basic business practice.</p></div>
+    <div class="card"><div class="icon">🏭</div><h3>Future Manufacturing</h3><p>A growing market and network can support the case for local manufacturing.</p></div>
+  </div>
+  <div class="stats"><div class="stat"><b>1</b><span>flagship Food Sock project</span></div><div class="stat"><b>13</b><span>current Food Sock flavours</span></div><div class="stat"><b>3</b><span>core product streams</span></div><div class="stat"><b>2027</b><span>dedicated teams for pipeline projects</span></div></div>
 </div></section>
 
-<section id="about"><div class="wrap"><div class="head"><div><span class="eyebrow">The bigger picture</span><h2>One programme. <span class="gradient">Many pathways.</span></h2></div><p>The programme brings Food Sock, +LULA, Kingdom Foods and the reseller opportunity into one connected story — then builds the people, market and partner network needed for future growth.</p></div>
-<div class="grid g4"><div class="card"><div class="icon">🍲</div><h3>Food Security</h3><p>Convenient food solutions that can expand access to practical meal options.</p></div><div class="card"><div class="icon">💼</div><h3>Enterprise</h3><p>People participate through sales, distribution and community-level commerce.</p></div><div class="card"><div class="icon">🎓</div><h3>Skills</h3><p>Training in selling, customer service, stock handling and basic business practice.</p></div><div class="card"><div class="icon">🏭</div><h3>Future Manufacturing</h3><p>A growing market and network can support the case for local manufacturing.</p></div></div>
-<div class="stats"><div class="stat"><b>1</b><span>flagship Food Sock project</span></div><div class="stat"><b>13</b><span>current Food Sock flavours</span></div><div class="stat"><b>3</b><span>core product streams</span></div><div class="stat"><b>2027</b><span>dedicated teams for pipeline projects</span></div></div></div></section>
+<section id="food-sock"><div class="wrap"><div class="card flag">
+  <div class="head"><div><span class="eyebrow">Flagship project</span><h2>Food Sock: <span class="gradient">food security meets enterprise.</span></h2></div><p>Launching 5 November 2026. Phase One focuses on placing products for resale, building a reputable sales programme, capturing a market niche and creating excitement for future manufacturing.</p></div>
+  <div class="two"><div><div class="bullets">
+    <div><i>01</i><span><b>Market entry:</b> place products for resale and build disciplined sales activity.</span></div>
+    <div><i>02</i><span><b>Build excitement:</b> turn real customer demand and reseller stories into commercial momentum.</span></div>
+    <div><i>03</i><span><b>Build people:</b> train entrepreneurs to sell, serve customers and manage stock.</span></div>
+    <div><i>04</i><span><b>Build the network:</b> grow from resellers toward distributors and community food hubs.</span></div>
+  </div><div class="actions"><a class="btn primary" href="#calculator">Use the reseller calculator</a></div></div>
+  <div class="product-grid">
+    <article class="card product" data-cat="food-sock" data-title="Chicken Breyani" tabindex="0"><div class="pic"><img loading="lazy" src="https://media.portmoni.com/resized/73312/FS_Chickn_Breyani-thumbnail-600x600-95.jpg" alt="Food Sock Chicken Breyani"></div><div class="product-body"><span class="tag">Food Sock</span><h3>Chicken Breyani</h3></div></article>
+    <article class="card product" data-cat="food-sock" data-title="Pasta Bolognese" tabindex="0"><div class="pic"><img loading="lazy" src="https://store.foodsock.co.za/cdn/shop/files/Pasta_Bolognese.png?v=1768378362&width=1500" alt="Food Sock Pasta Bolognese"></div><div class="product-body"><span class="tag">Food Sock</span><h3>Pasta Bolognese</h3></div></article>
+  </div></div>
+</div></div></section>
 
-<section id="food-sock"><div class="wrap"><div class="card flag"><div class="head"><div><span class="eyebrow">Flagship project</span><h2>Food Sock: <span class="gradient">food security meets enterprise.</span></h2></div><p>Launching 5 November 2026. Phase One focuses on placing products for resale, building a reputable sales programme, capturing a market niche and creating excitement for future manufacturing.</p></div><div class="two"><div><div class="bullets"><div><i>01</i><span><b>Market entry:</b> place products for resale and build disciplined sales activity.</span></div><div><i>02</i><span><b>Build excitement:</b> turn real customer demand and reseller stories into commercial momentum.</span></div><div><i>03</i><span><b>Build people:</b> train entrepreneurs to sell, serve customers and manage stock.</span></div><div><i>04</i><span><b>Build the network:</b> grow from resellers toward distributors and community food hubs.</span></div></div><div class="actions"><a class="btn primary" href="#calculator">Use the reseller calculator</a></div></div>
-<div class="product-grid"><article class="card product" data-cat="food-sock" data-title="Chicken Breyani" tabindex="0"><div class="pic"><img src="https://media.portmoni.com/resized/73312/FS_Chickn_Breyani-thumbnail-600x600-95.jpg" alt="Food Sock Chicken Breyani"></div><div class="product-body"><span class="tag">Food Sock</span><h3>Chicken Breyani</h3></div></article><article class="card product" data-cat="food-sock" data-title="Pasta Bolognese" tabindex="0"><div class="pic"><img src="https://store.foodsock.co.za/cdn/shop/files/Pasta_Bolognese.png?v=1768378362&width=1500" alt="Food Sock Pasta Bolognese"></div><div class="product-body"><span class="tag">Food Sock</span><h3>Pasta Bolognese</h3></div></article></div></div></div></div></section>
+<section id="catalogue"><div class="wrap">
+  <div class="head"><div><span class="eyebrow">Product programme</span><h2>Explore the <span class="gradient">range.</span></h2></div><p>Click a product card for more information. Product packaging is displayed from source imagery and is not altered.</p></div>
+  <div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="food-sock">Food Sock</button><button class="filter" data-filter="lula">+LULA</button><button class="filter" data-filter="kingdom">Kingdom Foods</button></div>
+  <div class="product-grid" id="productGrid">
+    <article class="card product" data-cat="food-sock" data-title="Food Sock — Pasta Bolognese" tabindex="0"><div class="pic"><img loading="lazy" src="https://store.foodsock.co.za/cdn/shop/files/Pasta_Bolognese.png?v=1768378362&width=1500" alt="Food Sock Pasta Bolognese"></div><div class="product-body"><span class="tag">Food Sock</span><h3>Pasta Bolognese</h3><p>Convenient meal kit from the official Food Sock range.</p></div></article>
+    <article class="card product" data-cat="lula" data-title="+LULA" tabindex="0"><div class="pic"><div style="font-size:4rem" aria-hidden="true">＋</div></div><div class="product-body"><span class="tag">+LULA</span><h3>+LULA</h3><p>A product pathway within the same Life Improvement reseller programme.</p></div></article>
+    <article class="card product" data-cat="kingdom" data-title="Kingdom Foods — VitaKidz" tabindex="0"><div class="pic"><img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/54e3bb91e4b099337fd824b9/1745429058706-4W4ZDEXCO5IHIZS5GEUL/Screenshot%2B2025-04-23%2Bat%2B11.21.49%E2%80%AFAM.png?format=1500w" alt="Kingdom Foods VitaKidz"></div><div class="product-body"><span class="tag">Kingdom Foods</span><h3>VitaKidz</h3><p>Part of the wider product ecosystem presented on this site.</p></div></article>
+  </div>
+</div></section>
 
-<section id="catalogue"><div class="wrap"><div class="head"><div><span class="eyebrow">Product programme</span><h2>Explore the <span class="gradient">range.</span></h2></div><p>Click a product card for more information. Product packaging is displayed from source imagery and is not altered.</p></div><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="food-sock">Food Sock</button><button class="filter" data-filter="lula">+LULA</button><button class="filter" data-filter="kingdom">Kingdom Foods</button></div>
-<div class="product-grid" id="productGrid"><article class="card product" data-cat="food-sock" data-title="Food Sock — Pasta Bolognese" tabindex="0"><div class="pic"><img src="https://store.foodsock.co.za/cdn/shop/files/Pasta_Bolognese.png?v=1768378362&width=1500" alt="Food Sock Pasta Bolognese"></div><div class="product-body"><span class="tag">Food Sock</span><h3>Pasta Bolognese</h3><p>Convenient meal kit from the official Food Sock range.</p></div></article>
-<article class="card product" data-cat="lula" data-title="+LULA" tabindex="0"><div class="pic"><div style="font-size:4rem">＋</div></div><div class="product-body"><span class="tag">+LULA</span><h3>+LULA</h3><p>A product pathway within the same Life Improvement reseller programme.</p></div></article>
-<article class="card product" data-cat="kingdom" data-title="Kingdom Foods — VitaKidz" tabindex="0"><div class="pic"><img src="https://images.squarespace-cdn.com/content/v1/54e3bb91e4b099337fd824b9/1745429058706-4W4ZDEXCO5IHIZS5GEUL/Screenshot%2B2025-04-23%2Bat%2B11.21.49%E2%80%AFAM.png?format=1500w" alt="Kingdom Foods VitaKidz"></div><div class="product-body"><span class="tag">Kingdom Foods</span><h3>VitaKidz</h3><p>Part of the wider product ecosystem presented on this site.</p></div></article></div></div></section>
-
-<section id="food-range"><div class="wrap"><div class="head"><div><span class="eyebrow">Food Sock range</span><h2>13 current <span class="gradient">flavours.</span></h2></div><p>The official Food Sock range currently lists these flavours.</p></div><div class="range"><div>Chicken Breyani</div><div>Pasta Bolognese</div><div>Chicken Pasta</div><div>Mac &amp; Cheese</div><div>Mutton Stew</div><div>Tomato Bredie</div><div>Chicken &amp; Veg Soup</div><div>Traditional Melkkos</div><div>Chakalaka Samp &amp; Beans</div><div>Chicken a la King</div><div>Thai Green Curry</div><div>Chilli Beef Stew</div><div>Tangy Fish Stew</div></div></div></section>
+<section id="food-range"><div class="wrap"><div class="head"><div><span class="eyebrow">Food Sock range</span><h2>13 current <span class="gradient">flavours.</span></h2></div><p>The official Food Sock range currently lists these flavours.</p></div>
+<div class="range"><div>Chicken Breyani</div><div>Pasta Bolognese</div><div>Chicken Pasta</div><div>Mac &amp; Cheese</div><div>Mutton Stew</div><div>Tomato Bredie</div><div>Chicken &amp; Veg Soup</div><div>Traditional Melkkos</div><div>Chakalaka Samp &amp; Beans</div><div>Chicken a la King</div><div>Thai Green Curry</div><div>Chilli Beef Stew</div><div>Tangy Fish Stew</div></div></div></section>
 
 <section id="lula"><div class="wrap"><div class="card"><span class="eyebrow">Part 02</span><h2>+LULA: <span class="gradient">another product pathway.</span></h2><p class="lead">+LULA sits alongside Food Sock and Kingdom Foods as part of one product-and-reseller programme. Each product can be introduced with its own visual story, customer explanation and reseller action.</p><a class="btn primary" href="#reseller">See the reseller opportunity →</a></div></div></section>
+
 <section id="kingdom"><div class="wrap"><div class="card"><span class="eyebrow">Part 03</span><h2>Kingdom Foods: <span class="gradient">food with purpose.</span></h2><p class="lead">VitaKidz, Maxi Blend and JOY Bucket are presented as part of the wider product ecosystem. Product information should always be checked against the relevant product source and final programme terms.</p></div></div></section>
 
 <section id="reseller"><div class="wrap"><div class="head"><div><span class="eyebrow">Become a Reseller</span><h2>Start small. <span class="gradient">Build a market.</span></h2></div><p>Food Sock reseller price: M10. Recommended customer selling price: M13.50, representing a 35% markup. No internal acquisition cost is shown publicly.</p></div>
 <div class="flow"><div>RESELL</div><div>SELL</div><div>GROW</div><div>PARTNER</div><div>FINANCE</div><div>MANUFACTURE</div><div>DISTRIBUTE</div><div>REINVEST</div><div>CREATE JOBS</div><div>GROWTH</div></div></div></section>
 
-<section id="calculator"><div class="wrap"><div class="head"><div><span class="eyebrow">Interactive model</span><h2>Calculate your <span class="gradient">sales potential.</span></h2></div><p>Points are calculated at 1 point per M50 in customer sales value.</p></div><div class="calc"><div class="card"><label for="qty">Quantity sold</label><input id="qty" type="number" min="1" value="50"><p class="note">Reseller price M10 • recommended customer price M13.50 • 35% markup.</p></div><div class="card"><div class="result"><div><b id="sales">M675.00</b><span>Customer sales value</span></div><div><b id="profit">M175.00</b><span>Gross reseller margin</span></div><div><b id="points">13.50</b><span>Points</span></div></div><p class="note">Points may contribute toward programme-defined benefits and eligibility for an invitation to participate in future share opportunities, subject to formal terms and eligibility. No returns or share allocation is guaranteed.</p></div></div></div></section>
+<section id="calculator"><div class="wrap"><div class="head"><div><span class="eyebrow">Interactive model</span><h2>Calculate your <span class="gradient">sales potential.</span></h2></div><p>Points are calculated at 1 point per M50 in customer sales value.</p></div>
+<div class="calc"><div class="card"><label for="qty">Quantity sold</label><input id="qty" type="number" min="0" inputmode="numeric" value="50"><p class="note">Reseller price M10 • recommended customer price M13.50 • 35% markup.</p></div>
+<div class="card"><div class="result"><div><b id="sales">M675.00</b><span>Customer sales value</span></div><div><b id="profit">M175.00</b><span>Gross reseller margin</span></div><div><b id="points">13.50</b><span>Points</span></div></div><p class="note">Points may contribute toward programme-defined benefits and eligibility for an invitation to participate in future share opportunities, subject to formal terms and eligibility. No returns or share allocation is guaranteed.</p></div></div></div></section>
 
-<section id="manufacturing"><div class="wrap"><div class="head"><div><span class="eyebrow">Long-term destination</span><h2>Build the market before <span class="gradient">building the factory.</span></h2></div><p>Reseller sales can build demand evidence, people, distribution capability and partner networks. Life Improvement can then use that commercial foundation when pursuing appropriate financing and local manufacturing partnerships.</p></div><div class="grid g3"><div class="card"><h3>Market</h3><p>Real customers, repeat sales and demand evidence.</p></div><div class="card"><h3>Partners</h3><p>Resellers, distributors, logistics, agro-processing, packaging, training and manufacturing partners.</p></div><div class="card"><h3>Jobs &amp; growth</h3><p>Local value chains that can support production, distribution and enterprise over time.</p></div></div></div></section>
+<section id="manufacturing"><div class="wrap"><div class="head"><div><span class="eyebrow">Long-term destination</span><h2>Build the market before <span class="gradient">building the factory.</span></h2></div><p>Reseller sales can build demand evidence, people, distribution capability and partner networks. Life Improvement can then use that commercial foundation when pursuing appropriate financing and local manufacturing partnerships.</p></div>
+<div class="grid g3"><div class="card"><h3>Market</h3><p>Real customers, repeat sales and demand evidence.</p></div><div class="card"><h3>Partners</h3><p>Resellers, distributors, logistics, agro-processing, packaging, training and manufacturing partners.</p></div><div class="card"><h3>Jobs &amp; growth</h3><p>Local value chains that can support production, distribution and enterprise over time.</p></div></div></div></section>
 
-<section id="registration"><div class="wrap"><div class="head"><div><span class="eyebrow">Get involved</span><h2>Register your <span class="gradient">interest.</span></h2></div><p>Reseller, Community Distributor, Potential Investor, Partner, Project, Volunteer or general enquiry.</p></div><form class="card" id="registrationForm"><div class="form-grid">
-<div><label for="name">Full name</label><input id="name" required></div><div><label for="org">Organisation</label><input id="org"></div><div><label for="phone">Phone / WhatsApp</label><input id="phone"></div><div><label for="email">Email</label><input id="email" type="email" required></div><div><label for="location">Location</label><input id="location"></div><div><label for="interest">I am interested as</label><select id="interest"><option>Reseller</option><option>Community Distributor</option><option>Potential Investor</option><option>Partner</option><option>Project</option><option>Volunteer</option><option>Enquiry</option></select></div><div class="full"><label for="message">Message</label><textarea id="message"></textarea></div><div class="full"><label for="pdf">Supporting PDF (optional until database is connected)</label><input id="pdf" type="file" accept=".pdf,application/pdf"></div></div><p class="note">Secure database storage and email notification are not claimed as live until the Supabase project URL/anon key and server-side notification function are connected.</p><button class="btn primary" type="submit">Send registration →</button><div id="status" class="status"></div></form></div></section>
+<section id="registration"><div class="wrap"><div class="head"><div><span class="eyebrow">Get involved</span><h2>Register your <span class="gradient">interest.</span></h2></div><p>Reseller, Community Distributor, Potential Investor, Partner, Project, Volunteer or general enquiry.</p></div>
+<form class="card" id="registrationForm">
+<div class="form-grid">
+<div><label for="name">Full name</label><input id="name" autocomplete="name" required></div>
+<div><label for="org">Organisation</label><input id="org" autocomplete="organization"></div>
+<div><label for="phone">Phone / WhatsApp</label><input id="phone" type="tel" autocomplete="tel"></div>
+<div><label for="email">Email</label><input id="email" type="email" autocomplete="email" required></div>
+<div><label for="location">Location</label><input id="location" autocomplete="address-level2"></div>
+<div><label for="interest">I am interested as</label><select id="interest"><option>Reseller</option><option>Community Distributor</option><option>Potential Investor</option><option>Partner</option><option>Project</option><option>Volunteer</option><option>Enquiry</option></select></div>
+<div class="full"><label for="message">Message</label><textarea id="message"></textarea></div>
+</div>
+<p class="note">Your registration is sent to the Life Improvement Foundation team through WhatsApp. No database or document-upload service is claimed to be active on this static version.</p>
+<button class="btn primary" type="submit">Send registration via WhatsApp →</button>
+<div id="status" class="status" role="status"></div>
+</form></div></section>
 
-<section><div class="wrap"><div class="cta"><div><h2>Ready to participate?</h2><p class="lead">Contact Life Improvement Foundation directly for the current programme information.</p></div><div class="actions"><a class="btn primary" href="https://wa.me/26659434159?text=Hello%20Life%20Improvement%20Foundation%2C%20I%20would%20like%20to%20participate." target="_blank" rel="noopener">WhatsApp</a><a class="btn ghost" href="mailto:projects@lifefoundation.co.ls">Email</a></div></div></div></section>
+<section><div class="wrap"><div class="cta"><div><h2>Ready to participate?</h2><p class="lead">Contact Life Improvement Foundation directly for the current programme information.</p></div><div class="actions"><a class="btn primary" href="https://wa.me/26659434159?text=Hello%20Life%20Improvement%20Foundation%2C%20I%20would%20like%20to%20participate." target="_blank" rel="noopener noreferrer">WhatsApp</a><a class="btn ghost" href="mailto:projects@lifefoundation.co.ls">Email</a></div></div></div></section>
 </main>
 
-<footer><div class="wrap grid"><div><h4>Life Improvement Foundation</h4><p>Better Food • Stronger Communities • Brighter Futures</p></div><div><h4>Explore</h4><p><a href="#food-sock">Food Sock</a><br><a href="#lula">+LULA</a><br><a href="#kingdom">Kingdom Foods</a><br><a href="#reseller">Become a Reseller</a></p></div><div><h4>Contact</h4><p><a href="mailto:projects@lifefoundation.co.ls">projects@lifefoundation.co.ls</a><br><a href="https://wa.me/26659434159" target="_blank" rel="noopener">+266 5943 4159</a></p></div></div></footer>
+<footer><div class="wrap grid"><div><h4>Life Improvement Foundation</h4><p>Better Food • Stronger Communities • Brighter Futures</p></div><div><h4>Explore</h4><p><a href="#food-sock">Food Sock</a><br><a href="#lula">+LULA</a><br><a href="#kingdom">Kingdom Foods</a><br><a href="#reseller">Become a Reseller</a></p></div><div><h4>Contact</h4><p><a href="mailto:projects@lifefoundation.co.ls">projects@lifefoundation.co.ls</a><br><a href="https://wa.me/26659434159" target="_blank" rel="noopener noreferrer">+266 5943 4159</a></p></div></div></footer>
 
-<div class="modal" id="modal"><div class="modal-box"><button class="close" id="close">Close</button><div id="modalContent"></div></div></div>
+<div class="modal" id="modal" aria-hidden="true"><div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="close" id="close" type="button">Close</button><div id="modalContent"></div></div></div>
+
 <script>
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-$('#menu').onclick=()=>$('#links').classList.toggle('open');
-$$('#links a').forEach(a=>a.onclick=()=>$('#links').classList.remove('open'));
+
+const menu=$('#menu'),links=$('#links');
+menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',open?'true':'false')});
+$$('#links a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+
 const launch=new Date('2026-11-05T00:00:00+02:00');
-function countdown(){const x=launch-Date.now();if(x<=0){$('#timer').innerHTML='<strong>FOOD SOCK IS LIVE • 5 NOVEMBER 2026</strong>';return}$('#d').textContent=Math.floor(x/86400000);$('#h').textContent=String(Math.floor(x%86400000/3600000)).padStart(2,'0');$('#m').textContent=String(Math.floor(x%3600000/60000)).padStart(2,'0');$('#s').textContent=String(Math.floor(x%60000/1000)).padStart(2,'0')}countdown();setInterval(countdown,1000);
-$$('.filter').forEach(b=>b.onclick=()=>{$$('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');const f=b.dataset.filter;$$('.product').forEach(c=>c.style.display=f==='all'||c.dataset.cat===f?'':'none')});
-function calc(){const q=Math.max(0,+$('#qty').value||0),sales=q*13.5,profit=q*3.5;$('#sales').textContent='M'+sales.toFixed(2);$('#profit').textContent='M'+profit.toFixed(2);$('#points').textContent=(sales/50).toFixed(2)}$('#qty').oninput=calc;calc();
-const modal=$('#modal'),mc=$('#modalContent');function openProduct(c){const img=c.querySelector('img'),title=c.dataset.title||c.querySelector('h3')?.textContent||'Product',tag=c.querySelector('.tag')?.textContent||'Life Improvement programme';mc.innerHTML='<span class="eyebrow">'+tag+'</span><h2>'+title+'</h2>'+(img?'<div class="pic"><img src="'+img.src+'" alt=""></div>':'')+'<p class="lead">This product is part of the Life Improvement product-and-reseller programme.</p><a class="btn primary" href="#reseller">Become a Reseller →</a>';modal.classList.add('open')}$$('.product').forEach(c=>{c.onclick=()=>openProduct(c);c.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openProduct(c)}}});$('#close').onclick=()=>modal.classList.remove('open');modal.onclick=e=>{if(e.target===modal)modal.classList.remove('open')};document.onkeydown=e=>{if(e.key==='Escape')modal.classList.remove('open')};
-$('#registrationForm').onsubmit=e=>{e.preventDefault();const data=`Life Improvement Foundation registration/enquiry%0A%0AName: ${encodeURIComponent($('#name').value)}%0AOrganisation: ${encodeURIComponent($('#org').value)}%0APhone: ${encodeURIComponent($('#phone').value)}%0AEmail: ${encodeURIComponent($('#email').value)}%0ALocation: ${encodeURIComponent($('#location').value)}%0AInterest: ${encodeURIComponent($('#interest').value)}%0AMessage: ${encodeURIComponent($('#message').value)}`;$('#status').textContent='Your registration details are ready. WhatsApp will open so the team receives the enquiry immediately. Database/PDF storage will only be used after the secure backend is connected.';$('#status').className='status show';window.open('https://wa.me/26659434159?text='+data,'_blank','noopener');};
-$$('img').forEach(i=>i.onerror=()=>{i.style.opacity='.15'});
+function countdown(){
+  const x=launch-Date.now();
+  if(x<=0){$('#timer').innerHTML='<strong>FOOD SOCK IS LIVE • 5 NOVEMBER 2026</strong>';return}
+  $('#d').textContent=Math.floor(x/86400000);
+  $('#h').textContent=String(Math.floor(x%86400000/3600000)).padStart(2,'0');
+  $('#m').textContent=String(Math.floor(x%3600000/60000)).padStart(2,'0');
+  $('#s').textContent=String(Math.floor(x%60000/1000)).padStart(2,'0');
+}
+countdown();setInterval(countdown,1000);
+
+$$('.filter').forEach(b=>b.addEventListener('click',()=>{
+  $$('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');
+  const f=b.dataset.filter;
+  $$('#productGrid .product').forEach(c=>c.style.display=f==='all'||c.dataset.cat===f?'':'none');
+}));
+
+function calc(){
+  const q=Math.max(0,Number($('#qty').value)||0),sales=q*13.5,profit=q*3.5;
+  $('#sales').textContent='M'+sales.toFixed(2);
+  $('#profit').textContent='M'+profit.toFixed(2);
+  $('#points').textContent=(sales/50).toFixed(2);
+}
+$('#qty').addEventListener('input',calc);calc();
+
+const modal=$('#modal'),mc=$('#modalContent');
+function openProduct(c){
+  const img=c.querySelector('img'),title=c.dataset.title||c.querySelector('h3')?.textContent||'Product',tag=c.querySelector('.tag')?.textContent||'Life Improvement programme';
+  mc.innerHTML='<span class="eyebrow">'+tag+'</span><h2 id="modalTitle">'+title+'</h2>'+(img?'<div class="pic"><img src="'+img.currentSrc+'" alt="'+title+'"></div>':'')+'<p class="lead">This product is part of the Life Improvement product-and-reseller programme.</p><a class="btn primary" href="#reseller">Become a Reseller →</a>';
+  modal.classList.add('open');modal.setAttribute('aria-hidden','false');
+}
+$$('.product').forEach(c=>{
+  c.addEventListener('click',()=>openProduct(c));
+  c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openProduct(c)}});
+});
+$('#close').addEventListener('click',()=>{modal.classList.remove('open');modal.setAttribute('aria-hidden','true')});
+modal.addEventListener('click',e=>{if(e.target===modal){modal.classList.remove('open');modal.setAttribute('aria-hidden','true')}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){modal.classList.remove('open');modal.setAttribute('aria-hidden','true')}});
+
+$('#registrationForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const fields=[
+    ['Name',$('#name').value],['Organisation',$('#org').value],['Phone / WhatsApp',$('#phone').value],
+    ['Email',$('#email').value],['Location',$('#location').value],['Interest',$('#interest').value],['Message',$('#message').value]
+  ];
+  const body='Life Improvement Foundation registration/enquiry\n\n'+fields.map(([k,v])=>k+': '+v).join('\n');
+  $('#status').textContent='WhatsApp is opening with your registration details. Please press Send in WhatsApp to complete the enquiry.';
+  $('#status').className='status show';
+  window.open('https://wa.me/26659434159?text='+encodeURIComponent(body),'_blank','noopener,noreferrer');
+});
+
+$$('img').forEach(i=>i.addEventListener('error',()=>{
+  i.alt=i.alt+' — image unavailable';
+  i.style.opacity='.25';
+}));
 </script>
-</body></html>
+</body>
+</html>
