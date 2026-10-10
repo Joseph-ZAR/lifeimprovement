@@ -184,6 +184,140 @@ footer a:hover {
 .footer-logo {
   background: transparent;
   object-fit: contain;
+}/* READABILITY AND COLOUR-CONTRAST FIX */
+:root {
+  --ink: #18312A;
+  --muted: #46574F;
+  --green-dark: #073B28;
+  --blue-dark: #075985;
+}
+
+/* Keep navigation readable */
+header {
+  background: var(--green-dark);
+  color: #FFFFFF;
+}
+
+.links a {
+  color: #FFFFFF;
+}
+
+.links a:hover {
+  color: #F5D76E;
+}
+
+/* Make text readable on light backgrounds */
+.section-head p,
+.catalogue-intro p,
+.partner-body p,
+.product-body p,
+.copy-panel p,
+.step span,
+.benefit p {
+  color: var(--muted);
+}
+
+/* Section labels on white and pale backgrounds */
+.kicker {
+  color: #A51D25;
+}
+
+/* Section labels and text on dark backgrounds */
+.dark .kicker,
+.factory .kicker,
+.contact-card .kicker {
+  color: #F5D76E;
+}
+
+.dark .section-head p,
+.factory .section-head p,
+.factory p,
+.contact-card p {
+  color: #F1F5F2;
+}
+
+.dark h2,
+.dark h3,
+.factory h2,
+.factory h3,
+.contact-card h3 {
+  color: #FFFFFF;
+}
+
+/* Improve links on pale backgrounds */
+.text-link {
+  color: #075985;
+  font-weight: 900;
+}
+
+.text-link:hover {
+  color: #073B28;
+}
+
+/* Ensure buttons have strong contrast */
+.btn-green {
+  background: #073B28;
+  color: #FFFFFF;
+}
+
+.btn-green:hover {
+  background: #10583D;
+  color: #FFFFFF;
+}
+
+.btn-gold {
+  background: #B91F29;
+  color: #FFFFFF;
+}
+
+.btn-gold:hover {
+  background: #F5D76E;
+  color: #18312A;
+}
+
+/* Readable labels inside the factory feature */
+.factory-list b {
+  color: #F5D76E;
+}
+
+.factory-list span,
+.factory-caption {
+  color: #F1F5F2;
+}
+
+/* Form fields and helper text */
+label {
+  color: #18312A;
+}
+
+input,
+select,
+textarea {
+  color: #18312A;
+  background: #FFFFFF;
+  border-color: #718078;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #075985;
+  outline-offset: 2px;
+}
+
+/* Keep links and text visible on small screens too */
+@media (max-width: 820px) {
+  .links {
+    background: #073B28;
+  }
+
+  .links a {
+    color: #FFFFFF;
+  }
+
+  .links a:hover {
+    color: #F5D76E;
+  }
 }</style>
 </head>
 <body>
