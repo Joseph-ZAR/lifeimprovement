@@ -654,7 +654,80 @@ footer li{
     padding:7px 9px;
   }
 }
-</style>
+/* FIX OVERLAPPING SECTIONS */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  display: block;
+}
+
+body > nav,
+body > header,
+body > section,
+body > footer {
+  position: relative;
+  float: none;
+  clear: both;
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-image,
+.hero-overlay {
+  position: absolute;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.message-layout,
+.industrial-grid,
+.product-grid,
+.journey-grid,
+.footer-grid {
+  position: relative;
+  width: 100%;
+  align-items: start;
+}
+
+.message-copy,
+.message-side,
+.product,
+.journey-card,
+.factory-panel,
+.footer-grid > div {
+  position: relative;
+  min-width: 0;
+}
+
+.message-side {
+  align-self: start;
+}
+
+@media (max-width: 950px) {
+  .message-layout,
+  .industrial-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .product-grid,
+  .journey-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}</style>
 </head>
 
 <body>
