@@ -2,1358 +2,1054 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#073b28">
 
-<title>Kingdom Foods | A New Chapter in Lesotho's Industrial Journey</title>
+<title>Kingdom Foods | Life Improvement Foundation</title>
+
+<meta name="description" content="Discover the Kingdom Foods and Life Improvement Foundation partnership, product opportunities and our vision for future manufacturing and job creation in Lesotho.">
 
 <style>
-:root{
-  --green:#073b28;
-  --green2:#145c40;
-  --gold:#d9ad2b;
-  --cream:#f6f1e5;
-  --dark:#101510;
-  --white:#fff;
-  --muted:#667168;
+:root {
+  --green: #073b28;
+  --green-light: #145c40;
+  --gold: #d9ad2b;
+  --cream: #f6f1e5;
+  --white: #ffffff;
+  --ink: #17231b;
+  --muted: #59675e;
+  --max-width: 1160px;
 }
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+* {
+  box-sizing: border-box;
 }
 
-html{
-  scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--cream);
-  color:var(--dark);
-  line-height:1.7;
+body {
+  margin: 0;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.7;
+  overflow-wrap: break-word;
 }
 
-img{
-  max-width:100%;
-  display:block;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-/* NAVIGATION */
-
-.nav{
-  position:relative;
-  top:auto;
-  z-index:2;
-  background:rgba(8,17,12,.97);
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
-  padding:12px 5%;
-  box-shadow:0 5px 25px rgba(0,0,0,.2);
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.nav-logo{
-  width:125px;
-  height:55px;
-  object-fit:contain;
-  background:#fff;
-  border-radius:8px;
-  padding:5px;
+h1, h2, h3, p {
+  margin-top: 0;
 }
 
-.nav-links{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:7px;
+h1, h2, h3 {
+  line-height: 1.15;
 }
 
-.nav-links a{
-  color:#fff;
-  font-size:.88rem;
-  font-weight:800;
-  padding:9px 13px;
-  border-radius:25px;
-  transition:.25s;
+p:last-child {
+  margin-bottom: 0;
 }
 
-.nav-links a:hover{
-  background:var(--gold);
-  color:#111;
+.container {
+  width: calc(100% - 40px);
+  max-width: var(--max-width);
+  margin-right: auto;
+  margin-left: auto;
 }
 
-/* HERO */
-
-.hero{
-  position:relative;
-  min-height:85vh;
-  display:flex;
-  align-items:flex-end;
-  overflow:hidden;
-  background:#10271b;
+.section {
+  padding: 76px 0;
 }
 
-.hero-image{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
+.eyebrow {
+  margin-bottom: 12px;
+  color: var(--green-light);
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(3,22,14,.78) 0%,
-      rgba(3,22,14,.35) 48%,
-      rgba(3,22,14,.08) 100%
-    );
+.section-title {
+  max-width: 820px;
+  margin: 0 auto 18px;
+  font-size: clamp(2rem, 4vw, 3.3rem);
 }
 
-.hero-content{
-  position:relative;
-  z-index:2;
-  width:min(1180px,90%);
-  margin:auto;
-  padding:100px 0 70px;
-  color:#fff;
+.section-intro {
+  max-width: 760px;
+  margin: 0 auto 38px;
+  color: var(--muted);
 }
 
-.hero-tag{
-  display:inline-block;
-  background:var(--gold);
-  color:#111;
-  font-weight:900;
-  padding:9px 18px;
-  border-radius:30px;
-  text-transform:uppercase;
-  letter-spacing:1.5px;
-  margin-bottom:20px;
+.center {
+  text-align: center;
 }
 
-.hero h1{
-  max-width:900px;
-  font-size:clamp(2.6rem,6vw,5.5rem);
-  line-height:1;
-  margin-bottom:25px;
-}
+/* NAVIGATION: stays in normal document flow */
 
-.hero h1 span{
-  color:#f0c84d;
+.site-nav {
+  position: relative;
+  width: 100%;
+  background: #081b12;
+  color: var(--white);
 }
 
-.hero-intro{
-  max-width:780px;
-  font-size:1.18rem;
-  color:#f2f5f3;
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
-.hero-buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:14px;
-  margin-top:30px;
+.logo-link {
+  flex: 0 0 auto;
 }
 
-.btn{
-  display:inline-block;
-  padding:14px 23px;
-  border-radius:35px;
-  font-weight:900;
-  transition:.25s;
+.nav-logo {
+  width: 115px;
+  height: 60px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+  padding: 5px;
 }
 
-.btn-gold{
-  background:var(--gold);
-  color:#111;
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
 }
 
-.btn-white{
-  border:2px solid #fff;
-  color:#fff;
+.nav-links a {
+  display: inline-block;
+  padding: 9px 12px;
+  border-radius: 24px;
+  font-size: .88rem;
+  font-weight: 700;
 }
 
-.btn:hover{
-  transform:translateY(-3px);
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: #111;
+  background: var(--gold);
 }
 
-/* GENERAL SECTIONS */
+/* HERO: image and text occupy separate blocks */
 
-.section{
-  padding:90px 5%;
+.hero {
+  background: var(--green);
+  color: var(--white);
 }
 
-.container{
-  width:min(1180px,100%);
-  margin:auto;
+.hero-photo {
+  width: 100%;
+  max-height: 530px;
+  object-fit: cover;
+  object-position: center;
 }
 
-.eyebrow{
-  color:var(--green2);
-  font-size:.85rem;
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:2px;
-  margin-bottom:10px;
+.hero-copy {
+  padding: 58px 0 66px;
 }
 
-.section-heading{
-  max-width:900px;
-  margin:0 auto 55px;
-  text-align:center;
+.hero-tag {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 8px 15px;
+  border-radius: 30px;
+  background: var(--gold);
+  color: #171717;
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .7px;
 }
 
-.section-heading h2{
-  font-size:clamp(2.1rem,4vw,4rem);
-  line-height:1.08;
-  margin-bottom:18px;
+.hero h1 {
+  max-width: 900px;
+  margin-bottom: 20px;
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
 }
 
-.section-heading p{
-  color:var(--muted);
+.hero h1 span {
+  color: #f1ce62;
 }
 
-/* MAIN KINGDOM FOODS MESSAGE */
-
-.message{
-  background:#fff;
+.hero-copy p {
+  max-width: 760px;
+  color: #e3ebe5;
+  font-size: 1.1rem;
 }
 
-.message-layout{
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:55px;
-  align-items:start;
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
 }
 
-.message-copy h2{
-  font-size:clamp(2.2rem,4vw,4rem);
-  line-height:1.05;
-  color:var(--green);
-  margin-bottom:30px;
+.button {
+  display: inline-block;
+  padding: 13px 21px;
+  border: 2px solid var(--gold);
+  border-radius: 30px;
+  background: var(--gold);
+  color: #171717;
+  font-weight: 800;
 }
 
-.message-copy p{
-  margin-bottom:23px;
-  color:#39433d;
-  font-size:1.05rem;
+.button-outline {
+  border-color: #fff;
+  background: transparent;
+  color: #fff;
 }
 
-.message-copy p:first-of-type{
-  font-size:1.16rem;
-  color:#202a24;
+.button:hover,
+.button:focus-visible {
+  filter: brightness(1.08);
 }
+
+/* PARTNERSHIP STORY */
 
-.message-highlight{
-  margin:35px 0;
-  padding:30px;
-  border-left:6px solid var(--gold);
-  background:#f7f2e4;
-  border-radius:0 18px 18px 0;
-  font-size:1.25rem;
-  font-weight:800;
-  color:var(--green);
+.story {
+  background: #fff;
 }
 
-.message-side{
-  position:static;
-  top:auto;
+.story-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, .8fr);
+  gap: 40px;
+  align-items: start;
 }
 
-.side-card{
-  background:var(--green);
-  color:white;
-  border-radius:25px;
-  padding:35px;
-  box-shadow:0 20px 50px rgba(0,0,0,.14);
+.story-copy,
+.story-aside {
+  min-width: 0;
 }
 
-.side-card h3{
-  font-size:1.7rem;
-  margin-bottom:20px;
-  color:var(--gold);
+.story-copy h2 {
+  color: var(--green);
+  font-size: clamp(2rem, 4vw, 3.2rem);
 }
 
-.side-card p{
-  color:#dce7df;
-  margin-bottom:20px;
+.story-copy p {
+  margin-bottom: 20px;
+  color: #35443a;
 }
 
-.side-point{
-  border-top:1px solid rgba(255,255,255,.16);
-  padding:17px 0;
+.highlight {
+  margin: 28px 0;
+  padding: 24px;
+  border-left: 5px solid var(--gold);
+  background: var(--cream);
+  color: var(--green);
+  font-size: 1.2rem;
+  font-weight: 800;
 }
 
-.side-point strong{
-  display:block;
-  color:white;
-  margin-bottom:4px;
+.vision-card {
+  padding: 28px;
+  border-radius: 18px;
+  background: var(--green);
+  color: #fff;
 }
 
-/* PARTNERSHIP IMAGE */
+.vision-card h3 {
+  color: #f1ce62;
+  font-size: 1.65rem;
+}
 
-.partnership-visual{
-  background:#101a14;
-  padding:80px 5%;
+.vision-item {
+  padding: 16px 0;
+  border-top: 1px solid rgba(255,255,255,.2);
 }
 
-.visual-heading{
-  color:#fff;
-  text-align:center;
-  max-width:850px;
-  margin:0 auto 35px;
+.vision-item strong {
+  display: block;
+  color: #f1ce62;
+  margin-bottom: 4px;
 }
 
-.visual-heading .eyebrow{
-  color:var(--gold);
+.vision-item p {
+  margin: 0;
+  color: #e0e9e2;
 }
+
+/* PARTNERSHIP VISUAL */
 
-.visual-heading h2{
-  font-size:clamp(2.1rem,4vw,4rem);
-  line-height:1.08;
-  margin-bottom:15px;
+.visual-section {
+  background: #101a14;
+  color: #fff;
 }
 
-.visual-heading p{
-  color:#cbd5ce;
+.visual-section .eyebrow {
+  color: var(--gold);
 }
 
-.visual-frame{
-  width:min(1250px,100%);
-  margin:auto;
-  border-radius:28px;
-  overflow:hidden;
-  border:1px solid rgba(215,169,40,.45);
-  box-shadow:0 25px 70px rgba(0,0,0,.45);
-  background:#07130d;
+.visual-section .section-intro {
+  color: #dce5de;
 }
 
-.visual-frame img{
-  width:100%;
-  height:auto;
+.visual-frame {
+  overflow: hidden;
+  border: 1px solid rgba(217,173,43,.55);
+  border-radius: 18px;
+  background: #081b12;
 }
 
-.visual-caption{
-  background:#07130d;
-  color:#c9d3cc;
-  text-align:center;
-  padding:18px 25px;
-  font-size:.9rem;
+.visual-frame img {
+  width: 100%;
+  height: auto;
 }
 
-.visual-caption strong{
-  color:var(--gold);
+.visual-caption {
+  padding: 18px 22px;
+  color: #dce5de;
+  text-align: center;
+  font-size: .9rem;
 }
 
-/* PRODUCTS */
+/* PRODUCT CATALOGUE */
 
-.products{
-  background:#f0eadb;
+.products {
+  background: #f0eadb;
 }
 
-.product-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:28px;
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
 }
 
-.product{
-  background:#fff;
-  border-radius:22px;
-  overflow:hidden;
-  box-shadow:0 12px 35px rgba(0,0,0,.09);
-  transition:.3s;
+.product-card {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 26px rgba(0,0,0,.08);
 }
 
-.product:hover{
-  transform:translateY(-8px);
-  box-shadow:0 20px 45px rgba(0,0,0,.15);
+.product-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  padding: 22px;
+  background: #fff;
 }
 
-.product-image{
-  height:350px;
-  padding:25px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#fff;
+.product-photo img {
+  width: 100%;
+  max-height: 310px;
+  object-fit: contain;
 }
 
-.product-image img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
+.product-copy {
+  padding: 24px;
 }
 
-.product-body{
-  padding:25px;
+.product-copy h3 {
+  margin-bottom: 10px;
+  color: var(--green);
+  font-size: 1.45rem;
 }
 
-.product-body h3{
-  color:var(--green);
-  font-size:1.55rem;
-  margin-bottom:10px;
+.product-copy p {
+  color: var(--muted);
 }
 
-.product-body p{
-  color:var(--muted);
+.product-note {
+  margin-top: 26px;
+  color: var(--muted);
+  text-align: center;
+  font-size: .9rem;
 }
 
-/* INDUSTRIAL VISION */
+/* FUTURE MANUFACTURING */
+
+.factory-section {
+  background: var(--green);
+  color: #fff;
+}
 
-.industrial{
-  background:var(--green);
-  color:white;
+.factory-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 38px;
+  align-items: center;
 }
 
-.industrial-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center;
+.factory-copy,
+.factory-visual {
+  min-width: 0;
 }
 
-.industrial h2{
-  font-size:clamp(2.3rem,4vw,4.2rem);
-  line-height:1.05;
-  margin-bottom:22px;
+.factory-copy h2 {
+  font-size: clamp(2.1rem, 4vw, 3.5rem);
 }
 
-.industrial p{
-  color:#dce6df;
-  margin-bottom:20px;
+.factory-copy p {
+  color: #e0e9e2;
 }
 
-.industrial-list{
-  margin-top:25px;
+.factory-list {
+  padding: 0;
+  list-style: none;
 }
 
-.industrial-list div{
-  padding:15px 0;
-  border-bottom:1px solid rgba(255,255,255,.14);
+.factory-list li {
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(255,255,255,.2);
 }
 
-.industrial-list strong{
-  color:var(--gold);
+.factory-list strong {
+  color: #f1ce62;
 }
 
-.factory-panel{
-  border-radius:25px;
-  overflow:hidden;
-  background:#0b2015;
-  border:1px solid rgba(215,169,40,.4);
+.factory-visual {
+  overflow: hidden;
+  border: 1px solid rgba(217,173,43,.5);
+  border-radius: 18px;
+  background: #10281b;
 }
 
-.factory-panel img{
-  width:100%;
-  height:430px;
-  object-fit:cover;
+.factory-visual img {
+  width: 100%;
+  height: auto;
 }
 
-.factory-panel div{
-  padding:22px;
+.concept-note {
+  padding: 18px;
+  color: #e0e9e2;
+  font-size: .88rem;
 }
 
-.factory-panel strong{
-  color:var(--gold);
+.concept-note strong {
+  color: #f1ce62;
 }
 
 /* JOURNEY */
 
-.journey{
-  background:#fff;
+.journey {
+  background: #fff;
 }
 
-.journey-grid{
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:18px;
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
 }
 
-.journey-card{
-  background:#f7f7f2;
-  border-radius:20px;
-  padding:25px;
-  border-top:5px solid var(--gold);
+.journey-card {
+  min-width: 0;
+  padding: 24px;
+  border-top: 5px solid var(--gold);
+  border-radius: 12px;
+  background: #f7f5ee;
 }
 
-.journey-number{
-  font-size:2rem;
-  font-weight:900;
-  color:var(--green);
+.journey-number {
+  margin-bottom: 8px;
+  color: var(--green-light);
+  font-size: 1.8rem;
+  font-weight: 900;
 }
 
-.journey-card h3{
-  margin:8px 0;
-  color:var(--green);
+.journey-card h3 {
+  color: var(--green);
+  font-size: 1.2rem;
 }
 
-.journey-card p{
-  color:var(--muted);
-  font-size:.94rem;
+.journey-card p {
+  color: var(--muted);
 }
 
-/* CTA */
+/* CALL TO ACTION */
 
-.cta{
-  background:
-    linear-gradient(
-      135deg,
-      #092f21,
-      #145b3f
-    );
-  color:white;
-  text-align:center;
+.cta {
+  background: #e8dfc8;
+  text-align: center;
 }
 
-.cta-inner{
-  max-width:900px;
-  margin:auto;
+.cta-inner {
+  max-width: 820px;
+  margin: 0 auto;
 }
 
-.cta h2{
-  font-size:clamp(2.4rem,5vw,4.6rem);
-  line-height:1.03;
-  margin-bottom:22px;
+.cta h2 {
+  color: var(--green);
+  font-size: clamp(2.1rem, 4vw, 3.5rem);
 }
 
-.cta p{
-  color:#dce7df;
-  font-size:1.1rem;
-  margin-bottom:30px;
+.cta p {
+  color: #39473d;
+}
+
+.cta .button {
+  margin: 5px;
+}
+
+.cta .button-outline {
+  border-color: var(--green);
+  color: var(--green);
 }
 
 /* FOOTER */
 
-footer{
-  background:#080c09;
-  color:white;
-  padding:50px 5%;
+.site-footer {
+  padding: 44px 0 22px;
+  background: #08100b;
+  color: #fff;
 }
 
-.footer-grid{
-  width:min(1180px,100%);
-  margin:auto;
-  display:grid;
-  grid-template-columns:1.2fr 1fr 1fr;
-  gap:40px;
-}
-
-.footer-logo{
-  width:135px;
-  height:65px;
-  object-fit:contain;
-  background:#fff;
-  border-radius:8px;
-  padding:5px;
-  margin-bottom:15px;
-}
-
-footer h3{
-  color:var(--gold);
-  margin-bottom:12px;
-}
-
-footer p,
-footer li{
-  color:#b9c4bc;
-}
-
-footer ul{
-  list-style:none;
-}
-
-footer li{
-  margin-bottom:8px;
-}
-
-.copyright{
-  width:min(1180px,100%);
-  margin:35px auto 0;
-  padding-top:25px;
-  border-top:1px solid rgba(255,255,255,.1);
-  color:#89938c;
-  text-align:center;
-  font-size:.82rem;
-}
-
-/* MOBILE */
-
-@media(max-width:950px){
-
-  .nav{
-    flex-direction:column;
-  }
-
-  .message-layout,
-  .industrial-grid{
-    grid-template-columns:1fr;
-  }
-
-  .message-side{
-    position:static;
-  }
-
-  .product-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .journey-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
-}
-
-@media(max-width:600px){
-
-  .section{
-    padding:60px 5%;
-  }
-
-  .hero{
-    min-height:78vh;
-  }
-
-  .hero-content{
-    padding:80px 0 55px;
-  }
-
-  .hero h1{
-    font-size:2.9rem;
-  }
-
-  .product-grid,
-  .journey-grid{
-    grid-template-columns:1fr;
-  }
-
-  .product-image{
-    height:320px;
-  }
-
-  .factory-panel img{
-    height:300px;
-  }
-
-  .nav-links a{
-    font-size:.78rem;
-    padding:7px 9px;
-  }
-}
-/* FIX OVERLAPPING SECTIONS */
-html,
-body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  display: block;
-}
-
-body > nav,
-body > header,
-body > section,
-body > footer {
-  position: relative;
-  float: none;
-  clear: both;
-  width: 100%;
-}
-
-.hero {
-  position: relative;
-  isolation: isolate;
-}
-
-.hero-image,
-.hero-overlay {
-  position: absolute;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.message-layout,
-.industrial-grid,
-.product-grid,
-.journey-grid,
 .footer-grid {
-  position: relative;
-  width: 100%;
-  align-items: start;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 30px;
 }
 
-.message-copy,
-.message-side,
-.product,
-.journey-card,
-.factory-panel,
 .footer-grid > div {
-  position: relative;
   min-width: 0;
 }
 
-.message-side {
-  align-self: start;
+.footer-logo {
+  width: 120px;
+  height: 65px;
+  margin-bottom: 15px;
+  padding: 5px;
+  border-radius: 8px;
+  background: #fff;
+  object-fit: contain;
 }
 
-@media (max-width: 950px) {
-  .message-layout,
-  .industrial-grid {
+.site-footer h3 {
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+
+.site-footer p {
+  color: #d0d9d2;
+}
+
+.site-footer a {
+  color: #f1ce62;
+  overflow-wrap: anywhere;
+}
+
+.copyright {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,.15);
+  color: #aeb9b0;
+  text-align: center;
+  font-size: .82rem;
+}
+
+/* RESPONSIVE LAYOUT */
+
+@media (max-width: 850px) {
+  .nav-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .story-grid,
+  .factory-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 560px) {
+  .container {
+    width: calc(100% - 30px);
+  }
+
+  .section {
+    padding: 52px 0;
+  }
+
+  .nav-links {
+    width: 100%;
+    gap: 4px;
+  }
+
+  .nav-links a {
+    padding: 8px 10px;
+    font-size: .82rem;
+  }
+
+  .hero-photo {
+    max-height: 330px;
+  }
+
+  .hero-copy {
+    padding: 38px 0 45px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-copy p {
+    font-size: 1rem;
+  }
+
   .product-grid,
-  .journey-grid {
+  .journey-grid,
+  .footer-grid {
     grid-template-columns: minmax(0, 1fr);
   }
-}</style>
+
+  .product-photo {
+    min-height: 240px;
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button-row .button {
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a class="logo-link" href="index.html" aria-label="Life Improvement Foundation home">
+      <img class="nav-logo"
+           src="assets/lif/life-logo-transparent.png"
+           alt="Life Improvement Foundation logo">
+    </a>
 
-<nav class="nav">
-
-  <a href="index.html">
-    <img
-      class="nav-logo"
-      src="assets/lif/life-logo-transparent.png"
-      alt="Life Improvement Foundation">
-  </a>
-
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="partnership.html">Partnership</a>
-    <a href="#message">Kingdom Foods</a>
-    <a href="#products">Products</a>
-    <a href="#manufacturing">Manufacturing</a>
-    <a href="index.html#reseller">Reseller Opportunity</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="partnership.html">Partnership</a>
+      <a href="#story">Kingdom Foods</a>
+      <a href="#products">Products</a>
+      <a href="#manufacturing">Manufacturing</a>
+      <a href="index.html#reseller">Become a Reseller</a>
+    </div>
   </div>
-
 </nav>
 
-
-<!-- HERO -->
-
 <header class="hero">
+  <img class="hero-photo"
+       src="assets/kingdom/kingdom-foods-partnership.jpg"
+       alt="Kingdom Foods and Life Improvement Foundation partnership vision">
 
-  <img
-    class="hero-image"
-    src="assets/kingdom/kingdom-foods-partnership.jpg"
-    alt="Life Improvement Foundation and Kingdom Foods partnership vision in Lesotho">
+  <div class="container hero-copy">
+    <span class="hero-tag">Kingdom Foods × Life Improvement Foundation</span>
 
-  <div class="hero-overlay"></div>
+    <h1>A New Chapter in <span>Lesotho’s Industrial Journey</span></h1>
 
-  <div class="hero-content">
-
-    <span class="hero-tag">
-      Kingdom Foods × Life Improvement Foundation
-    </span>
-
-    <h1>
-      A New Chapter in
-      <span>Lesotho’s Industrial Journey</span>
-    </h1>
-
-    <p class="hero-intro">
-      Kingdom Foods is joining the Life Improvement Foundation family
-      as part of a wider vision for entrepreneurship, local value
-      creation and future manufacturing in Lesotho.
+    <p>
+      A partnership that looks beyond distribution: connecting products,
+      local entrepreneurs, job creation and a future manufacturing
+      opportunity for Lesotho.
     </p>
 
-    <div class="hero-buttons">
-
-      <a href="#message" class="btn btn-gold">
-        Read The Full Story
-      </a>
-
-      <a href="#products" class="btn btn-white">
-        Explore Products
-      </a>
-
+    <div class="button-row">
+      <a class="button" href="#story">Discover Our Partnership</a>
+      <a class="button button-outline" href="#products">Explore Products</a>
     </div>
-
   </div>
-
 </header>
 
+<main>
 
-<!-- FULL KINGDOM FOODS MESSAGE -->
+<section class="section story" id="story">
+  <div class="container story-grid">
 
-<section class="section message" id="message">
+    <article class="story-copy">
+      <div class="eyebrow">Kingdom Foods × LIF</div>
 
-  <div class="container message-layout">
+      <h2>Kingdom Foods: A New Chapter in Lesotho’s Industrial Journey</h2>
 
-    <article class="message-copy">
+      <p>
+        Kingdom Foods is now part of the Life Improvement Foundation
+        (LIF) family. Under this partnership, Kingdom Foods products
+        will be resold in Lesotho, connecting local consumers and
+        entrepreneurs with the brand.
+      </p>
 
-      <div class="eyebrow">
-        Kingdom Foods × LIF
+      <p>
+        But the ambition is bigger than distribution. Kingdom Foods,
+        Food Sock and LIF share a vision of increasing local sourcing,
+        creating opportunities for Basotho businesses and building
+        economic value in Lesotho.
+      </p>
+
+      <div class="highlight">
+        Our ambition is not just to sell products. It is to help build
+        opportunities, skills and industry at home.
       </div>
 
-      <h2>
-        Kingdom Foods: A New Chapter in Lesotho’s Industrial Journey
-      </h2>
-
       <p>
-        Kingdom Foods is proud to announce that it is now part of the Life Improvement Foundation (LIF) family. This marks a significant milestone in our commitment to Lesotho’s socio-economic development. Under this partnership, Kingdom Foods products will be resold in Lesotho, creating a direct link between local consumers and a brand that is deeply invested in the nation’s future.
+        The partnership includes a commitment to establish a
+        manufacturing plant within one year of the launch of Phase One
+        of the reseller programme, subject to the applicable
+        implementation requirements. The planned facility is intended
+        to create jobs, transfer skills and help keep more value within
+        Lesotho.
       </p>
 
       <p>
-        But this is more than a distribution agreement. It is a shared pledge. All parties—Kingdom Foods, Food Sock, and LIF—are committed to ensuring that most resources for our products are sourced in Lesotho, packed in Lesotho, and that our operations impact Lesotho first, then the world. This is not a slogan. It is a binding commitment to shift from being a mere distribution point for global products to becoming a nation that manufactures, adds value, and exports.
-      </p>
-
-      <div class="message-highlight">
-        We believe that true partnership means building industry at home.
-      </div>
-
-      <p>
-        We believe that true partnership means building industry at home. That is why, as part of this agreement, we have committed to establishing a manufacturing plant within one year of launching Phase One of the reseller program. This plant will create jobs, transfer skills, and keep value within Lesotho’s borders. It will turn raw materials sourced from Basotho farmers, suppliers, and entrepreneurs into finished goods packed right here in Lesotho.
+        Local farmers, suppliers, entrepreneurs and resellers can all
+        play a role in the journey. By building participation today,
+        we aim to help create the foundations for a stronger productive
+        economy tomorrow.
       </p>
 
       <p>
-        The reseller program will empower local entrepreneurs to sell Kingdom Foods products across the country. But the real victory will be the factory floor—where Basotho men and women will build careers, support families, and contribute to a diversified economy.
+        Our guiding ambition is simple: products by Basotho, for
+        Basotho and the world, with local impact at the heart of
+        the journey.
       </p>
-
-      <p>
-        We thank Life Improvement Foundation for presenting a brave and necessary case: that Lesotho does not want to be a dumping ground. We thank Food Sock for embracing this vision alongside us. And we thank the Basotho people for their trust.
-      </p>
-
-      <p>
-        Kingdom Foods is no longer just a brand sold in Lesotho. It is a brand built in Lesotho, for Lesotho, and eventually, for the world. Together, we are writing a new story—one of industry, dignity, and shared prosperity.
-      </p>
-
     </article>
 
+    <aside class="story-aside">
+      <div class="vision-card">
+        <h3>The Partnership Vision</h3>
 
-    <aside class="message-side">
-
-      <div class="side-card">
-
-        <h3>
-          The Partnership Vision
-        </h3>
-
-        <p>
-          This partnership is designed to move beyond simply distributing
-          finished products. The wider vision connects entrepreneurship,
-          local sourcing, manufacturing and economic participation.
-        </p>
-
-        <div class="side-point">
-          <strong>LOCAL ENTREPRENEURS</strong>
-          Reseller opportunities for Basotho.
+        <div class="vision-item">
+          <strong>JOBS FOR BASOTHO</strong>
+          <p>Build opportunities for people to earn, develop skills and support families.</p>
         </div>
 
-        <div class="side-point">
-          <strong>LOCAL SOURCING</strong>
-          Creating opportunities for Basotho farmers and suppliers.
+        <div class="vision-item">
+          <strong>LOCAL OPPORTUNITY</strong>
+          <p>Connect farmers, suppliers, resellers and entrepreneurs to new possibilities.</p>
         </div>
 
-        <div class="side-point">
-          <strong>LOCAL MANUFACTURING</strong>
-          A future production facility in Lesotho.
+        <div class="vision-item">
+          <strong>FUTURE MANUFACTURING</strong>
+          <p>Work towards a production facility that adds value in Lesotho.</p>
         </div>
 
-        <div class="side-point">
-          <strong>GLOBAL AMBITION</strong>
-          Building products in Lesotho with wider market potential.
+        <div class="vision-item">
+          <strong>LONG-TERM IMPACT</strong>
+          <p>Help build a more productive and economically resilient country.</p>
         </div>
-
       </div>
-
     </aside>
 
   </div>
-
 </section>
 
-
-<!-- PARTNERSHIP IMPACT -->
-
-<section class="section" style="background:#101a14;color:#fff;">
+<section class="section visual-section">
   <div class="container">
-    <div class="section-heading">
-      <div class="eyebrow" style="color:#d9ad2b;">
-        More Than Distribution
-      </div>
-
-      <h2 style="color:#fff;">
-        A Partnership That Builds Industry, Not Just Distribution
-      </h2>
-
-      <p style="color:#d5ded7;">
-        The ambition is to connect products today with jobs, skills,
-        local suppliers and manufacturing opportunities for tomorrow.
+    <div class="center">
+      <div class="eyebrow">More Than Distribution</div>
+      <h2 class="section-title">A Partnership That Builds Industry</h2>
+      <p class="section-intro">
+        Our shared direction connects products available today with
+        future opportunities for employment, local supply chains and
+        manufacturing in Lesotho.
       </p>
     </div>
 
-    <div class="product-grid">
-      <article class="product" style="background:#183626;color:#fff;">
-        <div class="product-body">
-          <h3 style="color:#d9ad2b;">Jobs for Basotho</h3>
-          <p style="color:#e1e9e3;">
-            Build opportunities for people to earn livelihoods,
-            support families and contribute to their communities.
-          </p>
-        </div>
-      </article>
-
-      <article class="product" style="background:#183626;color:#fff;">
-        <div class="product-body">
-          <h3 style="color:#d9ad2b;">Local Value</h3>
-          <p style="color:#e1e9e3;">
-            Grow opportunities for Basotho farmers, suppliers,
-            entrepreneurs and local businesses.
-          </p>
-        </div>
-      </article>
-
-      <article class="product" style="background:#183626;color:#fff;">
-        <div class="product-body">
-          <h3 style="color:#d9ad2b;">Future Manufacturing</h3>
-          <p style="color:#e1e9e3;">
-            Work toward a manufacturing facility in Lesotho,
-            subject to planning, approvals and implementation.
-          </p>
-        </div>
-      </article>
+    <div class="visual-frame">
+      <img src="assets/kingdom/kingdom-foods-partnership.jpg"
+           alt="Illustration of the Kingdom Foods and LIF partnership vision"
+           loading="lazy">
+      <div class="visual-caption">
+        Partnership and future manufacturing vision. Any facility shown
+        in concept imagery is illustrative, not a claim that a factory
+        is already operational.
+      </div>
     </div>
   </div>
 </section>
-
-<!-- PRODUCTS -->
 
 <section class="section products" id="products">
-
   <div class="container">
-
-    <div class="section-heading">
-
-      <div class="eyebrow">
-        Kingdom Foods Products
-      </div>
-
-      <h2>
-        Products At The Centre Of The Journey
-      </h2>
-
-      <p>
-        Explore the Kingdom Foods products forming part of the
-        reseller opportunity in Lesotho.
+    <div class="center">
+      <div class="eyebrow">Explore the Brand</div>
+      <h2 class="section-title">Kingdom Foods Products</h2>
+      <p class="section-intro">
+        Discover selected products from the Kingdom Foods range.
+        Product availability and the catalogue may be updated as the
+        Lesotho reseller programme develops.
       </p>
-
     </div>
-
 
     <div class="product-grid">
 
-      <!-- VITAKIDZ -->
-
-      <article class="product">
-
-        <div class="product-image">
-
+      <article class="product-card">
+        <div class="product-photo">
           <img
             src="https://kingdomfoods.co.za/wp-content/uploads/2025/06/KINGDOM-WEBSITE-06.png"
-            alt="Kingdom Foods VitaKidz">
-
+            alt="Kingdom Foods VitaKidz product"
+            loading="lazy">
         </div>
-
-        <div class="product-body">
-
+        <div class="product-copy">
           <h3>VitaKidz</h3>
-
           <p>
-            Consume as a meal or shake by adding water or milk.
-            According to Kingdom Foods product information, one serving
-            may contain up to 85% of a young child’s daily nutritional
-            requirements.
+            Explore the VitaKidz product from the Kingdom Foods range.
+            Please refer to the original product packaging for details.
           </p>
-
         </div>
-
       </article>
 
-
-      <!-- MAXI BLEND -->
-
-      <article class="product">
-
-        <div class="product-image">
-
+      <article class="product-card">
+        <div class="product-photo">
           <img
             src="https://kingdomfoods.co.za/wp-content/uploads/2025/06/KINGDOM-WEBSITE-07.png"
-            alt="Kingdom Foods Maxi Blend">
-
+            alt="Kingdom Foods Maxi Blend product"
+            loading="lazy">
         </div>
-
-        <div class="product-body">
-
+        <div class="product-copy">
           <h3>Maxi Blend</h3>
-
           <p>
-            Consume as a meal by adding boiling water and cooking
-            for approximately 30–40 minutes.
+            Discover Maxi Blend from Kingdom Foods. Product information
+            should be checked against the original packaging.
           </p>
-
         </div>
-
       </article>
 
-
-      <!-- JOY BUCKET -->
-
-      <article class="product">
-
-        <div class="product-image">
-
+      <article class="product-card">
+        <div class="product-photo">
           <img
             src="https://kingdomfoods.co.za/wp-content/uploads/2025/06/KINGDOM-WEBSITE-08.png"
-            alt="Kingdom Foods JOY Bucket">
-
+            alt="Kingdom Foods JOY Bucket product"
+            loading="lazy">
         </div>
-
-        <div class="product-body">
-
+        <div class="product-copy">
           <h3>JOY Bucket</h3>
-
           <p>
-            An emergency relief package for families experiencing
-            food and other crises.
+            Explore the JOY Bucket product from the Kingdom Foods
+            range. Please check the original packaging for details.
           </p>
-
         </div>
-
       </article>
 
     </div>
 
+    <p class="product-note">
+      Product images are intended to display original brand packaging.
+      No product prices are displayed on this page.
+    </p>
   </div>
-
 </section>
 
+<section class="section factory-section" id="manufacturing">
+  <div class="container factory-grid">
 
-<!-- MANUFACTURING VISION -->
+    <div class="factory-copy">
+      <div class="eyebrow" style="color:#f1ce62;">The Future We Are Working Towards</div>
 
-<section class="section industrial" id="manufacturing">
-
-  <div class="container industrial-grid">
-
-    <div>
-
-      <div class="eyebrow" style="color:#d9ad2b;">
-        The Long-Term Vision
-      </div>
-
-      <h2>
-        The real victory will be the factory floor.
-      </h2>
+      <h2>A Manufacturing Future Built in Lesotho</h2>
 
       <p>
-        As part of the partnership, we have committed to establishing
-        a manufacturing plant within one year of launching Phase One
-        of the reseller program.
+        LIF made the case for a partnership that can go beyond
+        distribution and help establish industry in Lesotho.
+        The planned manufacturing facility represents a future
+        ambition for local value creation.
       </p>
+
+      <ul class="factory-list">
+        <li><strong>Jobs:</strong> create employment opportunities for Basotho.</li>
+        <li><strong>Skills:</strong> develop practical production and operational experience.</li>
+        <li><strong>Local value:</strong> build stronger links with local farmers and suppliers where feasible.</li>
+        <li><strong>Opportunity:</strong> connect resellers and entrepreneurs to the wider journey.</li>
+      </ul>
 
       <p>
-        This plant will create jobs, transfer skills and keep more
-        value within Lesotho's borders.
+        The manufacturing plant is a future commitment, not an
+        existing operational factory. Timing and delivery remain
+        subject to implementation and applicable requirements.
       </p>
-
-      <p>
-        It will connect raw materials sourced from Basotho farmers,
-        suppliers and entrepreneurs with local processing, packaging,
-        employment and distribution.
-      </p>
-
-      <div class="industrial-list">
-
-        <div>
-          <strong>JOBS</strong><br>
-          Creating employment opportunities for Basotho men and women.
-        </div>
-
-        <div>
-          <strong>SKILLS</strong><br>
-          Developing manufacturing, logistics, quality and commercial skills.
-        </div>
-
-        <div>
-          <strong>LOCAL SUPPLIERS</strong><br>
-          Creating opportunities for farmers, suppliers and entrepreneurs.
-        </div>
-
-        <div>
-          <strong>VALUE CREATION</strong><br>
-          Keeping more economic value within Lesotho.
-        </div>
-
-      </div>
-
     </div>
 
-
-    <div class="factory-panel">
-
+    <div class="factory-visual">
       <img
         src="assets/manufacturing/lif-future-manufacturing-vision.png"
-        alt="Conceptual future manufacturing vision">
+        alt="Concept image illustrating a possible future LIF manufacturing facility in Lesotho"
+        loading="lazy">
 
-      <div>
-
-        <strong>
-          CONCEPTUAL FUTURE MANUFACTURING FACILITY
-        </strong>
-
-        <p>
-          This is a conceptual representation of the future
-          manufacturing vision. It must not be interpreted as
-          an existing completed factory.
-        </p>
-
+      <div class="concept-note">
+        <strong>CONCEPT IMAGE — FUTURE VISION</strong><br>
+        This image illustrates what a future manufacturing facility
+        could look like. It does not represent a completed or
+        operational plant.
       </div>
-
     </div>
 
   </div>
-
 </section>
 
-
-<!-- ECONOMIC JOURNEY -->
-
 <section class="section journey">
-
   <div class="container">
-
-    <div class="section-heading">
-
-      <div class="eyebrow">
-        The Bigger Picture
-      </div>
-
-      <h2>
-        From Products To Industry
-      </h2>
-
-      <p>
-        The journey connects commercial activity with entrepreneurship,
-        local sourcing and future productive capacity.
+    <div class="center">
+      <div class="eyebrow">The Journey Ahead</div>
+      <h2 class="section-title">From Products to Lasting Impact</h2>
+      <p class="section-intro">
+        Every stage is intended to build towards more local opportunity
+        and productive capacity.
       </p>
-
     </div>
-
 
     <div class="journey-grid">
 
-      <div class="journey-card">
-
+      <article class="journey-card">
         <div class="journey-number">01</div>
+        <h3>Build Awareness</h3>
+        <p>Introduce the partnership and its purpose to communities and prospective resellers.</p>
+      </article>
 
-        <h3>Products</h3>
-
-        <p>
-          Bring Kingdom Foods products into the Lesotho market.
-        </p>
-
-      </div>
-
-
-      <div class="journey-card">
-
+      <article class="journey-card">
         <div class="journey-number">02</div>
+        <h3>Grow Resellers</h3>
+        <p>Develop a network of local entrepreneurs and product resellers.</p>
+      </article>
 
-        <h3>Resellers</h3>
-
-        <p>
-          Empower local entrepreneurs to sell across the country.
-        </p>
-
-      </div>
-
-
-      <div class="journey-card">
-
+      <article class="journey-card">
         <div class="journey-number">03</div>
+        <h3>Develop Local Links</h3>
+        <p>Explore opportunities for Basotho suppliers, farmers and service providers.</p>
+      </article>
 
-        <h3>Market</h3>
-
-        <p>
-          Build a strong local customer and distribution network.
-        </p>
-
-      </div>
-
-
-      <div class="journey-card">
-
+      <article class="journey-card">
         <div class="journey-number">04</div>
+        <h3>Work Towards Manufacturing</h3>
+        <p>Progress the planned facility in line with the partnership commitment and implementation requirements.</p>
+      </article>
 
-        <h3>Manufacturing</h3>
-
-        <p>
-          Establish local manufacturing capacity as the programme develops.
-        </p>
-
-      </div>
-
-
-      <div class="journey-card">
-
+      <article class="journey-card">
         <div class="journey-number">05</div>
+        <h3>Create Lasting Impact</h3>
+        <p>Work towards jobs, skills, local value creation and broader economic participation.</p>
+      </article>
 
-        <h3>Growth</h3>
-
-        <p>
-          Build toward wider markets and greater economic participation.
-        </p>
-
-      </div>
+      <article class="journey-card">
+        <div class="journey-number">06</div>
+        <h3>Think Beyond Borders</h3>
+        <p>Build a foundation for products and productive capacity with potential to reach wider markets.</p>
+      </article>
 
     </div>
-
   </div>
-
 </section>
-
-
-<!-- FINAL MESSAGE -->
 
 <section class="section cta">
-
-  <div class="cta-inner">
-
-    <div class="eyebrow" style="color:#d9ad2b;">
-      The Vision
-    </div>
-
-    <h2>
-      Products by Basotho.<br>
-      For Basotho.<br>
-      For the world.
-    </h2>
+  <div class="container cta-inner">
+    <div class="eyebrow">Join the LIF Family</div>
+    <h2>Be Part of the Journey</h2>
 
     <p>
-      Together, we are writing a new story—one of industry,
-      dignity, and shared prosperity.
+      Whether you are interested in reselling products, supporting
+      local economic development or learning more about our
+      manufacturing vision, we welcome you to connect with
+      Life Improvement Foundation.
     </p>
 
-    <a href="index.html#reseller" class="btn btn-gold">
-      Explore The Reseller Opportunity
+    <a class="button"
+       href="index.html#reseller">
+      Explore the Reseller Opportunity
     </a>
 
+    <a class="button button-outline"
+       href="https://wa.me/26659434159"
+       target="_blank"
+       rel="noopener noreferrer">
+      Contact Us on WhatsApp
+    </a>
   </div>
-
 </section>
 
+</main>
 
-<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
 
-<footer>
+    <div class="footer-grid">
 
-  <div class="footer-grid">
+      <div>
+        <img class="footer-logo"
+             src="assets/lif/life-logo-transparent.png"
+             alt="Life Improvement Foundation logo"
+             loading="lazy">
 
-    <div>
+        <p>
+          Life Improvement Foundation works towards opportunity,
+          entrepreneurship, job creation and a stronger productive
+          future for Lesotho.
+        </p>
+      </div>
 
-      <img
-        class="footer-logo"
-        src="assets/lif/life-logo-transparent.png"
-        alt="Life Improvement Foundation">
+      <div>
+        <h3>Explore LIF</h3>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="partnership.html">Our Partnerships</a></p>
+        <p><a href="index.html#reseller">Reseller Opportunity</a></p>
+        <p><a href="#manufacturing">Manufacturing Vision</a></p>
+      </div>
 
-      <p>
-        Life Improvement Foundation is focused on connecting people
-        with opportunities and building pathways toward sustainable
-        economic participation in Lesotho.
-      </p>
-
-    </div>
-
-
-    <div>
-
-      <h3>Explore</h3>
-
-      <ul>
-
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-
-        <li>
-          <a href="partnership.html">Partnership</a>
-        </li>
-
-        <li>
-          <a href="#products">Kingdom Foods Products</a>
-        </li>
-
-        <li>
-          <a href="#manufacturing">Manufacturing Vision</a>
-        </li>
-
-        <li>
-          <a href="index.html#reseller">Reseller Opportunity</a>
-        </li>
-
-      </ul>
+      <div>
+        <h3>Contact LIF</h3>
+        <p>
+          WhatsApp:
+          <a href="https://wa.me/26659434159"
+             target="_blank"
+             rel="noopener noreferrer">+266 5943 4159</a>
+        </p>
+        <p>
+          Email:
+          <a href="mailto:projects@lifefoundation.co.ls">
+            projects@lifefoundation.co.ls
+          </a>
+        </p>
+      </div>
 
     </div>
 
-
-    <div>
-
-      <h3>Contact LIF</h3>
-
-      <p>
-        WhatsApp:
-        <a href="https://wa.me/26659434159">
-          +266 5943 4159
-        </a>
-      </p>
-
-      <p>
-        Email:
-        <a href="mailto:projects@lifefoundation.co.ls">
-          projects@lifefoundation.co.ls
-        </a>
-      </p>
-
+    <div class="copyright">
+      © 2026 Life Improvement Foundation.
+      Kingdom Foods product information and future manufacturing
+      imagery are provided for informational purposes.
     </div>
 
   </div>
-
-
-  <div class="copyright">
-
-    © 2026 Life Improvement Foundation.
-    Kingdom Foods partnership and manufacturing information is presented
-    subject to applicable agreements, approvals and implementation
-    requirements.
-
-  </div>
-
 </footer>
 
 </body>
