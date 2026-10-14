@@ -520,6 +520,123 @@ textarea:focus {
   .hero:before {
     background: linear-gradient(115deg, #052b1e 0%, #073b28 58%, #168a5a 100%);
   }
+}/* LIF PRODUCT CATALOGUE — OVERLAP FIX */
+#products,
+#foodsock,
+#twospoons,
+#kingdom {
+  position: relative;
+  isolation: isolate;
+  clear: both;
+  width: 100%;
+}
+
+#products .wrap,
+#foodsock .wrap,
+#twospoons .wrap,
+#kingdom .wrap {
+  position: relative;
+  min-width: 0;
+}
+
+.catalogue {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 18px;
+  width: 100%;
+}
+
+.catalogue > .product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  float: none;
+  width: auto;
+  height: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+.catalogue .product-image {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.catalogue .product-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.catalogue .product-body {
+  flex: 1 0 auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.catalogue-intro {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px 28px;
+}
+
+.catalogue-intro > * {
+  min-width: 0;
+}
+
+.products-showcase {
+  position: relative;
+  display: block;
+  overflow: visible;
+  width: 100%;
+}
+
+.products-cover {
+  width: 100%;
+}
+
+@media (max-width: 1050px) {
+  .catalogue {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .catalogue {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .catalogue .product-image {
+    height: 190px;
+  }
+}
+
+@media (max-width: 420px) {
+  .catalogue {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .catalogue .product-image {
+    height: 155px;
+  }
+
+  .catalogue .product-body {
+    padding: 10px;
+  }
+
+  .catalogue .product-body h3 {
+    font-size: 0.88rem;
+  }
 }</style>
 </head>
 <body>
