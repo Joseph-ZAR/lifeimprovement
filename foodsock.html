@@ -1,1 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Food Sock & Two Spoons | Life Improvement Foundation</title>
+<meta name="description" content="Explore Food Sock meals, Two Spoons stew mixes and Heartfelt Foods feeding solutions through Life Improvement Foundation in Lesotho.">
+<meta name="theme-color" content="#073b28">
+<style>
+:root{
+  --green:#073b28;
+  --bright:#18A957;
+  --blue:#168AC2;
+  --gold:#D4AF37;
+  --red:#E5242A;
+  --ink:#18312A;
+  --muted:#58675F;
+  --cream:#F7F8F3;
+  --line:#DDE7E2;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:#073b28f5;color:white;border-bottom:1px solid #ffffff25}
+.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:125px;height:66px;object-fit:contain}
+.brand-name{font-weight:900;line-height:1.2}
+.brand-name small{display:block;color:#e8dba8;font-size:.7rem;font-weight:600;margin-top:5px}
+.nav-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.nav-links a{font-size:.82rem;font-weight:800}
+.nav-links a:hover{color:var(--gold)}
+.hero{position:relative;overflow:hidden;background:var(--green);color:white;padding:75px 0 68px}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#052719f5 0%,#052719df 50%,#05271965 100%),url("https://store.foodsock.co.za/cdn/shop/files/Pasta_Bolognese.png?v=1768378362&width=1500") center/cover no-repeat}
+.hero .wrap{position:relative}
+.eyebrow{font-size:.74rem;letter-spacing:.17em;text-transform:uppercase;font-weight:900;color:#f1d977}
+.hero h1{font-size:clamp(2.6rem,6vw,5.5rem);line-height:1.02;letter-spacing:-.04em;max-width:850px;margin:18px 0}
+.hero h1 span{color:#f1d977}
+.hero p{max-width:700px;font-size:1.1rem;color:#f0f1e9}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;font-weight:850;border-radius:4px}
+.btn-gold{background:var(--gold);color:#15271c}
+.btn-light{background:white;color:var(--green)}
+.btn-outline{border:1px solid #ffffffa8;color:white}
+section{padding:70px 0}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+h2{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;letter-spacing:-.03em;margin:12px 0 18px}
+h3{line-height:1.2}
+.kicker{font-size:.73rem;letter-spacing:.16em;text-transform:uppercase;color:#9a7717;font-weight:900}
+.intro p,.section-head p{color:var(--muted)}
+.partnership{background:var(--cream)}
+.partnership-panel{background:white;border:1px solid var(--line);padding:clamp(24px,4vw,45px)}
+.partnership-visual{min-height:300px;background:linear-gradient(140deg,#073b28,#168AC2);display:flex;align-items:center;justify-content:center;gap:14px;padding:28px;color:white;text-align:center}
+.partnership-visual img{width:44%;max-height:160px;object-fit:contain;background:white;border-radius:8px;padding:10px}
+.partnership-visual .plus{font-size:2rem;color:#f1d977;font-weight:900}
+.section-head{max-width:800px;margin-bottom:30px}
+.section-head p{font-size:1.02rem}
+.meals{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+.card{border:1px solid var(--line);background:white;min-width:0;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 15px 32px #102b1a17}
+.card-image{height:225px;display:flex;align-items:center;justify-content:center;background:#fff;overflow:hidden}
+.card-image img{width:100%;height:100%;object-fit:contain;padding:12px}
+.card-body{padding:17px}
+.card-body small{font-size:.68rem;letter-spacing:.12em;font-weight:900;color:#96751b}
+.card h3{font-size:1.1rem;margin:7px 0 9px}
+.card p{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+details{border-top:1px solid var(--line);margin-top:12px;padding-top:10px}
+summary{cursor:pointer;font-weight:850;font-size:.86rem;color:var(--blue)}
+.details-body{font-size:.86rem;color:#46574d;padding-top:10px;overflow-wrap:anywhere}
+.details-body p{margin-bottom:9px}
+.details-body strong{color:var(--ink)}
+.soft{background:var(--cream)}
+.two-spoons{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:15px}
+.two-card{background:white;border:1px solid var(--line);padding:12px}
+.two-card img{width:100%;height:180px;object-fit:contain}
+.two-card h3{font-size:1rem;margin:12px 0 4px}
+.two-card p{font-size:.85rem;color:var(--muted);margin-bottom:0}
+.bucket-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.bucket{padding:25px;background:white;border:1px solid var(--line);border-top:4px solid var(--gold)}
+.bucket strong{display:block;font-size:1.8rem;color:var(--green);line-height:1.2;margin-bottom:8px}
+.notice{margin-top:25px;background:#fff9e7;border-left:4px solid var(--gold);padding:18px 20px;color:#4c5148}
+.cta{background:var(--green);color:white;text-align:center}
+.cta h2{max-width:780px;margin:12px auto 18px}
+.cta p{max-width:740px;margin:0 auto 25px;color:#e2e9df}
+footer{background:#05271b;color:white;padding:30px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
+footer p{margin:0;color:#d8e0d7;font-size:.85rem}
+footer a{color:#f1d977;font-weight:800}
+@media(max-width:900px){
+ .meals{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .two-spoons{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .intro{grid-template-columns:1fr}
+ .nav{align-items:flex-start;padding:10px 0}
+ .nav-links{gap:10px}
+}
+@media(max-width:560px){
+ .nav{display:block}
+ .brand{margin-bottom:8px}
+ .logo{width:95px;height:52px}
+ .nav-links{display:flex;gap:8px 13px}
+ .nav-links a{font-size:.76rem}
+ .hero{padding:58px 0 48px}
+ section{padding:48px 0}
+ .meals{grid-template-columns:1fr 1fr;gap:10px}
+ .card-image{height:160px}
+ .card-body{padding:12px}
+ .card h3{font-size:.98rem}
+ .two-spoons{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .two-card img{height:145px}
+ .bucket-grid{grid-template-columns:1fr}
+ .partnership-visual{min-height:210px;padding:15px}
+}
+</style>
+</head>
+<body>
 
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="index.html" aria-label="Life Improvement Foundation homepage">
+   <img class="logo" src="assets/life-logo-transparent.png" alt="Life Improvement Foundation logo">
+   <span class="brand-name">LIFE IMPROVEMENT FOUNDATION<small>Products • People • Production</small></span>
+  </a>
+  <nav class="nav-links" aria-label="Main navigation">
+   <a href="index.html">Home</a>
+   <a href="#foodsock-meals">Food Sock</a>
+   <a href="#two-spoons">Two Spoons</a>
+   <a href="#heartfelt">Heartfelt Foods</a>
+   <a href="kingdom-foods.html">Kingdom Foods</a>
+   <a href="index.html#reseller">Become a Reseller</a>
+  </nav>
+ </div>
+</header>
+
+<main>
+<section class="hero">
+ <div class="wrap">
+  <div class="eyebrow">A partnership serving homes and communities</div>
+  <h1>Good food solutions.<br><span>Greater possibilities.</span></h1>
+  <p>Discover the Food Sock range and associated food solutions presented by Life Improvement Foundation in Lesotho. From convenient family meals to stew mixes and feeding-programme formats, these products connect everyday needs with opportunity.</p>
+  <div class="actions">
+   <a class="btn btn-gold" href="#foodsock-meals">Explore Food Sock meals ↓</a>
+   <a class="btn btn-outline" href="index.html#reseller">Ask about reselling</a>
+  </div>
+ </div>
+</section>
+
+<section class="partnership">
+ <div class="wrap intro">
+  <div class="partnership-panel">
+   <div class="kicker">The partnership</div>
+   <h2>Products with a purpose.</h2>
+   <p>Life Improvement Foundation is building a pathway that connects product distribution, local enterprise and a longer-term manufacturing vision for Lesotho.</p>
+   <p>Our ambition is to create opportunities for resellers, develop local capabilities and help keep more value and skills within the country.</p>
+   <a class="btn btn-gold" href="partnership.html">Discover the partnership</a>
+  </div>
+  <div class="partnership-visual" role="img" aria-label="Life Improvement Foundation logo alongside the Food Sock name">
+   <img src="assets/life-logo-transparent.png" alt="Life Improvement Foundation logo">
+   <span class="plus" aria-hidden="true">+</span>
+   <div><strong style="font-size:clamp(1.3rem,3vw,2.3rem)">FOOD SOCK</strong><br><span style="font-size:.8rem">Official product range</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="foodsock-meals">
+ <div class="wrap">
+  <div class="section-head">
+   <div class="kicker">Food Sock • Family meals</div>
+   <h2>Explore the Food Sock range</h2>
+   <p>The product photographs below use the existing official image sources. Open each product's information panel for the available catalogue details. Check the pack label for the latest ingredients and allergen information before use.</p>
+  </div>
+  <div class="meals">
+
+   <article class="card">
+    <div class="card-image"><img src="https://media.portmoni.com/resized/73312/FS_Chickn_Breyani-thumbnail-600x600-95.jpg" alt="Food Sock Chicken Breyani product" loading="lazy"></div>
+    <div class="card-body"><small>FOOD SOCK</small><h3>Chicken Breyani</h3><p>A familiar rice-based meal with spices and lentils.</p>
+    <details><summary>Ingredients & nutrition</summary><div class="details-body"><p><strong>Pack:</strong> 384 g (4 × 96 g). <strong>Shelf life:</strong> 12 months as stated in the supplied catalogue.</p><p><strong>Ingredients:</strong> Rice, soya mince, red lentils, brown lentils, chicken stock, tomato soup, herbs, spices and flavourings.</p><p><strong>Allergens:</strong> Gluten (wheat), soy and flavour enhancers E620–E650; may contain cow’s milk.</p><p><strong>Per 100 g / serving:</strong> Energy 336 / 323 kcal; protein 16.2 / 15.6 g; carbohydrate 62.7 / 60.2 g; sugars 3.7 / 3.6 g; fat 2.0 / 1.9 g; fibre 7.4 / 7.1 g; sodium 1064 / 1022 mg.</p></div></details></div>
+   </article>
+
+   <article class="card">
+    <div class="card-image"><img src="https://store.foodsock.co.za/cdn/shop/files/Pasta_Bolognese.png?v=1768378362&width=1500" alt="Food Sock Pasta Bolognese product" loading="lazy"></div>
+    <div class="card-body"><small>FOOD SOCK</small><h3>Pasta Bolognese</h3><p>A pasta favourite in a convenient meal format.</p>
+    <details><summary>Ingredients & nutrition</summary><div class="details-body"><p><strong>Pack:</strong> 357 g (4 × 89 g). <strong>Shelf life:</strong> 12 months as stated in the supplied catalogue.</p><p><strong>Ingredients:</strong> Pasta (macaroni), coloured soya mince, tomato soup, beef stock, sugar, herbs, spices and flavourings.</p><p><strong>Allergens:</strong> Gluten (wheat), soy and flavour enhancers E620–E650; may contain cow’s milk.</p><p><strong>Per 100 g / serving:</strong> Energy 291 / 259 kcal; protein 14.6 / 13.0 g; carbohydrate 54.4 / 48.5 g; sugars 10.1 / 9.0 g; fat 1.7 / 1.5 g; fibre 6.5 / 5.8 g; sodium 1392 / 1241 mg.</p></div></details></div>
+   </article>
+
+   <article class="card">
+    <div class="card-image"><img src="https://media.portmoni.com/resized/96440/Food_Socks_Randburg_-_Chicken_Pasta_Food_Sock-thumbnail-600x600-95.jpg" alt="Food Sock Chicken Pasta product" loading="lazy"></div>
+    <div class="card-body"><small>FOOD SOCK</small><h3>Chicken Pasta</h3><p>A convenient pasta meal for home or travel.</p>
+    <details><summary>Ingredients & nutrition</summary><div class="details-body"><p><strong>Pack:</strong> 401 g (4 × 100 g). <strong>Shelf life:</strong> 12 months as stated in the supplied catalogue.</p><p><strong>Ingredients:</strong> Pasta (macaroni), soya mince, chicken stock, split peas, herbs, spices and flavourings.</p><p><strong>Allergens:</strong> Gluten (wheat), soy and flavour enhancers E620–E650; may contain cow’s milk.</p><p><strong>Per 100 g / serving:</strong> Energy 305 / 306 kcal; protein 16.3 / 16.3 g; carbohydrate 54.4 / 54.6 g; sugars 3.8 / 3.8 g; fat 2.5 / 2.5 g; fibre 8.7 / 8.7 g; sodium 1196 / 1200 mg.</p></div></details></div>
+   </article>
+
+   <article class="card">
+    <div class="card-image"><img src="https://media.portmoni.com/resized/96440/Food_Socks_Randburg_-_Mac__Cheese_Food_Sock-thumbnail-600x600-95.jpg" alt="Food Sock Mac and Cheese product" loading="lazy"></div>
+    <div class="card-body"><small>FOOD SOCK</small><h3>Mac &amp; Cheese</h3><p>A comforting macaroni and cheese meal.</p>
+    <details><summary>Ingredients & nutrition</summary><div class="details-body"><p><strong>Pack:</strong> 456 g (4 × 114 g). <strong>Shelf life:</strong> 12 months as stated in the supplied catalogue.</p><p><strong>Ingredients:</strong> Pasta (macaroni), cheese mix, salt, herbs, spices and flavourings.</p><p><strong>Allergens:</strong> Gluten (wheat) and cow’s milk; may contain soya.</p><p><strong>Per 100 g / serving:</strong> Energy 371 / 423 kcal; protein 12.6 / 14.4 g; carbohydrate 67.3 / 76.8 g; sugars 8.5 / 9.7 g; fat 4.6 / 5.2 g; fibre 3.4 / 3.8 g; sodium 500 / 569 mg.</p></div></details></div>
+   </article>
+
+   <article class="card">
+    <div class="card-image"><img src="https://store.foodsock.co.za/cdn/shop/files/d25mnzuu4dby3j1otczppg0n.jpg?v=1756820900" alt="Food Sock Mutton Stew product" loading="lazy"></div>
+    <div class="card-body"><small>FOOD SOCK</small><h3>Mutton Stew</h3><p>A hearty stew-inspired meal with rice and legumes.</p>
+    <details><summary>Ingredients & nutrition</summary><div class="details-body"><p><strong>Pack:</strong> 355 g (4 × 89 g). <strong>Shelf life:</strong> 12 months as stated in the supplied catalogue.</p><p><strong>Ingredients:</strong> Rice, soya mince, split peas, black eye beans, mutton soup, tomato soup, herbs, spices and flavourings.</p><p><strong>Allergens:</strong> Gluten (wheat), soy and flavour enhancers E620–E650; may contain cow’s milk.</p><p><strong>Per 100 g / serving:</strong> Energy 346 / 307 kcal; protein 18.2 / 16.2 g; carbohydrate 65.2 / 57.9 g; sugars 3.4 / 3.0 g; fat 1.4 / 1.2 g; fibre 9.7 / 8.6 g; sodium 794 / 705 mg.</p></div></details></div>
+   </article>
+
+   <article class="card">
+    <div class="card-image"><img src="https://foodsock.co.za/wp-content/uploads/2023/09/Tomato-Bredie-1-scaled.jpg" alt="Food Sock Tomato Bredie product" loading="lazy"></div>
+    <div class="card-body"><small>FOOD SOCK</small><h3>Tomato Bredie</h3><p>A tomato-based bredie-inspired family meal.</p>
+    <details><summary>Ingredients & nutrition</summary><div class="details-body"><p><strong>Pack:</strong> 396 g (4 × 99 g). <strong>Shelf life:</strong> 12 months as stated in the supplied catalogue.</p><p><strong>Ingredients:</strong> Rice, tomato soup, soya mince, black eye beans, sugar, beef stock, herbs, spices and flavourings.</p><p><strong>Allergens:</strong> Gluten (wheat), soy and flavour enhancers E620–E650; may contain cow’s milk.</p><p><strong>Per 100 g / serving:</strong> Energy 333 / 330 kcal; protein 14.5 / 14.4 g; carbohydrate 65.7 / 65.1 g; sugars 11.4 / 11.3 g; fat 1.3 / 1.3 g; fibre 5.9 / 5.8 g; sodium 1303 / 1291 mg.</p></div></details></div>
+   </article>
+
+   <article class="card">
+    <div class="card-image"><img src="https://store.foodsock.co.za/cdn/shop/files/Chicken_a_la_King.png?v=1768378104&width=1445" alt="Food Sock Chicken A La King product" loading="lazy"></div>
+    <div class="card-body"><small>FOOD SOCK</small><h3>Chicken A La King</h3><p>A creamy-style chicken meal with vegetables.</p>
+    <details><summary>Ingredients & nutrition</summary><div class="details-body"><p><strong>Pack:</strong> 296 g (4 × 74 g). <strong>Shelf life:</strong> 12 months as stated in the supplied catalogue.</p><p><strong>Ingredients:</strong> Rice, soya mince, Chicken Ala King sauce, mixed dehydrated vegetables, herbs, spices and flavourings.</p><p><strong>Allergens:</strong> Cow’s milk, soy and flavour enhancers E620–E650; may contain wheat (gluten).</p><p><strong>Per 100 g / serving:</strong> Energy 342 / 252 kcal; protein 15.1 / 11.1 g; carbohydrate 62.9 / 46.5 g; sugars 5.1 / 3.8 g; fat 3.2 / 2.4 g; fibre 5.8 / 4.3 g; sodium 918 / 678 mg.</p></div></details></div>
+   </article>
+
+   <article class="card">
+    <div class="card-image"><img src="https://store.foodsock.co.za/cdn/shop/files/Traditional_Melkkos.png?v=1768378281&width=823" alt="Food Sock Traditional Melkkos product" loading="lazy"></div>
+    <div class="card-body"><small>FOOD SOCK</small><h3>Traditional Melkkos</h3><p>A traditional sweet meal option.</p>
+    <details><summary>Ingredients & nutrition</summary><div class="details-body"><p><strong>Pack:</strong> 428 g (4 × 107 g). <strong>Shelf life:</strong> 12 months as stated in the supplied catalogue.</p><p><strong>Ingredients:</strong> Pasta (macaroni), Melkkos mix, sugar, herbs, spices and flavourings.</p><p><strong>Allergens:</strong> Gluten (wheat) and cow’s milk; may contain soya.</p><p><strong>Per 100 g / serving:</strong> Energy 379 / 406 kcal; protein 10.9 / 11.7 g; carbohydrate 70.9 / 75.9 g; sugars 24.3 / 26.0 g; fat 5.0 / 5.4 g; fibre 2.8 / 3.0 g; sodium 295 / 315 mg.</p></div></details></div>
+   </article>
+
+  </div>
+  <div class="notice">The supplied catalogue lists a 12-month shelf life and Halaal certification for these meals. Product information may change; always use the current packaging as the final reference. Nutrition figures are reproduced from the supplied catalogue and are shown as per 100 g / per serving.</div>
+ </div>
+</section>
+
+<section id="two-spoons" class="soft">
+ <div class="wrap">
+  <div class="section-head">
+   <div class="kicker">Two Spoons • Stew mixes & instant pap</div>
+   <h2>Familiar flavours, convenient formats</h2>
+   <p>The supplied catalogue describes 50 g sachets and 1 kg packs. The stew mixes are described as two 25 g servings per 50 g pack and are served with E’ZI PAP.</p>
+  </div>
+  <div class="two-spoons">
+   <article class="two-card"><img src="assets/twospoons/morogo.jpeg" alt="Two Spoons Morogo Stew Mix" loading="lazy"><h3>Morogo Stew Mix</h3><p>Spinach and cabbage flavours with soya mince, seeds and seasonings.</p><details><summary>Product details</summary><div class="details-body"><p><strong>Ingredients:</strong> Soya mince, sunflower seeds, tomato soup, dried spinach, dried cabbage, cornflour, onion flakes, herbs, spices and flavourings, chicken stock.</p><p><strong>Allergens:</strong> Soy, gluten (wheat, barley), flavour enhancers E620–E650; may contain milk and egg.</p><p><strong>Nutrition per 50 g / 100 g:</strong> Energy 153 / 305 kcal; protein 15.6 / 31.1 g; carbohydrate 15.4 / 30.8 g; sugars 5.1 / 10.1 g; fat 3.4 / 6.7 g; fibre 7.8 / 15.6 g; sodium 543 / 1085 mg.</p></div></details></article>
+   <article class="two-card"><img src="assets/twospoons/chilli-nut.jpeg" alt="Two Spoons Chilli Nut Stew Mix" loading="lazy"><h3>Chilli Nut Stew Mix</h3><p>A savoury stew mix with peanut flavouring and spices.</p><details><summary>Product details</summary><div class="details-body"><p><strong>Ingredients:</strong> Soya mince, peanut flavouring, tomato soup, herbs, spices and flavourings, cornflour, beef stock, sugar, onion flakes.</p><p><strong>Allergens:</strong> Soy, milk, gluten (wheat, barley), flavour enhancers E620–E650; may contain egg.</p><p><strong>Nutrition per 50 g / 100 g:</strong> Energy 133 / 266 kcal; protein 14.5 / 29.0 g; carbohydrate 14.0 / 28.0 g; sugars 5.2 / 10.5 g; fat 1.7 / 3.4 g; fibre 6.8 / 13.6 g; sodium 757 / 1513 mg.</p></div></details></article>
+   <article class="two-card"><img src="assets/twospoons/chakalaka.jpeg" alt="Two Spoons Chakalaka Stew Mix" loading="lazy"><h3>Chakalaka Stew Mix</h3><p>A vegetable and spice blend inspired by chakalaka.</p><details><summary>Product details</summary><div class="details-body"><p><strong>Ingredients:</strong> Soya mince, tomato soup, chakalaka soup powder, herbs, spices and flavourings, onion flakes, carrot, dried cabbage, green pepper, cornflour, sugar, salt.</p><p><strong>Allergens:</strong> Soy, gluten (wheat), flavour enhancers E620–E650; may contain cow’s milk.</p><p><strong>Nutrition per 50 g / 100 g:</strong> Energy 141 / 281 kcal; protein 13.2 / 26.4 g; carbohydrate 20.4 / 40.8 g; sugars 7.8 / 15.5 g; fat 0.9 / 1.9 g; fibre 8.1 / 16.3 g; sodium 975 / 1951 mg.</p></div></details></article>
+   <article class="two-card"><img src="assets/twospoons/oxtail.jpeg" alt="Two Spoons Oxtail Stew Mix" loading="lazy"><h3>Oxtail Stew Mix</h3><p>A stew mix with oxtail soup flavour and vegetables.</p><details><summary>Product details</summary><div class="details-body"><p><strong>Ingredients:</strong> Soya mince, oxtail soup, mixed dehydrated vegetables, cornflour, tomato soup, onion flakes, herbs, spices and flavourings, sugar.</p><p><strong>Allergens:</strong> Soy, gluten (wheat), E620–E650; may contain cow’s milk.</p><p><strong>Nutrition per 50 g / 100 g:</strong> Energy 137 / 274 kcal; protein 15.1 / 30.1 g; carbohydrate 16.4 / 32.8 g; sugars 6.0 / 12.0 g; fat 0.9 / 1.9 g; fibre 7.3 / 14.5 g; sodium 976 / 1952 mg.</p></div></details></article>
+   <article class="two-card"><img src="assets/twospoons/ezi-pap.jpeg" alt="Two Spoons E’ZI PAP Instant Pap" loading="lazy"><h3>E’ZI PAP Instant Pap</h3><p>Instant maize pap available in single servings and larger packs.</p><details><summary>Product details</summary><div class="details-body"><p><strong>Ingredients:</strong> Pre-cooked maize, soy protein isolate, sucrose, canola oil, flavouring, sweetener (E955), vitamins and minerals.</p><p><strong>Allergens:</strong> Soy.</p><p><strong>Nutrition per 50 g / 100 g:</strong> Energy 183 / 365 kcal; protein 6.5 / 13.0 g; carbohydrate 32 / 63 g; sugars 4.5 / 9 g; fat 3.0 / 5.9 g; fibre 2.4 / 4.7 g; sodium 51 / 101 mg.</p></div></details></article>
+  </div>
+  <div class="notice">Two Spoons catalogue information supplied for this page lists Halaal certification and a 12-month shelf life. Confirm current pack sizes, certification and allergen statements on the packaging.</div>
+ </div>
+</section>
+
+<section id="heartfelt">
+ <div class="wrap">
+  <div class="section-head">
+   <div class="kicker">Heartfelt Foods • Feeding programmes</div>
+   <h2>Solutions for organised feeding</h2>
+   <p>The supplied catalogue describes shelf-stable dehydrated meal buckets for schools, creches, feeding centres, soup kitchens, NGOs and community programmes.</p>
+  </div>
+  <div class="bucket-grid">
+   <article class="bucket"><strong>5-litre bucket</strong><h3>Up to 50 meals</h3><p>Meal yield depends on serving size and whether portions are intended for children or adults.</p></article>
+   <article class="bucket"><strong>10-litre bucket</strong><h3>Up to 100 meals</h3><p>A larger format for group feeding and community meal programmes.</p></article>
+   <article class="bucket"><strong>20-litre bucket</strong><h3>Up to 200 meals</h3><p>The catalogue lists this format for dehydrated meals; actual yield depends on portions.</p></article>
+  </div>
+  <div class="partnership-panel" style="margin-top:22px">
+   <h3>Meal bucket flavour options listed in the catalogue</h3>
+   <p>Chicken A La King • Chicken Breyani • Chicken Pasta • Mutton Stew • Pasta Bolognese • Tomato Bredie</p>
+   <h3>Instant maize porridge</h3>
+   <p>The catalogue also describes a 20-litre Heartfelt Foods instant maize porridge bucket (12.5 kg), with up to 250 servings at 50 g each. The listed shelf life is 12 months. The catalogue identifies soy as an allergen and lists Halaal certification.</p>
+  </div>
+  <div class="notice">Meal counts are catalogue estimates, not guaranteed serving totals. Actual yield varies with portion size, preparation and the needs of the people being served.</div>
+ </div>
+</section>
+
+<section class="cta">
+ <div class="wrap">
+  <div class="eyebrow">Connect with LIF</div>
+  <h2>Help build opportunity through products, people and local enterprise.</h2>
+  <p>Interested in reselling, community supply or learning more about the manufacturing vision for Lesotho? Contact Life Improvement Foundation to start the conversation.</p>
+  <div class="actions" style="justify-content:center">
+   <a class="btn btn-gold" href="index.html#reseller">Become a reseller</a>
+   <a class="btn btn-light" href="https://wa.me/26659434159?text=Hello%20LIF%2C%20I%20would%20like%20to%20learn%20more%20about%20the%20Food%20Sock%20and%20Two%20Spoons%20ranges.">WhatsApp LIF</a>
+   <a class="btn btn-outline" href="kingdom-foods.html">Explore Kingdom Foods</a>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap footer-inner">
+  <p>© <span id="year">2026</span> Life Improvement Foundation • Lesotho</p>
+  <p><a href="mailto:projects@lifefoundation.co.ls">projects@lifefoundation.co.ls</a> · <a href="index.html">Back to homepage</a></p>
+ </div>
+</footer>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
