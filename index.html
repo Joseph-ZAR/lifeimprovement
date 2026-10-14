@@ -637,6 +637,38 @@ textarea:focus {
   .catalogue .product-body h3 {
     font-size: 0.88rem;
   }
+}/* Keep the product collection label and heading separate */
+.products-cover-content .kicker {
+  display: inline-block;
+  position: relative;
+  line-height: 1.5;
+  margin: 0 0 12px;
+  padding: 3px 0;
+}
+
+.products-cover-content h2 {
+  display: block;
+  position: relative;
+  clear: both;
+  line-height: 1.08;
+  margin: 8px 0 18px;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .products-cover-content {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .products-cover-content .kicker {
+    max-width: 100%;
+    letter-spacing: .12em;
+  }
+
+  .products-cover-content h2 {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
 }</style>
 </head>
 <body>
