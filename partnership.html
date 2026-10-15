@@ -3,685 +3,1217 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover the Life Improvement Foundation, Food Sock and Kingdom Foods tripartite partnership to develop local distribution, create jobs and build a manufacturing future in Lesotho.">
+  <meta name="theme-color" content="#073b2b">
+  <meta name="description" content="Discover how Life Improvement Foundation, Food Sock and Kingdom Foods are working towards local enterprise, food manufacturing and lasting opportunity in Lesotho.">
   <title>Our Partnership | Life Improvement Foundation</title>
 
   <style>
     :root {
-      --green: #075b3b;
-      --green-dark: #063c2b;
-      --green-light: #e9f4ed;
-      --gold: #d6a83f;
-      --red: #c92f35;
-      --cream: #faf7ef;
-      --white: #ffffff;
-      --ink: #202b25;
-      --muted: #637168;
-      --border: #e4e9e3;
-      --shadow: 0 16px 45px rgba(12, 53, 36, .10);
+      --green: #087f43;
+      --green-dark: #073b2b;
+      --green-deep: #052d21;
+      --green-pale: #edf7f0;
+      --blue: #149bd7;
+      --blue-pale: #edf8fd;
+      --red: #e52b35;
+      --gold: #efbd42;
+      --gold-pale: #fff7e3;
+      --ink: #18291f;
+      --muted: #5d6b62;
+      --white: #fff;
+      --surface: #f6f9f6;
+      --border: #dfe9e1;
+      --shadow: 0 14px 38px rgba(7, 59, 43, .09);
+      --radius: 20px;
+      --max-width: 1180px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
 
     body {
-      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--ink);
       background: var(--white);
       line-height: 1.7;
+      overflow-wrap: break-word;
     }
 
-    img { max-width: 100%; display: block; }
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
-    a { color: inherit; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
 
     .container {
-      width: min(1160px, 92%);
-      margin: auto;
-    }
-
-    .top-strip {
-      background: var(--green-dark);
-      color: white;
-      text-align: center;
-      padding: 8px 14px;
-      font-size: .83rem;
-      letter-spacing: .04em;
-    }
-
-    header {
-      background: rgba(255,255,255,.97);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(12px);
-    }
-
-    .nav {
-      min-height: 86px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      text-decoration: none;
-      min-width: 0;
-    }
-
-    .brand img {
-      width: 78px;
-      height: 70px;
-      object-fit: contain;
-    }
-
-    .brand-copy strong {
-      display: block;
-      color: var(--green);
-      font-size: 1rem;
-      line-height: 1.25;
-    }
-
-    .brand-copy span {
-      display: block;
-      font-size: .75rem;
-      color: var(--muted);
-      margin-top: 4px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      flex-wrap: wrap;
-      gap: 19px;
-    }
-
-    .nav-links a {
-      font-size: .88rem;
-      text-decoration: none;
-      font-weight: 700;
-      transition: color .2s;
-    }
-
-    .nav-links a:hover { color: var(--red); }
-
-    .nav-links .nav-cta {
-      background: var(--green);
-      color: white;
-      border-radius: 30px;
-      padding: 11px 17px;
-    }
-
-    .nav-links .nav-cta:hover {
-      background: var(--red);
-      color: white;
-    }
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      color: white;
-      background:
-        linear-gradient(115deg, rgba(4,48,33,.97), rgba(7,91,59,.92)),
-        url("assets/partnership/partnership-journey.jpg") center/cover;
-      padding: 82px 0 76px;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 360px;
-      height: 360px;
-      right: -130px;
-      top: -150px;
-      border: 1px solid rgba(255,255,255,.15);
-      border-radius: 50%;
-      box-shadow: 0 0 0 45px rgba(255,255,255,.025),
-                  0 0 0 90px rgba(255,255,255,.025);
-    }
-
-    .hero-grid {
-      position: relative;
-      display: grid;
-      grid-template-columns: 1.08fr .92fr;
-      align-items: center;
-      gap: 48px;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      text-transform: uppercase;
-      letter-spacing: .15em;
-      font-size: .76rem;
-      font-weight: 800;
-      color: var(--gold);
-      margin-bottom: 14px;
-    }
-
-    h1, h2, h3, p { margin-top: 0; }
-
-    h1 {
-      font-size: clamp(2.35rem, 5vw, 4.2rem);
-      line-height: 1.08;
-      letter-spacing: -.04em;
-      margin-bottom: 22px;
-    }
-
-    h1 span { color: #f2cf73; }
-
-    .hero-copy {
-      max-width: 650px;
-      color: rgba(255,255,255,.88);
-      font-size: 1.08rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 13px;
-      flex-wrap: wrap;
-      margin-top: 28px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 13px 20px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: .92rem;
-      transition: transform .2s, background .2s;
-    }
-
-    .btn:hover { transform: translateY(-3px); }
-
-    .btn-gold {
-      background: var(--gold);
-      color: #17281e;
-    }
-
-    .btn-white {
-      color: white;
-      border: 1px solid rgba(255,255,255,.55);
-    }
-
-    .btn-green {
-      background: var(--green);
-      color: white;
-    }
-
-    /* Tripartite partnership visual */
-    .partnership-visual {
-      background: rgba(255,255,255,.97);
-      color: var(--ink);
-      padding: 25px;
-      border-radius: 25px;
-      box-shadow: 0 25px 70px rgba(0,0,0,.22);
-      border-top: 5px solid var(--gold);
-    }
-
-    .visual-heading {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .visual-heading strong {
-      display: block;
-      color: var(--green);
-      font-size: 1.05rem;
-    }
-
-    .visual-heading span {
-      font-size: .78rem;
-      color: var(--muted);
-    }
-
-    .partner-logos {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .partner-logo {
-      min-width: 0;
-      min-height: 130px;
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      padding: 12px 8px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: white;
-    }
-
-    .partner-logo img {
-      width: 100%;
-      max-width: 115px;
-      height: 65px;
-      object-fit: contain;
-      margin-bottom: 8px;
-    }
-
-    .partner-logo strong {
-      font-size: .79rem;
-      line-height: 1.25;
-      color: var(--green-dark);
-    }
-
-    .partner-logo small {
-      font-size: .65rem;
-      color: var(--muted);
-      margin-top: 4px;
-    }
-
-    .handshake {
-      margin: 18px auto 13px;
-      width: 76px;
-      height: 76px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--green-light);
-      border: 2px solid var(--gold);
-      font-size: 2.3rem;
-      animation: handshakePulse 3s ease-in-out infinite;
-    }
-
-    @keyframes handshakePulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.07); }
-    }
-
-    .visual-caption {
-      text-align: center;
-      font-size: .85rem;
-      font-weight: 800;
-      color: var(--green);
-      margin-bottom: 0;
+      width: min(var(--max-width), 92%);
+      margin-inline: auto;
     }
 
     .section {
       padding: 82px 0;
     }
 
-    .section-cream { background: var(--cream); }
-    .section-green { background: var(--green-dark); color: white; }
-
-    .section-heading {
-      max-width: 760px;
-      margin: 0 auto 42px;
-      text-align: center;
+    .eyebrow {
+      display: inline-block;
+      color: var(--green);
+      font-size: .77rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      margin-bottom: 13px;
     }
 
-    .section-heading .eyebrow { color: var(--red); }
+    .section-heading {
+      max-width: 790px;
+      text-align: center;
+      margin: 0 auto 42px;
+    }
 
     .section-heading h2 {
-      color: var(--green-dark);
-      font-size: clamp(1.9rem, 4vw, 2.9rem);
-      line-height: 1.16;
-      letter-spacing: -.025em;
+      font-size: clamp(2rem, 4.2vw, 3.15rem);
+      line-height: 1.12;
+      letter-spacing: -.035em;
       margin-bottom: 16px;
     }
 
-    .section-heading p { color: var(--muted); }
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
 
-    .section-green .section-heading h2 { color: white; }
-    .section-green .section-heading p { color: rgba(255,255,255,.78); }
-    .section-green .section-heading .eyebrow { color: #f2cf73; }
+    .topbar {
+      background: var(--green-deep);
+      color: #fff;
+      padding: 8px 0;
+      font-size: .82rem;
+      text-align: center;
+    }
 
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+    .topbar strong {
+      color: var(--gold);
+    }
+
+    /* Navigation */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, .97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-wrap {
+      min-height: 82px;
+      display: flex;
       align-items: center;
-      gap: 48px;
+      justify-content: space-between;
+      gap: 20px;
+      position: relative;
     }
 
-    .intro-image {
-      width: 100%;
-      height: 390px;
-      object-fit: cover;
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-      background: #e5e9e3;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      flex-shrink: 0;
     }
 
-    .intro-copy h2 {
-      font-size: clamp(1.8rem, 3.5vw, 2.7rem);
-      line-height: 1.15;
-      color: var(--green-dark);
+    .brand-logo {
+      width: 68px;
+      height: 66px;
+      object-fit: contain;
     }
 
-    .intro-copy p { color: var(--muted); }
-
-    .quote {
-      border-left: 5px solid var(--gold);
-      padding: 15px 0 15px 20px;
-      margin: 24px 0;
-      font-size: 1.12rem;
-      font-weight: 700;
-      color: var(--green);
-    }
-
-    .role-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .role-card {
-      background: white;
-      color: var(--ink);
-      border-radius: 20px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      transition: transform .25s, box-shadow .25s;
-    }
-
-    .role-card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 24px 50px rgba(0,0,0,.14);
-    }
-
-    .role-top {
-      padding: 25px 24px 21px;
-      border-top: 5px solid var(--gold);
-    }
-
-    .role-top .number {
-      display: inline-grid;
-      place-items: center;
-      width: 39px;
-      height: 39px;
-      border-radius: 50%;
-      background: var(--green-light);
-      color: var(--green);
+    .brand-copy {
+      display: block;
       font-weight: 900;
-      margin-bottom: 14px;
-    }
-
-    .role-top h3 {
-      color: var(--green-dark);
-      font-size: 1.35rem;
-      margin-bottom: 8px;
-    }
-
-    .role-top p {
-      color: var(--muted);
-      font-size: .91rem;
-      margin-bottom: 0;
-    }
-
-    .role-body { padding: 0 24px 25px; }
-
-    .role-body ul {
-      margin: 0;
-      padding-left: 20px;
-      color: var(--muted);
-      font-size: .91rem;
-    }
-
-    .role-body li { margin: 8px 0; }
-    .role-body li::marker { color: var(--red); }
-
-    .principles-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .principle {
-      padding: 24px 20px;
-      border: 1px solid rgba(255,255,255,.17);
-      background: rgba(255,255,255,.055);
-      border-radius: 17px;
-    }
-
-    .principle .symbol {
-      font-size: 1.8rem;
-      margin-bottom: 12px;
-    }
-
-    .principle h3 {
-      color: #f2cf73;
-      font-size: 1.08rem;
-      margin-bottom: 8px;
-    }
-
-    .principle p {
-      color: rgba(255,255,255,.78);
+      line-height: 1.2;
       font-size: .9rem;
-      margin-bottom: 0;
+      max-width: 220px;
     }
 
-    .journey-grid {
+    .brand-copy small {
+      display: block;
+      margin-top: 6px;
+      color: var(--green);
+      font-size: .66rem;
+      letter-spacing: .055em;
+      font-weight: 800;
+    }
+
+    .nav-toggle {
+      display: none;
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--green-dark);
+      border-radius: 11px;
+      padding: 8px 12px;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .nav-links a {
+      font-size: .79rem;
+      font-weight: 800;
+      color: #33473a;
+      transition: color .2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--green);
+    }
+
+    .nav-links .nav-cta {
+      background: var(--green);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 999px;
+    }
+
+    .nav-links .nav-cta:hover {
+      background: var(--green-dark);
+      color: white;
+    }
+
+    /* Buttons */
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 12px 21px;
+      border-radius: 999px;
+      border: 2px solid transparent;
+      font-size: .91rem;
+      font-weight: 800;
+      text-align: center;
+      transition: transform .2s ease, box-shadow .2s ease;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, .12);
+    }
+
+    .button-green {
+      background: var(--green);
+      color: white;
+    }
+
+    .button-white {
+      background: white;
+      border-color: white;
+      color: var(--green-dark);
+    }
+
+    .button-outline {
+      background: white;
+      color: var(--green);
+      border-color: var(--green);
+    }
+
+    .button-gold {
+      background: var(--gold);
+      color: var(--green-deep);
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    /* Hero */
+
+    .hero {
+      background:
+        radial-gradient(circle at 92% 5%, rgba(20, 155, 215, .13), transparent 28%),
+        radial-gradient(circle at 0% 100%, rgba(8, 127, 67, .12), transparent 33%),
+        linear-gradient(135deg, #fff 0%, #f3faf5 70%, #f1f8fc 100%);
+      padding: 62px 0 70px;
+    }
+
+    .hero-grid {
       display: grid;
-      grid-template-columns: .9fr 1.1fr;
+      grid-template-columns: 1.02fr .98fr;
       gap: 42px;
       align-items: center;
     }
 
-    .journey-image {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-      background: #e5e9e3;
+    .hero h1 {
+      max-width: 750px;
+      font-size: clamp(2.55rem, 5vw, 4.65rem);
+      line-height: 1.01;
+      letter-spacing: -.055em;
+      margin-bottom: 23px;
     }
 
-    .journey-copy h2 {
-      font-size: clamp(1.9rem, 3.5vw, 2.7rem);
-      color: var(--green-dark);
-      line-height: 1.15;
+    .hero h1 .red {
+      color: var(--red);
     }
 
-    .journey-copy p { color: var(--muted); }
-
-    .journey-list {
-      padding: 0;
-      margin: 25px 0;
-      list-style: none;
+    .hero h1 .green {
+      color: var(--green);
     }
 
-    .journey-list li {
+    .hero-intro {
+      color: #43564a;
+      font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+      max-width: 660px;
+    }
+
+    .hero-image {
       position: relative;
-      padding: 0 0 16px 34px;
-      color: var(--ink);
+      min-height: 420px;
+      overflow: hidden;
+      border-radius: 27px;
+      background: #eaf4ec;
+      box-shadow: var(--shadow);
     }
 
-    .journey-list li::before {
-      content: "✓";
+    .hero-image img {
       position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-caption {
+      position: absolute;
+      bottom: 0;
       left: 0;
-      top: 1px;
-      width: 23px;
-      height: 23px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
+      right: 0;
+      padding: 17px 20px;
       color: white;
+      background: linear-gradient(transparent, rgba(5, 35, 24, .94));
+      font-size: .87rem;
+    }
+
+    .image-caption strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 3px;
+    }
+
+    .hero-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 23px;
+    }
+
+    .proof-chip {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 7px 12px;
+      color: #365044;
+      font-size: .79rem;
+      font-weight: 800;
+    }
+
+    /* Shared statement */
+
+    .vision-strip {
       background: var(--green);
-      font-size: .8rem;
-      font-weight: 900;
-    }
-
-    .commitment {
-      background: linear-gradient(120deg, var(--green), #0b7650);
       color: white;
-      border-radius: 22px;
-      padding: 34px;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 25px;
-      align-items: center;
+      padding: 30px 0;
     }
 
-    .commitment h2 {
-      font-size: clamp(1.55rem, 3vw, 2.3rem);
+    .vision-strip-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .vision-strip h2 {
+      font-size: clamp(1.25rem, 2.5vw, 1.85rem);
+      line-height: 1.25;
+      max-width: 700px;
+    }
+
+    .vision-strip p {
+      color: rgba(255, 255, 255, .86);
+      max-width: 420px;
+      font-size: .94rem;
+    }
+
+    /* Intro */
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      align-items: start;
+      gap: 50px;
+    }
+
+    .intro-lead h2 {
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.13;
+      letter-spacing: -.04em;
+      margin-bottom: 20px;
+    }
+
+    .intro-lead h2 span {
+      color: var(--green);
+    }
+
+    .intro-copy p {
+      color: #506057;
+      margin-bottom: 17px;
+    }
+
+    .intro-quote {
+      margin-top: 23px;
+      padding: 22px 24px;
+      border-left: 4px solid var(--gold);
+      border-radius: 0 15px 15px 0;
+      background: var(--gold-pale);
+      color: var(--green-dark);
+      font-size: 1.05rem;
+      font-weight: 800;
+    }
+
+    /* Partner cards */
+
+    .partners-section {
+      background: var(--surface);
+    }
+
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .partner-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 5px 20px rgba(7, 59, 43, .035);
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+
+    .partner-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .partner-logo-box {
+      width: 100%;
+      min-height: 112px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 22px;
+      padding: 8px;
+    }
+
+    .partner-logo-box img {
+      max-height: 100px;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    .partner-logo-text {
+      font-size: 1.8rem;
+      font-weight: 900;
+      letter-spacing: -.04em;
+      text-align: center;
+    }
+
+    .partner-logo-text.foodsock {
+      color: var(--red);
+    }
+
+    .partner-logo-text.kingdom {
+      color: var(--green);
+    }
+
+    .role-tag {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 7px 12px;
+      margin-bottom: 14px;
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: .055em;
+      text-transform: uppercase;
+    }
+
+    .role-lif {
+      background: #e5f5ea;
+      color: var(--green);
+    }
+
+    .role-food {
+      background: #e7f5fc;
+      color: #0878ad;
+    }
+
+    .role-kingdom {
+      background: #fff4d5;
+      color: #72500a;
+    }
+
+    .partner-card h3 {
+      font-size: 1.35rem;
       margin-bottom: 10px;
     }
 
-    .commitment p {
-      color: rgba(255,255,255,.83);
-      margin-bottom: 0;
+    .partner-card p {
+      color: var(--muted);
+      font-size: .94rem;
     }
 
-    .commitment .btn { white-space: nowrap; }
-
-    .cta {
-      background: var(--cream);
-      padding: 75px 0;
+    .partner-card .learn-link {
+      margin-top: auto;
+      padding-top: 19px;
+      font-size: .88rem;
+      font-weight: 900;
+      color: var(--green);
     }
 
-    .cta-inner {
+    /* Partnership design and roles */
+
+    .roles-section {
+      background: linear-gradient(180deg, #edf7f0, #f8fbf8);
+    }
+
+    .roles-heading {
+      max-width: 850px;
+      margin: 0 auto 39px;
+      text-align: center;
+    }
+
+    .roles-heading h2 {
+      font-size: clamp(2rem, 4.5vw, 3.25rem);
+      line-height: 1.1;
+      margin-bottom: 16px;
+      letter-spacing: -.04em;
+      color: var(--green-dark);
+    }
+
+    .roles-heading p {
+      color: var(--muted);
+    }
+
+    .roles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 21px;
+      align-items: stretch;
+    }
+
+    .role-card {
       background: white;
       border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 45px;
-      text-align: center;
-      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 7px 25px rgba(7, 59, 43, .045);
+      display: flex;
+      flex-direction: column;
     }
 
-    .cta-inner h2 {
-      font-size: clamp(1.8rem, 4vw, 2.7rem);
-      color: var(--green-dark);
+    .role-card-head {
+      padding: 25px 25px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .role-number {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--green);
+      color: white;
+      font-weight: 900;
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+    }
+
+    .role-card:nth-child(2) .role-number {
+      background: var(--blue);
+    }
+
+    .role-card:nth-child(3) .role-number {
+      background: var(--gold);
+      color: var(--green-deep);
+    }
+
+    .role-card h3 {
+      font-size: 1.3rem;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .role-card-head p {
+      color: var(--muted);
+      font-size: .91rem;
+    }
+
+    .role-card-body {
+      padding: 23px 25px 25px;
+      flex: 1;
+    }
+
+    .role-card-body p {
+      color: #4f6055;
+      font-size: .93rem;
       margin-bottom: 14px;
     }
 
-    .cta-inner p {
-      color: var(--muted);
-      max-width: 720px;
-      margin: 0 auto 24px;
+    .role-card-body ul {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin-top: 15px;
     }
 
-    footer {
-      background: #032c1f;
+    .role-card-body li {
+      position: relative;
+      padding-left: 25px;
+      font-size: .91rem;
+      color: #44554a;
+    }
+
+    .role-card-body li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .role-card:nth-child(2) li::before {
+      color: #0878ad;
+    }
+
+    .role-card:nth-child(3) li::before {
+      color: #b48612;
+    }
+
+    .role-details {
+      margin-top: 19px;
+      border-top: 1px solid var(--border);
+      padding-top: 15px;
+    }
+
+    .role-details summary {
+      cursor: pointer;
+      color: var(--green);
+      font-size: .88rem;
+      font-weight: 900;
+    }
+
+    .role-details p {
+      margin-top: 12px;
+      font-size: .88rem;
+    }
+
+    .roles-conclusion {
+      display: grid;
+      grid-template-columns: 66px 1fr;
+      gap: 20px;
+      align-items: center;
+      margin-top: 27px;
+      padding: 27px;
+      border-radius: var(--radius);
+      background: #fff9e9;
+      border: 1px solid #f1dfaa;
+    }
+
+    .handshake-icon {
+      display: grid;
+      place-items: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 17px;
+      background: white;
+      font-size: 2rem;
+    }
+
+    .roles-conclusion h3 {
+      color: var(--green-dark);
+      font-size: 1.18rem;
+      margin-bottom: 7px;
+    }
+
+    .roles-conclusion p {
+      color: #586255;
+      font-size: .94rem;
+    }
+
+    /* Impact */
+
+    .impact-section {
+      background: white;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 17px;
+    }
+
+    .impact-card {
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      padding: 23px 20px;
+      background: white;
+    }
+
+    .impact-icon {
+      font-size: 1.8rem;
+      margin-bottom: 13px;
+    }
+
+    .impact-card h3 {
+      font-size: 1.08rem;
+      margin-bottom: 9px;
+    }
+
+    .impact-card p {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* Manufacturing pathway */
+
+    .manufacturing-section {
+      background: var(--green-dark);
       color: white;
-      padding: 38px 0 22px;
+    }
+
+    .manufacturing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .manufacturing-copy .eyebrow {
+      color: var(--gold);
+    }
+
+    .manufacturing-copy h2 {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      line-height: 1.1;
+      letter-spacing: -.04em;
+      margin-bottom: 20px;
+    }
+
+    .manufacturing-copy > p {
+      color: #d7e5dc;
+      margin-bottom: 17px;
+    }
+
+    .manufacturing-steps {
+      display: grid;
+      gap: 14px;
+      margin: 26px 0;
+    }
+
+    .manufacturing-step {
+      display: grid;
+      grid-template-columns: 39px 1fr;
+      gap: 13px;
+      align-items: start;
+    }
+
+    .step-number {
+      display: grid;
+      place-items: center;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--green-deep);
+      font-weight: 900;
+    }
+
+    .manufacturing-step strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .manufacturing-step span {
+      color: #d0e0d6;
+      font-size: .9rem;
+    }
+
+    .commitment-note {
+      padding: 18px 20px;
+      border: 1px solid rgba(255, 255, 255, .2);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      background: rgba(255, 255, 255, .06);
+      color: #edf5ef;
+      font-size: .91rem;
+    }
+
+    .factory-visual {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #dbe7df;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, .22);
+    }
+
+    .factory-visual img {
+      width: 100%;
+      min-height: 350px;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .concept-label {
+      padding: 15px 18px;
+      background: #f6e8b7;
+      color: #4b3c10;
+      font-size: .82rem;
+      font-weight: 800;
+    }
+
+    .concept-label small {
+      display: block;
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    /* Local value */
+
+    .local-section {
+      background: var(--surface);
+    }
+
+    .local-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 42px;
+      align-items: start;
+    }
+
+    .local-copy h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.12;
+      margin-bottom: 18px;
+    }
+
+    .local-copy p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .local-stat {
+      padding: 27px;
+      border-radius: 20px;
+      background: white;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .local-stat .big-number {
+      font-size: clamp(3rem, 7vw, 4.7rem);
+      line-height: 1;
+      font-weight: 900;
+      color: var(--green);
+      letter-spacing: -.05em;
+    }
+
+    .local-stat h3 {
+      margin: 12px 0;
+      font-size: 1.25rem;
+    }
+
+    .local-stat p {
+      color: var(--muted);
+      font-size: .93rem;
+    }
+
+    .local-stat .qualifier {
+      display: block;
+      margin-top: 14px;
+      padding-top: 13px;
+      border-top: 1px solid var(--border);
+      font-size: .81rem;
+      color: #6d776f;
+    }
+
+    /* Final CTA */
+
+    .cta-section {
+      position: relative;
+      overflow: hidden;
+      padding: 82px 0;
+      color: white;
+      text-align: center;
+      background:
+        radial-gradient(circle at 8% 0%, rgba(20, 155, 215, .2), transparent 30%),
+        linear-gradient(130deg, #087f43, #073b2b 70%);
+    }
+
+    .cta-inner {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .cta-section .eyebrow {
+      color: var(--gold);
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2.15rem, 4.5vw, 3.5rem);
+      line-height: 1.1;
+      margin-bottom: 18px;
+      letter-spacing: -.035em;
+    }
+
+    .cta-section p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #dbece1;
+    }
+
+    .cta-section .button-row {
+      justify-content: center;
+    }
+
+    /* Footer */
+
+    .partner-footer {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      padding: 27px 0;
+      text-align: center;
+    }
+
+    .partner-footer .partner-line {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 900;
+      font-size: clamp(.98rem, 2.2vw, 1.25rem);
+    }
+
+    .partner-footer .lif-word {
+      color: var(--green);
+    }
+
+    .partner-footer .food-word {
+      color: var(--red);
+    }
+
+    .partner-footer .kingdom-word {
+      color: #287e54;
+    }
+
+    .partner-footer p {
+      color: var(--muted);
+      font-size: .85rem;
+      margin-top: 7px;
+    }
+
+    .site-footer {
+      padding: 34px 0;
+      color: white;
+      background: #101d16;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.3fr 1fr 1fr;
-      gap: 35px;
-      padding-bottom: 28px;
+      grid-template-columns: 1.1fr .9fr 1fr;
+      gap: 30px;
     }
 
     .footer-brand {
       display: flex;
       align-items: center;
       gap: 13px;
-      margin-bottom: 15px;
     }
 
     .footer-brand img {
-      width: 70px;
-      height: 60px;
+      width: 62px;
+      height: 62px;
       object-fit: contain;
+      background: white;
+      border-radius: 8px;
     }
 
-    footer h3 {
-      color: #f2cf73;
+    .footer-brand strong {
+      display: block;
+      line-height: 1.3;
+    }
+
+    .footer-brand span {
+      display: block;
+      color: #c8d8ce;
+      font-size: .82rem;
+      margin-top: 5px;
+    }
+
+    .footer-column h3 {
       font-size: 1rem;
-      margin-bottom: 12px;
+      margin-bottom: 13px;
     }
 
-    footer p, footer a {
-      color: rgba(255,255,255,.78);
-      font-size: .9rem;
+    .footer-column p,
+    .footer-column a {
+      color: #c8d8ce;
+      font-size: .87rem;
     }
 
-    footer a { text-decoration: none; }
-    footer a:hover { color: white; }
+    .footer-column p {
+      margin-bottom: 8px;
+    }
 
-    .footer-links {
+    .footer-column a:hover {
+      color: var(--gold);
+    }
+
+    .footer-nav {
       display: grid;
-      gap: 8px;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px 15px;
     }
 
-    .copyright {
-      border-top: 1px solid rgba(255,255,255,.15);
-      padding-top: 18px;
-      text-align: center;
-      color: rgba(255,255,255,.62);
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(255, 255, 255, .15);
+      padding-top: 20px;
+      margin-top: 27px;
+      color: #b8c8be;
       font-size: .8rem;
     }
 
-    .whatsapp-float {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      z-index: 200;
-      width: 57px;
-      height: 57px;
-      border-radius: 50%;
-      background: #168b51;
-      color: white;
-      display: grid;
-      place-items: center;
-      text-decoration: none;
-      font-size: 1.65rem;
-      box-shadow: 0 8px 25px rgba(0,0,0,.22);
+    /* Responsive design */
+
+    @media (max-width: 1120px) {
+      .nav-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: -4.35%;
+        right: -4.35%;
+        padding: 16px 4%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 11px 5px;
+        font-size: .91rem;
+      }
+
+      .nav-links .nav-cta {
+        text-align: center;
+        margin-top: 8px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+      }
+
+      .hero-image {
+        min-height: 350px;
+      }
     }
 
-    .whatsapp-float:hover { background: var(--green-dark); }
+    @media (max-width: 850px) {
+      .section {
+        padding: 64px 0;
+      }
 
-    @media (max-width: 900px) {
-      .nav {
+      .hero-grid,
+      .intro-grid,
+      .manufacturing-grid,
+      .local-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        min-height: 360px;
+      }
+
+      .partners-grid,
+      .roles-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .partner-card {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        column-gap: 22px;
+        align-items: start;
+      }
+
+      .partner-logo-box {
+        grid-row: span 4;
+        min-height: 100px;
+        margin: 0;
+      }
+
+      .partner-card .learn-link {
+        margin-top: 12px;
+      }
+
+      .impact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .vision-strip-inner {
         align-items: flex-start;
-        padding: 12px 0;
         flex-direction: column;
         gap: 10px;
       }
 
-      .nav-links { justify-content: flex-start; gap: 12px; }
-      .hero-grid, .intro-grid, .journey-grid { grid-template-columns: 1fr; }
-      .hero { padding: 60px 0; }
-      .role-grid { grid-template-columns: 1fr 1fr; }
-      .principles-grid { grid-template-columns: 1fr 1fr; }
-      .intro-image, .journey-image { height: 340px; }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid .footer-column:last-child {
+        grid-column: 1 / -1;
+      }
     }
 
-    @media (max-width: 600px) {
-      .brand img { width: 61px; height: 56px; }
-      .brand-copy strong { font-size: .9rem; }
-      .brand-copy span { font-size: .68rem; }
-      .nav-links { gap: 10px 14px; }
-      .nav-links a { font-size: .8rem; }
-      .nav-links .nav-cta { padding: 8px 12px; }
-      .section { padding: 58px 0; }
-      .hero { padding: 48px 0; }
-      .partner-logos { gap: 6px; }
-      .partner-logo { min-height: 110px; padding: 8px 4px; }
-      .partner-logo img { height: 48px; }
-      .partner-logo strong { font-size: .68rem; }
-      .partner-logo small { font-size: .58rem; }
-      .partnership-visual { padding: 16px; }
-      .role-grid, .principles-grid, .footer-grid { grid-template-columns: 1fr; }
-      .intro-image, .journey-image { height: 260px; }
-      .commitment { grid-template-columns: 1fr; padding: 26px; }
-      .commitment .btn { justify-self: start; }
-      .cta-inner { padding: 28px 20px; }
+    @media (max-width: 560px) {
+      .section {
+        padding: 52px 0;
+      }
+
+      .nav-wrap {
+        min-height: 72px;
+      }
+
+      .brand-logo {
+        width: 53px;
+        height: 53px;
+      }
+
+      .brand-copy {
+        font-size: .76rem;
+        max-width: 190px;
+      }
+
+      .brand-copy small {
+        font-size: .58rem;
+      }
+
+      .hero {
+        padding: 47px 0 54px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.3rem, 10.8vw, 3.5rem);
+      }
+
+      .hero-image {
+        min-height: 275px;
+      }
+
+      .button-row .button {
+        width: 100%;
+      }
+
+      .partner-card {
+        display: flex;
+        padding: 23px;
+      }
+
+      .partner-logo-box {
+        min-height: 90px;
+        margin-bottom: 17px;
+      }
+
+      .impact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .roles-conclusion {
+        grid-template-columns: 1fr;
+        padding: 22px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid .footer-column:last-child {
+        grid-column: auto;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: .01ms !important;
-        scroll-behavior: auto !important;
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
         transition-duration: .01ms !important;
       }
     }
@@ -689,349 +1221,679 @@
 </head>
 
 <body>
-  <div class="top-strip">
-    A Basotho-centred vision for opportunity, local industry and lasting impact
+  <div class="topbar">
+    <div class="container">
+      <strong>Stronger communities. Brighter futures.</strong>
+      &nbsp; A Basotho-centred vision for opportunity and local industry.
+    </div>
   </div>
 
-  <header>
-    <div class="container nav">
+  <header class="site-header">
+    <div class="container nav-wrap">
       <a class="brand" href="index.html" aria-label="Life Improvement Foundation home">
-        <img src="assets/lif/life-logo-transparent.png" alt="Life Improvement Foundation logo">
-        <div class="brand-copy">
-          <strong>Life Improvement Foundation</strong>
-          <span>Opportunity • Enterprise • Community</span>
-        </div>
+        <img class="brand-logo"
+             src="assets/lif/life-logo-transparent.png"
+             alt="Life Improvement Foundation logo">
+        <span class="brand-copy">
+          LIFE IMPROVEMENT FOUNDATION
+          <small>BETTER FOOD • STRONGER COMMUNITIES</small>
+        </span>
       </a>
 
-      <nav class="nav-links" aria-label="Main navigation">
+      <button class="nav-toggle"
+              type="button"
+              aria-label="Open navigation"
+              aria-expanded="false"
+              aria-controls="primary-navigation">☰</button>
+
+      <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="partnership.html" aria-current="page">Partnership</a>
         <a href="products.html">Food Sock &amp; Two Spoons</a>
         <a href="kingdom-foods.html">Kingdom Foods</a>
-        <a href="manufacturing.html">Manufacturing</a>
+        <a href="manufacturing.html">Manufacturing Vision</a>
+        <a href="community.html">Community Involvement</a>
+        <a href="reseller.html">Reseller Program</a>
+        <a href="register.html">Register to Join LIF</a>
+        <a href="contact.html">Contact Us</a>
         <a class="nav-cta" href="#join">Join the Journey</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <!-- HERO -->
+    <section class="hero" id="partnership">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">One partnership • One shared direction</span>
-          <h1>A Partnership That Builds <span>Industry,</span> Not Just Distribution.</h1>
-          <p class="hero-copy">
-            Life Improvement Foundation, Food Sock and Kingdom Foods are bringing
-            complementary strengths together around a bigger opportunity for Lesotho:
-            grow the market, develop local enterprise, create meaningful work and
-            build a pathway towards manufacturing in our own country.
+          <span class="eyebrow">Partnership • Industry • Lesotho</span>
+
+          <h1>
+            A Partnership That Builds
+            <span class="red">Industry,</span>
+            Not Just
+            <span class="green">Distribution.</span>
+          </h1>
+
+          <p class="hero-intro">
+            Life Improvement Foundation, Food Sock and Kingdom Foods are
+            bringing complementary strengths together around a bigger
+            opportunity for Lesotho: grow the market, develop local
+            enterprise, create meaningful work and build a pathway towards
+            manufacturing in our own country.
           </p>
-          <div class="hero-actions">
-            <a class="btn btn-gold" href="#roles">Explore the Partnership ↓</a>
-            <a class="btn btn-white" href="#manufacturing">Our Manufacturing Vision</a>
+
+          <div class="hero-proof">
+            <span class="proof-chip">🇱🇸 Local opportunity</span>
+            <span class="proof-chip">🤝 Shared responsibilities</span>
+            <span class="proof-chip">🏭 Manufacturing ambition</span>
+          </div>
+
+          <div class="button-row">
+            <a class="button button-green" href="#partnership-design-roles">
+              Explore the partnership ↓
+            </a>
+            <a class="button button-outline" href="manufacturing.html">
+              Our manufacturing vision
+            </a>
           </div>
         </div>
 
-        <div class="partnership-visual">
-          <div class="visual-heading">
-            <strong>THE TRIPARTITE PARTNERSHIP</strong>
-            <span>Three distinct roles. A shared ambition for Lesotho.</span>
+        <div class="hero-image">
+          <img src="partnership-journey.jpg"
+               alt="Partnership journey visual representing local industry and opportunity in Lesotho"
+               fetchpriority="high">
+          <div class="image-caption">
+            <strong>One partnership. One shared direction.</strong>
+            Working towards enterprise, local capability and lasting impact.
           </div>
-
-          <div class="partner-logos">
-            <div class="partner-logo">
-              <img src="assets/lif/life-logo-transparent.png"
-                   alt="Life Improvement Foundation original logo">
-              <strong>LIFE IMPROVEMENT FOUNDATION</strong>
-              <small>Market development</small>
-            </div>
-
-            <div class="partner-logo">
-              <!-- Replace this text wordmark with the original Food Sock logo file
-                   when it has been uploaded to assets/partnership/food-sock-logo.png -->
-              <strong style="font-size:1.25rem; letter-spacing:.02em;">FOOD SOCK</strong>
-              <small>Brand &amp; product expertise</small>
-            </div>
-
-            <div class="partner-logo">
-              <!-- Replace this text wordmark with the original Kingdom Foods logo file
-                   when it has been uploaded to assets/partnership/kingdom-foods-logo.png -->
-              <strong style="font-size:1.02rem;">KINGDOM FOODS</strong>
-              <small>Manufacturing expertise</small>
-            </div>
-          </div>
-
-          <div class="handshake" role="img" aria-label="Handshake symbol representing partnership">🤝</div>
-          <p class="visual-caption">Working together for Basotho and the future of Lesotho</p>
         </div>
       </div>
     </section>
 
+    <!-- SHARED VISION -->
+    <section class="vision-strip">
+      <div class="container vision-strip-inner">
+        <h2>Lesotho should not only be a destination for products. It should also be a place where value is created.</h2>
+        <p>
+          Our ambition is to help create the conditions for local enterprise,
+          skills, jobs and a stronger manufacturing future.
+        </p>
+      </div>
+    </section>
+
+    <!-- WHY THE PARTNERSHIP MATTERS -->
     <section class="section">
       <div class="container intro-grid">
-        <div>
-          <img class="intro-image"
-               src="assets/partnership/partnership-journey.jpg"
-               alt="Partnership journey towards local enterprise and manufacturing in Lesotho"
-               onerror="this.onerror=null;this.src='assets/manufacturing/lif-future-manufacturing-vision.png';">
+        <div class="intro-lead">
+          <span class="eyebrow">The principle</span>
+          <h2>Distribution is the beginning. <span>Building local capability</span> is the bigger ambition.</h2>
         </div>
 
         <div class="intro-copy">
-          <span class="eyebrow">Why this partnership matters</span>
-          <h2>Distribution is the beginning. Building local capability is the bigger ambition.</h2>
           <p>
-            The opportunity presented to Lesotho is not simply to move products from
-            one place to another. It is to establish a stronger market, create space
-            for Basotho entrepreneurs and work towards a future where more production,
-            skills and economic value can be developed locally.
+            The opportunity presented to Lesotho is not simply to move
+            products from one place to another. It is to establish a stronger
+            market, create space for Basotho entrepreneurs and work towards
+            a future where more production, skills and economic value can
+            be developed locally.
           </p>
+
           <p>
-            LIF brought the market-development and local-industry vision forward,
-            connecting Food Sock and Kingdom Foods around an opportunity for Lesotho.
-            Each partner contributes a different capability to the shared journey.
+            Life Improvement Foundation brought forward the market-development
+            and local-industry vision, connecting Food Sock and Kingdom Foods
+            around an opportunity for Lesotho. Each partner contributes
+            different capabilities to the shared journey.
           </p>
-          <div class="quote">
-            “We want opportunity to reach communities, enterprise to grow, and more
-            of the value created to remain in Lesotho.”
+
+          <p>
+            The Foundation’s wider mission is to help end poverty by
+            expanding opportunity, enterprise, skills and self-reliance.
+            The partnership is intended to connect commercial activity with
+            a longer-term ambition for local economic development.
+          </p>
+
+          <div class="intro-quote">
+            “Products by Basotho, for Basotho and the world.”
           </div>
-          <p>
-            This direction reflects the Foundation’s wider mission: to help end
-            poverty by expanding opportunity, enterprise, skills and self-reliance.
-          </p>
         </div>
       </div>
     </section>
 
-    <section class="section section-cream" id="roles">
+    <!-- PARTNERS -->
+    <section class="section partners-section" id="our-partners">
       <div class="container">
         <div class="section-heading">
-          <span class="eyebrow">Partnership design &amp; roles</span>
-          <h2>Three partners. Clear responsibilities. A shared future.</h2>
+          <span class="eyebrow">Our partners</span>
+          <h2>Three Organisations. One Shared Vision.</h2>
           <p>
-            The partnership works because each organisation contributes its own
-            strengths. The responsibilities below describe the intended roles
-            within the partnership; detailed operational arrangements remain subject
-            to the applicable agreements.
+            A partnership built around distinct responsibilities, shared
+            direction and the ambition to create lasting opportunity for
+            Basotho communities.
           </p>
         </div>
 
-        <div class="role-grid">
-          <article class="role-card">
-            <div class="role-top">
-              <span class="number">01</span>
-              <h3>Life Improvement Foundation</h3>
-              <p>The originator and market-development driving force for the Lesotho initiative.</p>
+        <div class="partners-grid">
+          <article class="partner-card">
+            <div class="partner-logo-box">
+              <img src="assets/lif/life-logo-transparent.png"
+                   alt="Life Improvement Foundation logo">
             </div>
-            <div class="role-body">
-              <ul>
-                <li>Conceived the Lesotho market-development and local-manufacturing initiative.</li>
-                <li>Brought Food Sock and Kingdom Foods together around the opportunity.</li>
-                <li>Leads local market entry, stakeholder engagement and relationship building.</li>
-                <li>Develops the distribution environment and opportunities for local resellers.</li>
-                <li>Works to connect community participation with the longer-term manufacturing vision.</li>
-                <li>May nominate Eco Solutions (Pty) Ltd as an operating partner, subject to the relevant arrangements.</li>
-              </ul>
-            </div>
+            <span class="role-tag role-lif">Market development &amp; distribution</span>
+            <h3>Life Improvement Foundation</h3>
+            <p>
+              The originator and driving force behind the Lesotho market
+              development and local manufacturing initiative. LIF connects
+              the partners with the market, communities and distribution
+              opportunities.
+            </p>
+            <a class="learn-link" href="#lif-role">Explore LIF’s role →</a>
           </article>
 
-          <article class="role-card">
-            <div class="role-top">
-              <span class="number">02</span>
-              <h3>Food Sock</h3>
-              <p>Product, brand and commercial expertise supporting the market opportunity.</p>
+          <article class="partner-card">
+            <div class="partner-logo-box">
+              <img src="assets/partnership/food-sock-logo.png"
+                   alt="Food Sock original logo"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="partner-logo-text foodsock" style="display:none;">Food Sock</span>
             </div>
-            <div class="role-body">
-              <ul>
-                <li>Retains responsibility for its intellectual property, formulations, brands and recipes.</li>
-                <li>Contributes marketing and commercial strategy.</li>
-                <li>Provides wholesale pricing and product-related commercial information to the relevant partners.</li>
-                <li>Provides technical product support within the agreed arrangements.</li>
-                <li>Supports the supply and distribution of its finished product range.</li>
-                <li>Contributes product knowledge to market development and customer education.</li>
-              </ul>
-            </div>
+            <span class="role-tag role-food">Brands, IP &amp; commercial strategy</span>
+            <h3>Food Sock</h3>
+            <p>
+              Contributes its brand, intellectual property, product
+              formulations and recipes, along with commercial strategy,
+              technical support and its finished product range.
+            </p>
+            <a class="learn-link" href="#food-sock-role">Explore Food Sock’s role →</a>
           </article>
 
-          <article class="role-card">
-            <div class="role-top">
-              <span class="number">03</span>
-              <h3>Kingdom Foods</h3>
-              <p>Manufacturing expertise supporting production and packaging arrangements.</p>
+          <article class="partner-card">
+            <div class="partner-logo-box">
+              <img src="assets/partnership/kingdom-foods-logo.png"
+                   alt="Kingdom Foods original logo"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="partner-logo-text kingdom" style="display:none;">Kingdom Foods</span>
             </div>
-            <div class="role-body">
-              <ul>
-                <li>Acts as the manufacturing partner for Food Sock under the applicable manufacturing agreement.</li>
-                <li>Manufactures and packages Food Sock products in accordance with agreed specifications and responsibilities.</li>
-                <li>Brings food-production and manufacturing experience to the wider initiative.</li>
-                <li>Supports the partnership’s product-supply arrangements within its agreed role.</li>
-                <li>Contributes to discussions about the future manufacturing pathway for Lesotho.</li>
-                <li>Its other product responsibilities, including VitaKidz-related supply arrangements, should follow the applicable agreements.</li>
-              </ul>
-            </div>
+            <span class="role-tag role-kingdom">Manufacturing &amp; packaging</span>
+            <h3>Kingdom Foods</h3>
+            <p>
+              Serves as the manufacturing partner for Food Sock products
+              under the applicable manufacturing agreement and also has
+              its own complementary product range.
+            </p>
+            <a class="learn-link" href="#kingdom-role">Explore Kingdom Foods’ role →</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-green">
+    <!-- PARTNERSHIP DESIGN & ROLES -->
+    <section class="section roles-section" id="partnership-design-roles">
+      <div class="container">
+        <div class="roles-heading">
+          <span class="eyebrow">Partnership design &amp; roles</span>
+          <h2>ROLES OF EACH PARTY IN THE PARTNERSHIP</h2>
+          <p>
+            The partnership works because each organisation contributes
+            its own strengths. The following describes the intended roles
+            within the partnership; detailed operational arrangements remain
+            subject to the applicable agreements.
+          </p>
+        </div>
+
+        <div class="roles-grid">
+          <article class="role-card" id="lif-role">
+            <div class="role-card-head">
+              <div class="role-number">1</div>
+              <h3>Life Improvement Foundation</h3>
+              <p>
+                The originator and driving force behind the Lesotho initiative.
+              </p>
+            </div>
+
+            <div class="role-card-body">
+              <p>
+                Life Improvement Foundation conceived the Lesotho market
+                development and local manufacturing initiative, and brought
+                Food Sock and Kingdom Foods together.
+              </p>
+
+              <p>
+                The vision is for investment and value created through this
+                initiative to benefit Lesotho and Basotho.
+              </p>
+
+              <ul>
+                <li>Leads local market development and distribution planning.</li>
+                <li>Facilitates market entry and stakeholder relationships.</li>
+                <li>Builds sales infrastructure and develops distribution channels.</li>
+                <li>Connects resellers and community participation with the wider vision.</li>
+                <li>Works to advance the local manufacturing ambition.</li>
+              </ul>
+
+              <details class="role-details">
+                <summary>Additional operating arrangement</summary>
+                <p>
+                  Life Improvement Foundation may nominate Eco Solutions
+                  (Pty) Ltd as its operating partner, subject to the relevant
+                  arrangements and agreements.
+                </p>
+              </details>
+            </div>
+          </article>
+
+          <article class="role-card" id="food-sock-role">
+            <div class="role-card-head">
+              <div class="role-number">2</div>
+              <h3>Food Sock</h3>
+              <p>
+                The brand, product intellectual property and commercial expertise.
+              </p>
+            </div>
+
+            <div class="role-card-body">
+              <p>
+                Food Sock owns the intellectual property, product
+                formulations, brands and recipes associated with its range.
+              </p>
+
+              <ul>
+                <li>Retains responsibility for its intellectual property, formulations, brands and recipes.</li>
+                <li>Drives marketing and commercial strategy.</li>
+                <li>Sets wholesale pricing and supplies relevant commercial information.</li>
+                <li>Provides technical support within the agreed arrangements.</li>
+                <li>Supplies its finished product range for distribution.</li>
+                <li>Contributes product knowledge to market development and customer education.</li>
+              </ul>
+
+              <details class="role-details">
+                <summary>How this supports the partnership</summary>
+                <p>
+                  Food Sock’s product and brand expertise supports market
+                  development while the partnership works towards expanding
+                  local capability in Lesotho.
+                </p>
+              </details>
+            </div>
+          </article>
+
+          <article class="role-card" id="kingdom-role">
+            <div class="role-card-head">
+              <div class="role-number">3</div>
+              <h3>Kingdom Foods</h3>
+              <p>
+                The manufacturing partner for Food Sock under the applicable agreement.
+              </p>
+            </div>
+
+            <div class="role-card-body">
+              <p>
+                Kingdom Foods is the manufacturing partner for Food Sock
+                products under the applicable manufacturing agreement.
+              </p>
+
+              <ul>
+                <li>Manufactures and packages Food Sock products under the manufacturing agreement.</li>
+                <li>Works to agreed product specifications and responsibilities.</li>
+                <li>Contributes manufacturing and production expertise.</li>
+                <li>Supports product-supply arrangements within its agreed role.</li>
+                <li>Supplies VitaKids, its own milkshake sachet range, as a complementary product range.</li>
+              </ul>
+
+              <details class="role-details">
+                <summary>Complementary products</summary>
+                <p>
+                  VitaKids is a Kingdom Foods product range that complements
+                  the wider offering. Product ownership and manufacturing
+                  responsibilities should be understood in accordance with
+                  the relevant agreements.
+                </p>
+              </details>
+            </div>
+          </article>
+        </div>
+
+        <div class="roles-conclusion">
+          <div class="handshake-icon" aria-hidden="true">🤝</div>
+          <div>
+            <h3>Protecting expertise. Localising opportunity. Benefiting Basotho.</h3>
+            <p>
+              This structure recognises Food Sock’s intellectual property,
+              Kingdom Foods’ manufacturing role and Life Improvement
+              Foundation’s leadership in Lesotho market development and
+              local benefit. LIF’s wider vision drives the effort to connect
+              distribution, community participation and a future local
+              manufacturing pathway.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="section impact-section" id="impact">
       <div class="container">
         <div class="section-heading">
           <span class="eyebrow">The shared direction</span>
-          <h2>What we want this partnership to make possible</h2>
+          <h2>What We Want This Partnership to Make Possible</h2>
           <p>
-            Our ambition goes beyond products. It is about building the conditions
-            for more Basotho people to participate in the economy and contribute to
-            a stronger local industry.
+            Our ambition goes beyond products. It is about creating more
+            ways for Basotho to participate in the economy and contribute
+            to a stronger local industry.
           </p>
         </div>
 
-        <div class="principles-grid">
-          <article class="principle">
-            <div class="symbol" aria-hidden="true">🌱</div>
-            <h3>Local participation</h3>
-            <p>Work towards greater use of Lesotho-based resources, suppliers, farmers and entrepreneurs wherever feasible.</p>
-          </article>
-
-          <article class="principle">
-            <div class="symbol" aria-hidden="true">🤝</div>
-            <h3>Enterprise for communities</h3>
-            <p>Open pathways for resellers, retailers, informal traders and community businesses to participate.</p>
-          </article>
-
-          <article class="principle">
-            <div class="symbol" aria-hidden="true">🧰</div>
-            <h3>Skills and jobs</h3>
-            <p>Build towards local employment, practical skills and production capability as the manufacturing journey develops.</p>
-          </article>
-
-          <article class="principle">
-            <div class="symbol" aria-hidden="true">🇱🇸</div>
-            <h3>Value in Lesotho</h3>
-            <p>Work towards the ambition of products by Basotho, for Basotho and the world.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="manufacturing">
-      <div class="container journey-grid">
-        <div>
-          <img class="journey-image"
-               src="assets/manufacturing/lif-future-manufacturing-vision.png"
-               alt="Concept image illustrating the future manufacturing vision for Lesotho">
-        </div>
-
-        <div class="journey-copy">
-          <span class="eyebrow">Journey to the manufacturing plant</span>
-          <h2>From market development to a future manufacturing base in Lesotho.</h2>
-          <p>
-            The partnership includes a commitment to work towards establishing a
-            manufacturing plant in Lesotho within one year after the launch of
-            Phase One of the reseller programme. This is a future commitment, not
-            a statement that the plant is already operating.
-          </p>
-          <ul class="journey-list">
-            <li>Build a viable local market through the Phase One reseller programme.</li>
-            <li>Develop a stronger network of retailers, traders and community entrepreneurs.</li>
-            <li>Work towards sourcing up to 70% of relevant products and resources locally, where feasible and suitable.</li>
-            <li>Work towards packing products in Lesotho as local capability and arrangements allow.</li>
-            <li>Create opportunities for employment, skills development and local suppliers as the plant develops.</li>
-          </ul>
-          <p>
-            <strong>Our long-term direction:</strong> a stronger local economy in which
-            Basotho can participate in distribution, supply, production and the value
-            chain around it.
-          </p>
-          <a class="btn btn-green" href="manufacturing.html">Explore the Manufacturing Vision →</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-cream">
-      <div class="container">
-        <div class="commitment">
-          <div>
-            <h2>Join the journey from opportunity to industry.</h2>
+        <div class="impact-grid">
+          <article class="impact-card">
+            <div class="impact-icon" aria-hidden="true">🌱</div>
+            <h3>Local Participation</h3>
             <p>
-              Resellers, retailers, community partners, potential suppliers and
-              supporters all have a role to play in growing the market and preparing
-              for the next stage.
+              Work towards greater use of Lesotho-based resources, suppliers,
+              farmers and entrepreneurs wherever feasible.
             </p>
-          </div>
-          <a class="btn btn-gold" href="#join">Find Your Place in the Journey →</a>
+          </article>
+
+          <article class="impact-card">
+            <div class="impact-icon" aria-hidden="true">🤝</div>
+            <h3>Enterprise for Communities</h3>
+            <p>
+              Open pathways for resellers, retailers, informal traders
+              and community businesses to participate.
+            </p>
+          </article>
+
+          <article class="impact-card">
+            <div class="impact-icon" aria-hidden="true">🧰</div>
+            <h3>Skills and Jobs</h3>
+            <p>
+              Build towards local employment, practical skills and production
+              capability as the manufacturing journey develops.
+            </p>
+          </article>
+
+          <article class="impact-card">
+            <div class="impact-icon" aria-hidden="true">🇱🇸</div>
+            <h3>Value in Lesotho</h3>
+            <p>
+              Work towards an economy where more value is created locally
+              and more Basotho can benefit from the supply chain.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="cta" id="join">
-      <div class="container">
-        <div class="cta-inner">
-          <span class="eyebrow">Be part of the LIF family</span>
-          <h2>Help build opportunity that lasts.</h2>
+    <!-- MANUFACTURING PATHWAY -->
+    <section class="section manufacturing-section" id="future-manufacturing">
+      <div class="container manufacturing-grid">
+        <div class="manufacturing-copy">
+          <span class="eyebrow">Journey to the manufacturing plant</span>
+          <h2>From Market Development to a Future Manufacturing Base in Lesotho.</h2>
+
           <p>
-            Are you interested in becoming a reseller, supporting community
-            participation, exploring local supply opportunities or learning more
-            about the manufacturing vision? Contact the Life Improvement Foundation
-            to discuss how you could contribute.
+            The partnership includes a commitment to work towards establishing
+            a manufacturing plant in Lesotho within one year after the launch
+            of Phase One of the reseller programme.
           </p>
-          <div class="hero-actions" style="justify-content:center;">
-            <a class="btn btn-green"
-               href="https://wa.me/26659434159?text=Hello%20LIF%2C%20I%20would%20like%20to%20learn%20more%20about%20the%20tripartite%20partnership."
-               target="_blank" rel="noopener">Chat with LIF on WhatsApp</a>
-            <a class="btn btn-green" href="mailto:projects@lifefoundation.co.ls">Email the Foundation</a>
-            <a class="btn btn-green" href="index.html">Return to Home</a>
+
+          <p>
+            Phase One is intended to help build a stronger market and a
+            nationwide network of resellers. This market-development work
+            is part of the pathway towards local production and packaging.
+          </p>
+
+          <div class="manufacturing-steps">
+            <div class="manufacturing-step">
+              <div class="step-number">1</div>
+              <div>
+                <strong>Develop the local market</strong>
+                <span>Build awareness, distribution and participation through the reseller programme.</span>
+              </div>
+            </div>
+
+            <div class="manufacturing-step">
+              <div class="step-number">2</div>
+              <div>
+                <strong>Connect local suppliers</strong>
+                <span>Work towards suitable supply relationships with Basotho farmers, millers and businesses.</span>
+              </div>
+            </div>
+
+            <div class="manufacturing-step">
+              <div class="step-number">3</div>
+              <div>
+                <strong>Build production capability</strong>
+                <span>Work towards local manufacturing, packaging, employment and skills development.</span>
+              </div>
+            </div>
+
+            <div class="manufacturing-step">
+              <div class="step-number">4</div>
+              <div>
+                <strong>Expand the opportunity</strong>
+                <span>Develop a stronger local value chain with potential to serve markets beyond Lesotho.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="commitment-note">
+            <strong>Important distinction:</strong> the manufacturing plant
+            shown here is a conceptual vision, not an existing operating
+            facility. The timeline describes the partnership commitment
+            and ambition, not a claim that construction or production
+            has already begun.
+          </div>
+
+          <div class="button-row">
+            <a class="button button-gold" href="manufacturing.html">
+              Explore the manufacturing vision →
+            </a>
           </div>
         </div>
+
+        <div class="factory-visual">
+          <img src="assets/manufacturing/lif-future-manufacturing-vision.png"
+               alt="Conceptual visual of a future food manufacturing facility in Lesotho"
+               loading="lazy">
+          <div class="concept-label">
+            CONCEPTUAL MANUFACTURING VISION
+            <small>
+              An illustration of what a future local manufacturing facility
+              could look like. This is not an existing factory.
+            </small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCAL SOURCING -->
+    <section class="section local-section">
+      <div class="container local-grid">
+        <div class="local-copy">
+          <span class="eyebrow">Local value creation</span>
+          <h2>More Local Sourcing. More Local Participation.</h2>
+          <p>
+            The partnership’s ambition is to source up to 70% of relevant
+            ingredients and resources locally when manufacturing develops,
+            where feasible and subject to quality, availability, food-safety
+            requirements and commercial arrangements.
+          </p>
+          <p>
+            This could create supply opportunities for Basotho farmers,
+            millers, suppliers and entrepreneurs while supporting local
+            processing, packaging, employment and skills development.
+          </p>
+          <p>
+            The goal is to build a supply chain that strengthens local
+            participation and keeps more economic value circulating in Lesotho.
+          </p>
+
+          <div class="button-row">
+            <a class="button button-green" href="community.html">
+              Community participation
+            </a>
+            <a class="button button-outline" href="reseller.html">
+              Reseller programme
+            </a>
+          </div>
+        </div>
+
+        <div class="local-stat">
+          <div class="big-number">70%</div>
+          <h3>Local-sourcing ambition</h3>
+          <p>
+            A target for sourcing relevant ingredients and resources from
+            local suppliers as manufacturing develops, where suitable and
+            commercially feasible.
+          </p>
+          <span class="qualifier">
+            This is an ambition, not a claim that 70% local sourcing is
+            already being achieved. Actual sourcing will depend on product
+            requirements, availability, quality and agreements.
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="join">
+      <div class="container cta-inner">
+        <span class="eyebrow">Partnership built for a brighter future</span>
+        <h2>Local Partnerships. Lasting Impact.</h2>
+        <p>
+          Resellers, retailers, community partners, potential suppliers
+          and supporters all have a role to play in growing the market
+          and preparing for the next stage. Contact Life Improvement
+          Foundation to discuss how you could contribute.
+        </p>
+
+        <div class="button-row">
+          <a class="button button-gold"
+             href="https://wa.me/26659434159?text=Hello%20LIF%2C%20I%20would%20like%20to%20learn%20more%20about%20the%20partnership%20and%20manufacturing%20vision."
+             target="_blank"
+             rel="noopener">
+            Get in touch on WhatsApp
+          </a>
+
+          <a class="button button-white"
+             href="mailto:projects@lifefoundation.co.ls?subject=Life%20Improvement%20Foundation%20Partnership">
+            Email the Foundation
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNER WORDMARKS -->
+    <section class="partner-footer" aria-label="Partnership organisations">
+      <div class="container">
+        <div class="partner-line">
+          <span class="lif-word">LIFE IMPROVEMENT FOUNDATION</span>
+          <span>+</span>
+          <span class="food-word">FOOD SOCK</span>
+          <span>+</span>
+          <span class="kingdom-word">KINGDOM FOODS</span>
+        </div>
+        <p>
+          Working towards local opportunity, food sovereignty and
+          manufacturing ambitions in Lesotho.
+        </p>
       </div>
     </section>
   </main>
 
-  <footer>
+  <!-- FOOTER -->
+  <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div>
           <div class="footer-brand">
-            <img src="assets/lif/life-logo-transparent.png" alt="Life Improvement Foundation logo">
-            <strong>Life Improvement Foundation</strong>
+            <img src="assets/lif/life-logo-transparent.png"
+                 alt="Life Improvement Foundation logo">
+            <div>
+              <strong>Life Improvement Foundation</strong>
+              <span>Better food. Stronger communities. Brighter futures.</span>
+            </div>
           </div>
-          <p>
-            Working towards a future where opportunity, enterprise, local skills
-            and community participation help Basotho build lasting prosperity.
+          <p style="margin-top:16px;color:#c8d8ce;font-size:.87rem;">
+            Working towards a future where opportunity, enterprise, local
+            skills and community participation help Basotho build lasting
+            prosperity.
           </p>
         </div>
 
-        <div>
-          <h3>Explore LIF</h3>
-          <div class="footer-links">
-            <a href="index.html">Home and Founder’s Vision</a>
-            <a href="partnership.html">The Partnership</a>
-            <a href="products.html">Food Sock &amp; Two Spoons Products</a>
-            <a href="kingdom-foods.html">Kingdom Foods</a>
-            <a href="manufacturing.html">Manufacturing Vision</a>
-          </div>
+        <div class="footer-column">
+          <h3>Contact the Foundation</h3>
+          <p>Lesotho</p>
+          <p>
+            <a href="tel:+26659434159">+266 5943 4159</a>
+          </p>
+          <p>
+            <a href="mailto:projects@lifefoundation.co.ls">
+              projects@lifefoundation.co.ls
+            </a>
+          </p>
+          <p>
+            <a href="https://wa.me/26659434159"
+               target="_blank" rel="noopener">Chat with LIF on WhatsApp</a>
+          </p>
         </div>
 
-        <div>
-          <h3>Contact the Foundation</h3>
-          <p>Email: <a href="mailto:projects@lifefoundation.co.ls">projects@lifefoundation.co.ls</a></p>
-          <p>WhatsApp: <a href="https://wa.me/26659434159" target="_blank" rel="noopener">+266 5943 4159</a></p>
-          <p>Lesotho</p>
+        <div class="footer-column">
+          <h3>Explore LIF</h3>
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="partnership.html">Partnership</a>
+            <a href="products.html">Products</a>
+            <a href="kingdom-foods.html">Kingdom Foods</a>
+            <a href="manufacturing.html">Manufacturing</a>
+            <a href="community.html">Community</a>
+            <a href="reseller.html">Reseller programme</a>
+            <a href="register.html">Join LIF</a>
+            <a href="contact.html">Contact us</a>
+          </nav>
         </div>
       </div>
 
-      <div class="copyright">
-        © <span id="year"></span> Life Improvement Foundation. Building opportunity, enterprise and a future for Lesotho.
+      <div class="footer-bottom">
+        <span>© <span id="current-year"></span> Life Improvement Foundation. All rights reserved.</span>
+        <span>Building opportunity, enterprise and a future for Lesotho.</span>
       </div>
     </div>
   </footer>
 
-  <a class="whatsapp-float"
-     href="https://wa.me/26659434159?text=Hello%20Life%20Improvement%20Foundation"
-     target="_blank" rel="noopener"
-     aria-label="Contact Life Improvement Foundation on WhatsApp">✆</a>
-
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // Responsive mobile navigation
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (navToggle && navLinks) {
+      navToggle.addEventListener("click", function () {
+        const open = navLinks.classList.toggle("open");
+
+        navToggle.setAttribute("aria-expanded", String(open));
+        navToggle.setAttribute(
+          "aria-label",
+          open ? "Close navigation" : "Open navigation"
+        );
+        navToggle.textContent = open ? "✕" : "☰";
+      });
+
+      navLinks.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          navLinks.classList.remove("open");
+          navToggle.setAttribute("aria-expanded", "false");
+          navToggle.setAttribute("aria-label", "Open navigation");
+          navToggle.textContent = "☰";
+        });
+      });
+    }
+
+    // Current copyright year
+    const yearElement = document.getElementById("current-year");
+
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
   </script>
 </body>
 </html>
