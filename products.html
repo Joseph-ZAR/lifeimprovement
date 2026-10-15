@@ -2,180 +2,640 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore Food Sock, Two Spoons and Kingdom Foods through Life Improvement Foundation in Lesotho. Discover meal solutions, bulk food options and reseller opportunities.">
-<title>Our Products | Life Improvement Foundation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#124b36">
+<meta name="description" content="Explore Food Sock, Two Spoons and Kingdom Foods through Life Improvement Foundation. Discover convenient meals, dietary information and our vision for Lesotho.">
+<title>Products | Life Improvement Foundation</title>
+
 <style>
 :root {
-  --red: #b51f2b;
-  --green: #146b43;
-  --blue: #168bd2;
-  --ink: #12382d;
-  --muted: #59665f;
-  --pale: #f7f4e9;
-  --gold: #d6ad3b;
+  --green:#124b36;
+  --deep:#082f23;
+  --green2:#236c4c;
+  --cream:#fbf8ef;
+  --gold:#d8ad47;
+  --red:#c93b35;
+  --white:#fff;
+  --ink:#26332c;
+  --muted:#657168;
+  --line:#e0e7df;
+  --pale:#edf4eb;
+  --shadow:0 14px 36px rgba(8,47,35,.09);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+html{scroll-behavior:smooth;scroll-padding-top:105px}
+body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.65 Arial,Helvetica,sans-serif}
+img{max-width:100%;display:block}
 a{color:inherit}
-header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid #e5eaf0}
-.nav{max-width:1200px;margin:auto;padding:12px 5%;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;color:var(--ink)}
-.logo img{width:65px;height:58px;object-fit:contain}
-nav{display:flex;gap:17px;flex-wrap:wrap;align-items:center}
-nav a{text-decoration:none;font-size:.92rem;font-weight:700}
-nav a:hover{color:var(--green)}
-.hero{background:linear-gradient(120deg,#102d43ed,#145c65e8),url('assets/manufacturing/lif-future-manufacturing-vision.png') center/cover;color:#fff;padding:78px 5%}
-.hero-inner{max-width:1100px;margin:auto}
-.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:.78rem;font-weight:800;color:#a8e5c3}
-h1{font-size:clamp(2.3rem,5vw,4.3rem);line-height:1.06;margin:12px 0 20px;max-width:800px}
-.hero p{font-size:1.12rem;max-width:740px;color:#f0f6fa}
-.btn{display:inline-block;background:var(--red);color:#fff;padding:13px 20px;border-radius:9px;text-decoration:none;font-weight:800;margin:10px 10px 0 0}
-.btn.alt{background:#fff;color:var(--ink)}
-.wrap{max-width:1200px;margin:auto;padding:48px 5%}
-.intro{text-align:center;max-width:800px;margin:0 auto 28px}
-h2{font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.15;margin:0 0 12px}
-h3{margin:0 0 8px;line-height:1.25}
-.muted{color:var(--muted)}
-.jump{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:24px 0}
-.jump a{border:1px solid #d9e2e8;border-radius:30px;padding:9px 16px;text-decoration:none;font-weight:800;background:#fff}
-.jump a:hover{background:var(--ink);color:#fff}
-.catalogue{background:var(--pale)}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px}
-.section-head p{max-width:650px;margin:0;color:var(--muted)}
-.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;align-items:stretch}
-.card{background:#fff;border:1px solid #e2e9ee;border-radius:15px;overflow:hidden;display:flex;flex-direction:column;min-width:0;box-shadow:0 5px 18px #142b3b0a}
-.card img{display:block;width:100%;height:220px;object-fit:contain;padding:12px;background:#fff}
-.card-body{padding:17px;display:flex;flex-direction:column;flex:1}
-.card h3{font-size:1.04rem}
-.card p{font-size:.91rem;color:var(--muted);margin:5px 0 14px}
-.tag{font-size:.73rem;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--green)}
-.card .small-link{margin-top:auto;font-weight:800;color:var(--blue);text-decoration:none}
-.brand-band{background:#fff}
-.callout{background:#102d43;color:#fff;border-radius:18px;padding:30px;display:flex;justify-content:space-between;align-items:center;gap:25px;flex-wrap:wrap}
-.callout p{color:#dce9ef;max-width:720px;margin:8px 0}
-.note{background:#fff8e7;border-left:4px solid #e4b23f;padding:15px 18px;border-radius:7px;margin-top:25px;color:#55451f}
-footer{background:#0b1d2b;color:#e7f0f5;padding:35px 5%}
-.foot{max-width:1100px;margin:auto;display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap}
-footer a{color:#bce8ce}
-@media(max-width:950px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}.card img{height:200px}}
-@media(max-width:680px){.nav{align-items:flex-start;flex-direction:column}.logo img{width:55px;height:48px}nav{gap:12px}.hero{padding:55px 6%}.wrap{padding:38px 5%}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card img{height:155px;padding:7px}.card-body{padding:12px}.card h3{font-size:.95rem}.card p{font-size:.84rem}.section-head{display:block}.callout{padding:22px}}
-@media(max-width:390px){.cards{grid-template-columns:1fr}.card img{height:220px}}
+button{font:inherit}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.nav{max-width:1240px;margin:auto;padding:12px 24px;min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--green);font-size:13px;font-weight:900;line-height:1.25;letter-spacing:.04em}
+.brand img{width:66px;height:58px;object-fit:contain}
+.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.12em;margin-top:5px}
+.navlinks{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.navlinks a{font-size:12px;font-weight:800;text-decoration:none;color:var(--deep)}
+.navlinks a:hover{color:var(--red)}
+.navlinks .cta{background:var(--green);color:white;border-radius:30px;padding:10px 15px}
+.hero{color:white;background:linear-gradient(100deg,rgba(5,39,27,.96),rgba(11,75,48,.82)),url("assets/manufacturing/lif-future-manufacturing-vision.png") center/cover no-repeat}
+.hero-inner{max-width:1240px;margin:auto;padding:76px 24px 84px}
+.eyebrow{display:inline-block;color:var(--green);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.16em}
+.hero .eyebrow{color:#f1d58b}
+h1,h2,h3{line-height:1.15;margin-top:0}
+h1{font-size:clamp(38px,6vw,68px);letter-spacing:-.04em;max-width:850px;margin:18px 0}
+.hero p{max-width:760px;color:rgba(255,255,255,.9);font-size:18px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:27px}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid transparent;border-radius:30px;padding:12px 19px;background:var(--gold);color:#1c2b20;font-weight:900;font-size:13px;cursor:pointer}
+.btn:hover{filter:brightness(.96);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:white;border-color:rgba(255,255,255,.6)}
+.btn-green{background:var(--green);color:white}
+.highlights{max-width:1192px;margin:-25px auto 0;padding:0 24px;position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.highlight{background:white;border:1px solid var(--line);border-radius:15px;padding:20px;box-shadow:var(--shadow);display:flex;align-items:center;gap:14px}
+.highlight .symbol{width:44px;height:44px;border-radius:50%;background:var(--pale);display:grid;place-items:center;font-size:22px;flex-shrink:0}
+.highlight strong{display:block;color:var(--green);font-size:14px}
+.highlight span{display:block;color:var(--muted);font-size:12px}
+.section{max-width:1240px;margin:auto;padding:70px 24px}
+.section-head{max-width:800px;margin-bottom:30px}
+.section-head h2{color:var(--deep);font-size:clamp(29px,4vw,44px);margin:12px 0}
+.section-head p{color:var(--muted);margin-bottom:0}
+.jump{display:flex;flex-wrap:wrap;gap:9px;margin:25px 0 30px}
+.jump a{background:white;border:1px solid #d8e2d6;border-radius:30px;padding:9px 14px;color:var(--green);text-decoration:none;font-size:12px;font-weight:900}
+.jump a:hover{background:var(--green);color:white}
+.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:19px}
+.product{background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;min-width:0;box-shadow:0 6px 24px rgba(8,47,35,.045);transition:transform .2s,box-shadow .2s}
+.product:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.product-photo{height:235px;padding:12px;background:#edf0e6;position:relative}
+.product-photo img{width:100%;height:100%;object-fit:contain;border-radius:10px}
+.tag{position:absolute;top:14px;left:14px;background:white;color:var(--green);border-radius:20px;padding:5px 9px;font-size:10px;font-weight:900;letter-spacing:.05em;box-shadow:0 3px 10px #0000000d}
+.product-body{padding:18px;display:flex;flex-direction:column;flex:1}
+.product h3{font-size:18px;color:var(--deep);margin:0 0 8px}
+.product-body>p{font-size:13px;color:var(--muted);margin:0 0 14px}
+.pills{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:15px}
+.pill{font-size:10px;font-weight:900;padding:5px 8px;border-radius:5px;background:var(--pale);color:var(--green)}
+.details-btn{width:100%;margin-top:auto;padding:12px 0 0;border:0;border-top:1px solid var(--line);background:transparent;color:var(--green);display:flex;align-items:center;justify-content:space-between;gap:8px;text-align:left;font-size:12px;font-weight:900;cursor:pointer}
+.plus{width:25px;height:25px;border-radius:50%;background:var(--pale);display:grid;place-items:center;font-size:18px;flex-shrink:0}
+.details{display:none;padding-top:15px;font-size:12px;color:var(--muted)}
+.details.open{display:block}
+.details h4{font-size:12px;color:var(--green);margin:14px 0 5px}
+.details h4:first-child{margin-top:0}
+.details p{margin:0 0 8px}
+.details ul{padding-left:17px;margin:5px 0 12px}
+.details li{margin-bottom:4px}
+.nutrition{width:100%;border-collapse:collapse;font-size:11px;margin:9px 0 12px}
+.nutrition th,.nutrition td{padding:5px 4px;text-align:left;border-bottom:1px solid var(--line)}
+.nutrition th{color:var(--green);background:#f3f6f0}
+.source-status{display:inline-block;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.04em;padding:5px 7px;border-radius:5px;background:#e6f1e6;color:#23623f;margin:3px 0 8px}
+.source-status.review{background:#fff1d4;color:#795616}
+.disclaimer{background:#fffdf5;border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:14px 17px;color:#59635b;font-size:12px;margin-top:24px}
+.soft{background:#eff4eb}
+.two-col{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;margin-bottom:32px}
+.story-image{min-height:300px;border-radius:22px;overflow:hidden;background:#e8ede2}
+.story-image img{width:100%;height:100%;min-height:300px;object-fit:cover}
+.story-copy h2{font-size:clamp(28px,4vw,40px);color:var(--deep);margin:12px 0}
+.story-copy p{color:var(--muted)}
+.kingdom-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.kingdom-card{background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.kingdom-card img{height:210px;width:100%;object-fit:contain;background:#f1f3eb;padding:12px}
+.kingdom-card div{padding:20px}
+.kingdom-card h3{font-size:20px;color:var(--green);margin-bottom:8px}
+.kingdom-card p{font-size:13px;color:var(--muted)}
+.impact{margin-top:40px;border-radius:22px;background:linear-gradient(120deg,var(--deep),var(--green2));color:white;padding:32px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.impact h2{font-size:clamp(25px,3.5vw,36px);margin:10px 0}
+.impact p{color:#e2eee6;margin-bottom:0;max-width:750px;font-size:14px}
+.impact .btn{white-space:nowrap}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:28px}
+.info-card{background:white;border:1px solid var(--line);border-radius:16px;padding:22px}
+.info-card .icon{font-size:26px}
+.info-card h3{font-size:16px;color:var(--green);margin:10px 0}
+.info-card p{font-size:13px;color:var(--muted);margin:0}
+.contact{background:var(--deep);color:white}
+.contact-inner{max-width:1240px;margin:auto;padding:65px 24px;display:grid;grid-template-columns:1.2fr .8fr;gap:35px;align-items:center}
+.contact h2{font-size:clamp(29px,4vw,43px);margin:12px 0}
+.contact p{color:#d9e6dd}
+.contact-box{padding:24px;border:1px solid #ffffff30;border-radius:16px;background:#ffffff0b}
+.contact-box a{display:block;color:white;text-decoration:none;margin:8px 0;overflow-wrap:anywhere}
+.contact-box a:hover{color:var(--gold)}
+footer{background:#061d15;color:#d4dfd7;padding:24px;font-size:12px}
+.footer-inner{max-width:1240px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.footer-links{display:flex;flex-wrap:wrap;gap:15px}
+footer a{color:white;text-decoration:none}
+footer a:hover{color:var(--gold)}
+@media(max-width:1050px){.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.navlinks{gap:10px}}
+@media(max-width:760px){
+ .nav{align-items:flex-start;flex-direction:column;padding:12px 18px;gap:12px}
+ .brand img{width:55px;height:49px}
+ .navlinks{justify-content:flex-start;gap:10px 14px}
+ .hero-inner{padding:58px 20px 70px}
+ .highlights{grid-template-columns:1fr;padding:0 18px}
+ .section{padding:54px 18px}
+ .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .product-photo{height:190px;padding:8px}
+ .product-body{padding:14px}
+ .product h3{font-size:16px}
+ .two-col,.contact-inner{grid-template-columns:1fr}
+ .kingdom-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .impact{grid-template-columns:1fr;padding:24px}
+ .impact .btn{justify-self:start;white-space:normal}
+ .info-grid{grid-template-columns:1fr}
+}
+@media(max-width:440px){
+ .product-grid,.kingdom-grid{grid-template-columns:1fr}
+ .product-photo{height:245px}
+ .hero .actions .btn{width:100%}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 </style>
 </head>
+
 <body>
-<header>
-<div class="nav">
-<a class="logo" href="index.html">
-<img src="assets/lif/life-logo-transparent.png" alt="Life Improvement Foundation logo">
-<span>Life Improvement Foundation</span>
-</a>
-<nav aria-label="Main navigation">
-<a href="index.html">Home</a>
-<a href="#foodsock">Food Sock</a>
-<a href="#twospoons">Two Spoons</a>
-<a href="#kingdom">Kingdom Foods</a>
-<a href="partnership.html">Partnership</a>
-<a href="index.html#reseller">Become a Reseller</a>
-</nav>
-</div>
+<header class="site-header">
+  <div class="nav">
+    <a class="brand" href="index.html">
+      <img src="assets/lif/life-logo-transparent.png" alt="Life Improvement Foundation logo"
+           onerror="this.style.display='none'">
+      <span>LIFE IMPROVEMENT FOUNDATION
+        <small>BUILDING OPPORTUNITY. IMPROVING LIVES.</small>
+      </span>
+    </a>
+    <nav class="navlinks" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="partnership.html">Partnership</a>
+      <a href="products.html" aria-current="page">Products</a>
+      <a href="kingdom-foods.html">Kingdom Foods</a>
+      <a href="manufacturing.html">Manufacturing Vision</a>
+      <a class="cta" href="#contact">Contact LIF</a>
+    </nav>
+  </div>
 </header>
 
 <main>
 <section class="hero">
-<div class="hero-inner">
-<div class="eyebrow">Good food. Local opportunity. A bigger future.</div>
-<h1>Discover Our Product Family</h1>
-<p>Explore convenient meal solutions and food products from Food Sock, Two Spoons and Kingdom Foods. Through LIF, these brands are part of a bigger journey: growing market access, creating reseller opportunities and working towards food manufacturing in Lesotho.</p>
-<a class="btn" href="#catalogue">Explore the Catalogue</a>
-<a class="btn alt" href="index.html#reseller">Become a Reseller</a>
-</div>
+  <div class="hero-inner">
+    <span class="eyebrow">Food • opportunity • community</span>
+    <h1>Good food. Stronger communities. A better future.</h1>
+    <p>
+      Discover Food Sock, Two Spoons and Kingdom Foods through Life Improvement
+      Foundation. Our story goes beyond products: we want to connect practical
+      food solutions with community participation, enterprise and future
+      manufacturing opportunities in Lesotho.
+    </p>
+    <div class="actions">
+      <a class="btn" href="#food-sock">Explore Food Sock</a>
+      <a class="btn btn-outline" href="#kingdom-foods">Discover Kingdom Foods</a>
+    </div>
+  </div>
 </section>
 
-<section class="wrap" id="catalogue">
-<div class="intro">
-<h2>Find the range for your needs</h2>
-<p class="muted">Browse individual meal options, traditional stew mixes and bulk food solutions. Product availability and pack details may vary; please contact LIF to confirm current stock and specifications.</p>
+<div class="highlights">
+  <div class="highlight"><div class="symbol">🍲</div><div><strong>Convenient meal solutions</strong><span>Practical products for homes and groups</span></div></div>
+  <div class="highlight"><div class="symbol">🤝</div><div><strong>Opportunity through participation</strong><span>Community, resellers and local enterprise</span></div></div>
+  <div class="highlight"><div class="symbol">🌱</div><div><strong>A future built in Lesotho</strong><span>Working towards skills, jobs and local value</span></div></div>
 </div>
-<div class="jump">
-<a href="#foodsock">Food Sock meals</a>
-<a href="#twospoons">Two Spoons</a>
-<a href="#bulk">Bulk food solutions</a>
-<a href="#kingdom">Kingdom Foods</a>
-</div>
+
+<section class="section" id="food-sock">
+  <div class="section-head">
+    <span class="eyebrow">Food Sock range</span>
+    <h2>Everyday meals made more convenient.</h2>
+    <p>
+      Food Sock describes its meals as soya-based flavoured meal mixes. The
+      published range includes rice, pasta and stew-style dishes. Each card
+      below contains preparation guidance and the nutrition/ingredient details
+      that could be verified from the published reference material.
+    </p>
+  </div>
+
+  <div class="jump">
+    <a href="#food-sock">Food Sock meals</a>
+    <a href="#two-spoons">Two Spoons</a>
+    <a href="#kingdom-foods">Kingdom Foods</a>
+    <a href="#dietary">Dietary information</a>
+  </div>
+
+  <div class="product-grid">
+
+    <article class="product">
+      <div class="product-photo">
+        <span class="tag">FOOD SOCK</span>
+        <img src="https://media.portmoni.com/resized/73312/FS_Chickn_Breyani-thumbnail-600x600-95.jpg" alt="Original Food Sock Chicken Breyani pack" loading="lazy">
+      </div>
+      <div class="product-body">
+        <h3>Chicken Breyani</h3>
+        <p>A fragrant, spiced rice-style meal mix. The published recipe book describes it as a soya meal that contains no meat; cooked chicken can be added as a serving suggestion.</p>
+        <div class="pills"><span class="pill">Meal for 4*</span><span class="pill">Soy</span><span class="pill">Gluten</span></div>
+        <button class="details-btn" aria-expanded="false" type="button"><span>Nutrition, ingredients & preparation</span><span class="plus">+</span></button>
+        <div class="details">
+          <span class="source-status">Published reference: 2025 recipe book</span>
+          <h4>Preparation</h4>
+          <p>Cook the ingredients with approximately 4.5 cups (1.125 litres) of boiling water. Cook until the water has cooked away and the rice is done. Stir as required.</p>
+          <h4>Ingredients listed in the published reference</h4>
+          <p>Soy, beans and pulses, rice, flavourings, spices, dehydrated vegetables, monosodium glutamate, sucrose, dextrose and vegetable oil.</p>
+          <h4>Allergens listed</h4><p>Soy and gluten.</p>
+          <h4>Nutrition — published reference</h4>
+          <table class="nutrition">
+            <tr><th>Nutrient</th><th>Total</th><th>Per 100 g</th></tr>
+            <tr><td>Energy</td><td>1101 kJ</td><td>1258 kJ</td></tr>
+            <tr><td>Protein</td><td>13 g</td><td>14.6 g</td></tr>
+            <tr><td>Carbohydrates</td><td>52 g</td><td>59 g</td></tr>
+            <tr><td>Total sugars</td><td>2 g</td><td>2.3 g</td></tr>
+            <tr><td>Total fat</td><td>0.7 g</td><td>0.8 g</td></tr>
+            <tr><td>Saturated fat</td><td>0.2 g</td><td>0.2 g</td></tr>
+            <tr><td>Dietary fibre</td><td>0 g</td><td>0 g</td></tr>
+            <tr><td>Sodium</td><td>0.1 g</td><td>0.2 g</td></tr>
+            <tr><td>Cholesterol</td><td>0.1 mg</td><td>0.1 mg</td></tr>
+            <tr><td>Potassium</td><td>173 mg</td><td>198 mg</td></tr>
+          </table>
+          <p><strong>Important:</strong> These figures are transcribed from an older published reference and should be checked against the current package before being treated as current label values.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div class="product-photo">
+        <span class="tag">FOOD SOCK</span>
+        <img src="https://media.portmoni.com/resized/96440/Food_Socks_Randburg_-_Chicken_Pasta_Food_Sock-thumbnail-600x600-95.jpg" alt="Original Food Sock Chicken Pasta pack" loading="lazy">
+      </div>
+      <div class="product-body">
+        <h3>Chicken Pasta</h3>
+        <p>A soya-based pasta meal with chicken-style flavouring, herbs and seasoning.</p>
+        <div class="pills"><span class="pill">Pasta meal</span><span class="pill">Check allergen panel</span></div>
+        <button class="details-btn" aria-expanded="false" type="button"><span>Ingredients, allergens & preparation</span><span class="plus">+</span></button>
+        <div class="details">
+          <span class="source-status">Preparation verified</span>
+          <h4>Preparation</h4>
+          <p>Cook all ingredients with approximately 7 cups (1.75 litres) of boiling water. Cook until the pasta is done to your liking.</p>
+          <h4>Ingredients & allergens</h4>
+          <p>The product is described as a soya-based dish with spices, herbs and flavourants. The complete current ingredient list and allergen declaration were not independently verified for this product in the reference extract available for this page.</p>
+          <h4>Nutrition</h4>
+          <span class="source-status review">Current figures need label verification</span>
+          <p>Exact nutrition values are intentionally not displayed here rather than risk publishing figures from a different product revision. The current product nutrition panel should be transcribed before this section is marked verified.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div class="product-photo">
+        <span class="tag">FOOD SOCK</span>
+        <img src="https://store.foodsock.co.za/cdn/shop/files/d25mnzuu4dby3j1otczppg0n.jpg?v=1756820900" alt="Original Food Sock Mutton Stew pack" loading="lazy">
+      </div>
+      <div class="product-body">
+        <h3>Mutton Stew</h3>
+        <p>A savoury, mutton-flavoured stew-style meal mix. The flavour name should not be treated as confirmation that the mix contains meat.</p>
+        <div class="pills"><span class="pill">Stew-style meal</span><span class="pill">Soy-based range</span></div>
+        <button class="details-btn" aria-expanded="false" type="button"><span>Ingredients, allergens & preparation</span><span class="plus">+</span></button>
+        <div class="details">
+          <span class="source-status">Preparation verified</span>
+          <h4>Preparation</h4>
+          <p>Boil the beans until soft. Cook all ingredients with approximately 6.8 cups (1.7 litres) of boiling water until the rice is cooked to your liking. Stir while cooking.</p>
+          <h4>Ingredients & allergens</h4>
+          <p>Use the full ingredients and allergen statement on the current package. The complete current ingredient list and nutrition figures were not verified in the source extract used here.</p>
+          <h4>Nutrition</h4>
+          <span class="source-status review">Current figures need label verification</span>
+          <p>Nutrition figures are not guessed or copied from another flavour.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div class="product-photo">
+        <span class="tag">FOOD SOCK</span>
+        <img src="https://store.foodsock.co.za/cdn/shop/files/Chicken_a_la_King.png?v=1768378104&width=1445" alt="Original Food Sock Chicken A La King pack" loading="lazy">
+      </div>
+      <div class="product-body">
+        <h3>Chicken A La King</h3>
+        <p>A savoury, chicken-flavoured rice-style meal mix designed for convenient preparation.</p>
+        <div class="pills"><span class="pill">Meal for 4*</span><span class="pill">Check current label</span></div>
+        <button class="details-btn" aria-expanded="false" type="button"><span>Ingredients, allergens & preparation</span><span class="plus">+</span></button>
+        <div class="details">
+          <span class="source-status">Preparation verified</span>
+          <h4>Preparation</h4>
+          <p>Boil the beans until soft. Cook all ingredients with approximately 6.8 cups (1.7 litres) of boiling water until the rice is cooked to your liking. Stir while cooking.</p>
+          <h4>Ingredients & allergens</h4>
+          <p>Confirm the full current ingredients and allergen declaration on the original package. Exact nutrition values were not verified from the source extract available for this page.</p>
+          <h4>Nutrition</h4>
+          <span class="source-status review">Current figures need label verification</span>
+          <p>No nutrition values have been inferred from another flavour.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div class="product-photo">
+        <span class="tag">FOOD SOCK</span>
+        <img src="https://foodsock.co.za/wp-content/uploads/2023/09/Tomato-Bredie-1-scaled.jpg" alt="Food Sock Tomato Bredie product image" loading="lazy">
+      </div>
+      <div class="product-body">
+        <h3>Tomato Bredie</h3>
+        <p>A tomato-forward, bredie-style meal mix inspired by a familiar home-cooking dish.</p>
+        <div class="pills"><span class="pill">Meal for 4*</span><span class="pill">Soy</span><span class="pill">Gluten</span></div>
+        <button class="details-btn" aria-expanded="false" type="button"><span>Nutrition, ingredients & preparation</span><span class="plus">+</span></button>
+        <div class="details">
+          <span class="source-status">Published reference: older recipe book</span>
+          <h4>Preparation</h4>
+          <p>Boil the beans until soft. Cook all ingredients with approximately 6 cups (1.5 litres) of boiling water until the rice is cooked to your liking. Stir while cooking.</p>
+          <h4>Ingredients listed in published reference</h4>
+          <p>Soy, beans and pulses, rice, flavourings, spices and dehydrated vegetables.</p>
+          <h4>Allergens listed</h4><p>Soy and gluten.</p>
+          <h4>Nutrition — published reference</h4>
+          <table class="nutrition">
+            <tr><th>Nutrient</th><th>Total</th><th>Per 100 g</th></tr>
+            <tr><td>Energy</td><td>1220 kJ</td><td>1190 kJ</td></tr>
+            <tr><td>Protein</td><td>12.5 g</td><td>12.2 g</td></tr>
+            <tr><td>Carbohydrates</td><td>59 g</td><td>57.5 g</td></tr>
+            <tr><td>Total sugars</td><td>9.7 g</td><td>9.5 g</td></tr>
+            <tr><td>Total fat</td><td>0.7 g</td><td>0.7 g</td></tr>
+            <tr><td>Saturated fat</td><td>0.2 g</td><td>0.2 g</td></tr>
+            <tr><td>Dietary fibre</td><td>3.6 g</td><td>3.5 g</td></tr>
+            <tr><td>Sodium</td><td>0.1 g</td><td>0.1 g</td></tr>
+            <tr><td>Cholesterol</td><td>0.6 mg</td><td>0.6 mg</td></tr>
+            <tr><td>Potassium</td><td>90 mg</td><td>88 mg</td></tr>
+          </table>
+          <p><strong>Important:</strong> These are published reference figures, not confirmed current packaging values. Confirm the units and nutrition panel on the current product pack before using them for dietary decisions.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div class="product-photo">
+        <span class="tag">FOOD SOCK</span>
+        <img src="https://media.portmoni.com/resized/96440/Food_Socks_Randburg_-_Mac__Cheese_Food_Sock-thumbnail-600x600-95.jpg" alt="Original Food Sock Mac and Cheese pack" loading="lazy">
+      </div>
+      <div class="product-body">
+        <h3>Mac &amp; Cheese</h3>
+        <p>A macaroni-and-cheese-style meal with pasta and a savoury flavour mix.</p>
+        <div class="pills"><span class="pill">Pasta meal</span><span class="pill">Check label</span></div>
+        <button class="details-btn" aria-expanded="false" type="button"><span>Ingredients, allergens & preparation</span><span class="plus">+</span></button>
+        <div class="details">
+          <span class="source-status">Preparation verified</span>
+          <h4>Preparation</h4>
+          <p>First cook the pasta until soft. Add the other ingredients with approximately 1 cup (250 ml) of boiling water. Add water slowly to the desired consistency and stir while cooking.</p>
+          <h4>Ingredients & allergens</h4>
+          <p>Read the current package for the exact ingredients and allergens, including any wheat/gluten or milk-related declarations. The current full nutrition table was not verified in the available source extract.</p>
+          <h4>Nutrition</h4>
+          <span class="source-status review">Current figures need label verification</span>
+          <p>Values are not copied from another pasta product.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div class="product-photo">
+        <span class="tag">FOOD SOCK</span>
+        <img src="https://store.foodsock.co.za/cdn/shop/files/Traditional_Melkkos.png?v=1768378281&width=823" alt="Original Food Sock Traditional Melkkos pack" loading="lazy">
+      </div>
+      <div class="product-body">
+        <h3>Traditional Melkkos</h3>
+        <p>A traditional South African comfort-food-style meal with a sweet, homely character.</p>
+        <div class="pills"><span class="pill">Traditional favourite</span><span class="pill">Check label</span></div>
+        <button class="details-btn" aria-expanded="false" type="button"><span>Ingredients, allergens & preparation</span><span class="plus">+</span></button>
+        <div class="details">
+          <span class="source-status">Preparation verified</span>
+          <h4>Preparation</h4>
+          <p>Boil the pasta until soft with approximately 375 ml of water. Add the insert to the remaining ingredients and cook with approximately 2.5 cups (675 ml) of boiling water. Stir while cooking.</p>
+          <h4>Ingredients & allergens</h4>
+          <p>Check the current pack for the exact ingredient list and allergen declaration, particularly any milk or gluten information. Exact nutrition figures were not verified in the available source extract.</p>
+          <h4>Nutrition</h4>
+          <span class="source-status review">Current figures need label verification</span>
+          <p>Do not rely on the flavour name alone when assessing allergens.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div class="product-photo">
+        <span class="tag">FOOD SOCK</span>
+        <img src="https://store.foodsock.co.za/cdn/shop/files/Pasta_Bolognese.png?v=1768378362&width=1500" alt="Original Food Sock Pasta Bolognese pack" loading="lazy">
+      </div>
+      <div class="product-body">
+        <h3>Pasta Bolognese</h3>
+        <p>A pasta meal with Bolognese-style flavouring. The published reference describes this as a soya meal that contains no meat.</p>
+        <div class="pills"><span class="pill">Meal for 4*</span><span class="pill">Soy</span><span class="pill">Gluten</span><span class="pill">Egg</span></div>
+        <button class="details-btn" aria-expanded="false" type="button"><span>Nutrition, ingredients & preparation</span><span class="plus">+</span></button>
+        <div class="details">
+          <span class="source-status">Published reference: 2025 recipe book</span>
+          <h4>Preparation</h4>
+          <p>Cook all ingredients with approximately 6 cups (1.5 litres) of boiling water until the pasta is cooked to your liking. Stir while cooking.</p>
+          <h4>Ingredients listed in the published reference</h4>
+          <p>Soy, pasta, flavourings, spices, dehydrated vegetables, sugar and garlic.</p>
+          <h4>Allergens listed</h4><p>Soy, gluten and egg.</p>
+          <h4>Nutrition — published reference</h4>
+          <table class="nutrition">
+            <tr><th>Nutrient</th><th>Total</th><th>Per 100 g</th></tr>
+            <tr><td>Energy</td><td>1137.6 kJ</td><td>1300 kJ</td></tr>
+            <tr><td>Protein</td><td>15.7 g</td><td>17.9 g</td></tr>
+            <tr><td>Carbohydrates</td><td>49.2 g</td><td>56.2 g</td></tr>
+            <tr><td>Total sugars</td><td>11.3 g</td><td>13 g</td></tr>
+            <tr><td>Total fat</td><td>1.4 g</td><td>1.6 g</td></tr>
+            <tr><td>Saturated fat</td><td>0.4 g</td><td>0.5 g</td></tr>
+            <tr><td>Dietary fibre</td><td>6.3 g</td><td>7.2 g</td></tr>
+            <tr><td>Sodium</td><td>0</td><td>0</td></tr>
+            <tr><td>Cholesterol</td><td>0.1 mg</td><td>0.1 mg</td></tr>
+            <tr><td>Potassium</td><td>47.4 mg</td><td>54.1 mg</td></tr>
+          </table>
+          <p><strong>Important:</strong> These are published reference figures, not confirmed current packaging values. Check the current product label for authoritative nutrition information.</p>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <p class="disclaimer">
+    *Serving guidance and weights can vary by product version. Food Sock's
+    published reference materials describe these as convenient soya-based
+    flavoured meals; a flavour name does not necessarily mean the mix contains
+    chicken, mutton or other meat. The current package is the final reference
+    for ingredients, allergens, nutrition and storage.
+  </p>
 </section>
 
-<section class="wrap catalogue" id="foodsock">
-<div class="section-head">
-<div><div class="tag">Convenient meal solutions</div><h2>Food Sock</h2>
-<p>A range of easy-to-prepare meal options for households and other food-service needs. Select a product to ask about availability and pack information.</p></div>
-</div>
-<div class="cards">
-<article class="card"><img src="https://media.portmoni.com/resized/73312/FS_Chickn_Breyani-thumbnail-600x600-95.jpg" alt="Food Sock Chicken Breyani pack" loading="lazy"><div class="card-body"><h3>Chicken Breyani</h3><p>A convenient chicken breyani meal option.</p><a class="small-link" href="https://<span class="small-link">Product details are listed on this LIF page</span>/" target="_blank" rel="noopener">Product information ↗</a></div></article>
-<article class="card"><img src="https://media.portmoni.com/resized/96440/Food_Socks_Randburg_-_Chicken_Pasta_Food_Sock-thumbnail-600x600-95.jpg" alt="Food Sock Chicken Pasta pack" loading="lazy"><div class="card-body"><h3>Chicken Pasta</h3><p>A family-friendly pasta meal option.</p><a class="small-link" href="https://<span class="small-link">Product details are listed on this LIF page</span>/" target="_blank" rel="noopener">Product information ↗</a></div></article>
-<article class="card"><img src="https://store.<span class="small-link">Product details are listed on this LIF page</span>/cdn/shop/files/d25mnzuu4dby3j1otczppg0n.jpg?v=1756820900" alt="Food Sock Mutton Stew pack" loading="lazy"><div class="card-body"><h3>Mutton Stew</h3><p>A hearty stew meal option.</p><a class="small-link" href="https://<span class="small-link">Product details are listed on this LIF page</span>/" target="_blank" rel="noopener">Product information ↗</a></div></article>
-<article class="card"><img src="https://store.<span class="small-link">Product details are listed on this LIF page</span>/cdn/shop/files/Chicken_a_la_King.png?v=1768378104&width=1445" alt="Food Sock Chicken A La King pack" loading="lazy"><div class="card-body"><h3>Chicken A La King</h3><p>A creamy-style chicken meal option.</p><a class="small-link" href="https://<span class="small-link">Product details are listed on this LIF page</span>/" target="_blank" rel="noopener">Product information ↗</a></div></article>
-<article class="card"><img src="https://<span class="small-link">Product details are listed on this LIF page</span>/wp-content/uploads/2023/09/Tomato-Bredie-1-scaled.jpg" alt="Food Sock Tomato Bredie pack" loading="lazy"><div class="card-body"><h3>Tomato Bredie</h3><p>A familiar tomato-based bredie meal.</p><a class="small-link" href="https://<span class="small-link">Product details are listed on this LIF page</span>/" target="_blank" rel="noopener">Product information ↗</a></div></article>
-<article class="card"><img src="https://media.portmoni.com/resized/96440/Food_Socks_Randburg_-_Mac__Cheese_Food_Sock-thumbnail-600x600-95.jpg" alt="Food Sock Mac and Cheese pack" loading="lazy"><div class="card-body"><h3>Mac &amp; Cheese</h3><p>A comforting macaroni and cheese meal.</p><a class="small-link" href="https://<span class="small-link">Product details are listed on this LIF page</span>/" target="_blank" rel="noopener">Product information ↗</a></div></article>
-<article class="card"><img src="https://store.<span class="small-link">Product details are listed on this LIF page</span>/cdn/shop/files/Traditional_Melkkos.png?v=1768378281&width=823" alt="Food Sock Traditional Melkkos pack" loading="lazy"><div class="card-body"><h3>Traditional Melkkos</h3><p>A traditional comfort-food favourite.</p><a class="small-link" href="https://<span class="small-link">Product details are listed on this LIF page</span>/" target="_blank" rel="noopener">Product information ↗</a></div></article>
-<article class="card"><img src="https://store.<span class="small-link">Product details are listed on this LIF page</span>/cdn/shop/files/Pasta_Bolognese.png?v=1768378362&width=1500" alt="Food Sock Pasta Bolognese pack" loading="lazy"><div class="card-body"><h3>Pasta Bolognese</h3><p>A pasta meal with a Bolognese-style sauce.</p><a class="small-link" href="https://<span class="small-link">Product details are listed on this LIF page</span>/" target="_blank" rel="noopener">Product information ↗</a></div></article>
-</div>
+<section class="soft" id="two-spoons">
+  <div class="section">
+    <div class="two-col">
+      <div class="story-copy">
+        <span class="eyebrow">Two Spoons</span>
+        <h2>Practical flavour for everyday meals.</h2>
+        <p>
+          The Two Spoons range includes Morogo, Chilli Nut, Chakalaka and
+          Oxtail stew mixes, alongside E’ZI PAP instant pap. Product formats
+          and cooking instructions depend on the specific pack.
+        </p>
+        <p>
+          The supplied range information identifies 50 g and 1 kg formats
+          for stew mixes and a 50 g, 1 kg and bulk format for E’ZI PAP.
+          Confirm the current package for ingredients, allergens and nutrition.
+        </p>
+      </div>
+      <div class="story-image">
+        <img src="assets/twospoons/morogo.jpeg" alt="Two Spoons Morogo product pack" loading="lazy">
+      </div>
+    </div>
+
+    <div class="product-grid">
+      <article class="product">
+        <div class="product-photo"><span class="tag">TWO SPOONS</span><img src="assets/twospoons/morogo.jpeg" alt="Two Spoons Morogo Stew Mix" loading="lazy"></div>
+        <div class="product-body">
+          <h3>Morogo Stew Mix</h3><p>A morogo-inspired stew mix for a convenient, flavoured meal.</p>
+          <div class="pills"><span class="pill">50 g</span><span class="pill">1 kg</span></div>
+          <button class="details-btn" aria-expanded="false" type="button"><span>Product & dietary details</span><span class="plus">+</span></button>
+          <div class="details"><h4>Pack information</h4><p>The supplied range information lists 50 g and 1 kg formats and a 12-month shelf life.</p><h4>Ingredients, allergens & nutrition</h4><p>The complete current ingredient and allergen declarations and nutrition panel have not been verified for this flavour here. Check the current original package before serving.</p></div>
+        </div>
+      </article>
+      <article class="product">
+        <div class="product-photo"><span class="tag">TWO SPOONS</span><img src="assets/twospoons/chilli-nut.jpeg" alt="Two Spoons Chilli Nut Stew Mix" loading="lazy"></div>
+        <div class="product-body">
+          <h3>Chilli Nut Stew Mix</h3><p>A chilli-and-nut flavour option for meals with a fuller, seasoned taste.</p>
+          <div class="pills"><span class="pill">50 g</span><span class="pill">1 kg</span></div>
+          <button class="details-btn" aria-expanded="false" type="button"><span>Product & dietary details</span><span class="plus">+</span></button>
+          <div class="details"><h4>Pack information</h4><p>The supplied range information lists 50 g and 1 kg formats and a 12-month shelf life.</p><h4>Allergy caution</h4><p>The product name indicates a nut-related flavour. Anyone with a nut allergy must check the full current allergen statement and must not rely on this summary.</p><h4>Nutrition</h4><p>Exact nutrition figures require verification against the current package.</p></div>
+        </div>
+      </article>
+      <article class="product">
+        <div class="product-photo"><span class="tag">TWO SPOONS</span><img src="assets/twospoons/chakalaka.jpeg" alt="Two Spoons Chakalaka Stew Mix" loading="lazy"></div>
+        <div class="product-body">
+          <h3>Chakalaka Stew Mix</h3><p>A chakalaka-inspired seasoning mix for a flavourful meal.</p>
+          <div class="pills"><span class="pill">50 g</span><span class="pill">1 kg</span></div>
+          <button class="details-btn" aria-expanded="false" type="button"><span>Product & dietary details</span><span class="plus">+</span></button>
+          <div class="details"><h4>Pack information</h4><p>The supplied range information lists 50 g and 1 kg formats and a 12-month shelf life.</p><h4>Ingredients, allergens & nutrition</h4><p>Check the original package for the complete ingredient list, allergens and nutrition values. Do not assume every flavour has the same ingredients.</p></div>
+        </div>
+      </article>
+      <article class="product">
+        <div class="product-photo"><span class="tag">TWO SPOONS</span><img src="assets/twospoons/oxtail.jpeg" alt="Two Spoons Oxtail Stew Mix" loading="lazy"></div>
+        <div class="product-body">
+          <h3>Oxtail Stew Mix</h3><p>An oxtail-inspired flavour for a savoury stew-style meal.</p>
+          <div class="pills"><span class="pill">50 g</span><span class="pill">1 kg</span></div>
+          <button class="details-btn" aria-expanded="false" type="button"><span>Product & dietary details</span><span class="plus">+</span></button>
+          <div class="details"><h4>Pack information</h4><p>The supplied range information lists 50 g and 1 kg formats and a 12-month shelf life.</p><h4>Ingredients, allergens & nutrition</h4><p>Check the original package for the complete ingredient list, allergens and nutrition values.</p></div>
+        </div>
+      </article>
+      <article class="product">
+        <div class="product-photo"><span class="tag">TWO SPOONS</span><img src="assets/twospoons/ezi-pap.jpeg" alt="Two Spoons E’ZI PAP instant pap" loading="lazy"></div>
+        <div class="product-body">
+          <h3>E’ZI PAP Instant Pap</h3><p>An instant maize-based pap option for meals and larger serving environments.</p>
+          <div class="pills"><span class="pill">50 g</span><span class="pill">1 kg</span><span class="pill">Bulk bucket</span></div>
+          <button class="details-btn" aria-expanded="false" type="button"><span>Product & dietary details</span><span class="plus">+</span></button>
+          <div class="details"><h4>Pack information</h4><p>The supplied range information includes 50 g and 1 kg packs and a 20 L bucket format (12.5 kg). The supplied information states up to 250 servings at 50 g per serving for the bucket format.</p><h4>Dietary information</h4><p>The supplied product information identifies soy and a 12-month shelf life. Verify the current package for the complete allergen statement, nutrition and preparation instructions.</p></div>
+        </div>
+      </article>
+    </div>
+  </div>
 </section>
 
-<section class="wrap" id="twospoons">
-<div class="section-head">
-<div><div class="tag">Everyday convenience</div><h2>Two Spoons</h2>
-<p>Stew mixes and instant pap options designed to make meal preparation easier. Check the original packaging for flavour-specific ingredients and allergen information.</p></div>
-</div>
-<div class="cards">
-<article class="card"><img src="assets/twospoons/morogo.jpeg" alt="Two Spoons Morogo Stew Mix original pack" loading="lazy"><div class="card-body"><h3>Morogo Stew Mix</h3><p>Available in 50 g sachets and 1 kg packs.</p><a class="small-link" href="https://wa.me/26659434159?text=Hello%20LIF%2C%20please%20share%20availability%20and%20details%20for%20Two%20Spoons%20Morogo%20Stew%20Mix.">Ask LIF about this product ↗</a></div></article>
-<article class="card"><img src="assets/twospoons/chilli-nut.jpeg" alt="Two Spoons Chilli Nut Stew Mix original pack" loading="lazy"><div class="card-body"><h3>Chilli Nut Stew Mix</h3><p>Available in 50 g sachets and 1 kg packs.</p><a class="small-link" href="https://wa.me/26659434159?text=Hello%20LIF%2C%20please%20share%20availability%20and%20details%20for%20Two%20Spoons%20Chilli%20Nut%20Stew%20Mix.">Ask LIF about this product ↗</a></div></article>
-<article class="card"><img src="assets/twospoons/chakalaka.jpeg" alt="Two Spoons Chakalaka Stew Mix original pack" loading="lazy"><div class="card-body"><h3>Chakalaka Stew Mix</h3><p>Available in 50 g sachets and 1 kg packs.</p><a class="small-link" href="https://wa.me/26659434159?text=Hello%20LIF%2C%20please%20share%20availability%20and%20details%20for%20Two%20Spoons%20Chakalaka%20Stew%20Mix.">Ask LIF about this product ↗</a></div></article>
-<article class="card"><img src="assets/twospoons/oxtail.jpeg" alt="Two Spoons Oxtail Stew Mix original pack" loading="lazy"><div class="card-body"><h3>Oxtail Stew Mix</h3><p>Available in 50 g sachets and 1 kg packs.</p><a class="small-link" href="https://wa.me/26659434159?text=Hello%20LIF%2C%20please%20share%20availability%20and%20details%20for%20Two%20Spoons%20Oxtail%20Stew%20Mix.">Ask LIF about this product ↗</a></div></article>
-<article class="card"><img src="assets/twospoons/ezi-pap.jpeg" alt="Two Spoons E'ZI PAP original pack" loading="lazy"><div class="card-body"><h3>E’ZI PAP Instant Pap</h3><p>Convenient instant pap in single-serve and larger pack formats.</p><a class="small-link" href="https://wa.me/26659434159?text=Hello%20LIF%2C%20please%20share%20availability%20and%20details%20for%20Two%20Spoons%20EZI%20PAP.">Ask LIF about this product ↗</a></div></article>
-</div>
+<section class="section" id="kingdom-foods">
+  <div class="section-head">
+    <span class="eyebrow">Kingdom Foods</span>
+    <h2>Food solutions for feeding at scale.</h2>
+    <p>
+      Kingdom Foods describes its work as manufacturing scalable food
+      solutions, including VitaKidz, Maxi Blend and JOY Bucket. The public
+      information below is a high-level product overview; detailed nutrient
+      claims are not added unless supported by a specific product label.
+    </p>
+  </div>
+
+  <div class="kingdom-grid">
+    <article class="kingdom-card">
+      <img src="https://kingdomfoods.co.za/wp-content/uploads/2025/06/KINGDOM-WEBSITE-06.png" alt="Kingdom Foods VitaKidz product imagery" loading="lazy">
+      <div><h3>VitaKidz</h3><p>A nutrition-oriented product developed for children. Kingdom Foods states that it can be consumed as a meal or shake by adding water or milk. Exact age suitability, preparation, ingredients, allergens and nutrition must be taken from the current pack.</p></div>
+    </article>
+    <article class="kingdom-card">
+      <img src="https://kingdomfoods.co.za/wp-content/uploads/2025/06/KINGDOM-WEBSITE-07.png" alt="Kingdom Foods Maxi Blend product imagery" loading="lazy">
+      <div><h3>Maxi Blend</h3><p>A bulk meal solution. Kingdom Foods describes preparation with boiling water and cooking for approximately 30–40 minutes. Confirm the product label for quantities, ingredients, allergens and nutrition.</p></div>
+    </article>
+    <article class="kingdom-card">
+      <img src="https://kingdomfoods.co.za/wp-content/uploads/2025/06/KINGDOM-WEBSITE-08.png" alt="Kingdom Foods JOY Bucket product imagery" loading="lazy">
+      <div><h3>JOY Bucket</h3><p>A relief package intended to provide essential support to families during crises. It is a package of emergency relief items, rather than a single meal with one nutrition panel.</p></div>
+    </article>
+  </div>
+
+  <p class="disclaimer">
+    Kingdom Foods product descriptions above are based on publicly described
+    product purposes. This page does not reproduce an unverified nutrition
+    table for VitaKidz or Maxi Blend. Use the exact current product packaging
+    for nutrition, ingredient, allergen, age suitability and preparation data.
+  </p>
+
+  <div class="impact">
+    <div>
+      <span class="eyebrow" style="color:#f1d58b">Our wider mission</span>
+      <h2>Products are one part of the journey.</h2>
+      <p>
+        LIF's ambition is to connect products, resellers, community needs and
+        future local manufacturing. The proposed manufacturing plant is a
+        future commitment and vision—not a claim that the plant is already
+        operating. Our goal is to support local skills, jobs and more value
+        remaining in Lesotho.
+      </p>
+    </div>
+    <a class="btn" href="manufacturing.html">Explore the manufacturing vision</a>
+  </div>
 </section>
 
-<section class="wrap catalogue" id="bulk">
-<div class="intro">
-<div class="tag">For organisations and larger groups</div>
-<h2>Bulk food solutions</h2>
-<p class="muted">Bulk meal buckets and instant maize porridge options may suit community programmes, schools, events and food-service operations. Ask us to confirm current formats, availability and serving guidance.</p>
-</div>
-<div class="cards">
-<article class="card"><img src="https://store.<span class="small-link">Product details are listed on this LIF page</span>/cdn/shop/files/Chicken_a_la_King.png?v=1768378104&width=1445" alt="Chicken A La King meal product" loading="lazy"><div class="card-body"><h3>Bulk Meal Buckets</h3><p>Selected meal varieties are listed in 5 L, 10 L and 20 L bucket formats. Serving yields depend on portion size and preparation.</p><a class="small-link" href="https://wa.me/26659434159?text=Hello%20LIF%2C%20please%20send%20bulk%20meal%20bucket%20options%20and%20serving%20information.">Enquire about bulk meals ↗</a></div></article>
-<article class="card"><img src="assets/twospoons/ezi-pap.jpeg" alt="Two Spoons E'ZI PAP product" loading="lazy"><div class="card-body"><h3>Instant Maize Porridge</h3><p>Instant pap and maize porridge formats are available in selected pack sizes. Confirm product, serving size and bulk options with LIF.</p><a class="small-link" href="https://wa.me/26659434159?text=Hello%20LIF%2C%20please%20send%20instant%20maize%20porridge%20bulk%20options.">Enquire about porridge ↗</a></div></article>
-</div>
-<div class="note"><strong>Important:</strong> Serving yields are estimates, not guarantees. Follow each product’s original label for preparation, ingredients, allergens, storage and dietary information.</div>
+<section class="soft" id="dietary">
+  <div class="section">
+    <div class="section-head">
+      <span class="eyebrow">Product information you can trust</span>
+      <h2>Nutrition, ingredients and allergen guidance.</h2>
+      <p>We distinguish published reference data from details that still need confirmation against the current pack.</p>
+    </div>
+    <div class="info-grid">
+      <article class="info-card"><div class="icon">📋</div><h3>Nutrition panels</h3><p>Where a published reference provides numeric nutrition data, it is shown on the relevant product card. Figures are identified as published reference values and may differ from current packaging.</p></article>
+      <article class="info-card"><div class="icon">⚠️</div><h3>Allergen safety</h3><p>Allergens vary by flavour. The published references identify soy and gluten for Chicken Breyani and Tomato Bredie, and soy, gluten and egg for Pasta Bolognese. Always read the current pack's complete allergen statement.</p></article>
+      <article class="info-card"><div class="icon">🍽️</div><h3>Preparation</h3><p>Use the product-specific water quantities and preparation directions shown in each card. Cooking time and final consistency can vary, so follow the current packaging instructions.</p></article>
+    </div>
+    <p class="disclaimer">
+      This page is informational and is not medical or allergy advice. For
+      severe allergies, special diets or nutrition-sensitive feeding
+      programmes, verify the full current label before serving. A product's
+      flavour name alone does not confirm that it contains the named meat or
+      is suitable for a particular diet.
+    </p>
+  </div>
 </section>
 
-<section class="wrap brand-band" id="kingdom">
-<div class="section-head">
-<div><div class="tag">Part of the LIF product family</div><h2>Kingdom Foods</h2>
-<p class="muted">Kingdom Foods is part of the wider LIF journey to develop local market access and work towards food manufacturing in Lesotho. Contact us for the current product range and availability.</p></div>
-</div>
-<div class="cards">
-<article class="card"><img src="https://kingdomfoods.co.za/wp-content/uploads/2025/06/KINGDOM-WEBSITE-06.png" alt="Kingdom Foods original product image" loading="lazy"><div class="card-body"><h3>Kingdom Foods Range</h3><p>Ask our team about available products, packaging and distribution.</p><a class="small-link" href="https://kingdomfoods.co.za/" target="_blank" rel="noopener"><span class="small-link">Contact LIF for range details</span></a></div></article>
-<article class="card"><img src="https://kingdomfoods.co.za/wp-content/uploads/2025/06/KINGDOM-WEBSITE-07.png" alt="Kingdom Foods original product range image" loading="lazy"><div class="card-body"><h3>For Retailers &amp; Resellers</h3><p>Contact LIF to discuss product access and reseller opportunities.</p><a class="small-link" href="index.html#reseller">Explore reseller opportunities ↗</a></div></article>
-<article class="card"><img src="https://kingdomfoods.co.za/wp-content/uploads/2025/06/KINGDOM-WEBSITE-08.png" alt="Kingdom Foods original product image" loading="lazy"><div class="card-body"><h3>Growing Local Opportunity</h3><p>Our long-term ambition is to create jobs, build skills and grow local value through manufacturing in Lesotho.</p><a class="small-link" href="partnership.html">Our partnership journey ↗</a></div></article>
-</div>
-</section>
-
-<section class="wrap">
-<div class="callout">
-<div><h2>Interested in supplying, stocking or reselling?</h2><p>Join the LIF family and help bring these products to more households and communities while supporting our long-term vision for local industry and jobs.</p></div>
-<div><a class="btn" href="index.html#reseller">Become a Reseller</a><a class="btn alt" href="https://wa.me/26659434159?text=Hello%20Life%20Improvement%20Foundation%2C%20I%20would%20like%20to%20enquire%20about%20your%20products." target="_blank" rel="noopener">WhatsApp LIF</a></div>
-</div>
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div>
+      <span class="eyebrow" style="color:#f1d58b">Connect with LIF</span>
+      <h2>Interested in products, community feeding or becoming a reseller?</h2>
+      <p>
+        Contact Life Improvement Foundation to discuss product enquiries,
+        dietary documentation, bulk meal requirements, reseller participation
+        and partnership opportunities.
+      </p>
+      <a class="btn" href="https://wa.me/26659434159?text=Hello%20LIF%2C%20I%20would%20like%20information%20about%20your%20products%20and%20dietary%20details.">Message LIF on WhatsApp</a>
+    </div>
+    <div class="contact-box">
+      <strong>Life Improvement Foundation</strong>
+      <a href="mailto:projects@lifefoundation.co.ls">projects@lifefoundation.co.ls</a>
+      <a href="tel:+26659434159">+266 5943 4159</a>
+      <p style="font-size:12px;margin-top:18px">Building opportunity. Improving lives. Working towards a future with more jobs, skills and local value for Lesotho.</p>
+    </div>
+  </div>
 </section>
 </main>
 
 <footer>
-<div class="foot">
-<div><strong>Life Improvement Foundation</strong><br>Products, opportunity and a future built in Lesotho.</div>
-<div>WhatsApp: <a href="https://wa.me/26659434159">+266 5943 4159</a><br>Email: <a href="mailto:projects@lifefoundation.co.ls">projects@lifefoundation.co.ls</a></div>
-<div><a href="index.html">Home</a> · <a href="partnership.html">Partnership</a></div>
-</div>
+  <div class="footer-inner">
+    <span>© <span id="year"></span> Life Improvement Foundation. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="partnership.html">Partnership</a>
+      <a href="kingdom-foods.html">Kingdom Foods</a>
+      <a href="manufacturing.html">Manufacturing Vision</a>
+    </div>
+  </div>
 </footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.querySelectorAll(".details-btn").forEach(function(button) {
+  button.addEventListener("click", function() {
+    const panel = button.nextElementSibling;
+    const opened = panel.classList.toggle("open");
+    button.setAttribute("aria-expanded", String(opened));
+    button.querySelector(".plus").textContent = opened ? "−" : "+";
+  });
+});
+</script>
 </body>
 </html>
