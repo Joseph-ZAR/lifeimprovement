@@ -1,1 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#087f43">
+  <meta name="description" content="Join Life Improvement Foundation, Food Sock and Kingdom Foods in building food sovereignty, local farming, reseller opportunities and manufacturing in Lesotho.">
+  <title>Community Participation | Life Improvement Foundation</title>
 
+  <style>
+    :root {
+      --lif-red: #e52b35;
+      --lif-green: #087f43;
+      --lif-blue: #149bd7;
+      --lif-gold: #f3bd36;
+      --lif-dark: #14251d;
+      --lif-muted: #627067;
+      --lif-light: #f4f8f5;
+      --lif-white: #ffffff;
+      --lif-border: #e0e9e2;
+      --lif-shadow: 0 12px 32px rgba(16, 50, 31, .09);
+      --lif-radius: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: var(--lif-dark);
+      background: var(--lif-white);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .container {
+      width: min(1160px, 92%);
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--lif-green);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section {
+      padding: 76px 0;
+    }
+
+    .section-heading {
+      max-width: 780px;
+      margin: 0 auto 36px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -.035em;
+    }
+
+    .section-heading p {
+      color: var(--lif-muted);
+      font-size: 1.04rem;
+    }
+
+    .top-strip {
+      background: var(--lif-dark);
+      color: white;
+      font-size: .83rem;
+      padding: 9px 0;
+      text-align: center;
+    }
+
+    .top-strip strong {
+      color: var(--lif-gold);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, .97);
+      border-bottom: 1px solid var(--lif-border);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-wrap {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 66px;
+      height: 62px;
+      object-fit: contain;
+    }
+
+    .brand-text {
+      line-height: 1.2;
+      font-weight: 800;
+      font-size: .98rem;
+    }
+
+    .brand-text span {
+      display: block;
+      color: var(--lif-green);
+      font-size: .72rem;
+      font-weight: 700;
+      margin-top: 5px;
+      letter-spacing: .05em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-size: .84rem;
+      font-weight: 700;
+      color: #314139;
+    }
+
+    .nav-links a:hover {
+      color: var(--lif-green);
+    }
+
+    .nav-links .nav-cta {
+      color: white;
+      background: var(--lif-green);
+      border-radius: 999px;
+      padding: 10px 17px;
+    }
+
+    .nav-toggle {
+      display: none;
+      border: 1px solid var(--lif-border);
+      background: white;
+      border-radius: 10px;
+      padding: 9px 12px;
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 82px 0 76px;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(20,155,215,.16), transparent 29%),
+        radial-gradient(circle at 5% 100%, rgba(8,127,67,.13), transparent 33%),
+        linear-gradient(135deg, #fff 0%, #f3faf5 62%, #f4faff 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      align-items: center;
+      gap: 46px;
+    }
+
+    .hero h1 {
+      max-width: 750px;
+      font-size: clamp(2.45rem, 5.4vw, 4.6rem);
+      line-height: 1.02;
+      letter-spacing: -.055em;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 .red {
+      color: var(--lif-red);
+    }
+
+    .hero h1 .green {
+      color: var(--lif-green);
+    }
+
+    .hero-lead {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: #45584c;
+      max-width: 650px;
+      margin-bottom: 22px;
+    }
+
+    .partner-line {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin: 20px 0;
+      font-weight: 800;
+      font-size: .9rem;
+    }
+
+    .partner-line span {
+      display: inline-block;
+      border: 1px solid var(--lif-border);
+      border-radius: 999px;
+      padding: 6px 11px;
+      background: white;
+    }
+
+    .partner-line .lif-tag {
+      color: var(--lif-green);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 12px 21px;
+      border: 2px solid transparent;
+      border-radius: 999px;
+      font-size: .92rem;
+      font-weight: 800;
+      text-align: center;
+      transition: transform .2s ease, box-shadow .2s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(0,0,0,.12);
+    }
+
+    .btn-primary {
+      background: var(--lif-green);
+      color: white;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--lif-green);
+      border-color: var(--lif-green);
+    }
+
+    .hero-visual {
+      min-width: 0;
+    }
+
+    .hero-image {
+      min-height: 370px;
+      border-radius: 30px;
+      box-shadow: var(--lif-shadow);
+      background:
+        linear-gradient(145deg, rgba(8,127,67,.08), rgba(20,155,215,.12));
+    }
+
+    .image-slot {
+      position: relative;
+      width: 100%;
+      min-height: 260px;
+      overflow: hidden;
+      border-radius: 20px;
+      background:
+        linear-gradient(135deg, #e8f5eb, #eaf6fc);
+      border: 1px solid var(--lif-border);
+    }
+
+    .image-slot img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity .35s ease;
+    }
+
+    .image-slot.has-image img {
+      opacity: 1;
+    }
+
+    .image-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 24px;
+      color: #365644;
+      text-align: center;
+    }
+
+    .image-placeholder .placeholder-icon {
+      font-size: 2.7rem;
+    }
+
+    .image-placeholder strong {
+      font-size: 1.1rem;
+    }
+
+    .image-placeholder small {
+      max-width: 290px;
+      font-size: .85rem;
+      color: #5a6d61;
+    }
+
+    .image-slot.has-image .image-placeholder {
+      display: none;
+    }
+
+    .hero-note {
+      background: white;
+      border: 1px solid var(--lif-border);
+      padding: 15px 18px;
+      border-radius: 16px;
+      margin-top: 14px;
+      box-shadow: var(--lif-shadow);
+      font-size: .9rem;
+    }
+
+    .hero-note strong {
+      color: var(--lif-green);
+    }
+
+    .mission-band {
+      background: var(--lif-green);
+      color: white;
+      padding: 30px 0;
+    }
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .mission-item {
+      padding: 8px 18px;
+      border-left: 3px solid var(--lif-gold);
+    }
+
+    .mission-item strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+
+    .mission-item span {
+      color: rgba(255,255,255,.86);
+      font-size: .91rem;
+    }
+
+    .intro-copy {
+      max-width: 880px;
+      margin: 0 auto;
+      font-size: 1.08rem;
+      text-align: center;
+      color: #45564a;
+    }
+
+    .intro-copy p + p {
+      margin-top: 16px;
+    }
+
+    .opportunities {
+      background: var(--lif-light);
+    }
+
+    .opportunity-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .opportunity-card {
+      background: white;
+      border: 1px solid var(--lif-border);
+      border-radius: var(--lif-radius);
+      padding: 25px;
+      box-shadow: 0 5px 20px rgba(16,50,31,.035);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .opportunity-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--lif-shadow);
+    }
+
+    .opportunity-icon {
+      display: grid;
+      place-items: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 15px;
+      background: #e7f5ec;
+      font-size: 1.65rem;
+      margin-bottom: 17px;
+    }
+
+    .opportunity-card h3 {
+      font-size: 1.17rem;
+      margin-bottom: 10px;
+    }
+
+    .opportunity-card p {
+      color: var(--lif-muted);
+      font-size: .94rem;
+    }
+
+    .opportunity-card .accent {
+      display: block;
+      width: 45px;
+      height: 4px;
+      border-radius: 99px;
+      background: var(--lif-red);
+      margin-top: 18px;
+    }
+
+    .stories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .story-card {
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--lif-border);
+      border-radius: var(--lif-radius);
+      box-shadow: 0 6px 22px rgba(16,50,31,.05);
+    }
+
+    .story-card .image-slot {
+      border: 0;
+      border-radius: 0;
+      min-height: 250px;
+    }
+
+    .story-content {
+      padding: 23px;
+    }
+
+    .story-content h3 {
+      font-size: 1.22rem;
+      margin-bottom: 9px;
+    }
+
+    .story-content p {
+      color: var(--lif-muted);
+      font-size: .94rem;
+    }
+
+    .story-label {
+      display: inline-block;
+      color: var(--lif-green);
+      font-size: .76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 8px;
+    }
+
+    .local-value {
+      background: #f3f9ff;
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .value-copy h2 {
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      line-height: 1.12;
+      margin-bottom: 18px;
+    }
+
+    .value-copy p {
+      color: #526257;
+      margin-bottom: 14px;
+    }
+
+    .value-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .value-point {
+      padding: 19px;
+      border-radius: 16px;
+      background: white;
+      border: 1px solid #dcebf4;
+    }
+
+    .value-point strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--lif-green);
+    }
+
+    .value-point span {
+      color: var(--lif-muted);
+      font-size: .9rem;
+    }
+
+    .earnings-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--lif-border);
+      border-radius: var(--lif-radius);
+      background: white;
+      box-shadow: var(--lif-shadow);
+    }
+
+    .earnings-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 570px;
+    }
+
+    .earnings-table th {
+      background: var(--lif-dark);
+      color: white;
+      text-align: left;
+      padding: 17px 20px;
+      font-size: .9rem;
+    }
+
+    .earnings-table td {
+      padding: 17px 20px;
+      border-bottom: 1px solid var(--lif-border);
+      vertical-align: top;
+      font-size: .93rem;
+    }
+
+    .earnings-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .earnings-table td:first-child {
+      font-weight: 800;
+      width: 32%;
+    }
+
+    .earnings-table td:last-child {
+      color: var(--lif-muted);
+    }
+
+    .points-note {
+      margin-top: 18px;
+      padding: 18px 20px;
+      border-left: 4px solid var(--lif-gold);
+      background: #fff9e8;
+      border-radius: 0 12px 12px 0;
+      color: #65532a;
+      font-size: .92rem;
+    }
+
+    .future-section {
+      background: var(--lif-dark);
+      color: white;
+    }
+
+    .future-section .section-heading p {
+      color: #d1ddd5;
+    }
+
+    .future-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .future-card {
+      padding: 23px 18px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 17px;
+      background: rgba(255,255,255,.055);
+    }
+
+    .future-card .number {
+      color: var(--lif-gold);
+      font-size: 1.8rem;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .future-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .future-card p {
+      font-size: .89rem;
+      color: #d1ddd5;
+    }
+
+    .closing-line {
+      text-align: center;
+      font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+      line-height: 1.2;
+      font-weight: 900;
+      margin-top: 38px;
+    }
+
+    .closing-line span {
+      color: var(--lif-gold);
+    }
+
+    .cta-section {
+      padding: 78px 0;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(20,155,215,.2), transparent 30%),
+        linear-gradient(120deg, #eaf8ef, #f7fbff);
+    }
+
+    .cta-box {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .cta-box h2 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .cta-box p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: #506056;
+    }
+
+    .cta-box .hero-actions {
+      justify-content: center;
+    }
+
+    .partner-footer {
+      padding: 25px 0;
+      background: white;
+      border-top: 1px solid var(--lif-border);
+      text-align: center;
+    }
+
+    .partner-footer .brand-line {
+      font-weight: 900;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      letter-spacing: .02em;
+    }
+
+    .partner-footer .lif {
+      color: var(--lif-green);
+    }
+
+    .partner-footer .food {
+      color: var(--lif-red);
+    }
+
+    .partner-footer .kingdom {
+      color: #247bb5;
+    }
+
+    .partner-footer p {
+      margin-top: 7px;
+      color: var(--lif-muted);
+      font-size: .85rem;
+    }
+
+    .site-footer {
+      background: #101d16;
+      color: white;
+      padding: 30px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .footer-inner p {
+      color: #c7d2ca;
+      font-size: .85rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      font-size: .85rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--lif-gold);
+    }
+
+    @media (max-width: 1000px) {
+      .nav-wrap {
+        min-height: 72px;
+      }
+
+      .nav-toggle {
+        display: block;
+        flex-shrink: 0;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 20px 4%;
+        background: white;
+        border-bottom: 1px solid var(--lif-border);
+        box-shadow: var(--lif-shadow);
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px 4px;
+      }
+
+      .nav-links .nav-cta {
+        text-align: center;
+        margin-top: 8px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .hero-visual {
+        max-width: 700px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .hero-image {
+        min-height: 320px;
+      }
+
+      .opportunity-grid,
+      .stories-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .future-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+      .section {
+        padding: 55px 0;
+      }
+
+      .brand img {
+        width: 53px;
+        height: 52px;
+      }
+
+      .brand-text {
+        font-size: .85rem;
+      }
+
+      .brand-text span {
+        font-size: .64rem;
+      }
+
+      .hero {
+        padding: 54px 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.35rem, 11vw, 3.5rem);
+      }
+
+      .hero-image {
+        min-height: 270px;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .mission-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+      }
+
+      .mission-item {
+        padding: 7px 14px;
+      }
+
+      .opportunity-grid,
+      .stories-grid,
+      .value-grid,
+      .value-list,
+      .future-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .opportunity-card {
+        padding: 22px;
+      }
+
+      .story-card .image-slot {
+        min-height: 235px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-strip">
+    <div class="container">
+      <strong>Basotho first. Local opportunity. Shared prosperity.</strong>
+      &nbsp; Building a stronger food future for Lesotho.
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Life Improvement Foundation home">
+        <img src="assets/lif/life-logo-transparent.png"
+             alt="Life Improvement Foundation logo">
+        <span class="brand-text">
+          LIFE IMPROVEMENT FOUNDATION
+          <span>COMMUNITY • OPPORTUNITY • INDUSTRY</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button"
+              aria-label="Open navigation"
+              aria-expanded="false">
+        ☰
+      </button>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="partnership.html">Partnership</a>
+        <a href="products.html">Products</a>
+        <a href="kingdom-foods.html">Kingdom Foods</a>
+        <a href="manufacturing.html">Manufacturing</a>
+        <a href="community.html" aria-current="page">Community</a>
+        <a href="reseller.html">Reseller Program</a>
+        <a href="register.html">Register</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="#join">Join the Movement</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">A nationwide call to every Mosotho</span>
+          <h1>
+            RALLY BEHIND
+            <span class="red">FOOD</span>
+            <span class="green">SOVEREIGNTY</span>
+          </h1>
+
+          <p class="hero-lead">
+            A call to farmers, street vendors, cooperatives, entrepreneurs
+            and community leaders to help build a food economy that creates
+            opportunities here at home.
+          </p>
+
+          <div class="partner-line" aria-label="Participating organisations">
+            <span class="lif-tag">Life Improvement Foundation</span>
+            <span>× Food Sock</span>
+            <span>× Kingdom Foods</span>
+          </div>
+
+          <p>
+            Food sovereignty means working towards a future in which
+            Basotho can produce, prepare, distribute and access quality,
+            affordable food while more of the value stays in Lesotho.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#opportunities">
+              Explore opportunities →
+            </a>
+            <a class="btn btn-secondary" href="#join">
+              Register your interest
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="image-slot hero-image"
+               data-image="assets/community/farm-producers.jpg">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🌱</span>
+              <strong>Basotho farmers. Local supply. Shared opportunity.</strong>
+              <small>
+                Your farm-producers photograph will appear here once uploaded.
+              </small>
+            </div>
+            <img src="assets/community/farm-producers.jpg"
+                 alt="Small-scale Basotho farmers supplying fresh produce to a LIF-branded truck"
+                 loading="eager">
+          </div>
+
+          <div class="hero-note">
+            <strong>Our direction:</strong>
+            strengthen local producers, open routes to market, support
+            community enterprise and work towards manufacturing in Lesotho.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mission-band">
+      <div class="container mission-grid">
+        <div class="mission-item">
+          <strong>Local participation</strong>
+          <span>Make room for farmers, vendors, resellers and cooperatives.</span>
+        </div>
+        <div class="mission-item">
+          <strong>Local value</strong>
+          <span>Build opportunities for Basotho suppliers and entrepreneurs.</span>
+        </div>
+        <div class="mission-item">
+          <strong>Long-term ambition</strong>
+          <span>Help lay the foundations for food manufacturing and job creation.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Our shared purpose</span>
+          <h2>Let Us Build This Opportunity Together</h2>
+        </div>
+
+        <div class="intro-copy">
+          <p>
+            Fellow Basotho, this is an invitation to take part in an
+            ambitious journey: strengthening our food supply, supporting
+            local enterprise and creating more ways for people to earn
+            a living.
+          </p>
+          <p>
+            Through the LIF, Food Sock and Kingdom Foods initiative, we want
+            to connect communities with products, distribution opportunities
+            and a longer-term vision for manufacturing in Lesotho.
+          </p>
+          <p>
+            Every participating farmer, reseller, vendor, cooperative and
+            community ambassador can help grow a stronger network.
+            <strong>Food sovereignty starts with participation.</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section opportunities" id="opportunities">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">There is a place for you</span>
+          <h2>Choose How You Want to Participate</h2>
+          <p>
+            You do not need to be a large business to contribute.
+            Start with the role that fits your skills, resources and community.
+          </p>
+        </div>
+
+        <div class="opportunity-grid">
+          <article class="opportunity-card">
+            <div class="opportunity-icon">🛍️</div>
+            <h3>Resellers</h3>
+            <p>
+              Build a small business by purchasing approved products through
+              the programme and reselling them to customers. Earnings depend
+              on the applicable reseller terms and actual sales.
+            </p>
+            <span class="accent"></span>
+          </article>
+
+          <article class="opportunity-card">
+            <div class="opportunity-icon">🌾</div>
+            <h3>Small Farm Producers</h3>
+            <p>
+              Register your interest in supplying fresh produce and, where
+              specifications and agreements allow, ingredients for future
+              local manufacturing.
+            </p>
+            <span class="accent"></span>
+          </article>
+
+          <article class="opportunity-card">
+            <div class="opportunity-icon">🥕</div>
+            <h3>Street Vendors</h3>
+            <p>
+              Explore adding suitable packaged foods and other approved
+              products to your stall alongside fruit, vegetables and snacks.
+            </p>
+            <span class="accent"></span>
+          </article>
+
+          <article class="opportunity-card">
+            <div class="opportunity-icon">🤝</div>
+            <h3>Cooperative Resellers</h3>
+            <p>
+              Join with a stokvel, cooperative, savings group or community
+              organisation to explore shared purchasing and distribution.
+            </p>
+            <span class="accent"></span>
+          </article>
+
+          <article class="opportunity-card">
+            <div class="opportunity-icon">📣</div>
+            <h3>Community Ambassadors</h3>
+            <p>
+              Help spread accurate information, connect interested people
+              with the programme and encourage local participation.
+            </p>
+            <span class="accent"></span>
+          </article>
+
+          <article class="opportunity-card">
+            <div class="opportunity-icon">🏪</div>
+            <h3>Local Businesses</h3>
+            <p>
+              Shops, distributors and other businesses can register their
+              interest in stocking products or supporting the supply network.
+            </p>
+            <span class="accent"></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="community-stories">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Opportunity in action</span>
+          <h2>From Local Farms to Local Markets</h2>
+          <p>
+            We want to build practical connections between the people who
+            produce food, the people who sell it and the families who buy it.
+          </p>
+        </div>
+
+        <div class="stories-grid">
+          <article class="story-card">
+            <div class="image-slot"
+                 data-image="assets/community/farm-producers.jpg">
+              <div class="image-placeholder">
+                <span class="placeholder-icon">🚚</span>
+                <strong>Farmers supplying local markets</strong>
+                <small>
+                  Add the photograph of producers and the LIF-branded truck.
+                </small>
+              </div>
+              <img src="assets/community/farm-producers.jpg"
+                   alt="Small farm producers preparing local produce for collection"
+                   loading="lazy">
+            </div>
+            <div class="story-content">
+              <span class="story-label">Local production</span>
+              <h3>Give Local Producers a Route to Market</h3>
+              <p>
+                We want to help connect small farmers and producers with
+                buyers and future supply opportunities, subject to product
+                quality, supply capacity and agreed purchasing terms.
+              </p>
+            </div>
+          </article>
+
+          <article class="story-card">
+            <div class="image-slot"
+                 data-image="assets/community/street-vendors.jpg">
+              <div class="image-placeholder">
+                <span class="placeholder-icon">🍎</span>
+                <strong>Street vendors serving their communities</strong>
+                <small>
+                  Add the photograph of a vendor showing products to a customer.
+                </small>
+              </div>
+              <img src="assets/community/street-vendors.jpg"
+                   alt="Street vendors displaying fresh produce, snacks and Food Sock products to a customer"
+                   loading="lazy">
+            </div>
+            <div class="story-content">
+              <span class="story-label">Small enterprise</span>
+              <h3>Help Vendors Grow Their Businesses</h3>
+              <p>
+                Street vendors can explore offering approved packaged food
+                products alongside their existing goods, giving customers
+                more choice and vendors another potential source of income.
+              </p>
+            </div>
+          </article>
+
+          <article class="story-card">
+            <div class="image-slot"
+                 data-image="assets/community/cooperative-market.jpg">
+              <div class="image-placeholder">
+                <span class="placeholder-icon">🧺</span>
+                <strong>Cooperatives creating shared opportunities</strong>
+                <small>
+                  Add the photograph of a cooperative selling at a conference.
+                </small>
+              </div>
+              <img src="assets/community/cooperative-market.jpg"
+                   alt="A community cooperative presenting and selling products to conference attendees"
+                   loading="lazy">
+            </div>
+            <div class="story-content">
+              <span class="story-label">Community enterprise</span>
+              <h3>Stronger Together Through Cooperatives</h3>
+              <p>
+                Community groups can explore collective distribution,
+                organised selling and ways to bring more people into the
+                growing local food and enterprise network.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section local-value">
+      <div class="container value-grid">
+        <div class="value-copy">
+          <span class="eyebrow">Keep more value in Lesotho</span>
+          <h2>Build a Stronger Local Food Economy</h2>
+          <p>
+            Our longer-term ambition is to expand local sourcing as
+            manufacturing develops. The programme aims for at least 70%
+            of relevant ingredients to be sourced locally when the plant
+            is established, subject to availability, quality, food-safety
+            requirements and commercial agreements.
+          </p>
+          <p>
+            This creates an opportunity to connect Basotho farmers, millers,
+            suppliers, workers and entrepreneurs with a developing value chain.
+          </p>
+          <a class="btn btn-primary" href="manufacturing.html">
+            Explore the manufacturing vision →
+          </a>
+        </div>
+
+        <div class="value-list">
+          <div class="value-point">
+            <strong>Farmers and growers</strong>
+            <span>Potential supply opportunities for local produce and ingredients.</span>
+          </div>
+          <div class="value-point">
+            <strong>Millers and suppliers</strong>
+            <span>Opportunities to support local sourcing where requirements are met.</span>
+          </div>
+          <div class="value-point">
+            <strong>Jobs and skills</strong>
+            <span>A vision for employment and skills development through future industry.</span>
+          </div>
+          <div class="value-point">
+            <strong>Local distribution</strong>
+            <span>More ways for small businesses to connect products with customers.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reseller-benefits">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">A pathway to participation</span>
+          <h2>How the Reseller Opportunity Is Intended to Work</h2>
+          <p>
+            The programme is designed to help participants understand the
+            steps from joining to selling and, where applicable, earning
+            programme benefits.
+          </p>
+        </div>
+
+        <div class="earnings-wrap">
+          <table class="earnings-table">
+            <thead>
+              <tr>
+                <th>Programme step</th>
+                <th>How it is intended to work</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Join the programme</td>
+                <td>
+                  Register your interest and receive details of available
+                  starter options, product information and trading requirements.
+                </td>
+              </tr>
+              <tr>
+                <td>Sell individual sachets</td>
+                <td>
+                  Purchase through the approved channel and resell according
+                  to the applicable reseller terms. Actual earnings depend
+                  on costs, selling terms and completed sales.
+                </td>
+              </tr>
+              <tr>
+                <td>Explore bulk products</td>
+                <td>
+                  Ask about available bulk formats and their applicable
+                  reseller terms.
+                </td>
+              </tr>
+              <tr>
+                <td>Earn programme points</td>
+                <td>
+                  The proposed points model is one point for every M100
+                  in eligible sales, subject to programme rules and verification.
+                </td>
+              </tr>
+              <tr>
+                <td>Redeem eligible points</td>
+                <td>
+                  Points may be redeemable for discounts on future orders
+                  if the final programme terms provide for this benefit.
+                </td>
+              </tr>
+              <tr>
+                <td>Future share opportunities</td>
+                <td>
+                  Eligible participants may be invited to consider future
+                  share opportunities if a manufacturing business is
+                  established and a lawful offering becomes available.
+                  This is not guaranteed.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="points-note">
+          <strong>Important:</strong> Final eligibility rules, points,
+          discounts, starter options and any future investment opportunity
+          must be confirmed in official programme terms. Points do not
+          automatically represent shares or an ownership interest.
+        </div>
+      </div>
+    </section>
+
+    <section class="section future-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow" style="color:#f3bd36;">The future we want to build</span>
+          <h2>More Than Selling Products</h2>
+          <p>
+            We want community participation today to help build the foundations
+            for a more resilient food economy tomorrow.
+          </p>
+        </div>
+
+        <div class="future-grid">
+          <article class="future-card">
+            <div class="number">01</div>
+            <h3>Food for Families</h3>
+            <p>
+              Support a future in which families can access suitable,
+              affordable food and communities have stronger supply networks.
+            </p>
+          </article>
+
+          <article class="future-card">
+            <div class="number">02</div>
+            <h3>Fairer Local Opportunity</h3>
+            <p>
+              Expand routes to market for farmers, producers, vendors
+              and small businesses.
+            </p>
+          </article>
+
+          <article class="future-card">
+            <div class="number">03</div>
+            <h3>Youth and Employment</h3>
+            <p>
+              Work towards future jobs, practical skills and entrepreneurial
+              opportunities through distribution and local industry.
+            </p>
+          </article>
+
+          <article class="future-card">
+            <div class="number">04</div>
+            <h3>Production in Lesotho</h3>
+            <p>
+              Help build the partnerships and market foundations needed
+              to pursue local food manufacturing.
+            </p>
+          </article>
+        </div>
+
+        <p class="closing-line">
+          Products by Basotho,
+          <span>for Basotho and the world.</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="cta-section" id="join">
+      <div class="container cta-box">
+        <span class="eyebrow">Your community. Your opportunity.</span>
+        <h2>Be Part of the Journey</h2>
+        <p>
+          Are you a farmer, vendor, reseller, cooperative, business owner
+          or community ambassador? Register your interest so the LIF team
+          can share information about participation and the next steps.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary"
+             href="https://wa.me/26659434159?text=Hello%20LIF%2C%20I%20would%20like%20to%20register%20my%20interest%20in%20the%20community%20participation%20and%20food%20sovereignty%20programme."
+             target="_blank" rel="noopener">
+            Register interest on WhatsApp
+          </a>
+          <a class="btn btn-secondary" href="register.html">
+            Open registration page
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="partner-footer" aria-label="Partnership">
+      <div class="container">
+        <div class="brand-line">
+          <span class="lif">LIF</span>
+          <span> + </span>
+          <span class="food">FOOD SOCK</span>
+          <span> + </span>
+          <span class="kingdom">KINGDOM FOODS</span>
+        </div>
+        <p>
+          Working towards local opportunity, food sovereignty and
+          manufacturing ambitions in Lesotho.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>
+        © <span id="current-year"></span> Life Improvement Foundation.
+        All rights reserved.
+      </p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="partnership.html">Partnership</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation menu
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    navToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+      navToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
+      );
+      navToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    // Close the mobile menu after selecting a link
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.setAttribute("aria-label", "Open navigation");
+        navToggle.textContent = "☰";
+      });
+    });
+
+    // Show photographs only when their files are available.
+    // The coloured placeholder remains visible until then.
+    document.querySelectorAll(".image-slot").forEach(function (slot) {
+      const img = slot.querySelector("img");
+      if (!img) return;
+
+      function showImageIfLoaded() {
+        if (img.complete && img.naturalWidth > 0) {
+          slot.classList.add("has-image");
+        }
+      }
+
+      img.addEventListener("load", showImageIfLoaded);
+      img.addEventListener("error", function () {
+        slot.classList.remove("has-image");
+      });
+
+      showImageIfLoaded();
+    });
+
+    // Keep the footer year current
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
