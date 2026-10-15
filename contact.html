@@ -1,1 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#073b2b">
+  <meta name="description" content="Contact Life Improvement Foundation in Lesotho. Find our offices, telephone numbers and email addresses.">
+  <title>Contact Us | Life Improvement Foundation</title>
+
+  <style>
+    :root {
+      --green: #087f43;
+      --green-dark: #073b2b;
+      --green-deep: #052d21;
+      --green-pale: #edf7f0;
+      --blue: #149bd7;
+      --blue-pale: #edf8fd;
+      --red: #e52b35;
+      --gold: #efbd42;
+      --ink: #18291f;
+      --muted: #5d6b62;
+      --white: #ffffff;
+      --surface: #f6f9f6;
+      --border: #dfe9e1;
+      --shadow: 0 14px 38px rgba(7,59,43,.10);
+      --radius: 20px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.7;
+      overflow-wrap: break-word;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(var(--max-width), 92%);
+      margin-inline: auto;
+    }
+
+    .topbar {
+      background: var(--green-deep);
+      color: white;
+      text-align: center;
+      padding: 8px 12px;
+      font-size: .83rem;
+    }
+
+    .topbar strong {
+      color: var(--gold);
+    }
+
+    /* Main navigation */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-wrap {
+      min-height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand-logo {
+      width: 78px;
+      height: 72px;
+      object-fit: contain;
+    }
+
+    .brand-copy {
+      max-width: 220px;
+      color: var(--green-dark);
+      font-size: .85rem;
+      font-weight: 900;
+      line-height: 1.25;
+    }
+
+    .brand-copy small {
+      display: block;
+      margin-top: 5px;
+      color: var(--green);
+      font-size: .62rem;
+      letter-spacing: .05em;
+    }
+
+    .nav-toggle {
+      display: none;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 13px;
+      background: white;
+      color: var(--green-dark);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 7px 14px;
+    }
+
+    .nav-links a {
+      padding: 7px 0;
+      border-bottom: 2px solid transparent;
+      color: #33473a;
+      font-size: .76rem;
+      font-weight: 800;
+      transition: color .2s ease, border-color .2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--green);
+      border-bottom-color: var(--gold);
+    }
+
+    .nav-links .nav-cta {
+      padding: 10px 14px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--green);
+      color: white;
+    }
+
+    .nav-links .nav-cta:hover {
+      background: var(--green-dark);
+      color: white;
+    }
+
+    /* Contact hero */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 78px 0 82px;
+      background:
+        radial-gradient(circle at 90% 12%, rgba(20,155,215,.16), transparent 28%),
+        radial-gradient(circle at 5% 100%, rgba(8,127,67,.12), transparent 35%),
+        linear-gradient(135deg, #fff 0%, #f2faf5 65%, #eff8fc 100%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 8px;
+      bottom: 0;
+      left: 0;
+      background: var(--red);
+      box-shadow: 240px 0 var(--gold), 480px 0 var(--green), 720px 0 var(--blue);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr .8fr;
+      align-items: center;
+      gap: 45px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 15px;
+      color: var(--green);
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 720px;
+      margin-bottom: 22px;
+      color: var(--green-dark);
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 1.02;
+      letter-spacing: -.055em;
+    }
+
+    h1 .red {
+      color: var(--red);
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .hero-logo-panel {
+      display: flex;
+      min-height: 310px;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+      border: 1px solid rgba(8,127,67,.12);
+      border-radius: 28px;
+      background: rgba(255,255,255,.82);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-logo {
+      width: 100%;
+      max-width: 390px;
+      max-height: 310px;
+      object-fit: contain;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 27px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border: 2px solid transparent;
+      border-radius: 999px;
+      font-size: .9rem;
+      font-weight: 900;
+      text-align: center;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(0,0,0,.12);
+    }
+
+    .button-green {
+      background: var(--green);
+      color: white;
+    }
+
+    .button-outline {
+      border-color: var(--green);
+      background: white;
+      color: var(--green);
+    }
+
+    /* Contact information */
+
+    .contact-section {
+      padding: 76px 0;
+    }
+
+    .section-heading {
+      max-width: 780px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 13px;
+      color: var(--green-dark);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.13;
+      letter-spacing: -.035em;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .contact-card {
+      position: relative;
+      overflow: hidden;
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: white;
+      box-shadow: var(--shadow);
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 42px rgba(7,59,43,.14);
+    }
+
+    .contact-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: var(--green);
+    }
+
+    .contact-card.secondary::before {
+      background: var(--blue);
+    }
+
+    .contact-card.telephone::before {
+      background: var(--red);
+    }
+
+    .contact-card.email::before {
+      background: var(--gold);
+    }
+
+    .card-icon {
+      display: grid;
+      width: 53px;
+      height: 53px;
+      place-items: center;
+      margin-bottom: 17px;
+      border-radius: 15px;
+      background: var(--green-pale);
+      color: var(--green);
+      font-size: 1.55rem;
+    }
+
+    .secondary .card-icon {
+      background: var(--blue-pale);
+      color: #0875a8;
+    }
+
+    .telephone .card-icon {
+      background: #fff0f0;
+      color: var(--red);
+    }
+
+    .email .card-icon {
+      background: var(--gold-pale, #fff7e3);
+      color: #795a00;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 10px;
+      color: var(--green-dark);
+      font-size: 1.35rem;
+      line-height: 1.25;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .contact-card address {
+      color: var(--ink);
+      font-style: normal;
+      font-size: 1.02rem;
+      font-weight: 700;
+      line-height: 1.8;
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 9px;
+    }
+
+    .contact-links a {
+      display: inline-block;
+      width: fit-content;
+      color: var(--green);
+      font-weight: 800;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-links a:hover {
+      color: var(--blue);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .contact-note {
+      margin-top: 32px;
+      padding: 23px 26px;
+      border-left: 5px solid var(--gold);
+      border-radius: 0 14px 14px 0;
+      background: var(--surface);
+      color: var(--muted);
+    }
+
+    .contact-note strong {
+      color: var(--green-dark);
+    }
+
+    /* Partnership image at the bottom */
+
+    .partnership-section {
+      padding: 15px 0 75px;
+    }
+
+    .partnership-panel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 26px;
+      background: var(--green-dark);
+      box-shadow: var(--shadow);
+    }
+
+    .partnership-panel img {
+      width: 100%;
+      max-height: 590px;
+      aspect-ratio: 16 / 7;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .partnership-caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 25px 30px;
+      background: var(--green-dark);
+      color: white;
+    }
+
+    .partnership-caption h2 {
+      margin-bottom: 5px;
+      font-size: clamp(1.35rem, 3vw, 2rem);
+      line-height: 1.2;
+    }
+
+    .partnership-caption p {
+      color: rgba(255,255,255,.83);
+    }
+
+    .partnership-caption .button {
+      flex-shrink: 0;
+      background: var(--gold);
+      color: var(--green-deep);
+    }
+
+    /* Footer with full site menu */
+
+    .site-footer {
+      padding: 58px 0 0;
+      background: var(--green-deep);
+      color: white;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .9fr 1fr;
+      gap: 38px;
+      padding-bottom: 40px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .footer-brand img {
+      width: 96px;
+      height: 88px;
+      padding: 5px;
+      border-radius: 12px;
+      background: white;
+      object-fit: contain;
+    }
+
+    .footer-brand strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 1.1rem;
+    }
+
+    .footer-brand span {
+      display: block;
+      color: rgba(255,255,255,.76);
+      font-size: .87rem;
+    }
+
+    .footer-description {
+      max-width: 430px;
+      color: rgba(255,255,255,.78);
+      font-size: .94rem;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 17px;
+      color: var(--gold);
+      font-size: 1.02rem;
+    }
+
+    .footer-column p {
+      margin-bottom: 10px;
+      color: rgba(255,255,255,.8);
+      font-size: .92rem;
+    }
+
+    .footer-column a {
+      color: rgba(255,255,255,.88);
+      overflow-wrap: anywhere;
+    }
+
+    .footer-column a:hover {
+      color: var(--gold);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .footer-nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 16px;
+    }
+
+    .footer-nav a {
+      font-size: .9rem;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px 25px;
+      flex-wrap: wrap;
+      padding: 19px 0;
+      border-top: 1px solid rgba(255,255,255,.18);
+      color: rgba(255,255,255,.7);
+      font-size: .81rem;
+    }
+
+    .footer-bottom .footer-colours {
+      color: var(--gold);
+      font-weight: 800;
+    }
+
+    @media (max-width: 1020px) {
+      .nav-wrap {
+        flex-wrap: wrap;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        padding: 8px 0 18px;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .nav-links.is-open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 11px 8px;
+        border-bottom: 1px solid var(--border);
+        font-size: .9rem;
+      }
+
+      .nav-links .nav-cta {
+        margin-top: 9px;
+        text-align: center;
+      }
+
+      .hero-grid {
+        gap: 28px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid > div:first-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .brand-logo {
+        width: 61px;
+        height: 60px;
+      }
+
+      .brand-copy {
+        max-width: 190px;
+        font-size: .74rem;
+      }
+
+      .brand-copy small {
+        font-size: .56rem;
+      }
+
+      .hero {
+        padding: 52px 0 60px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-logo-panel {
+        min-height: 230px;
+      }
+
+      .hero-logo {
+        max-height: 220px;
+      }
+
+      .contact-section {
+        padding: 55px 0;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        padding: 25px;
+      }
+
+      .partnership-section {
+        padding-bottom: 52px;
+      }
+
+      .partnership-panel img {
+        aspect-ratio: 4 / 3;
+      }
+
+      .partnership-caption {
+        padding: 23px;
+      }
+
+      .partnership-caption .button {
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-grid > div:first-child {
+        grid-column: auto;
+      }
+
+      .footer-nav {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <strong>Life Improvement Foundation</strong>
+    &nbsp; | &nbsp; Building opportunity, enterprise and a brighter future for Lesotho
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Life Improvement Foundation home">
+        <img
+          class="brand-logo"
+          src="assets/lif/life-logo-transparent.png"
+          alt="Life Improvement Foundation logo">
+        <span class="brand-copy">
+          LIFE IMPROVEMENT FOUNDATION
+          <small>BETTER FOOD • STRONGER COMMUNITIES</small>
+        </span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="primary-navigation">
+        ☰ Menu
+      </button>
+
+      <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="partnership.html">Partnership</a>
+        <a href="products.html">Food Sock &amp; Two Spoons</a>
+        <a href="kingdom-foods.html">Kingdom Foods</a>
+        <a href="manufacturing.html">Manufacturing Vision</a>
+        <a href="community.html">Community Involvement</a>
+        <a href="reseller.html">Become a Reseller</a>
+        <a href="register.html">Register to Join LIF</a>
+        <a href="contact.html" aria-current="page">Contact Us</a>
+        <a
+          class="nav-cta"
+          href="https://wa.me/26662004222?text=Hello%20Life%20Improvement%20Foundation%2C%20I%20would%20like%20to%20make%20an%20enquiry.">
+          Contact LIF
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">We would love to hear from you</span>
+          <h1>Let’s build a <span class="red">better future</span> together.</h1>
+          <p class="hero-copy">
+            Whether you are a community member, potential reseller, business
+            partner, supplier, investor or someone who shares our vision for
+            Lesotho, Life Improvement Foundation welcomes your enquiry.
+            Get in touch with our team using the details below.
+          </p>
+
+          <div class="button-row">
+            <a class="button button-green" href="#contact-details">
+              Find our offices
+            </a>
+            <a class="button button-outline" href="mailto:projects@lifefoundation.co.ls">
+              Email the Foundation
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-logo-panel">
+          <img
+            class="hero-logo"
+            src="assets/lif/life-logo-transparent.png"
+            alt="Life Improvement Foundation official logo">
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact-details">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Connect with LIF</span>
+          <h2>Our contact details</h2>
+          <p>
+            Visit either of our Maseru locations, call us or send an email.
+            We look forward to connecting with you.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <article class="contact-card">
+            <div class="card-icon" aria-hidden="true">⌖</div>
+            <h3>Main Office</h3>
+            <p>Our main office in Maseru, Lesotho.</p>
+            <address>
+              Office No. 7, Speedy Complex<br>
+              Opposite Maseru Main Circle<br>
+              Maseru, Lesotho
+            </address>
+          </article>
+
+          <article class="contact-card secondary">
+            <div class="card-icon" aria-hidden="true">⌂</div>
+            <h3>Secondary Office</h3>
+            <p>Visit us at the BESA Meat &amp; Chill premises.</p>
+            <address>
+              BESA Meat &amp; Chill Premises<br>
+              Corner Moshoeshoe &amp; Caledon Road<br>
+              Maseru West, Lesotho
+            </address>
+          </article>
+
+          <article class="contact-card telephone">
+            <div class="card-icon" aria-hidden="true">☎</div>
+            <h3>Contact Numbers</h3>
+            <p>Call our team using any of the following numbers.</p>
+            <div class="contact-links">
+              <a href="tel:+26662004222">+266 6200 4222</a>
+              <a href="tel:+26657434159">+266 5743 4159</a>
+              <a href="tel:+26657428997">+266 5742 8997</a>
+            </div>
+            <div class="button-row">
+              <a
+                class="button button-green"
+                href="https://wa.me/26662004222?text=Hello%20LIF%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+                target="_blank"
+                rel="noopener">
+                Message us on WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <article class="contact-card email">
+            <div class="card-icon" aria-hidden="true">✉</div>
+            <h3>Email Addresses</h3>
+            <p>For enquiries, partnerships and correspondence.</p>
+            <div class="contact-links">
+              <a href="mailto:projects@lifefoundation.co.ls">
+                projects@lifefoundation.co.ls
+              </a>
+              <a href="mailto:chairman@lifefoundation.co.ls">
+                chairman@lifefoundation.co.ls
+              </a>
+            </div>
+            <div class="button-row">
+              <a class="button button-outline" href="mailto:projects@lifefoundation.co.ls">
+                Send an email
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="contact-note">
+          <strong>Let’s create lasting opportunity.</strong>
+          LIF is working towards stronger communities, more local enterprise,
+          skills development, job creation and a future in which Basotho can
+          create and retain more value in Lesotho.
+        </div>
+      </div>
+    </section>
+
+    <section class="partnership-section" aria-labelledby="partnership-image-title">
+      <div class="container">
+        <div class="partnership-panel">
+          <img
+            src="assets/partnership/partnership-journey.jpg"
+            alt="Life Improvement Foundation partnership journey towards opportunity and local manufacturing in Lesotho"
+            loading="lazy">
+
+          <div class="partnership-caption">
+            <div>
+              <h2 id="partnership-image-title">One shared journey. A brighter future for Lesotho.</h2>
+              <p>
+                Working with partners and communities to grow opportunity,
+                enterprise, skills and local industry.
+              </p>
+            </div>
+            <a class="button" href="partnership.html">
+              Explore our partnership
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img
+              src="assets/lif/life-logo-transparent.png"
+              alt="Life Improvement Foundation logo"
+              loading="lazy">
+            <div>
+              <strong>Life Improvement Foundation</strong>
+              <span>Better food. Stronger communities. Brighter futures.</span>
+            </div>
+          </div>
+
+          <p class="footer-description">
+            Working towards a future where opportunity, enterprise, local
+            skills and community participation help Basotho build lasting
+            prosperity.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact the Foundation</h3>
+          <p><strong>Main Office</strong></p>
+          <p>Office No. 7, Speedy Complex, opposite Maseru Main Circle, Maseru.</p>
+          <p><strong>Secondary Office</strong></p>
+          <p>BESA Meat &amp; Chill Premises, corner Moshoeshoe &amp; Caledon Road, Maseru West.</p>
+          <p><a href="tel:+26662004222">+266 6200 4222</a></p>
+          <p><a href="tel:+26657434159">+266 5743 4159</a></p>
+          <p><a href="tel:+26657428997">+266 5742 8997</a></p>
+          <p><a href="mailto:projects@lifefoundation.co.ls">projects@lifefoundation.co.ls</a></p>
+          <p><a href="mailto:chairman@lifefoundation.co.ls">chairman@lifefoundation.co.ls</a></p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Explore LIF</h3>
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="partnership.html">Partnership</a>
+            <a href="products.html">Food Sock &amp; Two Spoons</a>
+            <a href="kingdom-foods.html">Kingdom Foods</a>
+            <a href="manufacturing.html">Manufacturing Vision</a>
+            <a href="community.html">Community Involvement</a>
+            <a href="reseller.html">Become a Reseller</a>
+            <a href="register.html">Register to Join LIF</a>
+            <a href="contact.html" aria-current="page">Contact Us</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>
+          © <span id="current-year"></span>
+          Life Improvement Foundation. All rights reserved.
+        </span>
+        <span class="footer-colours">
+          Building opportunity, enterprise and a future for Lesotho.
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (navToggle && navLinks) {
+      navToggle.addEventListener("click", function () {
+        const isOpen = navLinks.classList.toggle("is-open");
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+        navToggle.setAttribute(
+          "aria-label",
+          isOpen ? "Close navigation" : "Open navigation"
+        );
+        navToggle.textContent = isOpen ? "✕ Close" : "☰ Menu";
+      });
+
+      navLinks.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          navLinks.classList.remove("is-open");
+          navToggle.setAttribute("aria-expanded", "false");
+          navToggle.setAttribute("aria-label", "Open navigation");
+          navToggle.textContent = "☰ Menu";
+        });
+      });
+    }
+
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
 
