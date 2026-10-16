@@ -1569,7 +1569,165 @@
         transition-duration: .01ms !important;
       }
     }
-  </style>
+  /* ==========================================
+   LIF REGISTRATION OPTIONS
+   ========================================== */
+
+.registration-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin: 28px 0;
+}
+
+.registration-card {
+  min-width: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #dfe9e1;
+  border-radius: 20px;
+  box-shadow: 0 14px 38px rgba(7, 59, 43, 0.10);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.registration-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 42px rgba(7, 59, 43, 0.15);
+}
+
+.registration-card img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.registration-card-content {
+  padding: 24px;
+}
+
+.registration-card h3 {
+  margin: 0 0 12px;
+  color: #073b2b;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.registration-card p {
+  color: #5d6b62;
+  margin: 0 0 18px;
+}
+
+.registration-card .button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 21px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: #087f43;
+  color: #ffffff;
+  font-weight: 900;
+  text-align: center;
+}
+
+.registration-card .button:hover {
+  background: #073b2b;
+}
+
+.registration-note {
+  margin-top: 24px;
+  padding: 20px 22px;
+  border-left: 5px solid #efbd42;
+  border-radius: 8px;
+  background: #fff7e3;
+  color: #18291f;
+}
+
+/* ==========================================
+   PREVIOUS / NEXT PAGE NAVIGATION
+   ========================================== */
+
+.page-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 36px auto;
+  padding-top: 22px;
+  border-top: 1px solid #dfe9e1;
+}
+
+.page-navigation a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 11px 17px;
+  border: 1px solid #dfe9e1;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #073b2b;
+  font-weight: 800;
+  text-align: center;
+}
+
+.page-navigation a:hover {
+  border-color: #087f43;
+  background: #eaf6ed;
+}
+
+.page-navigation .next-page {
+  margin-left: auto;
+  border-color: #087f43;
+  background: #087f43;
+  color: #ffffff;
+}
+
+.page-navigation .next-page:hover {
+  background: #073b2b;
+}
+
+/* ==========================================
+   ACCESSIBILITY AND MOBILE LAYOUT
+   ========================================== */
+
+.registration-card a:focus-visible,
+.page-navigation a:focus-visible {
+  outline: 3px solid #efbd42;
+  outline-offset: 4px;
+}
+
+@media (max-width: 700px) {
+  .registration-options {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .registration-card img {
+    height: 220px;
+  }
+
+  .registration-card-content {
+    padding: 20px;
+  }
+
+  .page-navigation {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .page-navigation a {
+    width: 100%;
+  }
+
+  .page-navigation .next-page {
+    margin-left: 0;
+  }
+}</style>
 </head>
 
 <body>
