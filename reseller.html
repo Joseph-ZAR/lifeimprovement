@@ -2219,7 +2219,315 @@
       </div>
     </div>
   </section>
+<!-- LIF RESELLER REGISTRATION -->
+  <style>
+    #registration {
+      background: #f6f9f6;
+      padding: 70px 0;
+    }
 
+    #registration .registration-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-bottom: 38px;
+    }
+
+    #registration .registration-card {
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid #dfe9e1;
+      border-radius: 20px;
+      box-shadow: 0 10px 28px rgba(7, 59, 43, .08);
+    }
+
+    #registration .registration-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    #registration .registration-card-content {
+      padding: 24px;
+    }
+
+    #registration .application-form {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 30px;
+      background: #fff;
+      border: 1px solid #dfe9e1;
+      border-radius: 20px;
+    }
+
+    #registration .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    #registration label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 700;
+      color: #073b2b;
+    }
+
+    #registration input,
+    #registration select,
+    #registration textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd8ce;
+      border-radius: 9px;
+      font: inherit;
+      background: #fff;
+    }
+
+    #registration .form-field {
+      margin-bottom: 18px;
+    }
+
+    #registration .registration-submit {
+      display: inline-block;
+      border: 0;
+      border-radius: 30px;
+      padding: 14px 24px;
+      background: #087f43;
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    #registration .registration-submit:hover {
+      background: #073b2b;
+    }
+
+    #registration .registration-note {
+      color: #5d6b62;
+      font-size: .93rem;
+    }
+
+    @media (max-width: 700px) {
+      #registration .registration-grid,
+      #registration .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      #registration .registration-card img {
+        height: 220px;
+      }
+
+      #registration .application-form {
+        padding: 20px;
+      }
+    }
+  </style>
+
+  <section class="section" id="registration">
+    <div class="container">
+
+      <div class="section-head center">
+        <span class="eyebrow">Take Your First Step</span>
+        <h2>Register to Become a LIF Reseller</h2>
+        <p>
+          Whether you are applying as an individual, a family, a
+          stokvel, a cooperative or an organisation, there is a
+          place for you in the Life Improvement Foundation family.
+          Choose the registration option that works best for you.
+        </p>
+      </div>
+
+      <div class="registration-grid">
+
+        <article class="registration-card">
+          <img
+            src="assets/reseller/physical%20registration.jpg"
+            alt="In-person reseller registration with Life Improvement Foundation"
+            loading="lazy">
+
+          <div class="registration-card-content">
+            <h3>1. Register in Person</h3>
+            <p>
+              Prefer personal assistance? Contact LIF to arrange
+              an in-person registration and discuss the reseller
+              programme with our team.
+            </p>
+            <a
+              class="button button-gold"
+              href="https://wa.me/26659434159?text=Hello%20LIF%2C%20I%20would%20like%20to%20register%20as%20a%20reseller%20in%20person."
+              target="_blank"
+              rel="noopener noreferrer">
+              Arrange In-Person Registration
+            </a>
+          </div>
+        </article>
+
+        <article class="registration-card">
+          <img
+            src="assets/reseller/Online%20registration.jpg"
+            alt="Online registration option for LIF resellers"
+            loading="lazy">
+
+          <div class="registration-card-content">
+            <h3>2. Register Online</h3>
+            <p>
+              Complete the application below from your phone,
+              tablet or computer. You can attach your application
+              document in PDF format.
+            </p>
+            <a class="button button-gold" href="#online-application">
+              Apply Online
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="application-form" id="online-application">
+        <div class="section-head">
+          <h2>Online Reseller Application</h2>
+          <p>
+            Complete the required details. Please provide accurate
+            contact information so LIF can follow up with you.
+          </p>
+        </div>
+
+        <form
+          id="lif-reseller-application"
+          action="https://formsubmit.co/projects@lifefoundation.co.ls"
+          method="POST"
+          enctype="multipart/form-data">
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="New LIF Reseller Application">
+
+          <input
+            type="hidden"
+            name="_template"
+            value="table">
+
+          <input
+            type="text"
+            name="_honey"
+            style="display:none"
+            tabindex="-1"
+            autocomplete="off">
+
+          <div class="form-grid">
+
+            <div class="form-field">
+              <label for="lif-applicant-name">Full name *</label>
+              <input
+                id="lif-applicant-name"
+                name="Full name"
+                type="text"
+                autocomplete="name"
+                required>
+            </div>
+
+            <div class="form-field">
+              <label for="lif-applicant-email">Email address *</label>
+              <input
+                id="lif-applicant-email"
+                name="Email"
+                type="email"
+                autocomplete="email"
+                required>
+            </div>
+
+            <div class="form-field">
+              <label for="lif-applicant-phone">Phone / WhatsApp number *</label>
+              <input
+                id="lif-applicant-phone"
+                name="Phone or WhatsApp"
+                type="tel"
+                autocomplete="tel"
+                required>
+            </div>
+
+            <div class="form-field">
+              <label for="lif-applicant-town">Town or district *</label>
+              <input
+                id="lif-applicant-town"
+                name="Town or district"
+                type="text"
+                autocomplete="address-level2"
+                required>
+            </div>
+
+            <div class="form-field">
+              <label for="lif-applicant-type">Applicant type *</label>
+              <select
+                id="lif-applicant-type"
+                name="Applicant type"
+                required>
+                <option value="">Select an option</option>
+                <option value="Individual">Individual</option>
+                <option value="Family">Family</option>
+                <option value="Stokvel or cooperative">Stokvel or cooperative</option>
+                <option value="Community organisation or NPO">Community organisation or NPO</option>
+                <option value="Business or other organisation">Business or other organisation</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="lif-applicant-document">Application document (PDF) *</label>
+              <input
+                id="lif-applicant-document"
+                name="attachment"
+                type="file"
+                accept=".pdf,application/pdf"
+                required>
+              <p class="registration-note">
+                PDF only. Maximum file size: 10 MB.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="form-field">
+            <label for="lif-applicant-message">
+              Tell us briefly about yourself or your group
+            </label>
+            <textarea
+              id="lif-applicant-message"
+              name="About applicant"
+              rows="4"
+              placeholder="Your interest in the reseller programme, your group, or your community."></textarea>
+          </div>
+
+          <div class="form-field">
+            <label>
+              <input
+                type="checkbox"
+                name="Consent"
+                value="Agreed to be contacted by LIF"
+                required
+                style="width:auto; margin-right:8px;">
+              I agree that LIF may contact me about this application. *
+            </label>
+          </div>
+
+          <button class="registration-submit" type="submit">
+            Submit Reseller Application
+          </button>
+
+          <p class="registration-note" style="margin-top:16px;">
+            Your application will be sent to the LIF contact email
+            once the online form service has been activated and verified.
+            Do not submit sensitive identity or financial documents
+            through this form.
+          </p>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+  <!-- END LIF RESELLER REGISTRATION -->
   <!-- CALL TO ACTION -->
 
   <section class="section cta-section" id="get-started">
