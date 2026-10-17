@@ -1727,6 +1727,140 @@
   .page-navigation .next-page {
     margin-left: 0;
   }
+}/* ==========================================
+   LIF LAUNCH COUNTDOWN
+   ========================================== */
+
+.launch-countdown {
+  width: 100%;
+  max-width: 720px;
+  margin: 30px 0 10px;
+  padding: 25px;
+  border: 2px solid #efbd42;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #073b2b 0%, #0b6040 65%, #087f43 100%);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.launch-countdown::before {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  top: -100px;
+  right: -55px;
+  border: 24px solid rgba(239, 189, 66, 0.16);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.launch-countdown .launch-eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffda70;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.launch-countdown h2 {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: clamp(1.45rem, 3vw, 2.15rem);
+  line-height: 1.12;
+  font-weight: 950;
+  letter-spacing: -0.035em;
+}
+
+.launch-countdown .launch-date {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.launch-countdown .launch-date strong {
+  color: #ffda70;
+}
+
+.launch-timer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 0 20px;
+}
+
+.launch-time-unit {
+  min-width: 0;
+  padding: 15px 5px 12px;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #073b2b;
+  text-align: center;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+}
+
+.launch-time-unit strong {
+  display: block;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 950;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.launch-time-unit span {
+  display: block;
+  margin-top: 7px;
+  color: #52665b;
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.launch-countdown .launch-tagline {
+  margin: 0;
+  color: #ffda70;
+  font-size: 0.86rem;
+  font-weight: 950;
+  letter-spacing: 0.07em;
+  line-height: 1.5;
+}
+
+.launch-countdown .launch-finished {
+  color: #ffda70;
+  font-size: clamp(1.5rem, 4vw, 2.3rem);
+  font-weight: 950;
+  line-height: 1.2;
+}
+
+@media (max-width: 520px) {
+  .launch-countdown {
+    margin-top: 24px;
+    padding: 19px 13px;
+    border-radius: 17px;
+  }
+
+  .launch-timer {
+    gap: 6px;
+  }
+
+  .launch-time-unit {
+    padding: 13px 2px 10px;
+    border-radius: 9px;
+  }
+
+  .launch-time-unit span {
+    font-size: 0.55rem;
+    letter-spacing: 0.02em;
+  }
+
+  .launch-countdown .launch-date {
+    font-size: 0.9rem;
+  }
 }</style>
 </head>
 
@@ -1813,6 +1947,43 @@
               How the Partnership Began
             </a>
           </div>
+          <!-- LIF LAUNCH COUNTDOWN -->
+          <section class="launch-countdown" aria-labelledby="launch-countdown-title">
+            <span class="launch-eyebrow">A new chapter begins</span>
+            <h2 id="launch-countdown-title">LIF Launch Countdown</h2>
+            <p class="launch-date">
+              <strong>18 November 2026</strong> · 11:00 AM · Lesotho
+            </p>
+
+            <div class="launch-timer" id="lifLaunchTimer"
+                 role="timer" aria-label="Time remaining until the LIF launch">
+              <div class="launch-time-unit">
+                <strong id="lifDays">--</strong>
+                <span>DAYS</span>
+              </div>
+              <div class="launch-time-unit">
+                <strong id="lifHours">--</strong>
+                <span>HOURS</span>
+              </div>
+              <div class="launch-time-unit">
+                <strong id="lifMinutes">--</strong>
+                <span>MINUTES</span>
+              </div>
+              <div class="launch-time-unit">
+                <strong id="lifSeconds">--</strong>
+                <span>SECONDS</span>
+              </div>
+            </div>
+
+            <p class="launch-tagline">
+              END POVERTY. BUILD OPPORTUNITY.
+            </p>
+            <div id="lifLaunchFinished" class="launch-finished"
+                 role="status" hidden>
+              WE ARE LIVE!
+            </div>
+          </section>
+
         </div>
 
         <aside class="hero-panel">
@@ -2648,7 +2819,44 @@
       });
     }
 
-    document.getElementById("currentYear").textContent =
+     // LIF launch countdown: 18 November 2026, 11:00 AM in Lesotho (UTC+02:00)
+    (function () {
+      const launchDate = new Date("2026-11-18T11:00:00+02:00").getTime();
+
+      const daysEl = document.getElementById("lifDays");
+      const hoursEl = document.getElementById("lifHours");
+      const minutesEl = document.getElementById("lifMinutes");
+      const secondsEl = document.getElementById("lifSeconds");
+      const timerEl = document.getElementById("lifLaunchTimer");
+      const finishedEl = document.getElementById("lifLaunchFinished");
+
+      if (!daysEl || !hoursEl || !minutesEl || !secondsEl || !timerEl) {
+        return;
+      }
+
+      function updateLifCountdown() {
+        const remaining = launchDate - Date.now();
+
+        if (remaining <= 0) {
+          timerEl.hidden = true;
+          if (finishedEl) finishedEl.hidden = false;
+          return;
+        }
+
+        const days = Math.floor(remaining / 86400000);
+        const hours = Math.floor((remaining % 86400000) / 3600000);
+        const minutes = Math.floor((remaining % 3600000) / 60000);
+        const seconds = Math.floor((remaining % 60000) / 1000);
+
+        daysEl.textContent = String(days).padStart(2, "0");
+        hoursEl.textContent = String(hours).padStart(2, "0");
+        minutesEl.textContent = String(minutes).padStart(2, "0");
+        secondsEl.textContent = String(seconds).padStart(2, "0");
+      }
+
+      updateLifCountdown();
+      window.setInterval(updateLifCountdown, 1000);
+    })();document.getElementById("currentYear").textContent =
       new Date().getFullYear();
   </script>
 </body>
