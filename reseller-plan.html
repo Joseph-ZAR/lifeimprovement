@@ -27,7 +27,7 @@
   <div class="hero-inner">
     <div class="eyebrow">Your opportunity • Your community • Your future</div>
     <h1>The Reseller Revolution: Find Your Level. Calculate Your Potential.</h1>
-    <p>Choose the level that fits your goals, review the starter mix from the LIF Reseller Plan, and adjust quantities to estimate sales and the price difference using the exact per-unit prices shown in the LIF spreadsheet.</p>
+    <p>Choose the level that fits your goals, review the starter mix from the LIF Reseller Plan, and adjust quantities to estimate sales and the price difference using the exact per-unit prices including VAT shown in the LIF spreadsheet.</p>
     <div class="hero-actions">
       <a class="btn btn-gold" href="#reseller-levels">Explore all four reseller levels and the commercial track</a>
       <a class="btn btn-outline" href="https://wa.me/26659434159?text=Hello%20Life%20Improvement%20Foundation%2C%20I%20would%20like%20help%20choosing%20a%20reseller%20level.">Ask LIF on WhatsApp</a>
@@ -38,7 +38,7 @@
   <div class="notice"><strong>Important:</strong> The calculator is an estimate based on the figures in the uploaded LIF reseller spreadsheet. It does not include delivery, marketing, operating costs, discounts, unsold stock, or tax adjustments. Selling prices and product availability should be confirmed with LIF before placing an order.</div>
   <section class="section-heading" id="reseller-levels">
     <h2>Five ways to take part</h2>
-    <p>The four community reseller levels and the separate commercial track follow the LIF Reseller Plan. Prices shown are per individual unit exactly as displayed in the spreadsheet. Pack sizes are product information only and are not multiplied into the unit price.</p>
+    <p>The four community reseller levels and the separate commercial track follow the LIF Reseller Plan. Prices shown are per individual unit and include VAT, exactly as displayed in the spreadsheet. Pack sizes are product information only and are not multiplied into the unit price.</p>
   </section>
   <div class="level-grid" id="levelGrid"></div>
   <section class="cta">
@@ -55,15 +55,15 @@
 </footer>
 <script>
 const PRODUCTS = [
- {brand:"Food Socks",name:"Meal for 4 pouch",pack:"Box of 50",units:50,cost:58.91,ex:82.47},
- {brand:"TwoSpoons",name:"50g sachet",pack:"Box of 60",units:60,cost:12.13,ex:16.98},
- {brand:"TwoSpoons",name:"1kg pack",pack:"Box of 15",units:15,cost:179.95,ex:251.93},
- {brand:"TwoSpoons",name:"25kg bulk bag",pack:"Per bag",units:1,cost:3520.64,ex:4928.90},
- {brand:"Heartfelt Foods",name:"Meal bucket 5 litre",pack:"Box of 4",units:4,cost:420.16,ex:588.22},
- {brand:"Heartfelt Foods",name:"Meal bucket 10 litre",pack:"Box of 2",units:2,cost:774.61,ex:1084.45},
- {brand:"Heartfelt Foods",name:"Meal bucket 20 litre",pack:"Per bucket",units:1,cost:1516.36,ex:2122.90},
+ {brand:"Food Socks",name:"Meal for 4 pouch",pack:"Box of 50",units:50,cost:58.91,sell:82.47},
+ {brand:"TwoSpoons",name:"50g sachet",pack:"Box of 60",units:60,cost:12.13,sell:16.98},
+ {brand:"TwoSpoons",name:"1kg pack",pack:"Box of 15",units:15,cost:179.95,sell:251.93},
+ {brand:"TwoSpoons",name:"25kg bulk bag",pack:"Per bag",units:1,cost:3520.64,sell:4928.90},
+ {brand:"Heartfelt Foods",name:"Meal bucket 5 litre",pack:"Box of 4",units:4,cost:420.16,sell:588.22},
+ {brand:"Heartfelt Foods",name:"Meal bucket 10 litre",pack:"Box of 2",units:2,cost:774.61,sell:1084.45},
+ {brand:"Heartfelt Foods",name:"Meal bucket 20 litre",pack:"Per bucket",units:1,cost:1516.36,sell:2122.90},
  {brand:"Heartfelt Foods",name:"Instant Maize Porridge 1kg pack",pack:"Box of 15",units:15,cost:179.95,ex:251.93},
- {brand:"Heartfelt Foods",name:"Instant Maize Porridge 20 litre bucket (Natural only)",pack:"Per bucket",units:1,cost:1352.07,ex:1892.90}
+ {brand:"Heartfelt Foods",name:"Instant Maize Porridge 20 litre bucket (Natural only)",pack:"Per bucket",units:1,cost:1352.07,sell:1892.90}
 ];
 const LEVELS = [
  {id:"side",title:"The Side Hustler",tier:"M500 tier in plan",image:"assets/reseller-plan/the%20side%20hustle.jpg",best:"Individuals, students and community members testing the waters.",description:"A starter route for someone beginning to sell within their network.",points:"PDF estimate: about 14 points.",quantities:{0:6,1:12}},
@@ -76,7 +76,7 @@ function money(n){return "M"+Number(n||0).toLocaleString("en-LS",{minimumFractio
 function renderLevel(level){
  const items=PRODUCTS.map((p,i)=>{ if(level.quantities[i]===undefined) return ""; return `<tr>
  <td><strong>${p.name}</strong><br><small>${p.brand} · Pack reference: ${p.pack}</small></td>
- <td class="money">${money(p.cost)}</td><td class="money">${money(p.ex)}</td>
+ <td class="money">${money(p.cost)}</td><td class="money">${money(p.sell)}</td>
  <td class="qty-cell"><label class="sr-only" for="${level.id}-q-${i}">Quantity of ${p.name} in individual units</label><input type="number" min="0" step="1" value="${level.quantities[i]||0}" id="${level.id}-q-${i}" data-level="${level.id}" data-index="${i}" aria-label="Quantity of ${p.name}"></td>
  <td class="money line-profit" id="${level.id}-profit-${i}">${money(0)}</td></tr>`; }).join("");
  return `<article class="level-card ${level.commercial?"commercial":""}">
@@ -86,13 +86,13 @@ function renderLevel(level){
  ${level.points?`<p><strong>Plan note:</strong> ${level.points}</p>`:""}
  ${level.commercial?`<div class="commercial-note"><strong>Commercial pricing:</strong> The PDF says commercial discounts and actual wholesale pricing are negotiated with LIF. The figures below are only a planning illustration using the worksheet prices. The pallet line for 20L buckets and 25kg bags does not specify quantities, so those defaults are set to zero for you to enter after LIF confirms the mix.</div>`:""}
  <div class="calculator"><h4>Per-unit sales and profit estimate</h4><p class="calc-help">All prices are per individual unit exactly as displayed in the Excel sheet. Pack size is shown for reference only. Enter the number of individual units you intend to buy; quantities are not multiplied by pack size.</p>
- <div class="table-wrap"><table class="product-table"><thead><tr><th>Product / size and pack</th><th>LIF cost per unit (incl. VAT)</th><th>Recommended selling price per unit (excl. VAT)</th><th>Quantity (individual units)</th><th>Estimated price difference for quantity</th></tr></thead><tbody>${items}</tbody></table></div>
+ <div class="table-wrap"><table class="product-table"><thead><tr><th>Product / size and pack</th><th>LIF cost per unit (incl. VAT)</th><th>Recommended selling price per unit (incl. VAT)</th><th>Quantity (individual units)</th><th>Estimated price difference for quantity</th></tr></thead><tbody>${items}</tbody></table></div>
  <div class="summary" aria-live="polite">
  <div class="summary-item"><span>Total LIF cost (incl. VAT)</span><strong id="${level.id}-cost">M0.00</strong></div>
- <div class="summary-item"><span>Recommended sales total (excl. VAT)</span><strong id="${level.id}-sales">M0.00</strong></div>
+ <div class="summary-item"><span>Recommended sales total (incl. VAT)</span><strong id="${level.id}-sales">M0.00</strong></div>
  <div class="summary-item profit"><span>Estimated price difference</span><strong id="${level.id}-total">M0.00</strong></div>
  </div>
- <p class="fine-print">Calculation uses the displayed Excel values: (recommended selling price per unit excluding VAT − LIF cost per unit including VAT) × individual-unit quantity. This is a simple price difference using the two spreadsheet columns, not a VAT-adjusted accounting profit. It excludes business expenses. The products shown follow the starter mix listed for this level in the LIF Reseller Plan. Confirm any substitutions or additional product eligibility with LIF.</p>
+ <p class="fine-print">Calculation uses the displayed Excel values: (recommended selling price per unit including VAT − LIF cost per unit including VAT) × individual-unit quantity. The estimated difference is before business expenses and should not be treated as final accounting profit. The products shown follow the starter mix listed for this level in the LIF Reseller Plan. Confirm any substitutions or additional product eligibility with LIF.</p>
  </div></div></article>`;
 }
 document.getElementById("levelGrid").innerHTML=LEVELS.map(renderLevel).join("");
@@ -102,7 +102,7 @@ function calculate(level){
   const input=document.getElementById(`${level.id}-q-${i}`);
   if(!input) return;
   const qty=Math.max(0,Math.floor(Number(input.value)||0));
-  const price=p.ex;
+  const price=p.sell;
   const cost=qty*p.cost,sales=qty*price,profit=sales-cost;
   totalCost+=cost;totalSales+=sales;totalProfit+=profit;
   document.getElementById(`${level.id}-profit-${i}`).textContent=money(profit);
