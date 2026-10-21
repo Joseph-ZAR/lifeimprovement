@@ -7,21 +7,38 @@
 <title>LIF Reseller Plan & Profit Calculator</title>
 <style>
 :root{--green:#087f43;--green-dark:#073b2b;--green-deep:#052d21;--green-light:#eaf6ed;--blue:#149bd7;--blue-light:#edf8fd;--red:#e52b35;--gold:#efbd42;--gold-light:#fff7e3;--ink:#18291f;--muted:#5d6b62;--white:#ffffff;--paper:#ffffff;--surface:#f6f9f6;--line:#dfe9e1;--soft:#f6f9f6;--sky:#edf8fd;--shadow:0 14px 38px rgba(7,59,43,.11)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.55;background:#ffffff}a{color:var(--green-dark)}img{max-width:100%;display:block}button,input{font:inherit}.site-header{background:linear-gradient(110deg,var(--green-dark),var(--green) 62%,var(--blue));color:#fff;padding:18px max(20px,calc((100% - 1180px)/2));display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.brand{font-size:1.12rem;font-weight:800;letter-spacing:.02em;display:flex;align-items:center;gap:12px}.brand-logo{width:auto;height:54px;max-width:150px;object-fit:contain;background:#fff;border-radius:6px;padding:3px}.brand small{display:block;font-weight:500;font-size:.82rem;opacity:.9}.site-nav{display:flex;gap:9px;flex-wrap:wrap}.site-nav a{color:#fff;text-decoration:none;font-weight:700;font-size:.92rem;padding:9px 12px;border-radius:7px}.site-nav a:hover,.site-nav a:focus{background:rgba(255,255,255,.17);outline:2px solid rgba(255,255,255,.6)}.hero{background:linear-gradient(135deg,var(--green-dark),var(--green) 60%,var(--blue));color:#fff;padding:58px 20px 50px}.hero-inner{max-width:1180px;margin:auto}.eyebrow{color:var(--gold-light);text-transform:uppercase;font-weight:800;letter-spacing:.13em;font-size:.82rem}.hero h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.04;max-width:850px;margin:12px 0 18px}.hero p{max-width:780px;font-size:1.12rem}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-block;padding:12px 17px;border-radius:9px;text-decoration:none;font-weight:800;border:2px solid transparent}.btn-gold{background:var(--gold);color:#17251d}.btn-outline{border-color:#fff;color:#fff}.container{max-width:1180px;margin:0 auto;padding:30px 20px 60px}.notice{background:var(--gold-light);border-left:5px solid var(--gold);padding:15px 18px;border-radius:8px;margin:0 0 28px}.section-heading{margin:40px 0 18px}.section-heading h2{font-size:clamp(1.65rem,3vw,2.3rem);margin:0 0 8px;color:var(--green-dark)}.section-heading p{color:var(--muted);margin:0;max-width:850px}.level-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.level-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);min-width:0}.level-card.commercial{grid-column:1/-1}.level-image{width:100%;height:245px;object-fit:cover;background:var(--surface)}.level-content{padding:22px}.level-topline{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}.level-topline h3{margin:0;color:var(--green-dark);font-size:1.45rem}.tier{display:inline-block;background:var(--green-light);color:var(--green-dark);font-weight:800;padding:6px 10px;border-radius:999px;font-size:.84rem}.level-content p{margin:10px 0}.level-content ul{padding-left:21px}.calculator{margin-top:22px;border-top:1px solid var(--line);padding-top:20px}.calculator h4{font-size:1.2rem;margin:0 0 8px}.calc-help{font-size:.9rem;color:var(--muted);margin:0 0 14px}.price-choice{display:flex;gap:9px;flex-wrap:wrap;margin:12px 0 16px}.price-choice label{display:flex;gap:7px;align-items:center;background:#f1f7f5;border:1px solid #d6e6df;padding:9px 11px;border-radius:8px;font-weight:700;font-size:.9rem}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}.product-table{width:100%;border-collapse:collapse;min-width:790px;background:white}.product-table th,.product-table td{padding:10px 11px;border-bottom:1px solid #e8eeee;text-align:left;vertical-align:middle;font-size:.9rem}.product-table th{background:var(--green-light);color:var(--green-dark);font-size:.82rem}.product-table td.money{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}.product-table input{width:82px;padding:8px;border:1px solid #cbd9d4;border-radius:7px}.qty-cell{white-space:nowrap}.line-profit{font-weight:800;color:var(--green-dark)}.summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}.summary-item{background:var(--surface);border:1px solid var(--border);padding:13px;border-radius:10px}.summary-item span{display:block;font-size:.79rem;color:var(--muted);font-weight:700}.summary-item strong{display:block;font-size:1.18rem;margin-top:4px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.summary-item.profit{background:var(--green-light);border-color:var(--border)}.summary-item.profit strong{color:var(--green-dark)}.commercial-note{background:var(--blue-light);border-left:4px solid var(--blue);padding:12px 14px;border-radius:7px;margin:12px 0;font-size:.92rem}.fine-print{font-size:.83rem;color:var(--muted);margin-top:12px}.cta{margin-top:38px;padding:28px;background:var(--green-dark);color:#fff;border-radius:16px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.cta h2{margin:0 0 8px}.cta p{margin:0;max-width:700px}.cta a{background:var(--gold);color:#17251d}.site-footer{background:#073b2b;color:#dce9e2;padding:25px 20px;text-align:center}.footer-lif-logo{width:auto;max-width:190px;max-height:65px;object-fit:contain;margin:0 auto 16px;background:#fff;border-radius:6px;padding:4px}.partner-logos{display:flex;justify-content:center;align-items:center;gap:24px;flex-wrap:wrap;margin:0 auto 18px}.partner-logos img{max-width:180px;max-height:58px;width:auto;object-fit:contain;background:#fff;border-radius:6px;padding:6px}.site-footer a{color:#fff}.backtop{display:inline-block;margin-top:14px;color:#fff}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-@media(max-width:850px){.level-grid{grid-template-columns:1fr}.level-card.commercial{grid-column:auto}.summary{grid-template-columns:1fr 1fr}.level-image{height:220px}.site-header{align-items:flex-start}.site-nav{width:100%}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.55;background:#ffffff}a{color:var(--green-dark)}img{max-width:100%;display:block}button,input{font:inherit}.site-header{position:sticky;top:0;z-index:1000;border-bottom:1px solid var(--line);background:rgba(255,255,255,.97);backdrop-filter:blur(12px)}
+.nav-wrap{position:relative;display:flex;min-height:84px;align-items:center;justify-content:space-between;gap:22px;padding-top:7px;padding-bottom:7px}
+.brand{display:flex;min-width:0;flex-shrink:0;align-items:center}
+.brand-logo{width:88px;height:72px;object-fit:contain;background:transparent;border-radius:0;padding:0}
+.nav-toggle{display:none;padding:10px 13px;color:var(--green-dark);background:#fff;border:1px solid var(--line);border-radius:10px;font-weight:900;cursor:pointer}
+.nav-links{display:flex;min-width:0;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:5px 15px}
+.nav-links a{padding:7px 0;color:#33473a;border-bottom:2px solid transparent;font-size:.77rem;font-weight:800;text-decoration:none}
+.nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--green);border-bottom-color:var(--gold)}
+.hero{background:linear-gradient(135deg,var(--green-dark),var(--green) 60%,var(--blue));color:#fff;padding:58px 20px 50px}.hero-inner{max-width:1180px;margin:auto}.eyebrow{color:var(--gold-light);text-transform:uppercase;font-weight:800;letter-spacing:.13em;font-size:.82rem}.hero h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.04;max-width:850px;margin:12px 0 18px}.hero p{max-width:780px;font-size:1.12rem}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-block;padding:12px 17px;border-radius:9px;text-decoration:none;font-weight:800;border:2px solid transparent}.btn-gold{background:var(--gold);color:#17251d}.btn-outline{border-color:#fff;color:#fff}.container{max-width:1180px;margin:0 auto;padding:30px 20px 60px}.notice{background:var(--gold-light);border-left:5px solid var(--gold);padding:15px 18px;border-radius:8px;margin:0 0 28px}.section-heading{margin:40px 0 18px}.section-heading h2{font-size:clamp(1.65rem,3vw,2.3rem);margin:0 0 8px;color:var(--green-dark)}.section-heading p{color:var(--muted);margin:0;max-width:850px}.level-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.level-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);min-width:0}.level-card.commercial{grid-column:1/-1}.level-image{width:100%;height:245px;object-fit:cover;background:var(--surface)}.level-content{padding:22px}.level-topline{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}.level-topline h3{margin:0;color:var(--green-dark);font-size:1.45rem}.tier{display:inline-block;background:var(--green-light);color:var(--green-dark);font-weight:800;padding:6px 10px;border-radius:999px;font-size:.84rem}.level-content p{margin:10px 0}.level-content ul{padding-left:21px}.calculator{margin-top:22px;border-top:1px solid var(--line);padding-top:20px}.calculator h4{font-size:1.2rem;margin:0 0 8px}.calc-help{font-size:.9rem;color:var(--muted);margin:0 0 14px}.price-choice{display:flex;gap:9px;flex-wrap:wrap;margin:12px 0 16px}.price-choice label{display:flex;gap:7px;align-items:center;background:#f1f7f5;border:1px solid #d6e6df;padding:9px 11px;border-radius:8px;font-weight:700;font-size:.9rem}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}.product-table{width:100%;border-collapse:collapse;min-width:790px;background:white}.product-table th,.product-table td{padding:10px 11px;border-bottom:1px solid #e8eeee;text-align:left;vertical-align:middle;font-size:.9rem}.product-table th{background:var(--green-light);color:var(--green-dark);font-size:.82rem}.product-table td.money{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}.product-table input{width:82px;padding:8px;border:1px solid #cbd9d4;border-radius:7px}.qty-cell{white-space:nowrap}.line-profit{font-weight:800;color:var(--green-dark)}.summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}.summary-item{background:var(--surface);border:1px solid var(--border);padding:13px;border-radius:10px}.summary-item span{display:block;font-size:.79rem;color:var(--muted);font-weight:700}.summary-item strong{display:block;font-size:1.18rem;margin-top:4px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.summary-item.profit{background:var(--green-light);border-color:var(--border)}.summary-item.profit strong{color:var(--green-dark)}.commercial-note{background:var(--blue-light);border-left:4px solid var(--blue);padding:12px 14px;border-radius:7px;margin:12px 0;font-size:.92rem}.fine-print{font-size:.83rem;color:var(--muted);margin-top:12px}.cta{margin-top:38px;padding:28px;background:var(--green-dark);color:#fff;border-radius:16px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.cta h2{margin:0 0 8px}.cta p{margin:0;max-width:700px}.cta a{background:var(--gold);color:#17251d}.site-footer{background:#073b2b;color:#dce9e2;padding:25px 20px;text-align:center}.footer-lif-logo{width:auto;max-width:190px;max-height:65px;object-fit:contain;margin:0 auto 16px;background:#fff;border-radius:6px;padding:4px}.partner-logos{display:flex;justify-content:center;align-items:center;gap:24px;flex-wrap:wrap;margin:0 auto 18px}.partner-logos img{max-width:180px;max-height:58px;width:auto;object-fit:contain;background:#fff;border-radius:6px;padding:6px}.site-footer a{color:#fff}.backtop{display:inline-block;margin-top:14px;color:#fff}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:850px){.level-grid{grid-template-columns:1fr}.level-card.commercial{grid-column:auto}.summary{grid-template-columns:1fr 1fr}.level-image{height:220px}.nav-toggle{display:inline-flex;align-items:center;gap:8px}.nav-links{display:none;position:absolute;top:100%;left:0;right:0;z-index:1001;padding:18px 22px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);align-items:flex-start;flex-direction:column;gap:8px}.nav-links.is-open{display:flex}.nav-links a{font-size:.9rem}}
 @media(max-width:520px){.hero{padding:42px 18px}.container{padding:22px 13px 42px}.level-content{padding:16px}.summary{grid-template-columns:1fr}.site-nav a{padding:7px 8px;font-size:.83rem}.level-image{height:190px}.cta{padding:20px}}
 </style>
 </head>
 <body>
 <header class="site-header">
-  <div class="brand"><img class="brand-logo" src="assets/lif/life-logo-transparent.png" alt="Life Improvement Foundation logo"> <span>LIFE IMPROVEMENT FOUNDATION<small>End Poverty. Build Opportunity.</small></span></div>
-  <nav class="site-nav" aria-label="Main navigation">
-    <a href="index.html">Home</a>
-    <a href="reseller.html">Become a Reseller</a>
-    <a href="reseller-plan.html" aria-current="page">Reseller Plan & Calculator</a>
-    <a href="products.html">Products</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html" aria-label="Life Improvement Foundation home">
+      <img class="brand-logo" src="assets/lif/life-logo-transparent.png" alt="Life Improvement Foundation logo">
+    </a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mainNav">☰ <span>Menu</span></button>
+    <nav class="nav-links" id="mainNav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="partnership.html">Partnership</a>
+      <a href="products.html">Food Sock &amp; Two Spoons</a>
+      <a href="kingdom-foods.html">Kingdom Foods</a>
+      <a href="manufacturing.html">Manufacturing Vision</a>
+      <a href="community.html">Community Involvement</a>
+      <a href="reseller.html">Become a Reseller</a>
+      <a href="reseller-plan.html" aria-current="page">Reseller Plan &amp; Calculator</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </div>
 </header>
 <section class="hero">
   <div class="hero-inner">
@@ -62,7 +79,7 @@ const PRODUCTS = [
  {brand:"Heartfelt Foods",name:"Meal bucket 5 litre",pack:"Box of 4",units:4,cost:420.16,sell:588.22},
  {brand:"Heartfelt Foods",name:"Meal bucket 10 litre",pack:"Box of 2",units:2,cost:774.61,sell:1084.45},
  {brand:"Heartfelt Foods",name:"Meal bucket 20 litre",pack:"Per bucket",units:1,cost:1516.36,sell:2122.90},
- {brand:"Heartfelt Foods",name:"Instant Maize Porridge 1kg pack",pack:"Box of 15",units:15,cost:179.95,ex:251.93},
+ {brand:"Heartfelt Foods",name:"Instant Maize Porridge 1kg pack",pack:"Box of 15",units:15,cost:179.95,sell:251.93},
  {brand:"Heartfelt Foods",name:"Instant Maize Porridge 20 litre bucket (Natural only)",pack:"Per bucket",units:1,cost:1352.07,sell:1892.90}
 ];
 const LEVELS = [
@@ -74,25 +91,30 @@ const LEVELS = [
 ];
 function money(n){return "M"+Number(n||0).toLocaleString("en-LS",{minimumFractionDigits:2,maximumFractionDigits:2});}
 function renderLevel(level){
- const items=PRODUCTS.map((p,i)=>{ if(level.quantities[i]===undefined) return ""; return `<tr>
- <td><strong>${p.name}</strong><br><small>${p.brand} · Pack reference: ${p.pack}</small></td>
+ const items=PRODUCTS.map((p,i)=>{
+  const inStarterMix=Object.prototype.hasOwnProperty.call(level.quantities,i);
+  const initialQty=inStarterMix ? level.quantities[i] : 0;
+  return `<tr>
+ <td><strong>${p.name}</strong><br><small>${p.brand} · Pack reference: ${p.pack}</small><br><span class="tier">${inStarterMix?"Starter mix":"Optional addition"}</span></td>
  <td class="money">${money(p.cost)}</td><td class="money">${money(p.sell)}</td>
- <td class="qty-cell"><label class="sr-only" for="${level.id}-q-${i}">Quantity of ${p.name} in individual units</label><input type="number" min="0" step="1" value="${level.quantities[i]||0}" id="${level.id}-q-${i}" data-level="${level.id}" data-index="${i}" aria-label="Quantity of ${p.name}"></td>
- <td class="money line-profit" id="${level.id}-profit-${i}">${money(0)}</td></tr>`; }).join("");
+ <td class="qty-cell"><label class="sr-only" for="${level.id}-q-${i}">Quantity of ${p.name} in individual units</label><input type="number" min="0" step="1" value="${initialQty}" id="${level.id}-q-${i}" data-level="${level.id}" data-index="${i}" aria-label="Quantity of ${p.name}"></td>
+ <td class="money line-profit" id="${level.id}-profit-${i}">${money(0)}</td></tr>`;
+ }).join("");
  return `<article class="level-card ${level.commercial?"commercial":""}">
  <img class="level-image" src="${level.image}" alt="${level.title} reseller level" loading="lazy" onerror="this.style.display='none'">
  <div class="level-content"><div class="level-topline"><h3>${level.title}</h3><span class="tier">${level.tier}</span></div>
  <p><strong>Best for:</strong> ${level.best}</p><p>${level.description}</p>
  ${level.points?`<p><strong>Plan note:</strong> ${level.points}</p>`:""}
  ${level.commercial?`<div class="commercial-note"><strong>Commercial pricing:</strong> The PDF says commercial discounts and actual wholesale pricing are negotiated with LIF. The figures below are only a planning illustration using the worksheet prices. The pallet line for 20L buckets and 25kg bags does not specify quantities, so those defaults are set to zero for you to enter after LIF confirms the mix.</div>`:""}
- <div class="calculator"><h4>Per-unit sales and profit estimate</h4><p class="calc-help">All prices are per individual unit exactly as displayed in the Excel sheet. Pack size is shown for reference only. Enter the number of individual units you intend to buy; quantities are not multiplied by pack size.</p>
+ <div class="calculator"><h4>Per-unit sales and profit estimate</h4><p class="calc-help">All prices include VAT and are per individual unit. Products in the published starter mix are pre-filled; other products are available as optional additions. Enter quantities as individual units, not boxes or pallets.</p>
  <div class="table-wrap"><table class="product-table"><thead><tr><th>Product / size and pack</th><th>LIF cost per unit (incl. VAT)</th><th>Recommended selling price per unit (incl. VAT)</th><th>Quantity (individual units)</th><th>Estimated price difference for quantity</th></tr></thead><tbody>${items}</tbody></table></div>
+ <button class="btn btn-gold calculate-btn" type="button" data-calculate="${level.id}" style="margin-top:14px;cursor:pointer">Calculate totals</button>
  <div class="summary" aria-live="polite">
  <div class="summary-item"><span>Total LIF cost (incl. VAT)</span><strong id="${level.id}-cost">M0.00</strong></div>
  <div class="summary-item"><span>Recommended sales total (incl. VAT)</span><strong id="${level.id}-sales">M0.00</strong></div>
  <div class="summary-item profit"><span>Estimated price difference</span><strong id="${level.id}-total">M0.00</strong></div>
  </div>
- <p class="fine-print">Calculation uses the displayed Excel values: (recommended selling price per unit including VAT − LIF cost per unit including VAT) × individual-unit quantity. The estimated difference is before business expenses and should not be treated as final accounting profit. The products shown follow the starter mix listed for this level in the LIF Reseller Plan. Confirm any substitutions or additional product eligibility with LIF.</p>
+ <p class="fine-print">The estimated price difference is (recommended selling price including VAT − LIF cost including VAT) × quantity. It is before business expenses and is not a VAT-adjusted accounting profit. Optional additions let you test other products; confirm substitutions, stock and order eligibility with LIF.</p>
  </div></div></article>`;
 }
 document.getElementById("levelGrid").innerHTML=LEVELS.map(renderLevel).join("");
@@ -102,8 +124,7 @@ function calculate(level){
   const input=document.getElementById(`${level.id}-q-${i}`);
   if(!input) return;
   const qty=Math.max(0,Math.floor(Number(input.value)||0));
-  const price=p.sell;
-  const cost=qty*p.cost,sales=qty*price,profit=sales-cost;
+  const cost=qty*p.cost,sales=qty*p.sell,profit=sales-cost;
   totalCost+=cost;totalSales+=sales;totalProfit+=profit;
   document.getElementById(`${level.id}-profit-${i}`).textContent=money(profit);
  });
@@ -113,9 +134,19 @@ function calculate(level){
 }
 LEVELS.forEach(level=>{
  document.querySelectorAll(`[data-level="${level.id}"]`).forEach(el=>el.addEventListener("input",()=>calculate(level)));
- 
+ document.querySelector(`[data-calculate="${level.id}"]`).addEventListener("click",()=>calculate(level));
  calculate(level);
 });
+const navToggle=document.getElementById("navToggle");
+const mainNav=document.getElementById("mainNav");
+if(navToggle&&mainNav){
+ navToggle.addEventListener("click",function(){
+  const isOpen=mainNav.classList.toggle("is-open");
+  navToggle.setAttribute("aria-expanded",String(isOpen));
+  navToggle.innerHTML=isOpen?"✕ <span>Close</span>":"☰ <span>Menu</span>";
+ });
+ mainNav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{mainNav.classList.remove("is-open");navToggle.setAttribute("aria-expanded","false");navToggle.innerHTML="☰ <span>Menu</span>";}));
+}
 </script>
 </body>
 </html>
