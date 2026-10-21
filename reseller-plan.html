@@ -74,11 +74,11 @@ const LEVELS = [
 ];
 function money(n){return "M"+Number(n||0).toLocaleString("en-LS",{minimumFractionDigits:2,maximumFractionDigits:2});}
 function renderLevel(level){
- const items=PRODUCTS.map((p,i)=>`<tr>
+ const items=PRODUCTS.map((p,i)=>{ if(level.quantities[i]===undefined) return ""; return `<tr>
  <td><strong>${p.name}</strong><br><small>${p.brand} · Pack reference: ${p.pack}</small></td>
  <td class="money">${money(p.cost)}</td><td class="money">${money(p.ex)}</td>
  <td class="qty-cell"><label class="sr-only" for="${level.id}-q-${i}">Quantity of ${p.name} in individual units</label><input type="number" min="0" step="1" value="${level.quantities[i]||0}" id="${level.id}-q-${i}" data-level="${level.id}" data-index="${i}" aria-label="Quantity of ${p.name}"></td>
- <td class="money line-profit" id="${level.id}-profit-${i}">${money(0)}</td></tr>`).join("");
+ <td class="money line-profit" id="${level.id}-profit-${i}">${money(0)}</td></tr>`; }).join("");
  return `<article class="level-card ${level.commercial?"commercial":""}">
  <img class="level-image" src="${level.image}" alt="${level.title} reseller level" loading="lazy" onerror="this.style.display='none'">
  <div class="level-content"><div class="level-topline"><h3>${level.title}</h3><span class="tier">${level.tier}</span></div>
@@ -92,7 +92,7 @@ function renderLevel(level){
  <div class="summary-item"><span>Recommended sales total (excl. VAT)</span><strong id="${level.id}-sales">M0.00</strong></div>
  <div class="summary-item profit"><span>Estimated price difference</span><strong id="${level.id}-total">M0.00</strong></div>
  </div>
- <p class="fine-print">Calculation uses the displayed Excel values: (recommended selling price per unit excluding VAT − LIF cost per unit including VAT) × individual-unit quantity. This is a simple price difference using the two spreadsheet columns, not a VAT-adjusted accounting profit. It excludes business expenses. Product eligibility by reseller level must be confirmed with LIF; the spreadsheet does not map products to levels.</p>
+ <p class="fine-print">Calculation uses the displayed Excel values: (recommended selling price per unit excluding VAT − LIF cost per unit including VAT) × individual-unit quantity. This is a simple price difference using the two spreadsheet columns, not a VAT-adjusted accounting profit. It excludes business expenses. The products shown follow the starter mix listed for this level in the LIF Reseller Plan. Confirm any substitutions or additional product eligibility with LIF.</p>
  </div></div></article>`;
 }
 document.getElementById("levelGrid").innerHTML=LEVELS.map(renderLevel).join("");
@@ -100,6 +100,7 @@ function calculate(level){
  let totalCost=0,totalSales=0,totalProfit=0;
  PRODUCTS.forEach((p,i)=>{
   const input=document.getElementById(`${level.id}-q-${i}`);
+  if(!input) return;
   const qty=Math.max(0,Math.floor(Number(input.value)||0));
   const price=p.ex;
   const cost=qty*p.cost,sales=qty*price,profit=sales-cost;
