@@ -1,173 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore the Life Improvement Foundation reseller levels and calculate indicative product profit using LIF reseller costs and recommended selling prices.">
-<title>LIF Reseller Plan & Profit Calculator</title>
-<style>
-:root{--green:#087f43;--green-dark:#073b2b;--green-deep:#052d21;--green-light:#eaf6ed;--blue:#149bd7;--blue-light:#edf8fd;--red:#e52b35;--gold:#efbd42;--gold-light:#fff7e3;--ink:#18291f;--muted:#5d6b62;--white:#ffffff;--paper:#ffffff;--surface:#f6f9f6;--line:#dfe9e1;--soft:#f6f9f6;--sky:#edf8fd;--shadow:0 14px 38px rgba(7,59,43,.11)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.55;background:#ffffff}a{color:var(--green-dark)}img{max-width:100%;display:block}button,input{font:inherit}.site-header{position:sticky;top:0;z-index:1000;border-bottom:1px solid var(--line);background:rgba(255,255,255,.97);backdrop-filter:blur(12px)}
-.nav-wrap{position:relative;display:flex;min-height:84px;align-items:center;justify-content:space-between;gap:22px;padding-top:7px;padding-bottom:7px}
-.brand{display:flex;min-width:0;flex-shrink:0;align-items:center}
-.brand-logo{width:88px;height:72px;object-fit:contain;background:transparent;border-radius:0;padding:0}
-.nav-toggle{display:none;padding:10px 13px;color:var(--green-dark);background:#fff;border:1px solid var(--line);border-radius:10px;font-weight:900;cursor:pointer}
-.nav-links{display:flex;min-width:0;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:5px 15px}
-.nav-links a{padding:7px 0;color:#33473a;border-bottom:2px solid transparent;font-size:.77rem;font-weight:800;text-decoration:none}
-.nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--green);border-bottom-color:var(--gold)}
-.hero{background:linear-gradient(135deg,var(--green-dark),var(--green) 60%,var(--blue));color:#fff;padding:58px 20px 50px}.hero-inner{max-width:1180px;margin:auto}.eyebrow{color:var(--gold-light);text-transform:uppercase;font-weight:800;letter-spacing:.13em;font-size:.82rem}.hero h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.04;max-width:850px;margin:12px 0 18px}.hero p{max-width:780px;font-size:1.12rem}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-block;padding:12px 17px;border-radius:9px;text-decoration:none;font-weight:800;border:2px solid transparent}.btn-gold{background:var(--gold);color:#17251d}.btn-outline{border-color:#fff;color:#fff}.container{max-width:1180px;margin:0 auto;padding:30px 20px 60px}.site-header .nav-wrap{padding:7px 20px;min-height:84px}.notice{background:var(--gold-light);border-left:5px solid var(--gold);padding:15px 18px;border-radius:8px;margin:0 0 28px}.section-heading{margin:40px 0 18px}.section-heading h2{font-size:clamp(1.65rem,3vw,2.3rem);margin:0 0 8px;color:var(--green-dark)}.section-heading p{color:var(--muted);margin:0;max-width:850px}.level-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.level-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);min-width:0}.level-card.commercial{grid-column:1/-1}.level-image{width:100%;height:245px;object-fit:cover;background:var(--surface)}.level-content{padding:22px}.level-topline{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}.level-topline h3{margin:0;color:var(--green-dark);font-size:1.45rem}.tier{display:inline-block;background:var(--green-light);color:var(--green-dark);font-weight:800;padding:6px 10px;border-radius:999px;font-size:.84rem}.level-content p{margin:10px 0}.level-content ul{padding-left:21px}.calculator{margin-top:22px;border-top:1px solid var(--line);padding-top:20px}.calculator h4{font-size:1.2rem;margin:0 0 8px}.calc-help{font-size:.9rem;color:var(--muted);margin:0 0 14px}.price-choice{display:flex;gap:9px;flex-wrap:wrap;margin:12px 0 16px}.price-choice label{display:flex;gap:7px;align-items:center;background:#f1f7f5;border:1px solid #d6e6df;padding:9px 11px;border-radius:8px;font-weight:700;font-size:.9rem}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}.product-table{width:100%;border-collapse:collapse;min-width:790px;background:white}.product-table th,.product-table td{padding:10px 11px;border-bottom:1px solid #e8eeee;text-align:left;vertical-align:middle;font-size:.9rem}.product-table th{background:var(--green-light);color:var(--green-dark);font-size:.82rem}.product-table td.money{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}.product-table input{width:82px;padding:8px;border:1px solid #cbd9d4;border-radius:7px}.qty-cell{white-space:nowrap}.line-profit{font-weight:800;color:var(--green-dark)}.summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}.summary-item{background:var(--surface);border:1px solid var(--border);padding:13px;border-radius:10px}.summary-item span{display:block;font-size:.79rem;color:var(--muted);font-weight:700}.summary-item strong{display:block;font-size:1.18rem;margin-top:4px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.summary-item.profit{background:var(--green-light);border-color:var(--border)}.summary-item.profit strong{color:var(--green-dark)}.commercial-note{background:var(--blue-light);border-left:4px solid var(--blue);padding:12px 14px;border-radius:7px;margin:12px 0;font-size:.92rem}.fine-print{font-size:.83rem;color:var(--muted);margin-top:12px}.cta{margin-top:38px;padding:28px;background:var(--green-dark);color:#fff;border-radius:16px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.cta h2{margin:0 0 8px}.cta p{margin:0;max-width:700px}.cta a{background:var(--gold);color:#17251d}.site-footer{background:#073b2b;color:#dce9e2;padding:25px 20px;text-align:center}.footer-lif-logo{width:auto;max-width:190px;max-height:65px;object-fit:contain;margin:0 auto 16px;background:#fff;border-radius:6px;padding:4px}.partner-logos{display:flex;justify-content:center;align-items:center;gap:24px;flex-wrap:wrap;margin:0 auto 18px}.partner-logos img{max-width:180px;max-height:58px;width:auto;object-fit:contain;background:#fff;border-radius:6px;padding:6px}.site-footer a{color:#fff}.backtop{display:inline-block;margin-top:14px;color:#fff}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-@media(max-width:850px){.level-grid{grid-template-columns:1fr}.level-card.commercial{grid-column:auto}.summary{grid-template-columns:1fr 1fr}.level-image{height:220px}.nav-toggle{display:inline-flex;align-items:center;gap:8px}.nav-links{display:none;position:absolute;top:100%;left:0;right:0;z-index:1001;padding:18px 22px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);align-items:flex-start;flex-direction:column;gap:8px}.nav-links.is-open{display:flex}.nav-links a{font-size:.9rem}}
-@media(max-width:520px){.hero{padding:42px 18px}.container{padding:22px 13px 42px}.level-content{padding:16px}.summary{grid-template-columns:1fr}.site-nav a{padding:7px 8px;font-size:.83rem}.level-image{height:190px}.cta{padding:20px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#087f3e">
+  <title>LIF Reseller Plan & Product Allocation</title>
+  <style>
+    :root {
+      --green: #087f3e;
+      --green-dark: #075c30;
+      --red: #c92032;
+      --blue: #1688c9;
+      --gold: #e5b83f;
+      --ink: #17251d;
+      --muted: #5c6b62;
+      --paper: #f5f8f5;
+      --line: #dce6de;
+      --white: #fff;
+      --shadow: 0 12px 32px rgba(15, 45, 28, .09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink); background: var(--paper);
+      font-family: Arial, Helvetica, sans-serif; line-height: 1.55;
+    }
+    a { color: var(--green-dark); }
+    .topbar { background: var(--green-dark); color: #fff; padding: 10px 5%; text-align: center; font-weight: 700; }
+    header {
+      background: linear-gradient(120deg, #fff 0%, #f0fff5 55%, #e9f5ff 100%);
+      border-bottom: 4px solid var(--gold); padding: 24px 5% 30px;
+    }
+    .head-inner { max-width: 1180px; margin: auto; display: flex; align-items: center; gap: 22px; }
+    .logo { width: 120px; max-height: 120px; object-fit: contain; flex: 0 0 auto; }
+    .eyebrow { color: var(--red); text-transform: uppercase; letter-spacing: .13em; font-size: .78rem; font-weight: 800; }
+    h1 { margin: 5px 0 8px; font-size: clamp(2rem, 4vw, 3.35rem); line-height: 1.08; color: var(--green-dark); }
+    .lead { max-width: 780px; margin: 0; color: #34473b; font-size: 1.08rem; }
+    nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px auto 0; max-width: 1180px; }
+    nav a { text-decoration: none; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-size: .92rem; font-weight: 700; }
+    main { max-width: 1180px; margin: 28px auto 60px; padding: 0 18px; }
+    .notice { background: #fff8e6; border-left: 5px solid var(--gold); padding: 14px 17px; border-radius: 10px; margin-bottom: 24px; }
+    .section-heading { margin: 34px 0 14px; }
+    .section-heading h2 { margin: 0 0 5px; color: var(--green-dark); font-size: clamp(1.45rem, 2.7vw, 2rem); }
+    .section-heading p { margin: 0; color: var(--muted); }
+    .tiers { display: grid; grid-template-columns: repeat( auto-fit, minmax(205px, 1fr)); gap: 16px; }
+    .tier-card { border: 2px solid transparent; background: #fff; border-radius: 17px; overflow: hidden; box-shadow: var(--shadow); cursor: pointer; transition: transform .15s ease, border-color .15s ease; }
+    .tier-card:hover { transform: translateY(-3px); }
+    .tier-card.selected { border-color: var(--green); box-shadow: 0 0 0 3px rgba(8,127,62,.12), var(--shadow); }
+    .tier-card img { width: 100%; height: 150px; object-fit: cover; display: block; background: #e8eee9; }
+    .tier-content { padding: 15px; }
+    .tier-content h3 { margin: 0 0 4px; color: var(--green-dark); font-size: 1.06rem; }
+    .tier-label { display: inline-block; background: #e9f7ee; color: var(--green-dark); padding: 4px 9px; border-radius: 999px; font-size: .82rem; font-weight: 800; margin-bottom: 8px; }
+    .tier-content p { color: var(--muted); font-size: .91rem; margin: 0 0 12px; }
+    .tier-card button { border: 0; border-radius: 9px; padding: 10px 12px; width: 100%; color: #fff; background: var(--green); font-weight: 800; cursor: pointer; }
+    .tier-card button:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+    .builder { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(270px, .75fr); gap: 20px; align-items: start; }
+    .panel { background: #fff; border: 1px solid var(--line); border-radius: 17px; padding: 20px; box-shadow: var(--shadow); min-width: 0; }
+    .panel h2, .panel h3 { margin-top: 0; color: var(--green-dark); }
+    .selected-tier { padding: 12px 14px; background: #eef8f1; border-radius: 11px; margin-bottom: 16px; }
+    .selected-tier strong { display: block; font-size: 1.15rem; }
+    .selected-tier span { color: var(--muted); font-size: .92rem; }
+    .product-list { display: grid; gap: 12px; }
+    .product { display: grid; grid-template-columns: auto minmax(0, 1fr) 90px; gap: 12px; align-items: center; border: 1px solid var(--line); border-radius: 12px; padding: 12px; }
+    .product input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--green); }
+    .product-name { font-weight: 800; display: block; }
+    .product-brand { display: block; color: var(--muted); font-size: .83rem; }
+    .qty-label { font-size: .8rem; color: var(--muted); display: block; margin-bottom: 3px; }
+    .qty { width: 100%; padding: 9px 7px; border: 1px solid #bdcfc2; border-radius: 8px; font-size: 1rem; }
+    .product:has(input[type="checkbox"]:not(:checked)) .qty-wrap { opacity: .45; }
+    .side-copy { color: var(--muted); font-size: .94rem; }
+    .summary-box { border-radius: 12px; background: #f4f8f5; padding: 14px; margin: 14px 0; }
+    .summary-line { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--line); }
+    .summary-line:last-child { border-bottom: 0; }
+    .summary-line strong { text-align: right; }
+    .btn { border: 0; border-radius: 10px; padding: 12px 16px; font-weight: 800; cursor: pointer; font-size: .98rem; }
+    .btn-primary { background: var(--green); color: #fff; width: 100%; }
+    .btn-secondary { background: #eaf3ed; color: var(--green-dark); }
+    .btn:disabled { opacity: .55; cursor: not-allowed; }
+    .status { margin-top: 12px; padding: 12px; border-radius: 10px; display: none; white-space: pre-wrap; overflow-wrap: anywhere; }
+    .status.show { display: block; }
+    .status.error { background: #fff0f0; color: #8c1824; border: 1px solid #f1c5ca; }
+    .status.info { background: #edf7ff; color: #164f77; border: 1px solid #c9e6f7; }
+    .status.success { background: #eaf8ee; color: #075c30; border: 1px solid #bfe3c9; }
+    .footnote { font-size: .84rem; color: var(--muted); }
+    .brands { margin-top: 40px; padding: 22px; background: #fff; border-radius: 17px; border: 1px solid var(--line); text-align: center; }
+    .brand-logos { display: flex; align-items: center; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 15px; }
+    .brand-logos img { max-width: 150px; max-height: 90px; object-fit: contain; }
+    footer { background: #103b26; color: #fff; padding: 24px 5%; text-align: center; }
+    footer p { margin: 4px; }
+    @media (max-width: 760px) {
+      .head-inner { align-items: flex-start; gap: 14px; }
+      .logo { width: 78px; max-height: 88px; }
+      .builder { grid-template-columns: 1fr; }
+      .product { grid-template-columns: auto minmax(0, 1fr) 76px; gap: 8px; padding: 10px; }
+      main { padding: 0 12px; }
+      .panel { padding: 15px; }
+    }
+    @media (max-width: 430px) {
+      .head-inner { display: block; }
+      .logo { width: 84px; margin-bottom: 10px; }
+      .product { grid-template-columns: auto minmax(0, 1fr); }
+      .qty-wrap { grid-column: 2; max-width: 110px; }
+    }
+  </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a class="brand" href="index.html" aria-label="Life Improvement Foundation home">
-      <img class="brand-logo" src="assets/lif/life-logo-transparent.png" alt="Life Improvement Foundation logo">
-    </a>
-    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mainNav">☰ <span>Menu</span></button>
-    <nav class="nav-links" id="mainNav" aria-label="Main navigation">
+  <div class="topbar">ENDING POVERTY, NOT MANAGING IT — BUILDING OPPORTUNITY THROUGH COMMUNITY ENTERPRISE</div>
+  <header>
+    <div class="head-inner">
+      <img class="logo" src="life-logo-transparent.png" alt="Life Improvement Foundation logo">
+      <div>
+        <div class="eyebrow">Life Improvement Foundation × Food Sock × Kingdom Foods</div>
+        <h1>Choose Your Reseller Path</h1>
+        <p class="lead">Build a business around food access, community enterprise and a stronger local economy. Select your reseller level, then build a product mix from the products approved for that level.</p>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="partnership.html">Partnership</a>
-      <a href="products.html">Food Sock &amp; Two Spoons</a>
+      <a href="partnership.html">Our Partnership</a>
+      <a href="products.html">Food Sock Products</a>
       <a href="kingdom-foods.html">Kingdom Foods</a>
-      <a href="manufacturing.html">Manufacturing Vision</a>
-      <a href="community.html">Community Involvement</a>
-      <a href="reseller.html">Become a Reseller</a>
-      <a href="reseller-plan.html" aria-current="page">Reseller Plan &amp; Calculator</a>
+      <a href="reseller.html">How to Become a Reseller</a>
+      <a href="reseller-plan.html" aria-current="page">Reseller Plan</a>
       <a href="contact.html">Contact Us</a>
     </nav>
-  </div>
-</header>
-<section class="hero">
-  <div class="hero-inner">
-    <div class="eyebrow">Your opportunity • Your community • Your future</div>
-    <h1>The Reseller Revolution: Find Your Level. Calculate Your Potential.</h1>
-    <p>Choose the level that fits your goals, review the starter mix from the LIF Reseller Plan, and adjust quantities to estimate sales and the price difference using the exact per-unit prices including VAT shown in the LIF spreadsheet.</p>
-    <div class="hero-actions">
-      <a class="btn btn-gold" href="#reseller-levels">Explore all four reseller levels and the commercial track</a>
-      <a class="btn btn-outline" href="https://wa.me/26659434159?text=Hello%20Life%20Improvement%20Foundation%2C%20I%20would%20like%20help%20choosing%20a%20reseller%20level.">Ask LIF on WhatsApp</a>
+  </header>
+
+  <main>
+    <div class="notice">
+      <strong>Important about pricing:</strong> product prices and allocation limits are not stored in this public page. Once LIF connects the protected quote service and approves your account, the calculator can return VAT-inclusive costs privately. This protects LIF's confidential pricing from being exposed in public website code.
     </div>
-  </div>
-</section>
-<main class="container">
-  <div class="notice"><strong>Important:</strong> The calculator is an estimate based on the figures in the uploaded LIF reseller spreadsheet. It does not include delivery, marketing, operating costs, discounts, unsold stock, or tax adjustments. Selling prices and product availability should be confirmed with LIF before placing an order.</div>
-  <section class="section-heading" id="reseller-levels">
-    <h2>Five ways to take part</h2>
-    <p>The four community reseller levels and the separate commercial track follow the LIF Reseller Plan. Prices shown are per individual unit and include VAT, exactly as displayed in the spreadsheet. Pack sizes are product information only and are not multiplied into the unit price.</p>
-  </section>
-  <div class="level-grid" id="levelGrid"></div>
-  <section class="cta">
-    <div><h2>Ready to discuss your reseller journey?</h2><p>Contact LIF to confirm the latest costs, recommended selling prices, stock availability, registration requirements and commercial terms.</p></div>
-    <a class="btn" href="https://wa.me/26659434159?text=Hello%20LIF%2C%20I%20would%20like%20to%20discuss%20the%20reseller%20programme.">Contact LIF on WhatsApp</a>
-  </section>
-  <p class="fine-print">Source note: product descriptions, pack sizes and unit prices are taken from the uploaded “Reseller Page” worksheet. Starter mixes and commercial-track notes are based on the uploaded “The Reseller Revolution” PDF. Some PDF and spreadsheet descriptions do not align perfectly; confirm the exact order unit with LIF before purchase. The commercial track's pricing is negotiated directly with LIF and its calculator uses the worksheet's listed recommended prices only as an illustration.</p>
-</main>
-<footer class="site-footer"><img class="footer-lif-logo" src="assets/lif/life-logo-transparent.png" alt="Life Improvement Foundation logo" loading="lazy"><div class="partner-logos" aria-label="LIF partner logos"><img src="assets/partnership/kingdom-foods-logo.png" alt="Kingdom Foods logo" loading="lazy"><img src="assets/partnership/food-sock-logo.png" alt="Food Sock logo" loading="lazy"></div>
-  <strong>Life Improvement Foundation</strong><br>
-  “We are not here to manage poverty. We are here to end it.”<br>
-  <a href="https://wa.me/26659434159">WhatsApp: +266 5943 4159</a> · <a href="contact.html">Contact LIF</a><br>
-  <a class="backtop" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top ↑</a>
-</footer>
-<script>
-const PRODUCTS = [
- {brand:"Food Socks",name:"Meal for 4 pouch",pack:"Box of 50",units:50,cost:58.91,sell:82.47},
- {brand:"TwoSpoons",name:"50g sachet",pack:"Box of 60",units:60,cost:12.13,sell:16.98},
- {brand:"TwoSpoons",name:"1kg pack",pack:"Box of 15",units:15,cost:179.95,sell:251.93},
- {brand:"TwoSpoons",name:"25kg bulk bag",pack:"Per bag",units:1,cost:3520.64,sell:4928.90},
- {brand:"Heartfelt Foods",name:"Meal bucket 5 litre",pack:"Box of 4",units:4,cost:420.16,sell:588.22},
- {brand:"Heartfelt Foods",name:"Meal bucket 10 litre",pack:"Box of 2",units:2,cost:774.61,sell:1084.45},
- {brand:"Heartfelt Foods",name:"Meal bucket 20 litre",pack:"Per bucket",units:1,cost:1516.36,sell:2122.90},
- {brand:"Heartfelt Foods",name:"Instant Maize Porridge 1kg pack",pack:"Box of 15",units:15,cost:179.95,sell:251.93},
- {brand:"Heartfelt Foods",name:"Instant Maize Porridge 20 litre bucket (Natural only)",pack:"Per bucket",units:1,cost:1352.07,sell:1892.90}
-];
-const LEVELS = [
- {id:"side",title:"The Side Hustler",tier:"M500 tier in plan",image:"assets/reseller-plan/the%20side%20hustle.jpg",best:"Individuals, students and community members testing the waters.",description:"A starter route for someone beginning to sell within their network.",points:"about 14 points.",quantities:{0:6,1:12}},
- {id:"family",title:"The Family Provider",tier:"M1,500 tier in plan",image:"assets/reseller-plan/the%20family%20provider.jpg",best:"Families, taxi vendors and market traders seeking a broader income stream.",description:"A variety mix spanning meal pouches, a 5-litre bucket and instant porridge.",points:"about 42 points.",quantities:{0:12,4:1,7:2}},
- {id:"community",title:"The Community Champion",tier:"M3,500 tier in plan",image:"assets/reseller-plan/The%20community%20champion.jpg",best:"Spaza shops, stokvels and church or community groups.",description:"A shared-selling route with larger food-service formats and family products.",points:"about 98 points.",quantities:{0:20,4:2,5:1,7:4}},
- {id:"master",title:"The Master Distributor",tier:"M10,000 tier in plan",image:"assets/reseller-plan/the%20master%20distributor.jpg",best:"Cooperatives, established community businesses and full-time entrepreneurs.",description:"A larger-volume mix focused on meal pouches and bulk meal buckets.",points:"Territory and institutional bidding rights are described in the plan; confirm applicable terms with LIF.",quantities:{0:50,5:2,6:4}},
- {id:"commercial",title:"Commercial Track",tier:"Custom mixed pallet",image:"assets/reseller-plan/commercial%20track.jpg",best:"Wholesalers, supermarkets, retailers and institutional distributors.",description:"The PDF describes a minimum of one standard mixed pallet, with volume pricing negotiated directly with LIF.",points:"Commercial customers do not participate in the consumer points system; confirm commercial terms with LIF.",commercial:true,quantities:{0:1000,1:1200,4:40,5:10,7:75,6:0,3:0}}
-];
-function money(n){return "M"+Number(n||0).toLocaleString("en-LS",{minimumFractionDigits:2,maximumFractionDigits:2});}
-function renderLevel(level){
- const items=PRODUCTS.map((p,i)=>{
-  const inStarterMix=Object.prototype.hasOwnProperty.call(level.quantities,i);
-  const initialQty=inStarterMix ? level.quantities[i] : 0;
-  return `<tr>
- <td><strong>${p.name}</strong><br><small>${p.brand} · Pack reference: ${p.pack}</small><br><span class="tier">${inStarterMix?"Starter mix":"Optional addition"}</span></td>
- <td class="money">${money(p.cost)}</td><td class="money">${money(p.sell)}</td>
- <td class="qty-cell"><label class="sr-only" for="${level.id}-q-${i}">Quantity of ${p.name} in individual units</label><input type="number" min="0" step="1" value="${initialQty}" id="${level.id}-q-${i}" data-level="${level.id}" data-index="${i}" aria-label="Quantity of ${p.name}"></td>
- <td class="money line-profit" id="${level.id}-profit-${i}">${money(0)}</td></tr>`;
- }).join("");
- return `<article class="level-card ${level.commercial?"commercial":""}">
- <img class="level-image" src="${level.image}" alt="${level.title} reseller level" loading="lazy" onerror="this.style.display='none'">
- <div class="level-content"><div class="level-topline"><h3>${level.title}</h3><span class="tier">${level.tier}</span></div>
- <p><strong>Best for:</strong> ${level.best}</p><p>${level.description}</p>
- ${level.points?`<p><strong>${level.id==="master"||level.commercial?"Plan note":"Possible points to be earned:"}</strong> ${level.points}</p>`:""}
- ${level.commercial?`<div class="commercial-note"><strong>Commercial pricing:</strong> The PDF says commercial discounts and actual wholesale pricing are negotiated with LIF. The figures below are only a planning illustration using the worksheet prices. The pallet line for 20L buckets and 25kg bags does not specify quantities, so those defaults are set to zero for you to enter after LIF confirms the mix.</div>`:""}
- <div class="calculator"><h4>Per-unit sales and profit estimate</h4><p class="calc-help">All prices include VAT and are per individual unit. Products in the published starter mix are pre-filled; other products are available as optional additions. Enter quantities as individual units, not boxes or pallets.</p>
- <div class="table-wrap"><table class="product-table"><thead><tr><th>Product / size and pack</th><th>LIF cost per unit (incl. VAT)</th><th>Recommended selling price per unit (incl. VAT)</th><th>Quantity (individual units)</th><th>Estimated price difference for quantity</th></tr></thead><tbody>${items}</tbody></table></div>
- <button class="btn btn-gold calculate-btn" type="button" data-calculate="${level.id}" style="margin-top:14px;cursor:pointer">Calculate totals</button>
- <div class="summary" aria-live="polite">
- <div class="summary-item"><span>Total LIF cost (incl. VAT)</span><strong id="${level.id}-cost">M0.00</strong></div>
- <div class="summary-item"><span>Recommended sales total (incl. VAT)</span><strong id="${level.id}-sales">M0.00</strong></div>
- <div class="summary-item profit"><span>Estimated price difference</span><strong id="${level.id}-total">M0.00</strong></div>
- </div>
- <p class="fine-print">The estimated price difference is (recommended selling price including VAT − LIF cost including VAT) × quantity. It is before business expenses and is not a VAT-adjusted accounting profit. Optional additions let you test other products; confirm substitutions, stock and order eligibility with LIF.</p>
- </div></div></article>`;
-}
-document.getElementById("levelGrid").innerHTML=LEVELS.map(renderLevel).join("");
-function calculate(level){
- let totalCost=0,totalSales=0,totalProfit=0,totalUnits=0;
- PRODUCTS.forEach((p,i)=>{
-  const input=document.getElementById(`${level.id}-q-${i}`);
-  const line=document.getElementById(`${level.id}-profit-${i}`);
-  if(!input||!line) return;
-  const parsed=Number(input.value);
-  const qty=Number.isFinite(parsed)?Math.max(0,Math.floor(parsed)):0;
-  input.value=String(qty);
-  const cost=qty*p.cost;
-  const sales=qty*p.sell;
-  const profit=sales-cost;
-  totalUnits+=qty;
-  totalCost+=cost;
-  totalSales+=sales;
-  totalProfit+=profit;
-  line.textContent=money(profit);
- });
- const costEl=document.getElementById(`${level.id}-cost`);
- const salesEl=document.getElementById(`${level.id}-sales`);
- const totalEl=document.getElementById(`${level.id}-total`);
- if(costEl) costEl.textContent=money(totalCost);
- if(salesEl) salesEl.textContent=money(totalSales);
- if(totalEl) totalEl.textContent=money(totalProfit);
- const button=document.querySelector(`[data-calculate="${level.id}"]`);
- if(button){
-  button.textContent=`Totals calculated · ${totalUnits.toLocaleString("en-LS")} units`;
-  button.setAttribute("aria-label",`Totals calculated for ${level.title}: LIF cost ${money(totalCost)}, sales ${money(totalSales)}, estimated price difference ${money(totalProfit)}`);
- }
-}
-LEVELS.forEach(level=>{
- const button=document.querySelector(`[data-calculate="${level.id}"]`);
- if(button) button.addEventListener("click",()=>calculate(level));
- document.querySelectorAll(`[data-level="${level.id}"]`).forEach(input=>{
-  input.addEventListener("input",()=>{
-   if(button) button.textContent="Calculate totals";
-  });
- });
- calculate(level);
-});
-const navToggle=document.getElementById("navToggle");
-const mainNav=document.getElementById("mainNav");
-if(navToggle&&mainNav){
- navToggle.addEventListener("click",function(){
-  const isOpen=mainNav.classList.toggle("is-open");
-  navToggle.setAttribute("aria-expanded",String(isOpen));
-  navToggle.innerHTML=isOpen?"✕ <span>Close</span>":"☰ <span>Menu</span>";
- });
- mainNav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{mainNav.classList.remove("is-open");navToggle.setAttribute("aria-expanded","false");navToggle.innerHTML="☰ <span>Menu</span>";}));
-}
-</script>
+
+    <section aria-labelledby="tier-title">
+      <div class="section-heading">
+        <h2 id="tier-title">1. Choose your reseller level</h2>
+        <p>Each level has its own approved product range. The tier amount is the advertised level name; the flexible allocation limit is based on the exact VAT-inclusive LIF cost of its standard starter mix.</p>
+      </div>
+      <div class="tiers" id="tierCards">
+        <article class="tier-card selected" data-tier="side-hustle">
+          <img src="assets/reseller-plan/the%20side%20hustle.jpg" alt="Side Hustle reseller level" loading="lazy">
+          <div class="tier-content"><span class="tier-label">M500 tier</span><h3>The Side Hustler</h3><p>For individuals, students and community members starting small.</p><button type="button" data-select-tier="side-hustle">Choose this level</button></div>
+        </article>
+        <article class="tier-card" data-tier="family-provider">
+          <img src="assets/reseller-plan/the%20family%20provider.jpg" alt="Family Provider reseller level" loading="lazy">
+          <div class="tier-content"><span class="tier-label">M1,500 tier</span><h3>The Family Provider</h3><p>Build a reliable income stream while serving household needs.</p><button type="button" data-select-tier="family-provider">Choose this level</button></div>
+        </article>
+        <article class="tier-card" data-tier="community-champion">
+          <img src="assets/reseller-plan/The%20community%20champion.jpg" alt="Community Champion reseller level" loading="lazy">
+          <div class="tier-content"><span class="tier-label">M3,500 tier</span><h3>The Community Champion</h3><p>Serve more customers and grow local product availability.</p><button type="button" data-select-tier="community-champion">Choose this level</button></div>
+        </article>
+        <article class="tier-card" data-tier="master-distributor">
+          <img src="assets/reseller-plan/the%20master%20distributor.jpg" alt="Master Distributor reseller level" loading="lazy">
+          <div class="tier-content"><span class="tier-label">M10,000 tier</span><h3>The Master Distributor</h3><p>For larger distribution ambitions, territory opportunities and institutional supply.</p><button type="button" data-select-tier="master-distributor">Choose this level</button></div>
+        </article>
+        <article class="tier-card" data-tier="commercial-track">
+          <img src="assets/reseller-plan/commercial%20track.jpg" alt="Commercial Track reseller level" loading="lazy">
+          <div class="tier-content"><span class="tier-label">Custom mixed pallet</span><h3>Commercial Track</h3><p>For wholesalers and retailers requiring custom volume arrangements.</p><button type="button" data-select-tier="commercial-track">Choose this level</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="builder-title">
+      <div class="section-heading">
+        <h2 id="builder-title">2. Build your product allocation</h2>
+        <p>Choose more than one product and set a quantity for each selected line. Only products approved for your selected level are shown.</p>
+      </div>
+      <div class="builder">
+        <div class="panel">
+          <div class="selected-tier"><strong id="selectedTierName">The Side Hustler</strong><span id="selectedTierDesc">Approved starter products for the Side Hustle level.</span></div>
+          <div id="productList" class="product-list" aria-live="polite"></div>
+          <p class="footnote">Quantities refer to the priced product unit defined by LIF's product catalogue. Pack descriptions and quantity conventions must match the official spreadsheet before live quoting is enabled.</p>
+        </div>
+        <aside class="panel">
+          <h2>Your allocation</h2>
+          <p class="side-copy">Your selected mix and VAT-inclusive quote will appear here after the protected LIF quote service is connected and your reseller account is approved.</p>
+          <div class="summary-box">
+            <div class="summary-line"><span>Selected product lines</span><strong id="lineCount">0</strong></div>
+            <div class="summary-line"><span>Total quantity</span><strong id="quantityCount">0</strong></div>
+            <div class="summary-line"><span>Pricing status</span><strong id="pricingStatus">Not connected</strong></div>
+          </div>
+          <button class="btn btn-primary" id="quoteBtn" type="button">Request private cost estimate</button>
+          <button class="btn btn-secondary" id="resetBtn" type="button" style="width:100%; margin-top:10px;">Clear selection</button>
+          <div id="status" class="status info" role="status"></div>
+          <p class="footnote">The live quote service must validate your signed-in account, selected tier, approved products and allocation budget on the server. Do not add private prices or a Supabase service-role key to this HTML file.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="brands">
+      <h2>One partnership. Shared opportunity.</h2>
+      <p>Life Improvement Foundation, Food Sock and Kingdom Foods are working together to expand access and build local enterprise.</p>
+      <div class="brand-logos">
+        <img src="life-logo-transparent.png" alt="Life Improvement Foundation logo" loading="lazy">
+        <img src="assets/partnership/food%20sock.png" alt="Food Sock brand logo" loading="lazy">
+        <img src="assets/kingdom/kingdom-journey.jpg" alt="Kingdom Foods partnership image" loading="lazy">
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p><strong>Life Improvement Foundation</strong></p>
+    <p>Ending poverty, not managing it.</p>
+    <p>For reseller registration and commercial enquiries, use the Contact Us page or visit an LIF office.</p>
+  </footer>
+
+  <script>
+    /*
+      SECURITY NOTE:
+      This public page intentionally contains no confidential unit prices or allocation budgets.
+      Connect a protected, authenticated server-side quote endpoint before enabling live quotes.
+      Expected endpoint: /functions/v1/reseller-quote
+      Expected request: { tier, items: [{ sku, quantity }] }
+      The server must authenticate the user, verify LIF approval, enforce tier permissions and
+      allocation budget, and calculate VAT-inclusive prices from the private pricing table.
+    */
+    const PRODUCTS = {
+      food_sock_meal_pouch: { name: "Food Sock — Meal for 4 pouch", brand: "Food Sock" },
+      two_spoons_50g_sachet: { name: "Two Spoons — 50g sachet", brand: "Two Spoons" },
+      heartfelt_5l_bucket: { name: "Heartfelt Foods — Meal bucket, 5 litre", brand: "Heartfelt Foods" },
+      heartfelt_10l_bucket: { name: "Heartfelt Foods — Meal bucket, 10 litre", brand: "Heartfelt Foods" },
+      heartfelt_20l_bucket: { name: "Heartfelt Foods — Meal bucket, 20 litre", brand: "Heartfelt Foods" },
+      heartfelt_porridge_1kg: { name: "Heartfelt Foods — Instant Maize Porridge, 1kg pack", brand: "Heartfelt Foods" },
+      two_spoons_25kg_bulk_bag: { name: "Two Spoons — 25kg bulk bag", brand: "Two Spoons · Commercial bulk" }
+    };
+
+    const TIERS = {
+      "side-hustle": {
+        name: "The Side Hustler",
+        description: "Approved starter products for the Side Hustle level.",
+        products: ["food_sock_meal_pouch", "two_spoons_50g_sachet"]
+      },
+      "family-provider": {
+        name: "The Family Provider",
+        description: "Approved starter products for the Family Provider level.",
+        products: ["food_sock_meal_pouch", "heartfelt_5l_bucket", "heartfelt_porridge_1kg"]
+      },
+      "community-champion": {
+        name: "The Community Champion",
+        description: "Approved starter products for the Community Champion level.",
+        products: ["food_sock_meal_pouch", "heartfelt_10l_bucket", "heartfelt_5l_bucket", "heartfelt_porridge_1kg"]
+      },
+      "master-distributor": {
+        name: "The Master Distributor",
+        description: "Approved starter products for the Master Distributor level.",
+        products: ["food_sock_meal_pouch", "heartfelt_20l_bucket", "heartfelt_10l_bucket"]
+      },
+      "commercial-track": {
+        name: "Commercial Track",
+        description: "Custom mixed pallet; final mix, quantities and pricing require LIF office approval.",
+        products: ["food_sock_meal_pouch", "two_spoons_50g_sachet", "heartfelt_5l_bucket", "heartfelt_10l_bucket", "heartfelt_20l_bucket", "heartfelt_porridge_1kg", "two_spoons_25kg_bulk_bag"]
+      }
+    };
+
+    let selectedTier = "side-hustle";
+    const selections = {};
+    const $ = (id) => document.getElementById(id);
+
+    function renderTier() {
+      const tier = TIERS[selectedTier];
+      document.querySelectorAll(".tier-card").forEach(card => {
+        card.classList.toggle("selected", card.dataset.tier === selectedTier);
+      });
+      $("selectedTierName").textContent = tier.name;
+      $("selectedTierDesc").textContent = tier.description;
+      renderProducts();
+      updateSummary();
+    }
+
+    function renderProducts() {
+      const tier = TIERS[selectedTier];
+      const host = $("productList");
+      host.replaceChildren();
+      tier.products.forEach(sku => {
+        const product = PRODUCTS[sku];
+        const wrap = document.createElement("div");
+        wrap.className = "product";
+
+        const check = document.createElement("input");
+        check.type = "checkbox";
+        check.id = "check-" + sku;
+        check.checked = Boolean(selections[sku] && selections[sku].quantity > 0);
+        check.setAttribute("aria-label", "Select " + product.name);
+
+        const textWrap = document.createElement("label");
+        textWrap.htmlFor = check.id;
+        const name = document.createElement("span");
+        name.className = "product-name";
+        name.textContent = product.name;
+        const brand = document.createElement("span");
+        brand.className = "product-brand";
+        brand.textContent = product.brand;
+        textWrap.append(name, brand);
+
+        const qtyWrap = document.createElement("div");
+        qtyWrap.className = "qty-wrap";
+        const qtyLabel = document.createElement("label");
+        qtyLabel.className = "qty-label";
+        qtyLabel.htmlFor = "qty-" + sku;
+        qtyLabel.textContent = "Quantity";
+        const qty = document.createElement("input");
+        qty.className = "qty";
+        qty.id = "qty-" + sku;
+        qty.type = "number";
+        qty.min = "1";
+        qty.max = selectedTier === "commercial-track" ? "10000" : "50";
+        qty.step = "1";
+        qty.inputMode = "numeric";
+        qty.value = selections[sku] && selections[sku].quantity ? selections[sku].quantity : "1";
+        qty.disabled = !check.checked;
+        qty.setAttribute("aria-label", "Quantity for " + product.name);
+
+        check.addEventListener("change", () => {
+          if (check.checked) {
+            selections[sku] = { quantity: Math.max(1, Number(qty.value) || 1) };
+            qty.disabled = false;
+          } else {
+            delete selections[sku];
+            qty.disabled = true;
+          }
+          updateSummary();
+        });
+        qty.addEventListener("change", () => {
+          const max = selectedTier === "commercial-track" ? 10000 : 50;
+          let value = Math.floor(Number(qty.value) || 1);
+          value = Math.max(1, Math.min(max, value));
+          qty.value = String(value);
+          if (check.checked) selections[sku] = { quantity: value };
+          updateSummary();
+        });
+
+        qtyWrap.append(qtyLabel, qty);
+        wrap.append(check, textWrap, qtyWrap);
+        host.append(wrap);
+      });
+    }
+
+    function updateSummary() {
+      const allowed = new Set(TIERS[selectedTier].products);
+      const selected = Object.entries(selections).filter(([sku, data]) => allowed.has(sku) && data.quantity > 0);
+      $("lineCount").textContent = String(selected.length);
+      $("quantityCount").textContent = String(selected.reduce((sum, [, data]) => sum + data.quantity, 0));
+      $("pricingStatus").textContent = "Protected service needed";
+      $("quoteBtn").disabled = selected.length === 0;
+    }
+
+    function showStatus(message, type = "info") {
+      const status = $("status");
+      status.className = "status show " + type;
+      status.textContent = message;
+    }
+
+    document.querySelectorAll("[data-select-tier]").forEach(button => {
+      button.addEventListener("click", () => {
+        selectedTier = button.dataset.selectTier;
+        // Keep selected items only where the new tier permits them.
+        const allowed = new Set(TIERS[selectedTier].products);
+        Object.keys(selections).forEach(sku => { if (!allowed.has(sku)) delete selections[sku]; });
+        renderTier();
+        showStatus("Selected " + TIERS[selectedTier].name + ". The product list now shows only products approved for this level.", "info");
+      });
+    });
+
+    $("resetBtn").addEventListener("click", () => {
+      Object.keys(selections).forEach(sku => delete selections[sku]);
+      renderProducts();
+      updateSummary();
+      showStatus("Your product selection has been cleared.", "info");
+    });
+
+    $("quoteBtn").addEventListener("click", async () => {
+      const items = Object.entries(selections)
+        .filter(([sku, data]) => TIERS[selectedTier].products.includes(sku) && data.quantity > 0)
+        .map(([sku, data]) => ({ sku, quantity: data.quantity }));
+      if (!items.length) {
+        showStatus("Select at least one product and quantity first.", "error");
+        return;
+      }
+
+      /*
+        Before launch, replace this safe placeholder with the authenticated Supabase client flow
+        and call the protected Edge Function. Never send a service-role key from this browser.
+      */
+      showStatus(
+        "Your product mix is ready, but the private pricing service is not connected yet. No prices have been calculated or exposed. LIF must connect the protected quote service and reseller sign-in/approval before this button can return a private VAT-inclusive estimate.",
+        "info"
+      );
+      console.info("Quote selection (no prices):", { tier: selectedTier, items });
+    });
+
+    renderTier();
+  </script>
 </body>
 </html>
