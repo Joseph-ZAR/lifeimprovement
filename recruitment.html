@@ -1,216 +1,397 @@
 
-<section id="apply" class="application">
-  <h1>Apply to Join LIF</h1>
-  <h2>Food Presenter / Sales Agent</h2>
-
-  <p>
-    Life Improvement Foundation is looking for confident, professional
-    people who can represent our organisation and food products,
-    communicate clearly with customers, demonstrate products and sell
-    responsibly in their communities.
-  </p>
-
-  <form id="lif-recruitment-form">
-    <label for="full_name">Full name *</label>
-    <input id="full_name" name="full_name" required maxlength="150">
-
-    <label for="phone">Contact number *</label>
-    <input id="phone" name="phone" type="tel" required maxlength="40">
-
-    <label for="email">Email address (if available)</label>
-    <input id="email" name="email" type="email" maxlength="254">
-
-    <label for="district">District *</label>
-    <select id="district" name="district" required>
-      <option value="">Select your district</option>
-      <option>Maseru</option>
-      <option>Berea</option>
-      <option>Leribe</option>
-      <option>Butha-Buthe</option>
-      <option>Mokhotlong</option>
-      <option>Thaba-Tseka</option>
-      <option>Qacha's Nek</option>
-      <option>Quthing</option>
-      <option>Mohale's Hoek</option>
-      <option>Other / outside Lesotho</option>
-    </select>
-
-    <label for="presentation_experience">
-      Tell us about your presentation and communication skills *
-    </label>
-    <textarea id="presentation_experience"
-      name="presentation_experience" required maxlength="2000"
-      rows="4"
-      placeholder="For example, speaking to groups, explaining products, customer service or public speaking."></textarea>
-
-    <label for="sales_experience">
-      Tell us about your selling or customer-service experience *
-    </label>
-    <textarea id="sales_experience" name="sales_experience"
-      required maxlength="2000" rows="4"
-      placeholder="Include formal or informal selling, business activities or relevant experience."></textarea>
-
-    <label for="product_demonstration">
-      How would you present and demonstrate an LIF food product to a customer? *
-    </label>
-    <textarea id="product_demonstration" name="product_demonstration"
-      required maxlength="2000" rows="4"></textarea>
-
-    <label for="availability">When are you available to work? *</label>
-    <select id="availability" name="availability" required>
-      <option value="">Select availability</option>
-      <option>Full-time</option>
-      <option>Part-time</option>
-      <option>Flexible / to be discussed</option>
-    </select>
-
-    <label for="motivation">Why would you like to join LIF? *</label>
-    <textarea id="motivation" name="motivation" required
-      maxlength="2000" rows="4"></textarea>
-
-    <label class="consent">
-      <input type="checkbox" name="consent_to_contact"
-        id="consent_to_contact" required>
-      I confirm that the information supplied is accurate and agree
-      that LIF may contact me about this application.
-    </label>
-
-    <button type="submit" id="recruitment-submit">
-      Submit Application
-    </button>
-    <p id="recruitment-message" role="status" aria-live="polite"></p>
-  </form>
-</section>
-
-<style>
-  .application {
-    max-width: 760px;
-    margin: 32px auto;
-    padding: 24px;
-    font-family: Arial, sans-serif;
-    color: #183027;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 8px 28px rgba(0,0,0,.09);
-  }
-  .application h1 { color: #137b43; margin-bottom: 8px; }
-  .application h2 { margin-top: 0; }
-  .application label {
-    display: block;
-    font-weight: 600;
-    margin: 18px 0 7px;
-  }
-  .application input:not([type="checkbox"]),
-  .application select,
-  .application textarea {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #bdc9c1;
-    border-radius: 8px;
-    font: inherit;
-  }
-  .application .consent {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-weight: 400;
-  }
-  .application .consent input { margin-top: 4px; }
-  .application button {
-    width: 100%;
-    margin-top: 20px;
-    padding: 14px;
-    border: 0;
-    border-radius: 8px;
-    background: #137b43;
-    color: white;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-  }
-  #recruitment-message { overflow-wrap: anywhere; }
-</style>
-
-<script>
-(() => {
-  const form = document.getElementById("lif-recruitment-form");
-  if (!form) return;
-
-  const message = document.getElementById("recruitment-message");
-  const submit = document.getElementById("recruitment-submit");
-
-  // Replace this placeholder with your Supabase publishable/anon key.
-  const SUPABASE_URL = "https://jxxrbcacbpxcvmyqhhxj.supabase.co";
-  const SUPABASE_PUBLIC_KEY = "sb_publishable_O-t_SPdeGHGXEDMRk0KLtQ_pB7mCkUe";
-
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    if (!form.reportValidity()) return;
-
-    if (SUPABASE_PUBLIC_KEY.includes("PASTE_YOUR_")) {
-      message.textContent =
-        "The application form is not configured yet. Please contact LIF.";
-      return;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#137b43">
+  <title>Apply to Join LIF | Life Improvement Foundation</title>
+  <meta name="description" content="Apply to become an LIF Food Presenter or Sales Agent in Lesotho.">
+  <style>
+    :root {
+      --lif-green: #137b43;
+      --lif-red: #c62828;
+      --lif-blue: #eaf5fb;
+      --lif-text: #183027;
+      --lif-border: #bdc9c1;
     }
 
-    const data = new FormData(form);
-    const payload = {
-      full_name: String(data.get("full_name") || "").trim(),
-      phone: String(data.get("phone") || "").trim(),
-      email: String(data.get("email") || "").trim() || null,
-      district: String(data.get("district") || ""),
-      position: "Food Presenter / Sales Agent",
-      presentation_experience:
-        String(data.get("presentation_experience") || "").trim(),
-      sales_experience:
-        String(data.get("sales_experience") || "").trim(),
-      product_demonstration:
-        String(data.get("product_demonstration") || "").trim(),
-      availability: String(data.get("availability") || ""),
-      motivation: String(data.get("motivation") || "").trim(),
-      consent_to_contact: data.get("consent_to_contact") === "on",
-      application_status: "Pending"
-    };
+    * { box-sizing: border-box; }
 
-    submit.disabled = true;
-    submit.textContent = "Submitting…";
-    message.textContent = "";
+    body {
+      margin: 0;
+      padding: 24px 14px;
+      background: linear-gradient(135deg, #f1f8f3, #eaf5fb);
+      color: var(--lif-text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
 
-    try {
-      const response = await fetch(
-        `${SUPABASE_URL}/rest/v1/lif_recruitment_applications`,
-        {
-          method: "POST",
-          headers: {
-            "apikey": SUPABASE_PUBLIC_KEY,
-            "Authorization": `Bearer ${SUPABASE_PUBLIC_KEY}`,
-            "Content-Type": "application/json",
-            "Prefer": "return=minimal"
-          },
-          body: JSON.stringify(payload)
-        }
-      );
+    .application {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: clamp(20px, 5vw, 42px);
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 10px 36px rgba(0, 0, 0, .10);
+    }
 
-      if (!response.ok) {
-        const details = await response.text();
-        console.error("LIF recruitment submission failed:", details);
-        throw new Error("Application could not be saved.");
+    .brand {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 3px solid var(--lif-green);
+    }
+
+    .brand img {
+      display: block;
+      width: min(220px, 75%);
+      max-height: 130px;
+      object-fit: contain;
+      margin: 0 auto 12px;
+    }
+
+    .brand h1 {
+      margin: 0;
+      color: var(--lif-green);
+      font-size: clamp(1.7rem, 5vw, 2.4rem);
+      line-height: 1.2;
+    }
+
+    .brand p { margin: 10px 0 0; }
+
+    h2 {
+      margin-top: 28px;
+      color: var(--lif-red);
+      font-size: 1.35rem;
+    }
+
+    .intro { margin-bottom: 24px; }
+
+    label {
+      display: block;
+      margin: 18px 0 7px;
+      font-weight: 700;
+    }
+
+    input:not([type="checkbox"]),
+    select,
+    textarea {
+      display: block;
+      width: 100%;
+      padding: 13px;
+      border: 1px solid var(--lif-border);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--lif-text);
+      font: inherit;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: 3px solid rgba(19, 123, 67, .18);
+      border-color: var(--lif-green);
+    }
+
+    textarea {
+      min-height: 105px;
+      resize: vertical;
+    }
+
+    .consent {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 22px;
+      font-weight: 400;
+    }
+
+    .consent input {
+      flex: 0 0 auto;
+      width: 18px;
+      height: 18px;
+      margin-top: 5px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 22px;
+      padding: 15px;
+      border: 0;
+      border-radius: 9px;
+      background: var(--lif-green);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:hover { background: #0d6133; }
+    button:disabled { opacity: .65; cursor: wait; }
+
+    #recruitment-message {
+      display: none;
+      margin-top: 18px;
+      padding: 13px;
+      border-radius: 8px;
+      overflow-wrap: anywhere;
+    }
+
+    #recruitment-message.visible { display: block; }
+    #recruitment-message.success {
+      color: #155724;
+      background: #e8f5e9;
+    }
+    #recruitment-message.warning {
+      color: #744d00;
+      background: #fff3cd;
+    }
+    #recruitment-message.error {
+      color: #842029;
+      background: #f8d7da;
+    }
+
+    .footer {
+      margin-top: 26px;
+      padding-top: 18px;
+      border-top: 1px solid #e1e7e3;
+      text-align: center;
+      font-size: .92rem;
+    }
+
+    .footer a { color: var(--lif-green); }
+
+    @media (max-width: 480px) {
+      body { padding: 12px 8px; }
+      .application { border-radius: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="application">
+    <header class="brand">
+      <img
+        src="assets/lif/life-logo-transparent.png"
+        alt="Life Improvement Foundation logo"
+        onerror="this.onerror=null;this.src='assets/life-logo-transparent.png';"
+      >
+      <h1>Apply to Join LIF</h1>
+      <p>Ending poverty, not managing it.</p>
+    </header>
+
+    <h2>Food Presenter / Sales Agent</h2>
+    <p class="intro">
+      Life Improvement Foundation invites confident, professional people
+      to represent our organisation and food products, communicate clearly
+      with customers, demonstrate products and sell responsibly in their
+      communities.
+    </p>
+
+    <form id="lif-recruitment-form">
+      <label for="full_name">Full name *</label>
+      <input id="full_name" name="full_name" required maxlength="150"
+        autocomplete="name">
+
+      <label for="phone">Contact number *</label>
+      <input id="phone" name="phone" type="tel" required maxlength="40"
+        autocomplete="tel">
+
+      <label for="email">Email address (if available)</label>
+      <input id="email" name="email" type="email" maxlength="254"
+        autocomplete="email">
+
+      <label for="district">District *</label>
+      <select id="district" name="district" required>
+        <option value="">Select your district</option>
+        <option value="Maseru">Maseru</option>
+        <option value="Berea">Berea</option>
+        <option value="Leribe">Leribe</option>
+        <option value="Butha-Buthe">Butha-Buthe</option>
+        <option value="Mokhotlong">Mokhotlong</option>
+        <option value="Thaba-Tseka">Thaba-Tseka</option>
+        <option value="Qacha's Nek">Qacha's Nek</option>
+        <option value="Quthing">Quthing</option>
+        <option value="Mohale's Hoek">Mohale's Hoek</option>
+        <option value="Other / outside Lesotho">Other / outside Lesotho</option>
+      </select>
+
+      <label for="presentation_experience">
+        Tell us about your presentation and communication skills *
+      </label>
+      <textarea id="presentation_experience"
+        name="presentation_experience" required maxlength="2000"
+        placeholder="For example, speaking to groups, explaining products, customer service or public speaking."></textarea>
+
+      <label for="sales_experience">
+        Tell us about your selling or customer-service experience *
+      </label>
+      <textarea id="sales_experience" name="sales_experience"
+        required maxlength="2000"
+        placeholder="Include formal or informal selling, business activities or relevant experience."></textarea>
+
+      <label for="product_demonstration">
+        How would you present and demonstrate an LIF food product to a customer? *
+      </label>
+      <textarea id="product_demonstration" name="product_demonstration"
+        required maxlength="2000"></textarea>
+
+      <label for="availability">When are you available to work? *</label>
+      <select id="availability" name="availability" required>
+        <option value="">Select availability</option>
+        <option value="Full-time">Full-time</option>
+        <option value="Part-time">Part-time</option>
+        <option value="Flexible / to be discussed">Flexible / to be discussed</option>
+      </select>
+
+      <label for="motivation">Why would you like to join LIF? *</label>
+      <textarea id="motivation" name="motivation" required
+        maxlength="2000"></textarea>
+
+      <label class="consent" for="consent_to_contact">
+        <input type="checkbox" name="consent_to_contact"
+          id="consent_to_contact" required>
+        <span>
+          I confirm that the information supplied is accurate and agree
+          that LIF may contact me about this application.
+        </span>
+      </label>
+
+      <button type="submit" id="recruitment-submit">
+        Submit Application
+      </button>
+      <p id="recruitment-message" role="status" aria-live="polite"></p>
+    </form>
+
+    <footer class="footer">
+      <strong>Life Improvement Foundation</strong>
+      <p>
+        Need help? Contact
+        <a href="mailto:projects@lifefoundation.co.ls">
+          projects@lifefoundation.co.ls
+        </a>
+      </p>
+      <p>
+        <a href="index.html">Home</a> ·
+        <a href="contact.html">Contact LIF</a>
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const SUPABASE_URL =
+        "https://jxxrbcacbpxcvmyqhhxj.supabase.co";
+
+      const SUPABASE_PUBLIC_KEY =
+        "sb_publishable_O-t_SPdeGHGXEDMRk0KLtQ_pB7mCkUe";
+
+      const SUBMIT_ENDPOINT =
+        `${SUPABASE_URL}/functions/v1/lif-recruitment-submit`;
+
+      const form = document.getElementById("lif-recruitment-form");
+      const message = document.getElementById("recruitment-message");
+      const submit = document.getElementById("recruitment-submit");
+
+      function showMessage(text, type) {
+        message.textContent = text;
+        message.className = `visible ${type}`;
       }
 
-      form.reset();
-      message.textContent =
-        "Thank you. Your application has been submitted successfully to LIF.";
-    } catch (error) {
-      console.error(error);
-      message.textContent =
-        "We could not confirm your submission. Please try again later or contact LIF. Do not assume the application was received.";
-    } finally {
-      submit.disabled = false;
-      submit.textContent = "Submit Application";
-    }
-  });
-})();
-</script>
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
+        if (!form.reportValidity()) return;
+
+        const formData = new FormData(form);
+
+        const payload = {
+          full_name: String(formData.get("full_name") || "").trim(),
+          phone: String(formData.get("phone") || "").trim(),
+          email: String(formData.get("email") || "").trim() || null,
+          district: String(formData.get("district") || ""),
+          presentation_experience:
+            String(formData.get("presentation_experience") || "").trim(),
+          sales_experience:
+            String(formData.get("sales_experience") || "").trim(),
+          product_demonstration:
+            String(formData.get("product_demonstration") || "").trim(),
+          availability: String(formData.get("availability") || ""),
+          motivation: String(formData.get("motivation") || "").trim(),
+          consent_to_contact:
+            formData.get("consent_to_contact") === "on"
+        };
+
+        submit.disabled = true;
+        submit.textContent = "Submitting application…";
+        message.className = "";
+        message.textContent = "";
+
+        try {
+          const response = await fetch(SUBMIT_ENDPOINT, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "apikey": SUPABASE_PUBLIC_KEY,
+              "Authorization": `Bearer ${SUPABASE_PUBLIC_KEY}`
+            },
+            body: JSON.stringify(payload)
+          });
+
+          const result = await response.json().catch(() => ({}));
+
+          if (!response.ok || result.success !== true) {
+            console.error(
+              "LIF recruitment submission error:",
+              response.status,
+              result
+            );
+
+            if (response.status === 401 || response.status === 403) {
+              throw new Error(
+                "The recruitment service rejected this request. " +
+                "Please contact LIF so the service access can be checked."
+              );
+            }
+
+            throw new Error(
+              result.error ||
+              result.message ||
+              `Submission failed (HTTP ${response.status}).`
+            );
+          }
+
+          form.reset();
+
+          if (result.notificationSent === false) {
+            showMessage(
+              "Your application was saved, but the email notification " +
+              "could not be confirmed. LIF has been alerted to check the " +
+              "notification service. Please keep your application details.",
+              "warning"
+            );
+          } else {
+            showMessage(
+              "Thank you. Your application has been submitted successfully. " +
+              "LIF will contact you using the details you provided.",
+              "success"
+            );
+          }
+        } catch (error) {
+          console.error("LIF recruitment request failed:", error);
+
+          showMessage(
+            error instanceof Error
+              ? error.message
+              : "We could not confirm your submission. Please try again later " +
+                "or contact projects@lifefoundation.co.ls.",
+            "error"
+          );
+        } finally {
+          submit.disabled = false;
+          submit.textContent = "Submit Application";
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
