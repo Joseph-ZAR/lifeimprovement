@@ -1,1 +1,796 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#137b43">
+<title>LIF Recruitment Staff Dashboard</title>
+<style>
+:root {
+  --green:#137b43;
+  --green-dark:#0d6133;
+  --red:#c62828;
+  --blue:#eaf5fb;
+  --ink:#183027;
+  --muted:#617168;
+  --line:#d9e3dc;
+  --white:#fff;
+  --paper:#f2f7f3;
+  --gold:#fff3cd;
+}
+* { box-sizing:border-box; }
+body {
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.5;
+}
+button,input,select,textarea { font:inherit; }
+button { cursor:pointer; }
+button:disabled { opacity:.6;cursor:wait; }
+header {
+  background:var(--white);
+  border-bottom:3px solid var(--green);
+  padding:16px 4%;
+}
+.header-inner {
+  max-width:1400px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+.brand {
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.brand img {
+  width:76px;
+  height:66px;
+  object-fit:contain;
+}
+.brand h1 {
+  font-size:clamp(1.1rem,3vw,1.7rem);
+  line-height:1.2;
+  margin:0;
+  color:var(--green);
+}
+.brand p { margin:5px 0 0;color:var(--muted); }
+.container {
+  max-width:1400px;
+  margin:28px auto;
+  padding:0 18px 40px;
+}
+.panel {
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:clamp(18px,3vw,28px);
+  box-shadow:0 5px 20px #102b190a;
+  margin-bottom:20px;
+}
+h2 { margin:0 0 12px;font-size:1.4rem; }
+h3 { margin:0 0 10px;font-size:1.1rem; }
+p { overflow-wrap:anywhere; }
+.muted { color:var(--muted); }
+label {
+  display:block;
+  font-weight:700;
+  margin:13px 0 6px;
+}
+input,select,textarea {
+  width:100%;
+  padding:11px 12px;
+  border:1px solid #b8c9bd;
+  border-radius:8px;
+  color:var(--ink);
+  background:#fff;
+}
+textarea { min-height:110px;resize:vertical; }
+input:focus,select:focus,textarea:focus {
+  outline:3px solid #137b4325;
+  border-color:var(--green);
+}
+.btn {
+  border:0;
+  border-radius:8px;
+  padding:11px 16px;
+  background:var(--green);
+  color:#fff;
+  font-weight:700;
+}
+.btn:hover { background:var(--green-dark); }
+.btn-secondary { background:#52645a; }
+.btn-danger { background:var(--red); }
+.btn-small { padding:8px 11px;font-size:.9rem; }
+.actions {
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-top:16px;
+}
+.status-message {
+  display:none;
+  padding:12px 14px;
+  margin:15px 0;
+  border-radius:8px;
+  overflow-wrap:anywhere;
+}
+.status-message.show { display:block; }
+.status-message.error { background:#f8d7da;color:#842029; }
+.status-message.success { background:#e8f5e9;color:#155724; }
+.status-message.info { background:var(--blue);color:#1c526f; }
+.hidden { display:none !important; }
+.login-panel { max-width:520px;margin:35px auto; }
+.login-panel img {
+  display:block;
+  width:150px;
+  max-height:110px;
+  object-fit:contain;
+  margin:0 auto 15px;
+}
+.login-panel h2,.login-panel>p { text-align:center; }
+.dashboard-heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:14px;
+}
+.stats {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  margin:20px 0;
+}
+.stat {
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:16px;
+  background:#fbfdfb;
+}
+.stat span { display:block;color:var(--muted);font-size:.9rem; }
+.stat strong { display:block;font-size:1.8rem;color:var(--green); }
+.filters {
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:12px;
+  align-items:end;
+}
+.applicant-layout {
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+  gap:20px;
+  align-items:start;
+}
+.application-list {
+  display:grid;
+  gap:10px;
+  margin-top:15px;
+}
+.applicant {
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:15px;
+  background:#fff;
+  text-align:left;
+  width:100%;
+  color:var(--ink);
+}
+.applicant:hover,.applicant.selected {
+  border-color:var(--green);
+  background:#f0f8f2;
+}
+.applicant strong { display:block;font-size:1rem; }
+.applicant small { color:var(--muted);display:block;margin-top:3px; }
+.applicant-top {
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  align-items:flex-start;
+}
+.badge {
+  display:inline-block;
+  border-radius:999px;
+  padding:4px 9px;
+  background:#e7efe9;
+  color:#245638;
+  font-size:.78rem;
+  font-weight:700;
+}
+.detail-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+}
+.detail {
+  padding:11px;
+  background:#f6f9f6;
+  border-radius:8px;
+  min-width:0;
+}
+.detail.full { grid-column:1/-1; }
+.detail span {
+  display:block;
+  font-size:.82rem;
+  color:var(--muted);
+  font-weight:700;
+  margin-bottom:4px;
+}
+.detail p { margin:0;white-space:pre-wrap;overflow-wrap:anywhere; }
+.detail a { color:var(--green); }
+.empty {
+  padding:24px;
+  text-align:center;
+  color:var(--muted);
+  background:#f8faf8;
+  border-radius:8px;
+}
+hr { border:0;border-top:1px solid var(--line);margin:22px 0; }
+footer {
+  text-align:center;
+  color:var(--muted);
+  padding:10px 0 30px;
+  font-size:.9rem;
+}
+@media(max-width:900px) {
+  .applicant-layout { grid-template-columns:1fr; }
+  .stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:600px) {
+  header { padding:12px; }
+  .header-inner { align-items:flex-start; }
+  .brand img { width:54px;height:50px; }
+  .brand p { font-size:.85rem; }
+  .filters { grid-template-columns:1fr; }
+  .detail-grid { grid-template-columns:1fr; }
+  .detail.full { grid-column:auto; }
+  .stats { gap:8px; }
+  .stat { padding:12px; }
+  .stat strong { font-size:1.45rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <img src="assets/lif/life-logo-transparent.png"
+           alt="Life Improvement Foundation"
+           onerror="this.onerror=null;this.src='assets/life-logo-transparent.png'">
+      <div>
+        <h1>LIF Recruitment Dashboard</h1>
+        <p>Confidential staff access</p>
+      </div>
+    </div>
+    <button id="logout-btn" class="btn btn-secondary hidden" type="button">
+      Sign out
+    </button>
+  </div>
+</header>
+
+<main class="container">
+  <section id="login-section" class="panel login-panel">
+    <img src="assets/lif/life-logo-transparent.png"
+         alt="Life Improvement Foundation logo"
+         onerror="this.onerror=null;this.src='assets/life-logo-transparent.png'">
+    <h2>Staff sign in</h2>
+    <p class="muted">For authorised LIF recruitment staff only.</p>
+
+    <div id="login-message" class="status-message" role="status"
+         aria-live="polite"></div>
+
+    <form id="login-form">
+      <label for="login-email">Staff email</label>
+      <input id="login-email" type="email" autocomplete="username"
+             value="projects@lifefoundation.co.ls" required>
+
+      <label for="login-password">Password</label>
+      <input id="login-password" type="password"
+             autocomplete="current-password" required>
+
+      <div class="actions">
+        <button id="login-btn" class="btn" type="submit">Sign in</button>
+      </div>
+    </form>
+    <p class="muted">
+      If access is denied, contact the LIF project administrator.
+    </p>
+  </section>
+
+  <section id="dashboard-section" class="hidden">
+    <div class="panel">
+      <div class="dashboard-heading">
+        <div>
+          <h2>Recruitment overview</h2>
+          <p class="muted">Signed in as <strong id="staff-email"></strong></p>
+        </div>
+        <div class="actions">
+          <button id="refresh-btn" class="btn btn-secondary" type="button">
+            Refresh applications
+          </button>
+          <button id="export-btn" class="btn" type="button">
+            Export filtered CSV
+          </button>
+        </div>
+      </div>
+
+      <div id="dashboard-message" class="status-message"
+           role="status" aria-live="polite"></div>
+
+      <div class="stats">
+        <div class="stat"><span>Total loaded</span><strong id="stat-total">0</strong></div>
+        <div class="stat"><span>Pending</span><strong id="stat-pending">0</strong></div>
+        <div class="stat"><span>Under review</span><strong id="stat-review">0</strong></div>
+        <div class="stat"><span>Shortlisted</span><strong id="stat-shortlisted">0</strong></div>
+      </div>
+
+      <div class="filters">
+        <div>
+          <label for="search-input">Search applicants</label>
+          <input id="search-input" type="search"
+                 placeholder="Name, phone, email or motivation">
+        </div>
+        <div>
+          <label for="district-filter">District</label>
+          <select id="district-filter">
+            <option value="">All districts</option>
+            <option>Maseru</option><option>Berea</option>
+            <option>Leribe</option><option>Butha-Buthe</option>
+            <option>Mokhotlong</option><option>Thaba-Tseka</option>
+            <option>Qacha's Nek</option><option>Quthing</option>
+            <option>Mohale's Hoek</option>
+            <option>Other / outside Lesotho</option>
+          </select>
+        </div>
+        <div>
+          <label for="status-filter">Application status</label>
+          <select id="status-filter">
+            <option value="">All statuses</option>
+            <option>Pending</option>
+            <option>Under Review</option>
+            <option>Shortlisted</option>
+            <option>Interview</option>
+            <option>Selected</option>
+            <option>Not Selected</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="applicant-layout">
+      <section class="panel">
+        <h2>Applications</h2>
+        <p class="muted">Select an applicant to view the full application.</p>
+        <div id="application-list" class="application-list">
+          <div class="empty">Loading applications…</div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Application details</h2>
+        <div id="application-detail" class="empty">
+          Select an application from the list.
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Life Improvement Foundation · Confidential recruitment information
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(() => {
+  "use strict";
+
+  const SUPABASE_URL = "https://jxxrbcacbpxcvmyqhhxj.supabase.co";
+  const SUPABASE_PUBLIC_KEY =
+    "sb_publishable_O-t_SPdeGHGXEDMRk0KLtQ_pB7mCkUe";
+  const STAFF_EMAIL = "projects@lifefoundation.co.ls";
+
+  const STATUS_OPTIONS = [
+    "Pending", "Under Review", "Shortlisted",
+    "Interview", "Selected", "Not Selected"
+  ];
+
+  const el = id => document.getElementById(id);
+  let db = null;
+  let currentUser = null;
+  let applications = [];
+  let selectedId = null;
+  let saving = false;
+
+  function message(id, text, kind = "info") {
+    const box = el(id);
+    box.textContent = text;
+    box.className = "status-message show " + kind;
+  }
+
+  function clearMessage(id) {
+    el(id).textContent = "";
+    el(id).className = "status-message";
+  }
+
+  function escapeHtml(value) {
+    return String(value ?? "").replace(/[&<>"']/g, char => ({
+      "&":"&amp;", "<":"&lt;", ">":"&gt;",
+      '"':"&quot;", "'":"&#39;"
+    })[char]);
+  }
+
+  function dateText(value) {
+    if (!value) return "Not recorded";
+    const date = new Date(value);
+    return Number.isNaN(date.getTime())
+      ? String(value)
+      : date.toLocaleString();
+  }
+
+  function filteredApplications() {
+    const term = el("search-input").value.trim().toLowerCase();
+    const district = el("district-filter").value;
+    const status = el("status-filter").value;
+
+    return applications.filter(app => {
+      if (district && app.district !== district) return false;
+      if (status && app.application_status !== status) return false;
+      if (!term) return true;
+
+      const searchable = [
+        app.full_name, app.phone, app.email, app.district,
+        app.motivation, app.sales_experience,
+        app.presentation_experience
+      ].join(" ").toLowerCase();
+
+      return searchable.includes(term);
+    });
+  }
+
+  function renderStats() {
+    el("stat-total").textContent = applications.length;
+    el("stat-pending").textContent =
+      applications.filter(a => a.application_status === "Pending").length;
+    el("stat-review").textContent =
+      applications.filter(a => a.application_status === "Under Review").length;
+    el("stat-shortlisted").textContent =
+      applications.filter(a => a.application_status === "Shortlisted").length;
+  }
+
+  function renderList() {
+    const list = el("application-list");
+    const rows = filteredApplications();
+
+    if (!rows.length) {
+      list.innerHTML = '<div class="empty">No applications match these filters.</div>';
+      return;
+    }
+
+    list.innerHTML = rows.map(app => `
+      <button type="button"
+        class="applicant ${app.id === selectedId ? "selected" : ""}"
+        data-id="${escapeHtml(app.id)}">
+        <span class="applicant-top">
+          <span>
+            <strong>${escapeHtml(app.full_name)}</strong>
+            <small>${escapeHtml(app.district)} · ${escapeHtml(app.phone)}</small>
+          </span>
+          <span class="badge">${escapeHtml(app.application_status)}</span>
+        </span>
+        <small>Submitted: ${escapeHtml(dateText(app.created_at))}</small>
+      </button>
+    `).join("");
+
+    list.querySelectorAll("[data-id]").forEach(button => {
+      button.addEventListener("click", () => {
+        selectedId = button.dataset.id;
+        renderList();
+        renderDetail();
+      });
+    });
+  }
+
+  function detailField(label, value, full = false) {
+    return `<div class="detail ${full ? "full" : ""}">
+      <span>${escapeHtml(label)}</span>
+      <p>${escapeHtml(value || "Not provided")}</p>
+    </div>`;
+  }
+
+  function renderDetail() {
+    const app = applications.find(a => a.id === selectedId);
+    const target = el("application-detail");
+
+    if (!app) {
+      target.className = "empty";
+      target.textContent = "Select an application from the list.";
+      return;
+    }
+
+    target.className = "";
+    target.innerHTML = `
+      <div class="detail-grid">
+        ${detailField("Full name", app.full_name)}
+        ${detailField("District", app.district)}
+        ${detailField("Phone", app.phone)}
+        ${detailField("Email", app.email)}
+        ${detailField("Position", app.position)}
+        ${detailField("Availability", app.availability)}
+        ${detailField("Submitted", dateText(app.created_at))}
+        ${detailField("Consent recorded", app.consent_to_contact ? "Yes" : "No")}
+        ${detailField("Presentation and communication experience",
+          app.presentation_experience, true)}
+        ${detailField("Sales and customer-service experience",
+          app.sales_experience, true)}
+        ${detailField("Product demonstration response",
+          app.product_demonstration, true)}
+        ${detailField("Motivation", app.motivation, true)}
+      </div>
+
+      <hr>
+      <h3>Staff review</h3>
+      <label for="review-status">Application status</label>
+      <select id="review-status">
+        ${STATUS_OPTIONS.map(status =>
+          `<option value="${escapeHtml(status)}"
+            ${app.application_status === status ? "selected" : ""}>
+            ${escapeHtml(status)}
+          </option>`
+        ).join("")}
+      </select>
+
+      <label for="review-notes">Internal review notes</label>
+      <textarea id="review-notes" maxlength="10000"
+        placeholder="Internal notes for authorised LIF staff only">${escapeHtml(app.review_notes || "")}</textarea>
+
+      <p class="muted">
+        Last reviewed: ${escapeHtml(dateText(app.reviewed_at))}
+      </p>
+
+      <div class="actions">
+        <button type="button" id="save-review" class="btn">
+          Save review
+        </button>
+        <a class="btn btn-secondary"
+           href="mailto:${encodeURIComponent(app.email || "")}">
+           Email applicant
+        </a>
+      </div>
+    `;
+
+    el("save-review").addEventListener("click", saveReview);
+  }
+
+  async function loadApplications() {
+    clearMessage("dashboard-message");
+    el("application-list").innerHTML =
+      '<div class="empty">Loading applications…</div>';
+
+    const { data, error } = await db
+      .from("lif_recruitment_applications")
+      .select("*")
+      .order("created_at", { ascending: false })
+      .limit(1000);
+
+    if (error) {
+      console.error("Application load error:", error);
+      message("dashboard-message",
+        "Could not load applications. Confirm the staff policies and SQL setup. " +
+        error.message, "error");
+      el("application-list").innerHTML =
+        '<div class="empty">Applications could not be loaded.</div>';
+      return;
+    }
+
+    applications = data || [];
+    if (!applications.some(a => a.id === selectedId)) {
+      selectedId = applications.length ? applications[0].id : null;
+    }
+
+    renderStats();
+    renderList();
+    renderDetail();
+
+    message("dashboard-message",
+      `Loaded ${applications.length} application(s).`, "success");
+  }
+
+  async function saveReview() {
+    if (saving || !selectedId) return;
+
+    const status = el("review-status").value;
+    const notes = el("review-notes").value.trim();
+
+    if (!STATUS_OPTIONS.includes(status)) {
+      message("dashboard-message", "Choose a valid application status.", "error");
+      return;
+    }
+
+    saving = true;
+    const button = el("save-review");
+    button.disabled = true;
+    button.textContent = "Saving…";
+
+    const { data, error } = await db
+      .from("lif_recruitment_applications")
+      .update({
+        application_status: status,
+        review_notes: notes || null,
+        reviewed_at: new Date().toISOString(),
+        reviewed_by: currentUser.id
+      })
+      .eq("id", selectedId)
+      .select("id")
+      .maybeSingle();
+
+    saving = false;
+    button.disabled = false;
+    button.textContent = "Save review";
+
+    if (error) {
+      console.error("Review update error:", error);
+      message("dashboard-message",
+        "Review could not be saved. " + error.message, "error");
+      return;
+    }
+
+    if (!data) {
+      message("dashboard-message",
+        "No record was updated. Confirm that this account is authorised.", "error");
+      return;
+    }
+
+    message("dashboard-message", "Application review saved.", "success");
+    await loadApplications();
+  }
+
+  function csvCell(value) {
+    const str = String(value ?? "");
+    return '"' + str.replace(/"/g, '""') + '"';
+  }
+
+  function exportCsv() {
+    const rows = filteredApplications();
+    if (!rows.length) {
+      message("dashboard-message", "There are no filtered applications to export.", "info");
+      return;
+    }
+
+    const columns = [
+      "id", "full_name", "phone", "email", "district", "position",
+      "presentation_experience", "sales_experience", "product_demonstration",
+      "availability", "motivation", "consent_to_contact",
+      "application_status", "review_notes", "reviewed_at", "created_at"
+    ];
+
+    const csv = [
+      columns.map(csvCell).join(","),
+      ...rows.map(row => columns.map(key => csvCell(row[key])).join(","))
+    ].join("\r\n");
+
+    const blob = new Blob(["\uFEFF", csv], {type:"text/csv;charset=utf-8;"});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "lif-recruitment-applications.csv";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  async function showDashboard(user) {
+    currentUser = user;
+
+    if (!user || (user.email || "").toLowerCase() !== STAFF_EMAIL) {
+      await db.auth.signOut();
+      el("dashboard-section").classList.add("hidden");
+      el("logout-btn").classList.add("hidden");
+      el("login-section").classList.remove("hidden");
+      message("login-message",
+        "This dashboard is restricted to the authorised LIF staff account.",
+        "error");
+      return;
+    }
+
+    const { data: staff, error } = await db
+      .from("lif_staff_users")
+      .select("user_id,email,active")
+      .eq("user_id", user.id)
+      .eq("active", true)
+      .maybeSingle();
+
+    if (error || !staff) {
+      await db.auth.signOut();
+      el("dashboard-section").classList.add("hidden");
+      el("logout-btn").classList.add("hidden");
+      el("login-section").classList.remove("hidden");
+      message("login-message",
+        "This account is not authorised. Run the staff security SQL and confirm the staff entry.",
+        "error");
+      return;
+    }
+
+    el("login-section").classList.add("hidden");
+    el("dashboard-section").classList.remove("hidden");
+    el("logout-btn").classList.remove("hidden");
+    el("staff-email").textContent = user.email;
+    await loadApplications();
+  }
+
+  async function signOut() {
+    await db.auth.signOut();
+    currentUser = null;
+    applications = [];
+    selectedId = null;
+    el("dashboard-section").classList.add("hidden");
+    el("logout-btn").classList.add("hidden");
+    el("login-section").classList.remove("hidden");
+    el("login-password").value = "";
+    clearMessage("login-message");
+  }
+
+  async function init() {
+    if (!window.supabase) {
+      message("login-message",
+        "The login library did not load. Check your internet connection and reload.",
+        "error");
+      return;
+    }
+
+    db = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLIC_KEY);
+
+    el("login-form").addEventListener("submit", async event => {
+      event.preventDefault();
+      clearMessage("login-message");
+
+      const email = el("login-email").value.trim().toLowerCase();
+      const password = el("login-password").value;
+
+      if (email !== STAFF_EMAIL) {
+        message("login-message",
+          "Use the authorised LIF staff email address.", "error");
+        return;
+      }
+
+      const button = el("login-btn");
+      button.disabled = true;
+      button.textContent = "Signing in…";
+
+      const { data, error } = await db.auth.signInWithPassword({email, password});
+
+      button.disabled = false;
+      button.textContent = "Sign in";
+
+      if (error) {
+        message("login-message",
+          "Sign-in failed. Check the email and password, or confirm the account in Supabase Authentication.",
+          "error");
+        return;
+      }
+
+      await showDashboard(data.user);
+    });
+
+    el("logout-btn").addEventListener("click", signOut);
+    el("refresh-btn").addEventListener("click", loadApplications);
+    el("export-btn").addEventListener("click", exportCsv);
+    el("search-input").addEventListener("input", renderList);
+    el("district-filter").addEventListener("change", renderList);
+    el("status-filter").addEventListener("change", renderList);
+
+    const { data } = await db.auth.getSession();
+    if (data.session) await showDashboard(data.session.user);
+  }
+
+  init();
+})();
+</script>
+</body>
+</html>
+
