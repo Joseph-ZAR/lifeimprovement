@@ -1,1 +1,591 @@
 
+/* ==========================================================
+   LIFE IMPROVEMENT FOUNDATION
+   SHARED WEBSITE NAVIGATION STYLESHEET
+   File: assets/css/lif-navigation.css
+
+   Purpose:
+   - Consistent navigation across LIF pages
+   - Desktop, tablet and mobile responsiveness
+   - Consistent navigation links and call-to-action buttons
+   - Mobile menu support for existing page menu buttons
+   - Improved accessibility and keyboard navigation
+
+   This stylesheet does not replace the existing page CSS.
+   ========================================================== */
+
+
+/* ----------------------------------------------------------
+   1. GLOBAL NAVIGATION VARIABLES
+   ---------------------------------------------------------- */
+
+:root {
+    --lif-red: #e31e24;
+    --lif-red-dark: #b9151b;
+    --lif-green: #168542;
+    --lif-green-dark: #106b34;
+    --lif-blue: #168acb;
+    --lif-blue-dark: #086ba5;
+    --lif-gold: #d7a928;
+
+    --lif-white: #ffffff;
+    --lif-dark: #17212b;
+    --lif-muted: #64748b;
+    --lif-border: #e5e7eb;
+
+    --lif-nav-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.09);
+
+    --lif-nav-radius: 8px;
+    --lif-nav-transition: 0.25s ease;
+}
+
+
+/* ----------------------------------------------------------
+   2. GENERAL NAVIGATION RESET
+   ---------------------------------------------------------- */
+
+.site-nav,
+header,
+.site-header {
+    box-sizing: border-box;
+}
+
+.site-nav *,
+header *,
+.site-header * {
+    box-sizing: border-box;
+}
+
+.site-nav a,
+header nav a,
+.site-header nav a {
+    text-decoration: none;
+}
+
+.site-nav img,
+header nav img,
+.site-header nav img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ----------------------------------------------------------
+   3. COMMON NAVIGATION CONTAINERS
+   ---------------------------------------------------------- */
+
+.site-nav,
+header nav,
+.site-header nav {
+    position: relative;
+    z-index: 1000;
+}
+
+.site-nav {
+    width: 100%;
+}
+
+.site-nav .container,
+header nav .container,
+.site-header nav .container {
+    width: 100%;
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site-nav .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+
+/* ----------------------------------------------------------
+   4. LOGO STYLING
+   ---------------------------------------------------------- */
+
+.logo-link,
+.nav-logo,
+header .logo,
+.site-header .logo {
+    flex-shrink: 0;
+}
+
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-logo {
+    display: block;
+    width: auto;
+    max-width: 220px;
+    max-height: 85px;
+    object-fit: contain;
+}
+
+header .logo img,
+.site-header .logo img {
+    display: block;
+    max-width: 220px;
+    max-height: 85px;
+    width: auto;
+    object-fit: contain;
+}
+
+
+/* ----------------------------------------------------------
+   5. COMMON NAVIGATION LINK STYLING
+   ---------------------------------------------------------- */
+
+.nav-links,
+.nav-links#primaryNavigation,
+.nav-links#primary-navigation,
+.main-nav,
+.site-nav .nav-links {
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links a,
+.main-nav a,
+.site-nav .nav-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 12px;
+
+    color: var(--lif-dark);
+    font-size: 14px;
+    font-weight: 650;
+    line-height: 1.35;
+
+    border-radius: var(--lif-nav-radius);
+
+    transition:
+        color var(--lif-nav-transition),
+        background-color var(--lif-nav-transition),
+        transform var(--lif-nav-transition);
+}
+
+.nav-links a:hover,
+.main-nav a:hover,
+.site-nav .nav-links a:hover {
+    color: var(--lif-red);
+    background-color: rgba(227, 30, 36, 0.07);
+}
+
+.nav-links a:focus-visible,
+.main-nav a:focus-visible,
+.site-nav .nav-links a:focus-visible {
+    outline: 3px solid var(--lif-blue);
+    outline-offset: 3px;
+}
+
+.nav-links a[aria-current="page"],
+.main-nav a[aria-current="page"],
+.site-nav .nav-links a[aria-current="page"] {
+    color: var(--lif-red);
+    background-color: rgba(227, 30, 36, 0.08);
+}
+
+
+/* ----------------------------------------------------------
+   6. NAVIGATION CALL-TO-ACTION BUTTONS
+   ---------------------------------------------------------- */
+
+.nav-links a.nav-cta,
+.nav-links .nav-cta,
+.main-nav a.nav-cta,
+.site-nav .nav-links a.nav-cta {
+    color: var(--lif-white);
+    background: var(--lif-red);
+    border: 2px solid var(--lif-red);
+    border-radius: 30px;
+    padding: 10px 18px;
+    font-weight: 750;
+}
+
+.nav-links a.nav-cta:hover,
+.nav-links .nav-cta:hover,
+.main-nav a.nav-cta:hover,
+.site-nav .nav-links a.nav-cta:hover {
+    color: var(--lif-white);
+    background: var(--lif-red-dark);
+    border-color: var(--lif-red-dark);
+    transform: translateY(-2px);
+}
+
+
+/* ----------------------------------------------------------
+   7. MOBILE MENU BUTTONS
+   Supports existing LIF button classes and IDs.
+   ---------------------------------------------------------- */
+
+.nav-toggle,
+.menu-toggle,
+#navToggle,
+#menuToggle {
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+    padding: 8px;
+
+    color: var(--lif-dark);
+    background: var(--lif-white);
+
+    border: 1px solid var(--lif-border);
+    border-radius: 8px;
+
+    font-size: 25px;
+    line-height: 1;
+
+    cursor: pointer;
+    transition: var(--lif-nav-transition);
+}
+
+.nav-toggle:hover,
+.menu-toggle:hover,
+#navToggle:hover,
+#menuToggle:hover {
+    color: var(--lif-red);
+    border-color: var(--lif-red);
+}
+
+.nav-toggle:focus-visible,
+.menu-toggle:focus-visible,
+#navToggle:focus-visible,
+#menuToggle:focus-visible {
+    outline: 3px solid var(--lif-blue);
+    outline-offset: 3px;
+}
+
+
+/* ----------------------------------------------------------
+   8. HOME PAGE NAVIGATION
+   ---------------------------------------------------------- */
+
+header .nav-links,
+.site-header .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+
+/* ----------------------------------------------------------
+   9. PARTNERSHIP AND MANUFACTURING NAVIGATION
+   ---------------------------------------------------------- */
+
+#primary-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+#primaryNavigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+
+/* ----------------------------------------------------------
+   10. PRODUCTS PAGE NAVIGATION
+   ---------------------------------------------------------- */
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+
+/* ----------------------------------------------------------
+   11. KINGDOM FOODS NAVIGATION
+   ---------------------------------------------------------- */
+
+/*
+   The existing Kingdom Foods navigation does not have
+   a mobile menu button or matching menu JavaScript.
+
+   Therefore, its links remain visible on mobile and wrap
+   naturally rather than disappearing.
+*/
+
+.site-nav .nav-inner {
+    flex-wrap: wrap;
+}
+
+.site-nav .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+
+/* ----------------------------------------------------------
+   12. COMMUNITY AND CONTACT NAVIGATION
+   ---------------------------------------------------------- */
+
+.nav-links.open,
+.nav-links.is-open {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* ----------------------------------------------------------
+   13. TABLET RESPONSIVENESS
+   ---------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+
+    .nav-links a,
+    .main-nav a,
+    .site-nav .nav-links a {
+        padding: 9px 9px;
+        font-size: 13px;
+    }
+
+    .nav-logo,
+    header .logo img,
+    .site-header .logo img {
+        max-width: 180px;
+        max-height: 75px;
+    }
+
+    .site-nav .nav-inner {
+        gap: 12px;
+    }
+}
+
+
+/* ----------------------------------------------------------
+   14. MOBILE RESPONSIVENESS
+   ---------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    /* General header layout */
+
+    header,
+    .site-header,
+    .site-nav {
+        width: 100%;
+    }
+
+    header .container,
+    .site-header .container,
+    .site-nav .container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .nav-logo,
+    header .logo img,
+    .site-header .logo img {
+        max-width: 155px;
+        max-height: 65px;
+    }
+
+    /* Show existing mobile menu buttons */
+
+    .nav-toggle,
+    .menu-toggle,
+    #navToggle,
+    #menuToggle {
+        display: inline-flex;
+        flex-shrink: 0;
+    }
+
+    /* Navigation layouts with existing mobile toggles */
+
+    #primaryNavigation,
+    #primary-navigation,
+    .main-nav {
+        display: none;
+
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+
+        width: 100%;
+        max-height: 75vh;
+        overflow-y: auto;
+
+        padding: 12px;
+
+        background: var(--lif-white);
+        border: 1px solid var(--lif-border);
+        border-radius: 10px;
+        box-shadow: var(--lif-nav-shadow);
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1100;
+    }
+
+    /* Open states used by the existing page scripts */
+
+    #primaryNavigation.is-open,
+    #primary-navigation.open,
+    #primary-navigation.is-open,
+    .main-nav.is-open,
+    .nav-links.open,
+    .nav-links.is-open {
+        display: flex;
+    }
+
+    /* Mobile links */
+
+    #primaryNavigation a,
+    #primary-navigation a,
+    .main-nav a,
+    .nav-links.open a,
+    .nav-links.is-open a {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 13px 15px;
+        font-size: 15px;
+        border-radius: 7px;
+    }
+
+    /* Mobile CTA */
+
+    #primaryNavigation a.nav-cta,
+    #primary-navigation a.nav-cta,
+    .main-nav a.nav-cta {
+        justify-content: center;
+        margin-top: 6px;
+    }
+
+    /* Kingdom Foods: no toggle exists, so keep links visible */
+
+    .site-nav .nav-inner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .site-nav .logo-link {
+        align-self: flex-start;
+    }
+
+    .site-nav .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+
+        width: 100%;
+        padding: 8px 0;
+
+        position: static;
+        background: transparent;
+        box-shadow: none;
+        border: 0;
+    }
+
+    .site-nav .nav-links a {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 10px 12px;
+    }
+
+    .site-nav .nav-links a.nav-cta {
+        justify-content: center;
+    }
+}
+
+
+/* ----------------------------------------------------------
+   15. SMALL MOBILE SCREENS
+   ---------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+    .nav-logo,
+    header .logo img,
+    .site-header .logo img {
+        max-width: 135px;
+        max-height: 58px;
+    }
+
+    .nav-toggle,
+    .menu-toggle,
+    #navToggle,
+    #menuToggle {
+        width: 42px;
+        height: 42px;
+        font-size: 23px;
+    }
+
+    #primaryNavigation,
+    #primary-navigation,
+    .main-nav {
+        max-height: 70vh;
+    }
+
+    #primaryNavigation a,
+    #primary-navigation a,
+    .main-nav a,
+    .site-nav .nav-links a {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+
+/* ----------------------------------------------------------
+   16. ACCESSIBILITY AND REDUCED MOTION
+   ---------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .nav-links a,
+    .main-nav a,
+    .site-nav .nav-links a,
+    .nav-toggle,
+    .menu-toggle {
+        transition: none;
+    }
+}
+
+
+/* ----------------------------------------------------------
+   17. PREVENT NAVIGATION CONTENT FROM CAUSING OVERFLOW
+   ---------------------------------------------------------- */
+
+header,
+.site-header,
+.site-nav,
+.nav-inner,
+.nav-links,
+.main-nav {
+    min-width: 0;
+}
+
+.nav-links a,
+.main-nav a,
+.site-nav .nav-links a {
+    overflow-wrap: anywhere;
+}
+
+
+/* ----------------------------------------------------------
+   END OF LIFE IMPROVEMENT FOUNDATION NAVIGATION CSS
+   ---------------------------------------------------------- */
+
