@@ -1,114 +1,37 @@
-/* LIFE IMPROVEMENT FOUNDATION — HOME PAGE RESPONSIVE CSS */
 
-:root {
-  --lif-red: #d71920;
-  --lif-green: #168447;
-  --lif-blue: #168fc5;
-  --lif-gold: #d5a52a;
-  --lif-ink: #17212b;
-  --lif-muted: #5b6670;
-  --lif-soft: #f4f7f8;
-  --lif-white: #ffffff;
+/* LIF RESPONSIVE OVERRIDES — include AFTER the existing page styles */
+:root{--lif-red:#d71920;--lif-green:#087f43;--lif-blue:#149bd7;--lif-gold:#efbd42;--lif-ink:#18291f;--lif-muted:#5d6b62;--lif-white:#fff;--lif-surface:#f5f8f5;--lif-border:#dfe9e1;--lif-shadow:0 14px 38px rgba(7,59,43,.10)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:115px}
+body{max-width:100%;overflow-x:hidden;overflow-wrap:anywhere}
+img,video,svg,iframe{max-width:100%}img{height:auto}
+button,input,select,textarea{max-width:100%;font:inherit}
+p,li{overflow-wrap:anywhere}
+:focus-visible{outline:3px solid var(--lif-blue);outline-offset:3px}
+.container,.wrap{width:min(1180px,92%);margin-left:auto;margin-right:auto}
+.site-header,header{z-index:100}
+.site-footer,footer{overflow-wrap:anywhere}
+@media(max-width:900px){
+.container,.wrap{width:min(calc(100% - 32px),760px)}
+.nav-wrap,.nav,.nav-inner,.header-inner{flex-wrap:wrap}
+.nav-links,.links,.main-nav{flex-wrap:wrap;justify-content:flex-start}
+.hero-grid,.intro-grid,.founder-grid,.origin-grid,.factory-grid,.factory-layout,.story-grid,.local-grid,.journey-visual-grid,.contact-grid{grid-template-columns:1fr!important}
+.footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 }
-
-* {
-  box-sizing: border-box;
+@media(max-width:640px){
+html{scroll-padding-top:150px}
+.container,.wrap{width:calc(100% - 28px)}
+h1{font-size:clamp(2rem,9vw,3rem)!important;line-height:1.08!important}
+h2{font-size:clamp(1.55rem,7vw,2.25rem)!important}
+.hero{min-height:0;padding-top:48px!important;padding-bottom:48px!important}
+.hero-actions,.button-row,.actions{flex-wrap:wrap}
+.footer-grid,.community-grid,.product-grid,.partner-grid,.partners-grid,.impact-grid,.journey-grid,.market-grid,.opportunity-grid,.future-grid,.stories-grid,.value-grid,.tiers,.steps,.next-grid,.bucket-grid,.two-card{grid-template-columns:1fr!important}
+.footer-bottom,.page-end .wrap{flex-direction:column}
+.brand-logo,.brand img,.logo,.nav-logo{max-width:58px;height:auto}
+.nav-links a,.links a{font-size:.88rem}
+table{display:block;max-width:100%;overflow-x:auto}
 }
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  color: var(--lif-ink);
-  overflow-x: hidden;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-h1, h2, h3 {
-  line-height: 1.15;
-  overflow-wrap: anywhere;
-}
-
-p, li {
-  line-height: 1.65;
-}
-
-.hero-grid,
-.founder-grid,
-.community-grid,
-.partner-grid,
-.product-grid {
-  align-items: center;
-  gap: clamp(20px, 4vw, 44px);
-}
-
-.hero-grid img,
-.founder-grid img,
-.community-grid img,
-.partner-grid img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  border-radius: 20px;
-  object-fit: cover;
-}
-
-section {
-  padding-top: clamp(38px, 6vw, 76px);
-  padding-bottom: clamp(38px, 6vw, 76px);
-}
-
-button,
-.button,
-.btn,
-a.button,
-a.btn {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-button:hover,
-.button:hover,
-.btn:hover,
-a.button:hover,
-a.btn:hover {
-  transform: translateY(-2px);
-}
-
-@media (max-width: 760px) {
-  .hero-grid,
-  .founder-grid,
-  .community-grid,
-  .partner-grid,
-  .product-grid {
-    grid-template-columns: minmax(0, 1fr) !important;
-  }
-
-  nav,
-  .nav {
-    flex-wrap: wrap;
-  }
-
-  .links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  h1 {
-    font-size: clamp(2rem, 9vw, 3rem);
-  }
-
-  h2 {
-    font-size: clamp(1.55rem, 6vw, 2.2rem);
-  }
-}
-
-@media (max-width: 420px) {
-  p, li {
-    font-size: 0.96rem;
-  }
-}
+/* Page-specific responsive rules */
+.hero-grid,.founder-grid,.origin-grid,.mandate-grid,.reseller-grid{align-items:center}.hero-panel,.hero-value,.community-card,.manufacturing-card,.partner-card,.product-card,.join-card{min-width:0;height:100%}.hero-values-grid,.community-grid,.manufacturing-grid,.partner-grid,.product-grid,.join-grid,.origin-steps,.manufacturing-goals{align-items:stretch}.image-frame,.founder-image-note,.reseller-image,.partner-image,.product-image{overflow:hidden}.image-frame img,.founder-grid img,.reseller-image img,.partner-image img,.product-image img{width:100%;object-fit:cover}.launch-countdown,.final-cta{text-align:center}.launch-timer{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}

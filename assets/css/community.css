@@ -1,0 +1,37 @@
+
+/* LIF RESPONSIVE OVERRIDES — include AFTER the existing page styles */
+:root{--lif-red:#d71920;--lif-green:#087f43;--lif-blue:#149bd7;--lif-gold:#efbd42;--lif-ink:#18291f;--lif-muted:#5d6b62;--lif-white:#fff;--lif-surface:#f5f8f5;--lif-border:#dfe9e1;--lif-shadow:0 14px 38px rgba(7,59,43,.10)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:115px}
+body{max-width:100%;overflow-x:hidden;overflow-wrap:anywhere}
+img,video,svg,iframe{max-width:100%}img{height:auto}
+button,input,select,textarea{max-width:100%;font:inherit}
+p,li{overflow-wrap:anywhere}
+:focus-visible{outline:3px solid var(--lif-blue);outline-offset:3px}
+.container,.wrap{width:min(1180px,92%);margin-left:auto;margin-right:auto}
+.site-header,header{z-index:100}
+.site-footer,footer{overflow-wrap:anywhere}
+@media(max-width:900px){
+.container,.wrap{width:min(calc(100% - 32px),760px)}
+.nav-wrap,.nav,.nav-inner,.header-inner{flex-wrap:wrap}
+.nav-links,.links,.main-nav{flex-wrap:wrap;justify-content:flex-start}
+.hero-grid,.intro-grid,.founder-grid,.origin-grid,.factory-grid,.factory-layout,.story-grid,.local-grid,.journey-visual-grid,.contact-grid{grid-template-columns:1fr!important}
+.footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:640px){
+html{scroll-padding-top:150px}
+.container,.wrap{width:calc(100% - 28px)}
+h1{font-size:clamp(2rem,9vw,3rem)!important;line-height:1.08!important}
+h2{font-size:clamp(1.55rem,7vw,2.25rem)!important}
+.hero{min-height:0;padding-top:48px!important;padding-bottom:48px!important}
+.hero-actions,.button-row,.actions{flex-wrap:wrap}
+.footer-grid,.community-grid,.product-grid,.partner-grid,.partners-grid,.impact-grid,.journey-grid,.market-grid,.opportunity-grid,.future-grid,.stories-grid,.value-grid,.tiers,.steps,.next-grid,.bucket-grid,.two-card{grid-template-columns:1fr!important}
+.footer-bottom,.page-end .wrap{flex-direction:column}
+.brand-logo,.brand img,.logo,.nav-logo{max-width:58px;height:auto}
+.nav-links a,.links a{font-size:.88rem}
+table{display:block;max-width:100%;overflow-x:auto}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Page-specific responsive rules */
+.hero-grid,.mission-grid,.value-grid{align-items:center}.opportunity-grid,.stories-grid,.future-grid,.mission-grid{align-items:stretch}.opportunity-card,.story-card,.future-card,.mission-item{height:100%;min-width:0}.hero-visual,.image-slot,.image-placeholder{overflow:hidden}.hero-visual img,.image-slot img{width:100%;height:100%;object-fit:cover}.earnings-wrap{max-width:100%;overflow-x:auto}
