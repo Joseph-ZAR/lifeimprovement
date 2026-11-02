@@ -1,1 +1,114 @@
+/* LIFE IMPROVEMENT FOUNDATION — HOME PAGE RESPONSIVE CSS */
 
+:root {
+  --lif-red: #d71920;
+  --lif-green: #168447;
+  --lif-blue: #168fc5;
+  --lif-gold: #d5a52a;
+  --lif-ink: #17212b;
+  --lif-muted: #5b6670;
+  --lif-soft: #f4f7f8;
+  --lif-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--lif-ink);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3 {
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+p, li {
+  line-height: 1.65;
+}
+
+.hero-grid,
+.founder-grid,
+.community-grid,
+.partner-grid,
+.product-grid {
+  align-items: center;
+  gap: clamp(20px, 4vw, 44px);
+}
+
+.hero-grid img,
+.founder-grid img,
+.community-grid img,
+.partner-grid img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+section {
+  padding-top: clamp(38px, 6vw, 76px);
+  padding-bottom: clamp(38px, 6vw, 76px);
+}
+
+button,
+.button,
+.btn,
+a.button,
+a.btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover,
+.button:hover,
+.btn:hover,
+a.button:hover,
+a.btn:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 760px) {
+  .hero-grid,
+  .founder-grid,
+  .community-grid,
+  .partner-grid,
+  .product-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  nav,
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  .links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
+  h2 {
+    font-size: clamp(1.55rem, 6vw, 2.2rem);
+  }
+}
+
+@media (max-width: 420px) {
+  p, li {
+    font-size: 0.96rem;
+  }
+}
